@@ -1,0 +1,189 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-searchbox/paper-searchbox.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+ <link rel="import" href="../bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+ 
+
+
+<link rel="import" href="my-icons.html">
+<link rel="import" href="./my-daemonview.html">
+<link rel="import" href="./login-view.html"/>
+<link rel="import" href="./memo-list-view.html"/>
+<link rel="import" href="./edit-view.html"/>
+<dom-module id="my-app">
+  <template>
+    <style>
+      :host {
+        --app-primary-color: #4285f4;
+        --app-secondary-color: black;
+
+        display: block;
+      }
+
+      app-header {
+        color: #fff;
+        background-color: var(--app-primary-color);
+      }
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+        line-height: 40px;
+      }
+
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
+     
+    </style>
+    <style is="custom-style">
+  .flex-vertical {
+    @apply(--layout-vertical);
+    
+  }
+  .flexchild-vertical {
+    @apply(--layout-flex);
+  }
+</style>
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}"></app-route>
+<paper-dialog id="dialog">
+  <h2><iron-icon icon="settings" style="margin-right: 5px"></iron-icon>App Setting</h2>
+  <paper-dialog-scrollable>
+    <p>메뉴 추가시 구현 예정</p>
+    <p>레이아웃은 이 대화상자안에서 리스트뷰나 테이블 형식의 레이아웃에서 텍스트를 수정하거나 체크박스에 체크하거나 하는 방식으로 구현될 예정</p>
+     </paper-dialog-scrollable>
+  <div class="buttons">
+    <paper-button dialog-dismiss>Close & Save</paper-button>
+  </div>
+</paper-dialog>
+    <app-drawer-layout fullbleed>
+      <!-- Drawer content -->
+      <app-drawer id="drawer">
+       <!-- <app-toolbar></app-toolbar>-->
+
+<div class="container flex-vertical">
+        <login-view></login-view>
+       <memo-list-view page="[[page]]" style="height: 200px" ></memo-list-view>
+</div>
+       <!--<paper-card style="width:100%; padding-left: 5px;padding-right: 5px ">
+       <div style="background:#212121;color:#FFF;font-family:'Roboto'">
+          <paper-searchbox raise-on-active raise-on-value></paper-searchbox>
+       </div>
+       
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="view1" href="/view1">View One</a>
+          <a name="view2" href="/view2">View Two</a>
+          <a name="view3" href="/view3">View Three</a>
+          <a name="daemonview" href="/daemonview">View 4</a>
+        </iron-selector>
+        </paper-card>-->
+      </app-drawer>
+
+      <!-- Main content -->
+      <app-header-layout has-scrolling-region>
+
+        <app-header condenses reveals effects="waterfall">
+          <app-toolbar>
+            <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
+            <div main-title>App</div>
+            <paper-icon-button icon="settings" on-click="_showdlg"></paper-icon-button>
+            <paper-icon-button icon="add">+</paper-icon-button>
+            
+          </app-toolbar>
+        </app-header>
+
+        <iron-pages
+            selected="[[page]]"
+            attr-for-selected="name"
+            fallback-selection="view404"
+            role="main">
+          <my-view1 name="view1"></my-view1>
+          <my-view2 name="view2"></my-view2>
+          <my-view3 name="view3"></my-view3>
+          <my-view404 name="view404"></my-view404>
+          <daemon-view name="daemonview"></daemon-view>
+          <edit-view name="edv"></edit-view>
+        </iron-pages>
+      </app-header-layout>
+    </app-drawer-layout>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-app',
+
+      properties: {
+        page: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_pageChanged',
+        },
+      },
+
+      observers: [
+        '_routePageChanged(routeData.page)',
+      ],
+
+      _routePageChanged: function(page) {
+        this.page = page || 'daemonview';
+
+        if (!this.$.drawer.persistent) {
+          this.$.drawer.close();
+        }
+      },
+
+      _pageChanged: function(page) {
+        // Load page import on demand. Show 404 page if fails
+        var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+        this.importHref(resolvedPageUrl, null, this._showPage404, true);
+      },
+
+      _showPage404: function() {
+        this.page = 'view404';
+      },
+      _showdlg:function(){
+        this.$.dialog.open();
+      },
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,131 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-userpicture/paper-userpicture.html">
+<dom-module id="logined-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
+    </style>
+    <style>
+  paper-input {
+    max-width: 400px;
+    margin: auto;
+  }
+  iron-icon, div[suffix] {
+    color: hsl(0, 0%, 50%);
+    margin-right: 12px;
+  }
+</style>
+    <style is="custom-style">
+  .flex-horizontal {
+    @apply(--layout-horizontal);
+  }
+  .flexchild {
+    @apply(--layout-flex);
+  }
+   .flex-end-justified {
+    @apply(--layout-horizontal);
+    @apply(--layout-end-justified);
+  }
+  
+  paper-button {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: normal;
+    font-size: 8px;
+    -webkit-font-smoothing: antialiased;
+  }
+  paper-button.pink {
+    color: var(--paper-pink-a200);
+    --paper-button-ink-color: var(--paper-pink-a200);
+  }
+  paper-button.pink:hover {
+    background-color: var(--paper-pink-100);
+  }
+   paper-button.indigo {
+    background-color: #FF5722;
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.indigo:hover {
+    background-color: #FFA000;
+  }
+</style>
+<div class="container flex-horizontal">
+  <div> <paper-userpicture user-id="LLL" user-name="[[username]]" style="margin-right: [[mpaddingsz]]; margin-top: 10px"></paper-userpicture></div>
+  <div class="flexchild">
+    <div class="container flex-end-justified" style="height: 30px">
+   <div><paper-button raised class="indigo" style="height: 80%;margin-top: 5px;margin-bottom: 5px;" on-click="dologout">로그아웃</paper-button></div>
+   <div><paper-icon-button icon="settings" style="width: 30px; height: 100%; "></paper-icon-button></div>
+    </div>
+    <center><div style="margin-top: [[mpaddingsz]];">[[username]]님</div></center>
+    <div style="margin-left: 10%"><paper-button class="pink">내정보</paper-button></div>
+  </div>
+</div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'logined-view',
+      properties:{
+        username:{
+          type: String,
+          value: 'unknown',
+        },
+        mpaddingsz:{
+          type: String,
+          value: '10px',
+          readOnly: true,
+        },
+        loginstate:{
+          type: Object,
+          value:  {logined:false,nologin:true,logining:false}
+          ,
+        },
+        logined:{
+          type:Boolean,
+          value: false,
+          notify: true,
+           
+        },
+        nologin:{
+          type:Boolean,
+          value: true,
+          notify: true,
+           reflectToAttribute:true,
+        },
+        logining:{
+          type: Boolean,
+          value: false,
+          notify: true,
+           reflectToAttribute:true,
+        },
+      },
+      dologout: function(){
+        this.nologin=true;
+        this.logining=this.logined=false;
+        alert("aa");
+      }
+    });
+  </script>
+</dom-module>
