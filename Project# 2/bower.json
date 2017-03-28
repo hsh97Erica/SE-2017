@@ -35,7 +35,8 @@
     "wysiwyg-e": "miztroh/wysiwyg-e#^1.1.0",
     "paper-fab": "PolymerElements/paper-fab#^1.2.1",
     "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#^1.1.5",
-    "paper-dialog": "PolymerElements/paper-dialog#^1.1.0"
+    "paper-dialog": "PolymerElements/paper-dialog#^1.1.0",
+    "paper-date-picker-item": "Collaborne/paper-date-picker-item#^1.3.0"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

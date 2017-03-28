@@ -125,7 +125,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>App</div>
+            <div main-title>[[appname]]</div>
             <paper-icon-button icon="settings" on-click="_showdlg"></paper-icon-button>
             <paper-icon-button icon="add">+</paper-icon-button>
             
@@ -158,6 +158,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           reflectToAttribute: true,
           observer: '_pageChanged',
         },
+        appname:{
+          type: String,
+          readOnly:true,
+          value: "Note App"
+        }
       },
 
       observers: [
