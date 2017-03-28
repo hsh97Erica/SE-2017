@@ -127,7 +127,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
             <div main-title>[[appname]]</div>
             <paper-icon-button icon="settings" on-click="_showdlg"></paper-icon-button>
-            <paper-icon-button icon="add">+</paper-icon-button>
+            <paper-icon-button icon="add" on-click="_move_new_memo_edit">+</paper-icon-button>
             
           </app-toolbar>
         </app-header>
@@ -143,6 +143,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-view404 name="view404"></my-view404>
           <daemon-view name="daemonview"></daemon-view>
           <edit-view name="edv"></edit-view>
+          <edit-view2 name="edv2"></edit-view2>
         </iron-pages>
       </app-header-layout>
     </app-drawer-layout>
@@ -188,6 +189,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       _showdlg:function(){
         this.$.dialog.open();
+      },
+      _move_new_memo_edit: function(){
+        location.href="/edv2";
       },
     });
   </script>

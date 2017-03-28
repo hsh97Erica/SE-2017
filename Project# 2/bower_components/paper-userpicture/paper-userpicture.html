@@ -1,0 +1,87 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="../paper-avatar-behavior/paper-avatar-behavior.html">
+
+<!--
+`paper-userpicture` lets you create user avatars. If user doesn't have picture set, we'll automatically create placeholder containing user name initials. Check out the demo!
+
+### Styling
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-userpicture-size` | The size of picture | `5em`
+`--paper-userpicture-text-size` | The font-size of the placeholder initials | `calc(var(--paper-userpicture-size) / 2)`
+
+@demo demo/index.html
+-->
+
+<dom-module id="paper-userpicture">
+    <template>
+        <style is="custom-style">
+            :host {
+                display: block;
+                --paper-userpicture-size: 5em;
+                --paper-userpicture-text-size: calc(var(--paper-userpicture-size) / 2);
+            }
+
+            #image, #placeholder {
+                height: var(--paper-userpicture-size);
+                width: var(--paper-userpicture-size);
+                background: #808080;
+                border-radius: 50%;
+                align-items: center;
+                display: flex;
+                color: rgba(255, 255, 255, 0.75);
+                cursor: default;
+                margin: 0 auto;
+            }
+
+            #placeholder > span {
+                font-size: var(--paper-userpicture-text-size);
+                display: inline-block;
+                margin: 0 auto;
+            }
+
+            #name {
+                text-align: center;
+                margin-top: 0.75em;
+                font-size: 0.85em;
+                font-weight: bold;
+                opacity: 0.75;
+            }
+        </style>
+
+        <iron-image id="image" src="[[image]]" sizing="cover" hidden$="[[!_imageVisible]]"></iron-image>
+
+        <div id="placeholder" hidden$="[[_imageVisible]]">
+            <span>[[initial]]</span>
+        </div>
+
+        <div id="name" hidden$="[[!showName]]">{{userName}}</div>
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'paper-userpicture',
+
+            behaviors: [AvatarBehavior],  
+
+            properties: {
+                /*
+                 * Whether to show name of user under the picture or not
+                 */
+                showName: {
+                    type: Boolean,
+                    value: false,
+                    notify: true,
+                    reflectToAttribute: true
+                },
+            },
+
+            colorChanged: function() {
+                this.$.placeholder.style.background = this.color;
+            }
+
+        });
+    </script>
+</dom-module>

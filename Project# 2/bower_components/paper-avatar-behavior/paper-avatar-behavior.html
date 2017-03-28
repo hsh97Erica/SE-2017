@@ -1,0 +1,68 @@
+<link rel="import" href="../iron-image/iron-image.html">
+<script src="../js-md5/build/md5.min.js"></script>
+
+<script>
+    AvatarBehavior = {
+        properties: {
+
+            colors: {
+                type: Array,
+                value: ['#FFA726', '#FF7043', '#26A69A', '#26C6DA', '#5C6BC0', '#7E57C2', '#AB47BC', '#66BB6A']
+            },
+
+            userName: {
+                type: String,
+                value: 'Average Joe',
+                observer: '_updateBg',
+            },
+
+            userId: {
+                type: String,
+                observer: '_updateBg',
+            },
+
+            image: {
+                type: String,
+                observer: '_updateBg',
+            },
+
+            color: {
+                type: String,
+                readOnly: true,
+                notify: true,
+            },
+
+            initial: {
+                type: String,
+            },
+
+            _imageVisible: {
+                type: Boolean,
+            }
+
+        },
+
+        _updateBg: function() {
+            if(this.image !== void(0)) {
+
+                // Hide placeholder in favor of user picture
+                this._imageVisible = true;
+
+            } else {
+
+                // Calculate hash from userId
+                var hash = md5.array('' + this.userId)[0];
+
+                // Save color to variable and set the initial character
+                this._setColor(this.colors[hash % this.colors.length]);
+                this.initial = this.userName.charAt(0).toUpperCase();
+
+                this.colorChanged(this.color);
+
+                // Hide user picture in favor of placeholder
+                this._imageVisible = false;
+
+            }
+        }
+    };
+</script>
