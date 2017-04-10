@@ -1,0 +1,256 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-searchbox/paper-searchbox.html">
+<link rel="import" href="../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-search/paper-search-bar.html">
+<link rel="import" href="../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html">
+<link rel="import" href="./memo-list-item.html"/>
+<link rel="import" href="./memo-list-category-view.html"/>
+
+<dom-module id="memo-list-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+      iron-list {
+      flex: 1 1 auto;
+    }
+      app-header {
+        color: #fff;
+        background-color: var(--app-primary-color);
+      }
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+        line-height: 40px;
+      }
+
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
+    
+    </style>
+    <style>
+  paper-input {
+    max-width: 400px;
+    margin: auto;
+  }
+  iron-icon, div[suffix] {
+    color: hsl(0, 0%, 50%);
+    margin-right: 12px;
+  }
+</style>
+   <paper-card>
+     <iron-ajax id="xhr" url="/{{userid}}/inquirylist.json" handle-as="json" on-response="handleResponse"></iron-ajax>
+      
+      <div style=" background:#212121;color:#000;font-family:'Roboto'">
+          <!--<paper-searchbox raise-on-active raise-on-value placeholder="메모 검색" value={{filterText}}></paper-searchbox>
+      -->
+      <paper-search-bar
+				query={{filterText}}
+				placeholder="메모 검색"
+        hide-filter-button=false
+				>
+			</paper-search-bar>
+       </div>
+       
+      <iron-selector  selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation" >
+          
+            
+          <!--<template is="dom-repeat" items="{{getCountArray}}">-->
+           
+            <iron-list id="memo_list" style="height: 320px"  items="{{getDataWithCategory}}" >
+              <template>
+                <memo-list-category-view  userid={{userid}} filterText={{filterText}} curbn={{curbn}} headerstr="[[item.header]]" data="[[item.rdata]]" ></memo-list-category-view>
+                <!--
+                <div>
+                  
+                <memo-list-item class="item" postfix="[[item]]"></memo-list-item>
+                </div>-->
+              </template>
+            </iron-list>
+           <!--<a name="view1" href="/view1">View One</a>
+          <a name="view2" href="/view2">View Two</a>
+          <a name="view3" href="/view3">View Three</a>
+          <a name="daemonview" href="/daemonview">View 4</a>-->
+          
+        </iron-selector>
+      
+   </paper-card>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'memo-list-view',
+      refreshFilter: function() {
+        this.$.resultList.render();
+      },
+      ready: function(){
+        this.addEventListener('refreshOnlineList',this._querylist);
+        this.addEventListener('flushOnlineList',this._flushOnlineListWIthCategory);
+       },
+      properties:{
+        page:{
+          type: Array,
+          value: [],
+        },
+        xScrollTop: {
+        type: Number,
+        readOnly: true,
+        value: 0
+      },
+      userid:{
+          type:String,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          value:'',
+        },
+      filterText: {
+        type: String,
+          value: '',
+          reflectToAttribute: true,
+       // observer: 'refreshFilter'  ,
+          notify:true,   
+          readOnly:false,     
+        },
+      xScrollLeft: {
+        type: Number,
+        readOnly: true,
+        value: 0
+      }, 
+      curbn:{
+          type:Number,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          value: 0
+        },
+        getCountArray:{ 
+          type: Array,
+          value: function(){
+          var ary = [];
+          for( i = 1;i<=10;i++){
+            ary.push(i.toString());
+          }
+          return ary;
+        },
+        readOnly:true,
+      },
+      getDataWithCategory:{
+        type: Object,
+        readOnly: false,
+        notify:true,
+        value: function(){
+          return this._getDataWithCategory();},
+        /*function(){
+          var ary=[];
+          var headers = ["memo","local"];
+          for(i=0;i<2;i++){
+            var ary2 =[];
+            for(j=1;j<4+i;j++){
+              ary2.push({value:j.toString()});
+            }
+            var hdr = headers[i];
+            ary.push({header:hdr.toString(),rdata:ary2});
+          }
+          return ary;
+        },*/
+      }
+    },
+    
+      
+    behaviors: [
+      Polymer.IronScrollTargetBehavior
+    ],
+    attached: function() {
+      this._scrollHandler();
+    },
+    _getDataWithCategory:function(){
+     
+      var odata = [];
+     // for(i=1;i<4;i++){odata.push({value:i.toString(),title:i.toString(),md:'unknown'});}
+      return this._buildDataWithCategory(odata,this._getLocalMemoDataList());
+    },
+    _getLocalMemoDataList: function(){
+      return [];
+    },
+    _responseDataWithCategory: function(odata){
+      return this._buildDataWithCategory(odata,this._getLocalMemoDataList());
+    },
+    _buildDataWithCategory: function(onlinedata,localdata){
+        var ary=[];
+          var headers = ["memo","local"];
+          ary.push({header:headers[0],rdata:onlinedata});
+          ary.push({header:headers[1],rdata:localdata});
+          
+          return ary;
+    },
+    _flushOnlineListWIthCategory: function(){
+      var nonlst = [];
+      var dd= this._buildDataWithCategory(nonlst,this._getLocalMemoDataList());
+      this.set('getDataWithCategory',dd);
+    },
+    _querylist: function(){
+     // alert("call _querylist");
+      this.$.xhr.generateRequest();
+    },
+     refreshFilter: function() {
+       alert(this.filterText);
+        //this.$.memo_list.fire('iron-resize');
+        //this.$.memo_list.
+      },
+    _scrollHandler: function() {
+      this._setXScrollTop(this._scrollTop);
+     // this._setXScrollLeft(this._scrollLeft);
+    },
+    handleResponse:function(data){
+        const resp = data.detail.response;
+        var rst = [];
+
+        const dcnt = resp.list_count;
+        for(i=0;i<dcnt;i++){
+          rst.push(resp.data[i]);
+          //alert(JSON.stringify(resp.data[i]));
+        }
+        
+       var dd= this._responseDataWithCategory(rst);
+       
+        this.set('getDataWithCategory',dd);
+       },
+
+    });
+  </script>
+</dom-module>

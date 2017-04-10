@@ -1,0 +1,39 @@
+{
+  "name": "undo-mgr",
+  "homepage": "https://github.com/miztroh/undo-mgr",
+  "authors": [
+    "Jonathan Cox <miztroh@gmail.com>"
+  ],
+  "description": "Use this element with the contenteditable attribute to track content changes and provide undo / redo functionality.",
+  "main": "undo-mgr.html",
+  "moduleType": [],
+  "keywords": [
+    "polymer",
+    "web-components",
+    "undo",
+    "redo",
+    "contenteditable"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer#latest",
+    "undo": "jzaefferer/undo#latest"
+  },
+  "version": "1.0.1",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "948b84a9cc062247dd97d810739eb1c4aadea4ab"
+  },
+  "_source": "https://github.com/miztroh/undo-mgr.git",
+  "_target": "*",
+  "_originalSource": "miztroh/undo-mgr"
+}

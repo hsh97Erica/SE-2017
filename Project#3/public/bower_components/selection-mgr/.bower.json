@@ -1,0 +1,39 @@
+{
+  "name": "selection-mgr",
+  "homepage": "https://github.com/miztroh/selection-mgr",
+  "authors": [
+    "Jonathan Cox <miztroh@gmail.com>"
+  ],
+  "description": "Use this element with the contenteditable attribute to manage (save, restore, observe) document selection",
+  "main": "selection-mgr.html",
+  "moduleType": [],
+  "keywords": [
+    "polymer",
+    "web-components",
+    "selection",
+    "contenteditable"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer#latest",
+    "keyboardevent-key-polyfill": "cvan/keyboardevent-key-polyfill#latest",
+    "selectionchange-polyfill": "2is10/selectionchange-polyfill"
+  },
+  "version": "1.0.1",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "2f9c107a9e4aab768b6b4fefa49dacd17f287efc"
+  },
+  "_source": "https://github.com/miztroh/selection-mgr.git",
+  "_target": "*",
+  "_originalSource": "miztroh/selection-mgr"
+}

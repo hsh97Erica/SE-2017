@@ -1,0 +1,184 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<dom-module id="memo-list-item">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 5px;
+      }
+    </style>
+    <style>
+  paper-input {
+    max-width: 400px;
+    margin: auto;
+  }
+  iron-icon, div[suffix] {
+    color: hsl(0, 0%, 50%);
+    margin-right: 12px;
+  }
+  
+</style>
+<style is="custom-style">
+  #container {
+    display: flex;
+  }
+  paper-button {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: normal;
+    font-size: 11px;
+    -webkit-font-smoothing: antialiased;
+  }
+  paper-button.pink {
+    color: var(--paper-pink-a200);
+    --paper-button-ink-color: var(--paper-pink-a200);
+  }
+  paper-button.pink:hover {
+    background-color: var(--paper-pink-100);
+  }
+  paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.indigo:hover {
+    background-color: var(--paper-indigo-400);
+  }
+  paper-button.green {
+    background-color: var(--paper-green-500);
+    color: white;
+  }
+  paper-button.green[active] {
+    background-color: var(--paper-red-500);
+  }
+  paper-button.disabled {
+    color: white;
+  }
+  .cafe-header { @apply(--paper-font-headline); }
+  .cafe-light { color: var(--paper-grey-600); }
+  .cafe-location {
+float: right;
+font-size: 15px;
+vertical-align: middle;
+  }
+  .cafe-reserve { color: var(--google-blue-500); }
+  iron-icon.star {
+--iron-icon-width: 16px;
+--iron-icon-height: 16px;
+color: var(--paper-amber-500);
+  }
+</style>
+    <paper-card>
+      <iron-ajax id="xhr" url="/memotransac/[[userid]]/mtdlt.json" handle-as="json" on-response="handleResponse"></iron-ajax>
+      <!--
+      <a name="view[[postfix]]" href="/view[[postfix]]" style="text-decoration: none">
+      -->
+        <div class="card-content">
+          <div lass="cafe-header">[[title]]</div>
+          <p class="cafe-light">[[summary]]</p>
+        </div>
+      
+
+     <div class="card-actions">
+      <div class="horizontal justified">
+        <paper-button class="indigo" on-click="_doview">view</paper-button>
+        <paper-button class="indigo" on-click="_doedit">edit</paper-button>
+        <!--<a href="/edv" class="pink">view</a>
+        <a href="/edv" class="pink">edit</a>-->
+        <paper-button class="pink" on-click="_dodelete">delete</paper-button>
+    </div>
+     </div>
+    <paper-card>
+    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'memo-list-item',
+      properties:{
+        postfix:{
+          type: String,
+          value: null,
+        },
+        boardnumber:{
+          type:Number,
+          value:0
+        },
+        curbn:{
+          type:Number,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          value: 0
+        },
+        userid:{
+          type:String,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          value:'',
+        },
+       title:{
+         type:String,
+         value:'unknown',
+       },
+       summary:{
+         type:String,
+         value:'',
+       },
+       
+      },
+      _doview:function(){
+        
+        this.curbn = this.boardnumber;
+        this.fire("changemode_view");
+        this.fire('selectedv');
+       // window.location.href = "/edv";
+       // var resolvedPageUrl = this.resolveUrl('my-' + "edv" + '.html');
+        //this.importHref(resolvedPageUrl, null, function(){alert("error");}, true);
+      //this.fire('changeBN',{value:3});//,'bridgeEventListener');//,'changeBN',this.getBoardNumber());
+      },
+      _doedit: function(){
+        this.curbn = this.boardnumber;
+        this.fire("changemode_edit");
+        this.fire('selectedv');
+      },
+      _dodelete: function(){
+        if(this.curbn==this.boardnumber){
+          this.fire("returnToHome");
+          this.curbn = 0;
+        }
+        var pid = this.boardnumber;
+        var params = {postid:pid};
+       this.$.xhr.params=params;
+       alert("del param: "+JSON.stringify(params));
+      this.$.xhr.generateRequest();
+
+      },
+       handleResponse:function(data){
+        const resp = data.detail.response;
+        alert("delete state: "+JSON.stringify(resp));
+        this.fire("memolistviewrefresh");
+
+       },
+    });
+  </script>
+</dom-module>

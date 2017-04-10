@@ -1,0 +1,240 @@
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="../bower_components/paper-styles/color.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/fs-person-card/fs-person-card.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="./logined-view.html">
+<dom-module id="login-view" >
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+    <style>
+  paper-input {
+    max-width: 400px;
+    margin: auto;
+  }
+  iron-icon, div[suffix] {
+    color: rgb(30, 30, 180);
+    margin-right: 12px;
+    
+  }
+</style>
+<style is="custom-style">
+  .flex-horizontal {
+    @apply(--layout-horizontal);
+  }
+  .flexchild {
+    @apply(--layout-flex);
+  }
+  .flex-vertical {
+    @apply(--layout-vertical);
+    /*height: 220px;*/
+  }
+  .flexchild-vertical {
+    @apply(--layout-flex);
+  }
+  .flex-end-justified {
+    @apply(--layout-horizontal);
+    @apply(--layout-end-justified);
+  }
+  #container {
+    display: flex;
+  }
+  paper-button {
+    font-family: 'Roboto', 'Noto', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+  }
+  paper-button.pink {
+    color: var(--paper-pink-a200);
+    --paper-button-ink-color: var(--paper-pink-a200);
+  }
+  paper-button.pink:hover {
+    background-color: var(--paper-pink-100);
+  }
+  paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.indigo:hover {
+    background-color: var(--paper-indigo-400);
+  }
+  paper-button.green {
+    background-color: var(--paper-green-500);
+    color: white;
+  }
+  paper-button.green[active] {
+    background-color: var(--paper-red-500);
+  }
+  paper-button.disabled {
+    color: white;
+  }
+</style>
+    <paper-card style="width:100%">
+    
+      <iron-ajax auto id="xhr" url="/dologin.json" handle-as="json" on-response="handleResponse"></iron-ajax>
+      
+        <!--<iron-request id="xhr"></iron-request>-->
+      <!--
+    <div class="container flex-horizontal">
+    <iron-icon class="big" icon="account-circle"  ></iron-icon>
+    </div>-->
+
+    <div class="flexchild">
+       <!--
+      <template is="dom-if" if="{{ loginState == state_logining }}" restamp="true">
+       -->
+        <div hidden$={{!logining}}><center><div><p><strong>loading...</string></p>
+        <paper-spinner active></paper-spinner>
+         </div></center></div>
+         
+         <!--<template is="dom-if" if$="{{ compStat(state_nologin) }}" restamp="true">
+         <template is="dom-if" if="{{ gst1() }}" restamep="false">-->
+        <div class="container flex-vertical" hidden$={{!nologin}}>
+            <div class="container flex-end-justified" style="margin-right: 15px">
+             <paper-input value="{{tfld_id}}" label="아이디"></paper-input>
+            </div>
+             <div class="container flex-end-justified" style="margin-right: 15px">
+                <paper-input value="{{tfld_pw}}" label="비밀번호"></paper-input>
+             </div>
+            <div class="container flex-end-justified" style="margin-right: 15px; margin-bottom: 10px">
+                <paper-button raised class="indigo" on-click="_callreq">로그인</paper-button>
+            </div>
+        </div>
+        
+        
+        <div class="container flex-vertical" style="width: 100%" hidden="{{!logined}}">
+         
+        <logined-view username=[[userid]] onlogout="dologout"></logined-view>
+        </div>
+    </div>
+      
+</div>
+    </paper-card>
+</template>
+
+  <script>
+    Polymer({
+      is: 'login-view',
+      ready: function(){
+        this.addEventListener('childlogout',this.dologout);
+      },
+      properties: {
+        loadingLG:{
+          type:Boolean,
+          value: false,
+        },
+       
+        loginstate:{
+          type: Object,
+          value:  {logined:false,nologin:true,logining:false}
+          ,
+        },
+        userid:{
+          type:String,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          value:'',
+        },
+        logined:{
+          type:Boolean,
+          notify: true,
+          value: false,
+          reflectToAttribute:true,
+        },
+        nologin:{
+          type:Boolean,
+          notify: true,
+          value: true,
+          reflectToAttribute:true,
+        },
+        logining:{
+          type: Boolean,
+          notify: true,
+          value: false,
+          reflectToAttribute:true,
+        },
+        tfld_id:{
+          type:String,
+          notify:true,
+          value:''
+        }
+        ,
+        tfld_pw:{
+          type:String,
+          notify:true,
+          value:''
+        }
+      },
+     
+      _callreq: function(){
+        this._setlogining();
+        this.$.xhr.params=this.buildAjaxParams();
+        this.$.xhr.generateRequest();
+        //this.$.xhr.send({url:'',body:{id: this.tfld_id, pw: this.tfld_pw}});
+        //this.async(this._changeLDState(),4000);
+       // setTimeout(this._setlogined.bind(this),2000);
+        //setTimeout(this._initLGState.bind(this),4000);
+      },
+      _setlogining: function(){
+        this.logining = true;
+        this.nologin=this.logined=false;
+      },
+      _setlogined: function(){
+        this.logined = true;
+         this.nologin=this.logining=false;
+      },
+      dologout: function(){
+        this.nologin=true;
+        this.logined =this.logining= false;
+        this.fire("memolistviewflush");
+      },
+      buildAjaxParams: function(){
+        var id = this.tfld_id;
+        var pw = this.tfld_pw;
+        return (
+          {
+            "id":id,
+            "pw":pw
+          }
+        );
+      },
+      handleResponse:function(data){
+        const resp = data.detail.response;
+        try{
+          if(resp.logined){
+            this._setlogined();
+            this.userid = this.tfld_id;
+            this.fire("memolistviewrefresh");
+          }
+          else{
+            //this.fire("memolistviewflush");
+            this.dologout();
+          }
+        }catch(error){
+         // this.fire("memolistviewflush");
+            this.dologout();
+        }
+        
+      }
+     
+    });
+  </script>
+</dom-module>
