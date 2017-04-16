@@ -36,7 +36,9 @@
     "paper-fab": "PolymerElements/paper-fab#^1.2.1",
     "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#^1.1.5",
     "paper-dialog": "PolymerElements/paper-dialog#^1.1.0",
-    "paper-search": "Collaborne/paper-search#^1.2.3"
+    "paper-search": "Collaborne/paper-search#^1.2.3",
+    "neon-text-board": "Collaborne/neon-text-board#^1.0.4",
+    "iron-data-table": "Saulis/iron-data-table#^1.0.6"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

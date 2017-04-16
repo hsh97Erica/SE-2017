@@ -96,6 +96,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-button dialog-dismiss>Close & Save</paper-button>
   </div>
 </paper-dialog>
+
     <app-drawer-layout fullbleed>
       <!-- Drawer content -->
       <app-drawer id="drawer">
@@ -125,7 +126,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>App</div>
+            <div main-title>[[pagetitle]]</div>
             <paper-icon-button icon="settings" on-click="_showdlg"></paper-icon-button>
             <paper-icon-button icon="add" on-click="_addnewmemo">+</paper-icon-button>
             
@@ -187,6 +188,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           notify:true,
           readOnly:false,
           value:0,
+        },
+        pagetitle:{
+          type:String,
+          readOnly:true,
+          value:'Note App'
         }
       },
 

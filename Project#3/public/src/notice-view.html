@@ -1,0 +1,135 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-data-table/iron-data-table.html">
+<link rel="import" href="../bower_components/iron-data-table/data-table-column.html">
+<dom-module id="notice-view">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+   <div>
+
+      <!--<iron-ajax id="xhr" url="/addons/universitynotice.json" handle-as="json" on-response="handleResponse"></iron-ajax> -->
+      <iron-ajax id="xhr" url="/addons/universitynotice.json" handle-as="json" last-response={{totaldata}} auto></iron-ajax>
+     
+      <iron-data-table items="[[totaldata.data]]">
+        <data-table-column name="학사 공지" flex=0.5>
+              <template>[[index]]</template>
+          </data-table-column>
+        <data-table-column name="Title" flex=20>
+              <template><a href=[[item.link]] >[[item.title]]</a></template>
+          </data-table-column>
+          <data-table-column name="author" flex=2>
+              <template>[[item.author]]</template>
+          </data-table-column>
+          <data-table-column name="Date" flex=1>
+              <template>[[item.pdate]]</template>
+          </data-table-column>
+         
+       </iron-data-table>
+       <!--<data-table-column name="Title">
+              <template><a href=[[item.link]] >[[item.title]]</a></template>
+          </data-table-column>
+          <data-table-column name="author">
+              <template>[[item.author]]</template>
+          </data-table-column>
+          <data-table-column name="Date">
+              <template>[[item.date]]</template>
+          </data-table-column>-->
+   </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'notice-view',
+       ready: function(){
+        //this._refreshdata();
+        setInterval(this._refreshdata.bind(this), 3*3600*1000);
+      },
+       properties:{
+         totaldata:{
+           type: Object,
+           notify:true,
+           readOnly:false,
+           value: function(){
+             return {data:[]};
+           },
+          // observer: '_ondatachanged',
+         },
+         realdata:{
+              type:Array,
+              //observer: '_reducedata'  ,
+              notify:true,
+              value:function (){
+                return [{title:"resp.title",link:"resp.link",pdate:"resp.pdate",author:"resp.author"}];
+              },
+         },
+
+       },
+       
+       _reducedata: function(){
+        
+            this.realdata=this._reducedatawithparam(this.realdata);
+       },
+       _reducedatawithparam: function(ary){
+         if(ary.length>15){
+            const tmp = [];
+            for(i=0;i<15;i++){
+              tmp.push(ary[i]);
+            }
+            return tmp;
+         }
+         else{
+           return ary;
+         }
+       },
+       _ondatachanged: function(){
+         alert("_ondatachanged");
+       },
+         handleResponse:function(data){
+        const resp = data.detail.response;
+        const rst = [];
+        
+        if(resp.iserror==false){
+          this.realdata = resp.data;
+          /*var dt = resp.data;
+          alert( JSON.stringify(dt));
+          for(i=0;i<15;i++){
+            var lst ={};
+             lst['title']=dt[i].title;
+             lst['link']=dt[i].link;
+             lst['date']=dt[i].pdate;
+             lst['author']=dt[i].author;
+            rst.push(lst);
+          }
+          alert( JSON.stringify(rst));
+          this.realdata=rst;*/
+        }
+        alert("rd: "+JSON.stringify(this.realdata));
+          
+       },
+       _refreshdata:function(){
+        
+        this.$.xhr.generateRequest();
+        
+       }
+    });
+  </script>
+</dom-module>

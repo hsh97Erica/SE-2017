@@ -111,7 +111,7 @@
              <paper-input value="{{tfld_id}}" label="아이디"></paper-input>
             </div>
              <div class="container flex-end-justified" style="margin-right: 15px">
-                <paper-input value="{{tfld_pw}}" label="비밀번호"></paper-input>
+                <paper-input value="{{tfld_pw}}" type="password" label="비밀번호"></paper-input>
              </div>
             <div class="container flex-end-justified" style="margin-right: 15px; margin-bottom: 10px">
                 <paper-button raised class="indigo" on-click="_callreq">로그인</paper-button>
@@ -121,7 +121,7 @@
         
         <div class="container flex-vertical" style="width: 100%" hidden="{{!logined}}">
          
-        <logined-view username=[[userid]] onlogout="dologout"></logined-view>
+        <logined-view username={{username}} userid=[[userid]] onlogout="dologout"></logined-view>
         </div>
     </div>
       
@@ -147,6 +147,13 @@
           ,
         },
         userid:{
+          type:String,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          value:'',
+        },
+         username:{
           type:String,
           notify:true,
           readOnly:false,
@@ -204,6 +211,7 @@
       dologout: function(){
         this.nologin=true;
         this.logined =this.logining= false;
+        this.fire("returnToHome");
         this.fire("memolistviewflush");
       },
       buildAjaxParams: function(){
@@ -221,8 +229,10 @@
         try{
           if(resp.logined){
             this._setlogined();
-            this.userid = this.tfld_id;
+            this.userid = resp.id;
+            this.username = resp.nickname;
             this.fire("memolistviewrefresh");
+            
           }
           else{
             //this.fire("memolistviewflush");

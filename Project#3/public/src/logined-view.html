@@ -14,6 +14,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/paper-userpicture/paper-userpicture.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+ <link rel="import" href="../bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+ <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <dom-module id="logined-view" attributes="onlogout">
   <template>
     <style include="shared-styles">
@@ -71,12 +75,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     background-color: #FFA000;
   }
 </style>
+<paper-dialog id="accdialog">
+  <h2>계정 정보 변경</h2>
+  <paper-dialog-scrollable>
+    <paper-input value="{{editacccurpw}}" type="password" label="*현재 비밀번호"></paper-input>
+    <paper-input value="{{editaccnewpw}}" type="password" label="새 비밀번호"></paper-input>
+    <paper-input value="{{editacccnickname}}" label="닉네임"></paper-input>
+     </paper-dialog-scrollable>
+  <div class="buttons">
+    <paper-button on-tap="editaccsave">Save</paper-button>
+    <paper-button dialog-dismiss>Close</paper-button>
+  </div>
+</paper-dialog>
 <div class="container flex-horizontal">
   <div> <paper-userpicture user-id="LLL" user-name="[[username]]" style="margin-right: [[mpaddingsz]]; margin-top: 10px"></paper-userpicture></div>
   <div class="flexchild">
     <div class="container flex-end-justified" style="height: 30px">
    <div><paper-button raised class="indigo" style="height: 80%;margin-top: 5px;margin-bottom: 5px;" on-click="dologout">로그아웃</paper-button></div>
-   <div><paper-icon-button icon="settings" style="width: 30px; height: 100%; "></paper-icon-button></div>
+   <div><paper-icon-button icon="settings" on-tap="showacceditwindow" style="width: 30px; height: 100%; "></paper-icon-button></div>
     </div>
     <center><div style="margin-top: [[mpaddingsz]];">[[username]]님</div></center>
     <div style="margin-left: 10%"><paper-button class="pink">내정보</paper-button></div>
@@ -91,6 +107,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         username:{
           type: String,
           value: 'unknown',
+          notify:true,
+          readOnly:false,
+          reflectToAttribute:true,
+        },
+        userid:{
+          type: String,
+          notify: true,
+          reflectToAttribute:true,
         },
         mpaddingsz:{
           type: String,
@@ -107,33 +131,95 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           value: false,
           notify: true,
            reflectToAttribute:true,
-           readyOnly:false
+           readOnly:false
         },
         nologin:{
           type:Boolean,
           value: true,
           notify: true,
            reflectToAttribute:true,
-           readyOnly:false
+           readOnly:false
         },
         logining:{
           type: Boolean,
           value: false,
           notify: true,
            reflectToAttribute:true,
-           readyOnly:false
+           readOnly:false
         },
+        editacccurpw:{
+          type:String,
+          notify:true,
+          readOnly:false,
+        },
+        editaccnewpw:{
+          type:String,
+          notify:true,
+          readOnly:false,
+        },
+        editacccnickname:{
+          type:String,
+          notify:true,
+          readOnly:false,
+        },
+
       },
       listeners: {
         'logout': 'dologout',
         'onlogout':'onlogout'
       },
+      _buildsaveurl: function(id){
+        return "/accountmgr/"+id+"/modify";
+      },
+      editaccsave: function(){
+        if(this.editacccurpw===undefined||this.editacccurpw.trim()===""){
+          alert("현재 비밀번호를 입력하세요");
+        }else{
+          const vcurpw =this.editacccurpw.trim() ;
+          const vnewpw =this.editaccnewpw.trim() ;
+          const vnn=this.editacccnickname.trim();
+           var ajx = document.createElement('iron-ajax');
+        ajx.handleAs='json';
+        ajx.contentType="application/json";
+        ajx.method='post';
+        var params = {currpw:vcurpw,newpw:vnewpw,nn:vnn};
+        ajx.body=params;
+        ajx.url = this._buildsaveurl( this.userid );
+        var req = ajx.generateRequest();
+        var self = this;
+        req.completes.then(function(respon) {
+          const numbereditem = [];
+          const resp = respon.response;
+          //const self = this;
+          if(resp.apply===true){
+            if(vnn.trim()!=""){
+              self.username = self.editacccnickname;
+            }
+            alert("정보 수정에 성공했습니다!");
+          }else{
+            alert("정보 저장에 실패했습니다.\n"+resp.apply);
+          }
+        });
+        }
+      },
+      showacceditwindow: function(){
+        this.editacccnickname = this.username;
+        this.editacccurpw = this.editaccnewpw= "";
+        this.$.accdialog.open();
 
+      },
       dologout: function(){
+        var ajx = document.createElement('iron-ajax');
+        ajx.handleAs='json';
+        ajx.method='delete';
+        ajx.url = '/dologin.json';
+        ajx.generateRequest();
       // this.onlogout();
       //this.fire('logout');
        //this.nologin=true;this.logining=this.logined=false;
+       
        this.fire('childlogout');
+
       }
     });
   </script>
