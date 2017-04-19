@@ -81,7 +81,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-search-bar
 				query={{filterText}}
 				placeholder="메모 검색"
-        hide-filter-button=false
+        hide-filter-button=true
 				>
 			</paper-search-bar>
        </div>
@@ -93,7 +93,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
            
             <iron-list id="memo_list" style="height: 320px"  items="{{getDataWithCategory}}" >
               <template>
-                <memo-list-category-view  userid={{userid}} filterText={{filterText}} curbn={{curbn}} headerstr="[[item.header]]" data="[[item.rdata]]" ></memo-list-category-view>
+                <memo-list-category-view  userid={{userid}} fltText=[[filterText]] curbn={{curbn}} headerstr="[[item.header]]" data="[[item.rdata]]" ></memo-list-category-view>
                 <!--
                 <div>
                   
@@ -142,7 +142,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         type: String,
           value: '',
           reflectToAttribute: true,
-       // observer: 'refreshFilter'  ,
+        observer: 'refreshFilter'  ,
           notify:true,   
           readOnly:false,     
         },
@@ -168,6 +168,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           return ary;
         },
         readOnly:true,
+      },
+      getOriginalDataWithCategory:{
+         type: Object,
+        readOnly: false,
+        notify:true,
+         value: function(){
+          return this._getDataWithCategory();},
       },
       getDataWithCategory:{
         type: Object,
@@ -222,15 +229,57 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var nonlst = [];
       var dd= this._buildDataWithCategory(nonlst,this._getLocalMemoDataList());
       this.set('getDataWithCategory',dd);
+      this.set('getOriginalDataWithCategory',dd);
     },
     _querylist: function(){
      // alert("call _querylist");
       this.$.xhr.generateRequest();
     },
+    _isnull:function(val){
+      if(val===undefined || val===null||val==null)return true;
+      return false;
+    },
+    _innerFilter: function(data){
+     // alert("start filter");
+      var memodata = data[0].rdata;
+      var localdata = data[1].rdata;
+      var newmemodata=[];
+      var newlocaldata = [];
+      var flttxt = this.filterText;
+      var re = new RegExp(flttxt,"gi");
+      for(i=0;i<memodata.length;i++){
+        var type1 = memodata[i].title.match(re);
+        var type2 =memodata[i].md.match(re);
+        if((!(this._isnull(type1))&&type1.length>0)||(!(this._isnull(type2))&&type2.length>0)){
+          newmemodata.push(memodata[i]);
+        }
+      }
+      for(i=0;i<localdata.length;i++){
+        var type1 = localdata[i].title.test(re);
+        var type2 = localdata[i].md.test(re);
+        if((!(this._isnull(type1))&&type1.length>0)||(!(this._isnull(type2))&&type2.length>0)){
+          newlocaldata.push(localdata[i]);
+        }
+      } 
+      var rst = this._buildDataWithCategory(newmemodata,newlocaldata);
+      //alert("work filter");
+      return rst;
+    },
      refreshFilter: function() {
-       alert(this.filterText);
-        //this.$.memo_list.fire('iron-resize');
-        //this.$.memo_list.
+       //alert("rff");
+       if(this.filterText!=undefined){
+         if(this.filterText.trim()===""){
+           this.set('getDataWithCategory',this.getOriginalDataWithCategory);
+         //this.getDataWithCategory =  this.getOriginalDataWithCategory;
+        }else{
+          var filtereddata = this._innerFilter( this.getOriginalDataWithCategory );
+          this.set('getDataWithCategory',filtereddata);
+          //this.getDataWithCategory = this._innerFilter( this.getDataWithCategory );
+         } 
+       }
+       else{
+         this.set('getDataWithCategory',this.getOriginalDataWithCategory);
+       }
       },
     _scrollHandler: function() {
       this._setXScrollTop(this._scrollTop);
@@ -247,8 +296,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
         
        var dd= this._responseDataWithCategory(rst);
-       
+       this.set('getOriginalDataWithCategory',dd);
         this.set('getDataWithCategory',dd);
+        this.filterText="";
        },
 
     });

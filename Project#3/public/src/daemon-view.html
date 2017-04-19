@@ -114,6 +114,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           value: function(){
             return ['unknown'];
           }
+        },
+        naverranktraversal:{
+          type:Object,
+          value: undefined,
+
         }
       },
       _getNaverRankData: function(){
@@ -124,6 +129,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var req = ajx.generateRequest();
         var self = this;
         req.completes.then(function(res) {
+          if(self.naverranktraversal!=undefined){
+              clearInterval(self.naverranktraversal);
+              self.naverranktraversal=undefined;
+              //alert("clear work");
+          }
           const numbereditem = [];
           const resp = res.response;
           for(i=0;i<resp.length;i++){
@@ -134,8 +144,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           self.naverrankes = numbereditem;
           //this._showNextNaverRank();
           //alert(self.naverrankes[0]);
+          self.naverranktraversal=setInterval(self._showNextNaverRank.bind(self),3*1000);  
           
-          setInterval(self._showNextNaverRank.bind(self),3*1000);  
         self.$.rn.moveToFirst();
       });
         

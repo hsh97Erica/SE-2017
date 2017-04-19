@@ -33,18 +33,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 </style>
    <memo-list-category-header category_title="[[headerstr]]"></memo-list-category-header>
-   <template id="dat_lst" is="dom-repeat" items="[[data]]" filter="filterRoom">
+   <template id="dat_lst" is="dom-repeat" items="[[data]]" filter="filterRoom2">
      <div> <memo-list-item class="item" userid={{userid}} curbn={{curbn}} value="[[item.value]]" boardnumber=[[item.boardnumber]] title="[[item.title]]" summary="[[item.md]]"></memo-list-item></div>
      <!-- title="[[item.title]]" summary="[[item.md]]"-->
    </template>
   </template>
 
   <script>
-     HTMLImports.whenReady(function() {
+    // HTMLImports.whenReady(function() {
     Polymer({
       is: 'memo-list-category-view',
       ready: function(){
-        this.filterText = "as";
+        // this.addEventListener('recvfiltertext',this._querylist);
+       
+        //this.filterText = "as";
+        //this.addEventListener('changefiltertext',this._querylist);
       },
       properties:{
         headerstr:{
@@ -76,12 +79,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             return rst;
         },
         },
-        filterText: {
+        fltText: {
           value: '',
-        observer: 'refreshFilter2' ,
-        readOnly:false,
+          readOnly:true,
+          notify:true,
           reflectToAttribute: true,
-          notify:true,         
+
+       // observer: 'refreshFilter2' ,
         }
       },
       filterRoom: function(filt) {
@@ -95,15 +99,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
    },
    filterRoom2: function(item) {
         
-        return item.title.includes(this.filterText)||item.md.includes(this.filterText);//(item.title.match(new RegExp(this.filterText, '*')))||(item.md.match(new RegExp(this.filterText, '*'+this.filterText+"*")));
+        return item.title.includes(this.fltText)||item.md.includes(this.fltText);//(item.title.match(new RegExp(this.filterText, '*')))||(item.md.match(new RegExp(this.filterText, '*'+this.filterText+"*")));
    },
-     
+     recvfiltertext: function(e, detail, sender) {
+      alert("onrecv: "+detail.ftext);
+     },
       refreshFilter2: function() {
+        alert(this.fltText);
        // alert(this.filterText);
         //this.$.dat_lst.filter();
       },
       
     });
-    });
+   // });
   </script>
 </dom-module>

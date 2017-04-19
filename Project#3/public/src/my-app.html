@@ -127,9 +127,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-toolbar>
             <paper-icon-button icon="my-icons:menu" drawer-toggle></paper-icon-button>
             <div main-title>[[pagetitle]]</div>
-            <paper-icon-button icon="settings" on-click="_showdlg"></paper-icon-button>
-            <paper-icon-button icon="add" on-click="_addnewmemo">+</paper-icon-button>
             
+            <paper-icon-button icon="add" on-click="_addnewmemo">+</paper-icon-button>
+            <paper-icon-button icon="icons:home" on-click="_gohome"></paper-icon-button>
+            <paper-icon-button icon="settings" on-click="_showdlg"></paper-icon-button>
           </app-toolbar>
         </app-header>
 
@@ -273,6 +274,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        //this.editoreditmode=0;
         this.$.mlview.fire("refreshOnlineList");
         
+      },
+      _gohome:function(){
+        this._onreturntohome();
       },
       _setcurrentboardnumber: function(bn){
        // alert("call _setcurrentboardnumber");

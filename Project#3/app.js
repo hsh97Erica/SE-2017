@@ -20,6 +20,13 @@ var connection = mysql.createPool({
   password : '',
   database: 'logindb'
 });
+var checkinjectionquery = function(qry){
+  if(qry.includes("'")||qry.includes("'")||qry.includes("/**/")||qry.includes("#")||qry.includes(",")||(qry.includes("/*")&&qry.includes("*/"))){
+    return true;
+  }else{
+    return false;
+  }
+};
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -192,8 +199,8 @@ app.get("/addons/universitynotice.json",function(req,res){
         const lst = [];
         console.log(parsed.feed.title);
         parsed.feed.entries.forEach(function(entry) {
-          var mlink = rst.link_host+(entry.link).substring(1);
-          if(lst.length<=15){
+          var mlink = rst.link_host+(entry.link);
+          if(lst.length<=30){
           lst.push({title:entry.title,link:mlink,pdate:entry.pubDate,author:entry.author});
         }
         else{
