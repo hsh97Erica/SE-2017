@@ -1,10 +1,10 @@
 # SE-2017
 
-##Sample
+## Sample
 ![sample1](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/sample1.png)
 ![sample2](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/sample2.png)
 
-##ref
+## ref
     [polymer 1.0](https://www.polymer-project.org/1.0/docs/devguide/feature-overview)
     [webcomponents](https://www.webcomponents.org)
     [node.js](https://nodejs.org/ko/)
