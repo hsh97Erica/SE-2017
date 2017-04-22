@@ -1,0 +1,164 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<dom-module id="add-account-form">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+    <style>
+  paper-input {
+    max-width: 400px;
+    margin: auto;
+  }
+  iron-icon, div[suffix] {
+    color: hsl(0, 0%, 50%);
+    margin-right: 12px;
+  }
+</style>
+<script src="../bower_components/js-base64/base64.js"></script>
+ <iron-ajax  id="signupxhr" url="" handle-as="json" on-response="handleResponse"></iron-ajax>
+ <iron-ajax  id="dupchk" handle-as="json" on-response="handleDupResponse"></iron-ajax>
+    <paper-input label="아이디" value="{{tfld_id}}" auto-validate pattern="[a-zA-Z0-9]*" error-message="영어와 문자만 가능합니다!"></paper-input>
+    <paper-button raised  on-click="_dodupchk">ID 중복체크</paper-button>
+    <paper-input value="{{tfld_pw}}" type="password" label="비밀번호"></paper-input>
+    <paper-input label="별명" value="{{tfld_nn}}"  ></paper-input>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'add-account-form',
+      properties: {
+        tfld_id:{
+          type:String,
+          notify:true,
+          readOnly:false,
+          observer:'on_change_id_flt',
+        },
+        tfld_pw:{
+          type:String,
+          notify:true,
+          readOnly:false,
+        },
+        tfld_nn:{
+          type:String,
+          notify:true,
+          readOnly:false,
+        },
+        id_err_msg:{
+          type:String,
+          notify:true,
+          readOnly:false,
+          value: '영어와 문자만 가능합니다!',
+        },
+        checkid_dup:{
+          type:Boolean,
+          value:false,
+        }
+      },
+      restore_err_msg:function(){
+        this.id_err_msg = '영어와 문자만 가능합니다!';
+      },
+      on_change_id_flt:function(){
+        this.checkid_dup=false;
+      },
+      _builddupurl: function(id){
+        return "/accountmgr/"+id+"/duplicationcheck";
+      },
+      _buildsignupurl: function(id){
+        return "/accountmgr/"+id+"/addnewuser";
+      },
+      submit:function(){
+        this._dosubmit();
+      },
+      _dosubmit:function(){
+        var id = this.tfld_id;
+        var pw = this.tfld_pw;
+        if((id===undefined||(id!=undefined && id.trim()=="")|| ! this.checkid_dup)&&(pw===undefined||(pw!=undefined && pw.trim()==""))){
+          alert("아이디 혹은 비밀번호를 제대로 입력하시거나 중복체크를 다시 해주세요.");
+          return;
+        }
+        else{
+        if(id===undefined||(id!=undefined && id.trim()=="")||! this.checkid_dup){
+          alert("아이디를 제대로 입력하시거나 중복체크를 다시해주세요.");
+          return;
+        }
+        if(pw===undefined||(pw!=undefined && pw.trim()=="")){
+          alert("비밀번호를 입력해주세요");
+          return;
+        }
+      }
+        var nn = ( this.tfld_nn===undefined)|| (this.tfld_nn!=undefined && this.tfld_nn.trim()=="") ? this.tfld_id:this.tfld_nn;
+        if(this.checkid_dup){
+          //alert("pass condiition");
+           var ajx = this.$.signupxhr;ajx.url = this._buildsignupurl( this.tfld_id.trim() );
+          ajx.contentType="application/json";
+        ajx.method='post';
+        var vnn = Base64.encode(nn);
+        var vpw = Base64.encode(pw);
+        var params = {newpw:vpw,nickn:vnn};
+        ajx.body=params;
+        ajx.generateRequest();
+      }
+      else{
+        alert("중복 체크를 해주세요.");
+      }
+      },
+      _dodupchk:function(){
+        if(this.tfld_id.trim()!=""){
+        var ajx = this.$.dupchk;
+        ajx.url = this._builddupurl( this.tfld_id.trim() );
+        ajx.generateRequest();
+        }else{
+          alert("아이디를 입력해주세요");
+        }
+      },
+       handleResponse:function(data){
+        const resp = data.detail.response;
+        if(resp.apply!=undefined && resp.apply==true){
+          alert(this.tfld_nn + "님 회원가입이 완료되었습니다.\n회원가입후 자동로그인은 아직 구현되지 않았으니 창을닫고 수동으로 로그인해주세요.");
+        }else{
+          alert("회원가입에 실패했습니다.");
+        }
+       },
+       handleDupResponse:function(data){
+        const resp = data.detail.response;
+        if(resp.state!=undefined&&resp.state==false){
+          alert("사용 가능한 ID입니다.");
+         this.checkid_dup=true;
+        }
+        else if(resp.state!=undefined&&resp.state==true){
+           this.set_duplication_id_msg();
+          this.checkid_dup=false;
+        }
+        else{ 
+          this.checkid_dup=false;
+        }
+       },
+      set_duplication_id_msg:function(){
+        alert("입력하신 아이디가 이미 존재합니다");
+        //this.id_err_msg = "입력하신 아이디가 이미 존재합니다."
+       // setTimeout(this.restore_err_msg.bind(this),1000);
+      },
+
+    });
+  </script>
+</dom-module>

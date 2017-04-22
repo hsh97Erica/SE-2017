@@ -10,6 +10,7 @@
 <link rel="import" href="../bower_components/fs-person-card/fs-person-card.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="./logined-view.html">
+<link rel="import" href="../bower_components/js-base64/base64_polymer_import.html">
 <dom-module id="login-view" >
   <template>
     <style include="shared-styles">
@@ -86,6 +87,8 @@
     color: white;
   }
 </style>
+
+<script src="../bower_components/js-base64/base64.js"></script>
     <paper-card style="width:100%">
     
       <iron-ajax auto id="xhr" url="/dologin.json" handle-as="json" on-response="handleResponse"></iron-ajax>
@@ -114,6 +117,7 @@
                 <paper-input value="{{tfld_pw}}" type="password" label="비밀번호"></paper-input>
              </div>
             <div class="container flex-end-justified" style="margin-right: 15px; margin-bottom: 10px">
+              <paper-button raised class="indigo" on-click="_dosignup">회원가입</paper-button>
                 <paper-button raised class="indigo" on-click="_callreq">로그인</paper-button>
             </div>
         </div>
@@ -188,9 +192,12 @@
           type:String,
           notify:true,
           value:''
-        }
+        },
+       
       },
-     
+     _dosignup:function(){
+      this.fire("show_signup_dlg");
+     },
       _callreq: function(){
         this._setlogining();
         this.$.xhr.params=this.buildAjaxParams();
@@ -217,10 +224,13 @@
       buildAjaxParams: function(){
         var id = this.tfld_id;
         var pw = this.tfld_pw;
+        var enid = Base64.encode(id);
+        var enpw = Base64.encode(pw);
+        alert("")
         return (
           {
-            "id":id,
-            "pw":pw
+            "id": enid,
+            "pw": enpw
           }
         );
       },

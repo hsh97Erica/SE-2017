@@ -35,6 +35,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="./login-view.html"/>
 <link rel="import" href="./memo-list-view.html"/>
 <link rel="import" href="./edit-view.html"/>
+<link rel="import" href="./add-account-form.html"/>
 <dom-module id="my-app">
   <template>
     <style>
@@ -96,7 +97,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-button dialog-dismiss>Close & Save</paper-button>
   </div>
 </paper-dialog>
-
+<paper-dialog id="signupdialog">
+  <h2><iron-icon style="margin-right: 5px"></iron-icon>회원가입</h2>
+  <paper-dialog-scrollable>
+    <add-account-form id="signupformview"></add-account-form>
+     </paper-dialog-scrollable>
+  <div class="buttons">
+    <paper-button on-click="_submitsignup">제출</paper-button>
+    <paper-button dialog-dismiss>Close</paper-button>
+  </div>
+</paper-dialog>
     <app-drawer-layout fullbleed>
       <!-- Drawer content -->
       <app-drawer id="drawer">
@@ -190,6 +200,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           readOnly:false,
           value:0,
         },
+        
         pagetitle:{
           type:String,
           readOnly:true,
@@ -211,6 +222,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this.addEventListener('changemode_edit',this._changeeditmodeedit);
         this.addEventListener('changemode_view',this._changeeditmodeview);
         this.addEventListener("returnToHome",this._onreturntohome);
+        this.addEventListener("show_signup_dlg",this._showsignupdlg);
       },
       _routePageChanged: function(page) {
         this.page = page || 'daemonview';
@@ -289,6 +301,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       _showdlg:function(){
         this.$.dialog.open();
+      },
+      _submitsignup:function(){
+        this.$$("#signupformview").submit();
+      },
+      _showsignupdlg:function(){
+        this.$.signupdialog.open();
       },
     });
   </script>

@@ -61,6 +61,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     --polymer-quill-editor-min-height: 100px;
   }
 </style>
+<script src="../bower_components/js-base64/base64.js"></script>
 <paper-card style="width:100%; height:auto;">
    <iron-ajax id="xhr" url="/[[userid]]/querydata.json" handle-as="json" on-response="handleResponse"></iron-ajax>
      <center style="width:99%"><paper-input style="width:100%" value="{{title}}" id="titleinput" label="제목"></paper-input></center>
@@ -130,9 +131,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      },
      handleResponse:function(data){
         const resp = data.detail.response;
-        alert(JSON.stringify(resp));
-        this.contentdata = resp.data[0].memodata;
-        this.title = resp.data[0].title;
+        if(resp!=undefined&& resp.list_count>0){
+       // alert(JSON.stringify(resp));
+        this.contentdata = Base64.decode( Base64.decode(resp.data[0].memodata));
+        this.title =  Base64.decode(resp.data[0].title);
+        }
         //alert("contentdata: "+this.contentdata);
         //this.$.wysiwygE.value=this.contentdata;
       },
@@ -171,8 +174,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       _save:function(){
         alert("call _save");
        var pid = this.boardnumber;
-       var htmlvalue = this.$.wysiwygE.value;
-       var mtitle = this.title;
+       var htmlvalue = Base64.encode(Base64.encode(Base64.encode( this.$.wysiwygE.value)));
+       var mtitle = Base64.encode(this.title);
        var params = {postid:pid,boardpw:'',mdt:htmlvalue,title:mtitle};
        this.$.xhrpost.body=params;
 

@@ -13,6 +13,7 @@ var cheerio = require('cheerio');
 var requestlib = require('request');
 var rssparser = require('rss-parser');
 var mysql      = require('mysql');
+var base64 =  require('js-base64').Base64;
 var connection = mysql.createPool({
   connectionLimit : 10,
   host     : 'localhost',
@@ -21,7 +22,8 @@ var connection = mysql.createPool({
   database: 'logindb'
 });
 var checkinjectionquery = function(qry){
-  if(qry.includes("'")||qry.includes("'")||qry.includes("/**/")||qry.includes("#")||qry.includes(",")||(qry.includes("/*")&&qry.includes("*/"))){
+  if(qry.includes("'")||qry.includes("'")||qry.includes(";")||qry.includes("/**/")||qry.includes("#")||qry.includes(",")||(qry.includes("/*")&&qry.includes("*/"))){
+    console.log("[injection query found] base64ed qry: '"+base64.encode(qry)+"'");
     return true;
   }else{
     return false;
@@ -127,17 +129,88 @@ app.post("/accountmgr/:id/modify",function(req,res){
   }
 });
 app.post("/accountmgr/:id/addnewuser",function(req,res){
-  const mid = request.params.id;
-  const currpw = request.body.currpw;
-  const newpw = request.body.newpw;
-  const nn = request.body.nn;
+  const mid = req.params.id;
+  const newpw = base64.decode( req.body.newpw );
+  const nn = base64.decode(req.body.nickn);
+  console.log("param pass");
+  console.log("==="+mid+"\n"+newpw+"\n"+nn+"\n===");
+  if(checkinjectionquery(mid)||checkinjectionquery(newpw)||checkinjectionquery(nn)){
+    res.json({apply:false});
+    return;
+  }
+  else{
 
+    connection.getConnection(function(err,conn){
+      if(err){
+        res.json({apply:false});
+        throw err;
+      }
+      conn.query("select count(id) as cnt from accountlist where id='"+mid+"';",function(err, rows, fields){
+        if(err){
+          res.json({apply:false});
+          throw err;
+        }
+        console.log("count sel");
+        if(rows[0].cnt==0){
+          conn.changeUser({user : 'logineduser',password:'logineduser123',database:'logindb'}, function(err) {
+            if(err){
+              res.json({apply:false});
+              throw err;
+            }
+            var qryy = "insert into accountlist(accesslevel,id,pw) values(3,'"+mid+"','"+newpw+"');";
+            conn.query(qryy,function(err,rows,fields){
+              if(err){
+                res.json({apply:false});
+                throw err;
+              }
+              conn.commit(function(err){
+                if(err){
+                  res.json({apply:false});
+                  throw err;
+                }
+                var qry2 = "insert into user_info(id,nickname) values('"+mid+"','"+nn+"');";
+                conn.query(qry2,function(err,rows,fields){
+                  if(err){
+                    res.json({apply:false});
+                    throw err;
+                  }
+                  conn.commit(function(err){
+                    if(err){
+                      res.json({apply:false});
+                      throw err;
+                    }
+                    res.json({apply:true});
+                  });
+                });
+              });
+            });
+          });
+        }else{
+          res.json({apply:false});
+          throw err;
+        }
+      });
+    });
+  }
 });
-app.post("/accountmgr/:id/duplicationcheck",function(req,res){
-  const mid = request.params.id;
-  const currpw = request.body.currpw;
-  const newpw = request.body.newpw;
-  const nn = request.body.nn;
+app.get("/accountmgr/:id/duplicationcheck",function(req,res){
+  const mid = req.params.id;
+  console.log("dup chkid: "+mid);
+  if(!checkinjectionquery(mid)){
+  connection.query("select count(id) as cnt from accountlist where id='"+mid+"';",function(err, rows, fields){
+    if(err){
+      res.json({state:true});
+      throw err;
+    }
+    if(rows[0].cnt>0){
+      res.json({state:true});
+    }else{
+      res.json({state:false});
+    }
+  });
+  }else{
+    res.json({state:true});
+  }
 
 });
 app.get("/addons/naverrank.json",function(req,res){
@@ -239,10 +312,11 @@ connection.query('SELECT * from availableloginlist;', function(err, rows, fields
   if (err) {response.json({logined:false});throw err;}
   //if(err)return;
   const rst = {};
-     tmpid = request.session.uid===undefined?  request.query.id:request.session.uid;
-     tmppw = request.session.uid===undefined? request.query.pw:request.session.upw;
+  console.log(request.query.id+"\n"+request.query.pw);
+     tmpid = request.session.uid===undefined?  base64.decode(request.query.id):request.session.uid;
+     tmppw = request.session.uid===undefined? base64.decode(request.query.pw):request.session.upw;
 loop = false;
-
+console.log(tmpid+"\n"+tmppw);
   for(i=0;i<rows.length;i++){
     const chkid = tmpid;
     const pw = tmppw;
@@ -419,8 +493,8 @@ app.post("/memotransac/:id/mtut.json",function(request,response){
  //console.log("!"+JSON.stringify(JSON.parse(request.body))+"!");
   const bpw = request.body.boardpw;
   const pid = request.body.postid;
-  const memodata = request.body.mdt;
-  const title = request.body.title;
+  const memodata = base64.decode(base64.decode(base64.decode(request.body.mdt)));
+  const title = base64.decode(request.body.title);
   console.log("header method: "+method);
    rst = {};
     connection.getConnection(function(err,conn){
@@ -560,10 +634,11 @@ conn.query("select boardnumber,title,memodata,modify_date as md from memoview wh
     console.log("select pass and len="+rows.length);
     if(rows.length==0){
       rst["resp"] = 'data query is succeed ,but no data';
-      response.json(rst)
+      response.json(rst);
     }else{
     for(i=0;i<rows.length;i++){
-      rows[i]["memodata"]=rows[i]["memodata"].toString();
+      rows[i]["memodata"]=base64.encode(base64.encode(rows[i]["memodata"].toString()));
+      rows[i]["title"]=base64.encode(rows[i]["title"]);
         rst["data"].push(rows[i]);
       //response.json(rows[i]);
       break;

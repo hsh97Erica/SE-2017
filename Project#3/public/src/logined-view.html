@@ -83,6 +83,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-input value="{{editacccnickname}}" label="닉네임"></paper-input>
      </paper-dialog-scrollable>
   <div class="buttons">
+    <!--
+    <paper-button on-tap="editaccrm">탈퇴</paper-button>
+    -->
     <paper-button on-tap="editaccsave">Save</paper-button>
     <paper-button dialog-dismiss>Close</paper-button>
   </div>
@@ -170,6 +173,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       _buildsaveurl: function(id){
         return "/accountmgr/"+id+"/modify";
+      },
+      editaccrm:function(){
+        this.fire('childlogout');
       },
       editaccsave: function(){
         if(this.editacccurpw===undefined||this.editacccurpw.trim()===""){

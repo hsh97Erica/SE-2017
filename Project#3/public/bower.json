@@ -38,7 +38,8 @@
     "paper-dialog": "PolymerElements/paper-dialog#^1.1.0",
     "paper-search": "Collaborne/paper-search#^1.2.3",
     "neon-text-board": "Collaborne/neon-text-board#^1.0.4",
-    "iron-data-table": "Saulis/iron-data-table#^1.0.6"
+    "iron-data-table": "Saulis/iron-data-table#^1.0.6",
+    "js-base64": "dankogai/js-base64#^2.1.9"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
