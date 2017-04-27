@@ -16,16 +16,21 @@ Custom property | Description | Default
 @demo demo/index.html
 @hero digital-clock.png
 -->
-
+<style type="text/css">
+   @font-face { font-family: "myfnt"; 
+       font-style: normal;
+       src: url('SubwayTicker.otf');
+        src: url('SubwayTicker.ttf') format("truetype"), url('SubwayTicker.eot') format('embedded-opentype'),url('SubwayTicker.svg') format('svg');
+        }
+         h1 {
+  font-family: myFirstFont;
+  font-size: 300%;
+  }
+  </style>
 <dom-module id="digital-clock">
   <template>
     <style>
-       @font-face { font-family: 'Delicious'; 
-       font-style: normal;
-       src: url('./SubwayTicker.ttf');
-       src:url('./SubwayTicker.otf');
-       src:url('./SubwayTicker.eot');
-        } 
+      
       :host {
         display: flex;
         height: 140px;
@@ -36,12 +41,13 @@ Custom property | Description | Default
         box-sizing: border-box;
       }
       .time {
-        font-family:'Delicious' !important;
-        font-weight: bold;
+        font-family: myfnt !important;
+        /*font-weight: bold;*/
         color: white;
         white-space: nowrap;
       }
       .date {
+        font-family: myfnt !important;
         font-size: var(--digital-clock-date-size, 30%);;
         text-align: center;
         color: white;
