@@ -1,8 +1,34 @@
-# SE-2017
+# SE-2017(2017CSE2019) 오픈소스개발
 
+## Project#3 2016004011
+***
 ## Sample
 ![sample1](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/sample1.png)
 ![sample2](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/sample2.png)
+
+
+### **구현한 기능**
+* 노트 쓰기 및 저장
+* 저장한 노트 수정하고 저장하기
+* 저장한 노트 삭제하기
+* 저장한 노트 불러오기
+* 저장한 노트의 제목을 추가
+* 저장한 노트 목록 필터링(검색어가 포함된 메모를 검색)
+* 대문창 동적인 배경화면 추가(with WebGL)
+* 현재시간
+* 로그인
+* 회원가입
+* 회원 정보 변경(현재 비밀번호, 닉네임)
+* 현재 시간 폰트변경
+* 현재 시간 배경추가
+* 네이버 실시간 검색어 파싱
+* 한양대(portal rss) 공지사항 파싱
+* 날씨 추가
+* (로그인없는)로컬 메모장 구현 - 예정
+* base64로 임시 통신 암호화
+* 로그아웃
+* 메모 에디터에서 동영상추가(url) - 예정
+* 메모 에디터에서 사진추가(with base64) - 예정
 
 ## ref
     [polymer 1.0](https://www.polymer-project.org/1.0/docs/devguide/feature-overview)
