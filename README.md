@@ -1,11 +1,15 @@
 # SE-2017(2017CSE2019) 오픈소스개발
 
-## Project#3 2016004011
+## Project#3 2016004011 with MySQL
 ***
 ## Sample
 ![sample1](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/sample1.png)
 ![sample2](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/sample2.png)
-
+![s3](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.51.22.png)
+![s4](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.51.55.png)
+![s5](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.52.21.png)
+![s6](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.52.57.png)
+![s7](https://github.com/hsh97Erica/SE-2017/blob/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.53.12.png)
 
 ### **구현한 기능**
 * 새로운 노트 쓰기 및 저장
