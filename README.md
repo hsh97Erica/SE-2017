@@ -50,6 +50,9 @@
 * 학사 공지사항의 제목을 클릭시 해당하는 공지사항을 볼 수 있도록 함
 * 폴리머로 로그인 창을 제작함
 * 타이틀바 사용자가 원하는 색상으로 변경하도록 함
+* 일렉트론앱 적용
+* 필터링가능하고 목록을 카테고리별로 구별할수있는 리스트뷰를 라이브러리를 조합해 제작
+* 메모목록에서 저장소별로 메모를 구분 지을 수 있도록 카테고리 구분자를 카테고리명에 따라 쓸 수 있도록 라이브러리를 조합해 또다른 임시 라이브러리를 제작함
 ## ref
     [polymer 1.0](https://www.polymer-project.org/1.0/docs/devguide/feature-overview)
     [webcomponents](https://www.webcomponents.org)
