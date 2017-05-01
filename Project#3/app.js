@@ -8,12 +8,13 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var session = require('express-session');
-var app = express();
+var noteapp = express();
 var cheerio = require('cheerio');
 var requestlib = require('request');
 var rssparser = require('rss-parser');
 var mysql      = require('mysql');
 var base64 =  require('js-base64').Base64;
+var aes256 = require('nodejs-aes256');
 var connection = mysql.createPool({
   connectionLimit : 10,
   host     : 'localhost',
@@ -22,7 +23,7 @@ var connection = mysql.createPool({
   database: 'logindb'
 });
 var checkinjectionquery = function(qry){
-  if(qry.includes("'")||qry.includes("'")||qry.includes(";")||qry.includes("/**/")||qry.includes("#")||qry.includes(",")||(qry.includes("/*")&&qry.includes("*/"))){
+  if(qry.includes('"')||qry.includes("'")||qry.includes(";")||qry.includes("/**/")||qry.includes("#")||qry.includes(",")||(qry.includes("/*")&&qry.includes("*/"))){//원시적 injection 방어
     console.log("[injection query found] base64ed qry: '"+base64.encode(qry)+"'");
     return true;
   }else{
@@ -30,30 +31,31 @@ var checkinjectionquery = function(qry){
   }
 };
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-app.use(session({
+noteapp.set('views', path.join(__dirname, 'views'));
+noteapp.set('view engine', 'jade');
+noteapp.use(session({
   resave:false,
   secret: '#$%^&!@memoapp&*()',
   saveUninitialized:true,
   //cookie: { secure: false }
 }));
+var chgusrinfo = {user : 'logineduser',password:'logineduser123',database:'memodb'};
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//noteapp.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+noteapp.use(logger('dev'));
+noteapp.use(bodyParser.json());
+noteapp.use(bodyParser.urlencoded({ extended: false }));
+noteapp.use(cookieParser());
+noteapp.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/edv', express.static(__dirname + '/'));
-app.use('/view1', express.static(__dirname + '/'));
-app.use('/view2', express.static(__dirname + '/'));
-app.use('/view3', express.static(__dirname + '/'));
-app.use('/daemonview', express.static(__dirname + '/'));
-app.use('/users', users);
-app.post("/accountmgr/:id/modify",function(req,res){
+noteapp.use('/', index);
+noteapp.use('/edv', express.static(__dirname + '/'));
+noteapp.use('/view1', express.static(__dirname + '/'));
+noteapp.use('/view2', express.static(__dirname + '/'));
+noteapp.use('/view3', express.static(__dirname + '/'));
+noteapp.use('/daemonview', express.static(__dirname + '/'));
+noteapp.use('/users', users);
+noteapp.post("/accountmgr/:id/modify",function(req,res){
   const mid = req.params.id;
   console.log(JSON.stringify(req.body));
   const currpw = req.body.currpw;
@@ -128,7 +130,7 @@ app.post("/accountmgr/:id/modify",function(req,res){
     });
   }
 });
-app.post("/accountmgr/:id/addnewuser",function(req,res){
+noteapp.post("/accountmgr/:id/addnewuser",function(req,res){
   const mid = req.params.id;
   const newpw = base64.decode( req.body.newpw );
   const nn = base64.decode(req.body.nickn);
@@ -193,7 +195,7 @@ app.post("/accountmgr/:id/addnewuser",function(req,res){
     });
   }
 });
-app.get("/accountmgr/:id/duplicationcheck",function(req,res){
+noteapp.get("/accountmgr/:id/duplicationcheck",function(req,res){
   const mid = req.params.id;
   console.log("dup chkid: "+mid);
   if(!checkinjectionquery(mid)){
@@ -213,7 +215,7 @@ app.get("/accountmgr/:id/duplicationcheck",function(req,res){
   }
 
 });
-app.get("/addons/naverrank.json",function(req,res){
+noteapp.get("/addons/naverrank.json",function(req,res){
   var url = "https://m.naver.com/";
   requestlib(url, function(error, response, html){  
     if (error) {res.json({value:"error"});throw error};
@@ -222,7 +224,7 @@ app.get("/addons/naverrank.json",function(req,res){
     const rst = [];
     $('script').each(function(){
         var hc = $(this).html();
-        if(hc.includes("oRTK :")){
+        if(hc.includes("oRTK :")&&hc.includes("oHTP :")&&hc.indexOf("oRTK :")<hc.indexOf("oHTP :")){
             var newdtstr = hc.substring(hc.indexOf("oRTK :")+"oRTK :".length,hc.indexOf("oHTP :")-2).trim();
             var jsonobj = JSON.parse(newdtstr);
             var ranklst = jsonobj.d;
@@ -236,7 +238,8 @@ app.get("/addons/naverrank.json",function(req,res){
       res.json(rst);//{orderedlist:rst});
 });
 });
-app.get("/addons/universitynotice.json",function(req,res){
+
+noteapp.get("/addons/universitynotice.json",function(req,res){
    var forceerr = false;
     if(forceerr){
       var rst = {};
@@ -286,7 +289,43 @@ app.get("/addons/universitynotice.json",function(req,res){
     }
 });
 });
-app.delete("/dologin.json",function(req,res){
+noteapp.post("/:id/articles/pwdchk.json",function(req,res){
+  console.log("acces");
+  var mid = req.params.id;
+  console.log("access /"+mid+"/articles/pwdchk.json");
+  var mpw = req.body.artpw===undefined?req.body.artpw : base64.decode(req.body.artpw);
+  var artid = Number(req.body.artid) ^ 12343210;
+  var sess = req.session;
+  if(mpw===undefined||mpw==""||mpw===""||mpw==null||sess.uid ===undefined || sess.upw ===undefined
+  ||checkinjectionquery(mpw)||checkinjectionquery(mid)
+  ){//password가 없거나 로그인이 안된경우
+    res.json({cor:false});
+  }else{
+    connection.getConnection(function(err,conn){
+      if(err){res.json({cor:false});throw err;}
+      conn.changeUser(chgusrinfo,function(err){
+        if(err){res.json({cor:false});throw err;}
+        conn.query("select count(*) as cnt from memolist where boardnumber="+artid+" and id='"+mid+"';",function(err,rows,fields){
+          if(err){res.json({cor:false});throw err;}
+          if(rows[0].cnt>0){
+            conn.query("select count(*) as cnt from memocontent where boardnumber="+artid+" and passwordlocked='"+mpw+"';",function(err,rows2,fields){
+              if(err){res.json({cor:false});throw err;}
+              if(rows2[0].cnt>0){
+                res.json({cor:true});
+              }else{
+                res.json({cor:false});
+              }
+            });
+          }else{
+            res.json({cor:false});
+          }
+        });
+      });
+    });
+    
+  }
+});
+noteapp.delete("/dologin.json",function(req,res){
   connection.getConnection(function(err,conn){
         connection.getConnection(function(err,conn){
           if(err){res.json({d:false});throw err;}
@@ -439,7 +478,7 @@ console.log(tmpid+"\n"+tmppw);
 });
 //connection.end();
 });
-app.get("/memotransac/:id/mtdlt.json",function(request,response){
+noteapp.get("/memotransac/:id/mtdlt.json",function(request,response){
   const method = request.method;
   const id = request.params.id;
  //console.log("!"+JSON.stringify(JSON.parse(request.body))+"!");
@@ -486,7 +525,7 @@ app.get("/memotransac/:id/mtdlt.json",function(request,response){
 
 
 
-app.post("/memotransac/:id/mtut.json",function(request,response){
+noteapp.post("/memotransac/:id/mtut.json",function(request,response){
   const method = request.method;
   const id = request.params.id;
  console.log("!"+JSON.stringify(request.body)+"!");
@@ -510,37 +549,79 @@ app.post("/memotransac/:id/mtut.json",function(request,response){
             throw err;
           }
           if(rows[0].cnt>0){
-            conn.query("update memocontent set memodata='"+memodata+"' , title='"+title+"', modify_date=NOW() where boardnumber="+pid+";",function(err,rows,fields){
-              if(err){
-                   try{response.json({state:false});}catch(err2){}
-                throw err;
-              }
-              response.json({state:true});
-            });
-            
+            if(bpw!=undefined && bpw!=null && bpw.trim() !=""){
+              memodata = aes256.encrypt(bpw,memodata);
+              conn.query("update memocontent set memodata='"+memodata+"' , passwordlocked='"+bpw+"' title='"+title+"', modify_date=NOW() where boardnumber="+pid+";",function(err,rows,fields){
+                if(err){
+                    try{response.json({state:false});}catch(err2){}
+                  throw err;
+                }
+                conn.commit(function(err){
+                  if(err){
+                    response.json({state:false});
+                    throw err;
+                  }
+                  response.json({state:true});
+                });
+               
+              });
+            }else{
+              conn.query("update memocontent set memodata='"+memodata+"' ,passwordlocked=NULL ,title='"+title+"', modify_date=NOW() where boardnumber="+pid+";",function(err,rows,fields){
+                if(err){
+                    try{response.json({state:false});}catch(err2){}
+                  throw err;
+                }
+                conn.commit(function(err){
+                  if(err){
+                    response.json({state:false});
+                    throw err;
+                  }
+                  response.json({state:true});
+                });
+               
+              });
+            }
           }else{
-            conn.query("insert into memolist(id) values('"+id+"');",function(err,rows,fields){
+              conn.query("insert into memolist(id) values('"+id+"');",function(err,rows,fields){
               console.log("insert pid ok");
-              conn.commit(function(err){if(err)throw err;});
-              console.log("commit of insert pid ok");
-            conn.query("select boardnumber as bn from memolist where id='"+id+"' order by boardnumber desc limit 1;",function(err,rows,fields){
-              if(err){
-                try{response.json({state:false});}catch(err2){}
-                throw err;
-              }
-               console.log("select boardnumber ok");
-            conn.query("insert into memocontent(boardnumber,title,memodata) values("+rows[0].bn+", '"+title+"' , '"+memodata+"');",function(err,rows2,fields){
-              if(err){
-                try{response.json({state:false});}catch(err2){}
-                throw err;
-              }
-              console.log("insert memocontent ok");
-              conn.commit(function(err){if(err){try{response.json({state:false});}catch(err2){}
-            throw err;}});
-
-              response.json({state:true,pid:rows[0].bn});
-            });
-          });
+              conn.commit(function(err){if(err){throw err;}
+                console.log("commit of insert pid ok");
+                conn.query("select boardnumber as bn from memolist where id='"+id+"' order by boardnumber desc limit 1;",function(err,rows,fields){
+                  if(err){
+                    try{response.json({state:false});}catch(err2){}
+                    throw err;
+                  }
+                  console.log("select boardnumber ok");
+                  if(bpw!=undefined && bpw != null && bpw.trim()!=""){
+                   // memodata = aes256.encrypt(bpw,memodata);
+                   var  encryptedmemodata = aes256.encrypt(bpw,memodata);
+                    conn.query("insert into memocontent(boardnumber,passwordlocked,title,memodata) values("+rows[0].bn+", '"+bpw+"' , '"+title+"' , '"+encryptedmemodata+"');",function(err,rows2,fields){
+                      if(err){
+                        try{response.json({state:false});}catch(err2){}
+                        throw err;
+                      }
+                      console.log("insert memocontent ok");
+                      conn.commit(function(err){if(err){try{response.json({state:false});}catch(err2){}
+                        throw err;}
+                        response.json({state:true,pid:rows[0].bn});
+                      });
+                    });
+                  }
+                  else{
+                    conn.query("insert into memocontent(boardnumber,title,memodata) values("+rows[0].bn+", '"+title+"' , '"+memodata+"');",function(err,rows2,fields){
+                      if(err){
+                        try{response.json({state:false});}catch(err2){}
+                        throw err;
+                      }
+                      console.log("insert memocontent ok");
+                      conn.commit(function(err){if(err){try{response.json({state:false});}catch(err2){}
+                        throw err;}
+                        response.json({state:true,pid:rows[0].bn});
+                      });
+                    });
+                  }
+                });
+              });
            });
           }
           conn.commit(function(err){if(err)try{response.json({state:false});}catch(err2){}});
@@ -550,7 +631,7 @@ app.post("/memotransac/:id/mtut.json",function(request,response){
     });
     
 });
-app.get("/memotransac/:id/mt.json",function(request,response){
+noteapp.get("/memotransac/:id/mt.json",function(request,response){
   const method = request.method;
   const id = request.params.id;
   console.log("header method: "+method);
@@ -562,28 +643,52 @@ app.get("/memotransac/:id/mt.json",function(request,response){
       const pid = request.query.postid;
       connection.getConnection(function(err,conn){
           
-          if(err)throw err;
+          if(err){rst["succresp"]=false;
+              response.json(rst);
+                throw err;}
           console.log("open connection ok");
       conn.changeUser({user : 'logineduser',password:'logineduser123',database:'memodb'}, function(err) {
-        if(err)throw err;
-        
-          if(bpw!=null&&bpw.trim()!=''){
-            conn.query("select * from memoview where id='"+id+"' and boardnumber="+pid+" and passwordlocked='"+bpw+"';",function(err,rows,fields){
-             if(err)throw err;
-             console.log("memo content quary1 ok(l: "+ rows.length);
-              rst["post_title"]=rows[0].title;
-              rst["content"]=rows[0].memodata.toString();
-              rst["modify_date"]= rows[0].modify_date;
+        if(err){rst["succresp"]=false;
               response.json(rst);
-              //console.log(rst);
+                throw err;}
+        
+          if(bpw!=undefined&&bpw!=null&&bpw.trim()!=''){
+            var qrypostfix = "from memoview where id='"+id+"' and boardnumber="+pid+" and passwordlocked='"+bpw+"';"
+
+            conn.query("select count(*) as cnt "+qrypostfix,function(err,rows2,fields){
+              if(err){rst["succresp"]=false;
+              response.json(rst);
+                throw err;}
+              if(rows2.cnt>0){
+                conn.query("select * "+qrypostfix,function(err,rows,fields){
+                if(err){rst["succresp"]=false;
+              response.json(rst);
+                throw err;}
+                console.log("memo content quary1 ok(l: "+ rows.length);
+                  rst["post_title"]=rows[0].title;
+                  rst["content"]=rows[0].memodata.toString();
+                  rst["content"]=aes256.decrypt(bpw,rst["content"]);
+                  rst["succresp"]=true;
+                  rst["modify_date"]= rows[0].modify_date;
+                  response.json(rst);
+                  //console.log(rst);
+                });
+            }
+            else{
+              rst["succresp"]=false;
+              response.json(rst);
+            }
             });
           }else{
             conn.query("select * from memoview where id='"+id+"' and boardnumber="+pid+";",function(err,rows,fields){
-              if(err)throw err;
+              if(err){rst["succresp"]=false;
+              response.json(rst);
+                throw err;}
               console.log("memo content quary2 ok(l:"+rows.length);
               rst["post_title"]=rows[0].title;
               rst["content"]=rows[0].memodata.toString();
               rst["modify_date"]= rows[0].modify_date.toString();
+              rst["succresp"]=true;
               response.json(rst);
              // console.log(rst);
             });
@@ -601,12 +706,13 @@ app.get("/memotransac/:id/mt.json",function(request,response){
   }
   //response.json(rst);
 });
-//app.post("/memotransac/:id/mt.json",function(request,response){});
+//noteapp.post("/memotransac/:id/mt.json",function(request,response){});
 
-app.get("/:id/querydata.json",function(request,response){
+noteapp.get("/:id/querydata.json",function(request,response){
   const id = request.params.id;
   //try{connection.connect(); }catch(err2){}
   const pid = request.query.postid;
+  const bpw = request.query.boardpw;
   logined = null;//"false";
 connection.query("use logindb;",function(err,rows,fields){});
 const qry2 = "select count(id) as cnt from loginhash where id='"+id+"' and hashv=md5('"+request.sessionID+"');";
@@ -628,7 +734,8 @@ if(rowss[0].cnt>0){//logined){
  
 //connection.query("use memodb;",function(err,rows,fields){
   if (err) throw err;
-conn.query("select boardnumber,title,memodata,modify_date as md from memoview where id='"+id+"' and boardnumber="+pid+" ;",function(err,rows,fields){
+  if(bpw!=undefined && bpw!=null && bpw.trim()!=""){
+    conn.query("select boardnumber,title,memodata,modify_date as md from memoview where id='"+id+"' and boardnumber="+pid+" ;",function(err,rows,fields){
     if (err) throw err;
     const rst = {list_count:rows.length,data:[]};
     console.log("select pass and len="+rows.length);
@@ -636,17 +743,39 @@ conn.query("select boardnumber,title,memodata,modify_date as md from memoview wh
       rst["resp"] = 'data query is succeed ,but no data';
       response.json(rst);
     }else{
-    for(i=0;i<rows.length;i++){
-      rows[i]["memodata"]=base64.encode(base64.encode(rows[i]["memodata"].toString()));
-      rows[i]["title"]=base64.encode(rows[i]["title"]);
+      for(i=0;i<rows.length;i++){
+
+        rows[i]["memodata"]=base64.encode(base64.encode(aes256.decrypt( bpw,rows[i]["memodata"].toString())));
+        rows[i]["title"]=base64.encode(rows[i]["title"]);
         rst["data"].push(rows[i]);
-      //response.json(rows[i]);
-      break;
-      //rst.values.push();
+        //response.json(rows[i]);
+        break;
+        //rst.values.push();
+      }
+      response.json(rst);
     }
-    response.json(rst);
+  });
+  }else
+  conn.query("select boardnumber,title,memodata,modify_date as md from memoview where id='"+id+"' and boardnumber="+pid+" ;",function(err,rows,fields){
+    if (err) throw err;
+    const rst = {list_count:rows.length,data:[]};
+    console.log("select pass and len="+rows.length);
+    if(rows.length==0){
+      rst["resp"] = 'data query is succeed ,but no data';
+      response.json(rst);
+    }else{
+      for(i=0;i<rows.length;i++){
+
+        rows[i]["memodata"]=base64.encode(base64.encode(rows[i]["memodata"].toString()));
+        rows[i]["title"]=base64.encode(rows[i]["title"]);
+        rst["data"].push(rows[i]);
+        //response.json(rows[i]);
+        break;
+        //rst.values.push();
+      }
+      response.json(rst);
     }
-});
+  });
 });
   });
 }
@@ -660,7 +789,7 @@ else{
 
 
 
-app.get("/:id/inquirylist.json",function(request,response){
+noteapp.get("/:id/inquirylist.json",function(request,response){
   const id = request.params.id;
   //try{connection.connect(); }catch(err2){}
   
@@ -684,7 +813,7 @@ if(logined){
  
 //connection.query("use memodb;",function(err,rows,fields){
   if (err) throw err;
-conn.query("select boardnumber,title,passwordlocked,modify_date as md from memoview where id='"+id+"' ;",function(err,rows,fields){
+  conn.query("select boardnumber,title,passwordlocked,modify_date as md from memoview where id='"+id+"' ;",function(err,rows,fields){
     if (err) throw err;
     const rst = {list_count:rows.length,data:[]};
     console.log("select pass and len="+rows.length);
@@ -693,7 +822,12 @@ conn.query("select boardnumber,title,passwordlocked,modify_date as md from memov
       response.json(rst);
     }else{
     for(i=0;i<rows.length;i++){
-        
+        if(rows[i].passwordlocked!=null&&rows[i].passwordlocked.trim()!=""){
+          rows[i]["pwdreq"]=true;
+        }
+        else{
+          rows[i]["pwdreq"]=false;
+        }
         rst["data"].push(rows[i]);
       //response.json(rows[i]);
       
@@ -709,27 +843,28 @@ else{
   response.json(logined);
 }
 });
-app.use('/dologin.json',lg);
-//app.use('/:id/inquirylist.json',queryMemoList);
+noteapp.use('/dologin.json',lg);
+//noteapp.use('/:id/inquirylist.json',queryMemoList);
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+noteapp.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+noteapp.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.noteapp.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
   res.render('error');
 });
 
-module.exports = app;
-app.listen(8080,function (){
+module.exports = noteapp;
+noteapp.listen(8080,function (){
 
 });
+

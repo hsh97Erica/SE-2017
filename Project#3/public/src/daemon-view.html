@@ -76,7 +76,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
     <div class="card">
       <div id="backgrd" style="position: relative; height:900px; width:100%">
-      <iframe src="electricflower/electricflower.html" style="width:100%;height:100%;  overflow:hidden;"></iframe>
+      <iframe src="electricflower/electricflower.html" scrolling="no" style="width:100%;height:100%;  overflow:hidden;"></iframe>
       </div>
       <div id="daemuncontent" style="position: relative;  left:10px; top: -900px;margin-bottom:-800px">
       <!--<electricflower-polymer ></electricflower-polymer>-->
@@ -92,8 +92,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </center>
        
       </div>
-      <div style="height:50px;  border-radius: 10px;background: #ffffff;">
+      <div style="height:50px;  border-radius: 10px;background: rgba(255, 255, 255, 0.8);">
         <div style=" display: inline-block;">실시간 검색상위:
+          
          <neon-ordered-text-board style=" display: inline-block" id="rn" values="{{naverrankes}}"></neon-ordered-text-board>
          </div>
       </div>
@@ -101,10 +102,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="container flex-horizontal" style="margin-top: 3%;">
         <paper-weather style="width:45%" unit="c" hide-forecast="true" show-extra-data="[[showExtraData]]" location="[[location.0]]"></paper-weather>
         <paper-weather style="width:45%" unit="c" hide-forecast="true" show-extra-data="[[showExtraData]]" location="[[location.1]]"></paper-weather>
-
       </div>
       <div>
-        <notice-view style="margin-top: 3%; background-color: #FFFFF0;"></notice-view>
+        
+        <notice-view style="margin-top: 3%; background: rgba(255, 255, 249, 0.8);"></notice-view>
       </div>
       </div>
     </div>
@@ -121,7 +122,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       is: 'daemon-view',
       ready: function(){
         this._getNaverRankData();
-        setInterval(this._getNaverRankData.bind(this), 120*1000);
+        setInterval(this._getNaverRankData.bind(this), 60*1000);
       },
       properties:{
         location:{

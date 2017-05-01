@@ -34,7 +34,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </style>
    <memo-list-category-header category_title="[[headerstr]]"></memo-list-category-header>
    <template id="dat_lst" is="dom-repeat" items="[[data]]" filter="filterRoom2">
-     <div> <memo-list-item class="item" userid={{userid}} curbn={{curbn}} value="[[item.value]]" boardnumber=[[item.boardnumber]] title="[[item.title]]" summary="[[item.md]]"></memo-list-item></div>
+     <div> <memo-list-item class="item" ldb={{ld}} islocal=[[isloc]] userid={{userid}} curbn={{curbn}} value="[[item.value]]" isrequiredpwd=[[item.pwdreq]] boardnumber=[[item.boardnumber]] title="[[item.title]]" summary="[[item.md]]"></memo-list-item></div>
      <!-- title="[[item.title]]" summary="[[item.md]]"-->
    </template>
   </template>
@@ -53,6 +53,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         headerstr:{
           type: String,
           value: 'unknown',
+        },
+        isloc:{
+          type: Boolean,
+          notify:true,
+        },
+        ld:{
+          type:Array,
+          notify:true,
+          readOnly:false,
         },
         userid:{
           type:String,
@@ -73,7 +82,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           notify:true,
           value: function(){
             var rst =[];
-            var tmp = {value:'k',title:'unknown',md:'md'};
+            var tmp = {value:'k',title:'unknown',md:'md',pwdreq:false};
             //return [];
             rst.push(tmp);
             return rst;

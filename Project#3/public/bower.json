@@ -29,7 +29,7 @@
     "paper-divider": "wincinderith/paper-divider#^1.1.0",
     "polymer-tinymce": "JaySunSyn/polymer-tinymce#^1.0.6",
     "polymer-quill": "chuckh/polymer-quill#^1.2.0",
-    "paper-radio-group": "PolymerElements/paper-radio-group#^1.2.1",
+    "paper-radio-group": "PolymerElements/paper-radio-group#^1.2.2",
     "marked-element": "PolymerElements/marked-element#^1.3.1",
     "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
     "wysiwyg-e": "miztroh/wysiwyg-e#^1.1.0",
@@ -39,7 +39,13 @@
     "paper-search": "Collaborne/paper-search#^1.2.3",
     "neon-text-board": "Collaborne/neon-text-board#^1.0.4",
     "iron-data-table": "Saulis/iron-data-table#^1.0.6",
-    "js-base64": "dankogai/js-base64#^2.1.9"
+    "js-base64": "dankogai/js-base64#^2.1.9",
+    "paper-checkbox": "PolymerElements/paper-checkbox#^1.4.2",
+    "aes-js": "ricmoo/aes-js#^3.1.0",
+    "crypto-js": "^3.1.9",
+    "forge": "^0.7.1",
+    "paper-swatch-picker": "PolymerElements/paper-swatch-picker#^1.0.2",
+    "paper-radio-button": "PolymerElements/paper-radio-button#^1.4.0"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

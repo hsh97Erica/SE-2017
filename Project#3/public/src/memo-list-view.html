@@ -72,7 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     margin-right: 12px;
   }
 </style>
-   <paper-card>
+   <paper-card style="height:100%">
      <iron-ajax id="xhr" url="/{{userid}}/inquirylist.json" handle-as="json" on-response="handleResponse"></iron-ajax>
       
       <div style=" background:#212121;color:#000;font-family:'Roboto'">
@@ -87,25 +87,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        </div>
        
       <iron-selector  selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation" >
-          
-            
-          <!--<template is="dom-repeat" items="{{getCountArray}}">-->
-           
-            <iron-list id="memo_list" style="height: 320px"  items="{{getDataWithCategory}}" >
+      
+            <iron-list id="memo_list" style="height: 80%"  items="{{getDataWithCategory}}" >
               <template>
-                <memo-list-category-view  userid={{userid}} fltText=[[filterText]] curbn={{curbn}} headerstr="[[item.header]]" data="[[item.rdata]]" ></memo-list-category-view>
+                <memo-list-category-view  userid={{userid}} fltText=[[filterText]] curbn={{curbn}} ld={{locdbparent}} isloc=[[item.islocal]]  headerstr="[[item.header]]" data="[[item.rdata]]" ></memo-list-category-view>
                 <!--
                 <div>
-                  
                 <memo-list-item class="item" postfix="[[item]]"></memo-list-item>
                 </div>-->
               </template>
             </iron-list>
-           <!--<a name="view1" href="/view1">View One</a>
-          <a name="view2" href="/view2">View Two</a>
-          <a name="view3" href="/view3">View Three</a>
-          <a name="daemonview" href="/daemonview">View 4</a>-->
-          
+           
         </iron-selector>
       
    </paper-card>
@@ -118,13 +110,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this.$.resultList.render();
       },
       ready: function(){
+        //this.ldbp = {ldb:[]};
         this.addEventListener('refreshOnlineList',this._querylist);
+        this.addEventListener('refreshLocalList',this._querylocallist);
         this.addEventListener('flushOnlineList',this._flushOnlineListWIthCategory);
        },
       properties:{
         page:{
           type: Array,
           value: [],
+        },
+        locdbparent:{
+          type:Object,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+          
         },
         xScrollTop: {
         type: Number,
@@ -212,7 +213,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       return this._buildDataWithCategory(odata,this._getLocalMemoDataList());
     },
     _getLocalMemoDataList: function(){
-      return [];
+      var rst = [];
+      var ldbp = this.locdbparent;
+      if(ldbp != undefined ){
+        alert("_getLocalMemoDataList \n"+ldbp.locdb);
+      }
+      /*var localdb = this.ldb;
+      for(i=0;i<localdb.length;i++){
+        //rst.push({boardnumber:i,value:localdb[i].content,title:localdb[i].title,md:localdb[i].md,pwdreq:false});
+      }*/
+      return rst;
+    },
+    _querylocallist:function(){
+      alert("_querylocallist");
+      var on1 = this.getDataWithCategory[0].rdata;
+      var on2 = this.getOriginalDataWithCategory[0].rdata;
+      var locdt = this._getLocalMemoDataList();
+      var pack1 = this._buildDataWithCategory(on1,locdt);
+      var pack2 = this._buildDataWithCategory(on2,locdt);
+      this.set('getDataWithCategory',pack1);
+      this.set('getOriginalDataWithCategory',pack2);
     },
     _responseDataWithCategory: function(odata){
       return this._buildDataWithCategory(odata,this._getLocalMemoDataList());
@@ -220,8 +240,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     _buildDataWithCategory: function(onlinedata,localdata){
         var ary=[];
           var headers = ["memo","local"];
-          ary.push({header:headers[0],rdata:onlinedata});
-          ary.push({header:headers[1],rdata:localdata});
+          ary.push({header:headers[0],islocal:false,rdata:onlinedata});
+          ary.push({header:headers[1],islocal:true,rdata:localdata});
           
           return ary;
     },

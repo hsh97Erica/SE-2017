@@ -1,0 +1,358 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/wysiwyg-e/wysiwyg-e.html">
+  <link rel="import" href="../bower_components/wysiwyg-e/tools/bold.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/italic.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/underline.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/strike.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/color.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/clear.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/code.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/link.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/image.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/audio.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/video.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/ordered.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/unordered.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/indent.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/outdent.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/justify.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/heading.html">
+		<link rel="import" href="../bower_components/wysiwyg-e/tools/blockquote.html">
+<script src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+<link rel="import" href="../bower_components/marked-element/marked-import.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
+ <link rel="import" href="../bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+<dom-module id="my-edv2" is="dom-bind">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+    <style>
+      paper-checkbox {
+    font-family: 'Roboto', sans-serif;
+    margin: 24px;
+  }
+
+  paper-checkbox:first-child {
+    --primary-color: #ff5722;
+  }
+
+  paper-checkbox.styled {
+    align-self: center;
+    border: 1px solid var(--paper-green-200);
+    padding: 8px 16px;
+    --paper-checkbox-checked-color: var(--paper-green-500);
+    --paper-checkbox-checked-ink-color: var(--paper-green-500);
+    --paper-checkbox-unchecked-color: var(--paper-green-900);
+    --paper-checkbox-unchecked-ink-color: var(--paper-green-900);
+    --paper-checkbox-label-color: var(--paper-green-500);
+    --paper-checkbox-label-spacing: 0;
+    --paper-checkbox-margin: 8px 16px 8px 0;
+    --paper-checkbox-vertical-align: top;
+  }
+  div .styled{
+    border: 1px solid var(--paper-green-200);
+    padding: 8px 16px;
+  }
+  paper-checkbox .subtitle {
+    display: block;
+    font-size: 0.8em;
+    margin-top: 2px;
+    max-width: 150px;
+  }
+  paper-input {
+    max-width: 400px;
+    margin: auto;
+  }
+  iron-icon, div[suffix] {
+    color: hsl(0, 0%, 50%);
+    margin-right: 12px;
+  }
+  polymer-quill.full {
+    --polymer-quill-editor-max-height: 300px;
+    --polymer-quill-editor-min-height: 100px;
+  }
+</style>
+<script src="../bower_components/js-base64/base64.js"></script>
+<script type="text/javascript" src="../bower_components/crypto-js/crypto-js.js"></script>
+<script type="text/javascript" src="../bower_components/crypto-js/aes.js"></script>
+<script type="text/javascript" src="../bower_components/crypto-js/core.js"></script>
+<script type="text/javascript" src="../bower_components/crypto-js/sha256.js"></script>
+<script type="text/javascript" src="../javascripts/gibberish-aes.js"></script>
+<script type="text/javascript" src="../bower_components/forge/dist/forge.min.js"></script>
+ <iron-ajax id="pwxhr" handle-as="json" on-response="handleCheckPWD"></iron-ajax>
+      
+<paper-dialog id="pwdialog">
+  <h2><iron-icon style="margin-right: 5px"></iron-icon>메모 비밀번호</h2>
+  <paper-dialog-scrollable>
+      <paper-input style="width:100%" value="{{pwd}}" label="메모 비밀번호 입력"></paper-input>
+     </paper-dialog-scrollable>
+  <div class="buttons">
+    <paper-button on-click="_submitpwd">제출</paper-button>
+  </div>
+</paper-dialog>
+
+<paper-card style="width:100%; height:auto;">
+   <iron-ajax id="xhr" url="/[[userid]]/querydata.json" handle-as="json" on-response="handleResponse"></iron-ajax>
+     <center style="width:99%"><paper-input style="width:100%" value="{{title}}" id="titleinput" label="제목"></paper-input></center>
+     <iron-ajax id="xhrpost" content-type="application/json" url="/memotransac/[[userid]]/mtut.json" method="POST" handle-as="json" on-response="handlePostResponse"></iron-ajax>
+    
+    <wysiwyg-e style="width: 100%; height: 100vh;" id="wysiwygE" value={{contentdata}}>
+    <wysiwyg-tool-bold></wysiwyg-tool-bold>
+    <wysiwyg-tool-italic></wysiwyg-tool-italic>
+    <wysiwyg-tool-underline></wysiwyg-tool-underline>
+    <wysiwyg-tool-strike></wysiwyg-tool-strike>
+    <wysiwyg-tool-clear></wysiwyg-tool-clear>
+    <wysiwyg-tool-code></wysiwyg-tool-code>
+    <wysiwyg-tool-link></wysiwyg-tool-link>
+    <wysiwyg-tool-image></wysiwyg-tool-image>
+    <wysiwyg-tool-audio></wysiwyg-tool-audio>
+    <wysiwyg-tool-video></wysiwyg-tool-video>
+    <wysiwyg-tool-ordered></wysiwyg-tool-ordered>
+    <wysiwyg-tool-unordered></wysiwyg-tool-unordered>
+    <wysiwyg-tool-indent></wysiwyg-tool-indent>
+    <wysiwyg-tool-outdent></wysiwyg-tool-outdent>
+    <wysiwyg-tool-justify right center full></wysiwyg-tool-justify>
+    <wysiwyg-tool-heading h1 h2 h3 h4 h5 h6></wysiwyg-tool-heading>
+    <wysiwyg-tool-blockquote></wysiwyg-tool-blockquote>
+    <wysiwyg-tool-undo></wysiwyg-tool-undo>
+    <wysiwyg-tool-redo></wysiwyg-tool-redo>
+</wysiwyg-e>
+
+  <div class="styled" >
+    <div>
+        <paper-checkbox checked={{passwordreq}} >
+        메모 비밀번호 활성화
+        </paper-checkbox>
+        <paper-input disabled=[[!passwordreq]] type="password" label="메모 비밀번호" value={{pwd}}></paper-input>
+        <paper-input disabled=[[!passwordreq]] type="password" label="메모 비밀번호 재입력" value={{pwdre}}></paper-input>
+      
+    </div>
+  </div>
+<paper-button id="savebtn" on-click="_save">저장</paper-button>
+</div>
+
+</paper-card>
+</template>
+
+  <script>
+    Polymer({
+      is: 'my-edv2',
+     properties:{
+       contentdata:{
+         type:String,
+         notify:true,
+         readOnly:false,
+         value:''
+       },
+       userid:{
+         type:String,
+         value:''
+       },
+       passwordreq:{
+         type:Boolean,
+         value: false,
+         notify:true,
+         observer: '_onpwdreqchanged'
+       },
+       localmode:{
+         type:Boolean,
+         notify:true,
+         readOnly:false,
+       },
+       boardnumber:{
+         type:Number,
+         value:0,
+         observer: '_onboardnumberschanged',
+       },
+       pwd:{
+        type:String,
+        value:'',
+        notify:true,
+       },
+       pwdre:{
+        type:String,
+        value:'',
+        notify:true,
+       },
+       title:{
+         type:String,
+         value:'',
+       },
+       editormode:{
+        type:Number,
+        value:0,
+        notify:true,
+        readOnly:false,
+        observer: '_oneditmodechanged',
+       },
+     },
+     _onpwdreqchanged:function(){
+      if(this.passwordreq!=undefined && this.passwordreq===false){
+        this.pwd = this.pwdre= "";
+
+      }
+
+     },
+     setReqPwState:function(state){
+      // alert("setReqPwState: "+state);
+      this.passwordreq=state;
+     },
+     _submitpwd:function(){
+        var xhr = this.$.pwxhr;
+        xhr.method = 'post';
+        xhr.url = '/'+this.userid+"/articles/pwdchk.json";
+        xhr.contentType="application/json";
+        var bn= this.boardnumber ^ 12343210;
+        var pw = this.pwd;
+        var apw = Base64.encode(pw);
+        var params = {artid:bn,artpw:apw};
+        xhr.body=params;
+        xhr.generateRequest();
+     },
+     handleCheckPWD:function(data){
+        const resp = data.detail.response;
+        if(resp.cor!=undefined){
+          if(resp.cor===true){
+            this.pwdre = this.pwd;
+            this.$.pwdialog.close();
+            this._reqcontent();
+          }else{
+
+            alert("비밀번호가 틀렸습니다, 다시 시도해주세요.");
+          }
+        }
+        else{
+          alert("통신오류");
+        }
+     },
+     _reqcontent:function(){
+        var pid = this.boardnumber;
+        var tpw = this.pwd;
+        //var bpw = Base64.encode( tpw );
+       var prm = {postid:pid,boardpw:tpw};//base64모듈 로딩이 안됨 :(
+       this.$.xhr.params=prm;
+      this.$.xhr.generateRequest();
+     },
+     _onboardnumberschanged:function(){
+      // alert("call _onboardnumberschanged");
+      if(this.localmode===false){
+        this.pwd = "";
+        if(this.passwordreq===true){
+          this.contentdata=this.title=this.pwd = this.pwdre="";
+          this.$.pwdialog.open();
+        }else{
+          this._reqcontent();
+        }
+      }
+     },
+     handleResponse:function(data){
+        const resp = data.detail.response;
+        if(resp!=undefined&& resp.list_count>0){
+       // alert(JSON.stringify(resp));
+       this.contentdata = Base64.decode( Base64.decode(resp.data[0].memodata));
+       //alert(this.contentdata);
+       /* if(this.passwordreq==true){
+          var cd = this.contentdata;
+          var pw = this.pwd;
+         
+          var bytes  = CryptoJS.AES.decrypt(cd, pw);
+          alert("aes bytes ok\n"+bytes+"\n\n"+cd);
+          var plaintext = bytes.toString();
+          alert("succ? "+(plaintext===undefined));
+          this.contentdata = plaintext;
+          alert("after working aes+\n'"+plaintext+"'");
+          alert("finish work\n");
+        }
+        else{
+          this._onpwdreqchanged();
+        }*/
+         this.title =  Base64.decode(resp.data[0].title);
+        }
+        //alert("contentdata: "+this.contentdata);
+        //this.$.wysiwygE.value=this.contentdata;
+      },
+        handlePostResponse:function(data){
+        const resp = data.detail.response;
+       // alert(JSON.stringify(resp));
+       if(this.editormode==1){
+
+       }
+        //alert(JSON.stringify(this.$.xhrpost.body));
+        this.fire("memolistviewrefresh");
+        //alert("contentdata: "+this.contentdata);
+        //this.$.wysiwygE.value=this.contentdata;
+      },
+      _oneditmodechanged:function(){
+       // alert("mode change call" + this.editormode);
+       if(this.localmode === false){
+          if(this.editormode==2){//edit existed memo
+            this.$.titleinput.readonly=false;
+            this.$.savebtn.disabled=false;
+            this.$.wysiwygE.mode = "edit";
+          }else if(this.editormode==3){//view existed memo
+            
+            this.$.titleinput.readonly=true;
+            this.$.savebtn.disabled=true;
+            this.$.wysiwygE.mode = "read";
+          }
+          else{
+            this.boardnumber=-1;
+            this.title = '';
+            this.contentdata='';
+            this.$.savebtn.disabled=false;
+            this.$.titleinput.readonly=false;
+            this.$.wysiwygE.mode = "edit";
+          }
+       }
+      },
+
+      _save:function(){
+        alert("call _save");
+       var pid = this.boardnumber;
+       var htmlvalue = Base64.encode(Base64.encode(Base64.encode( this.$.wysiwygE.value)));
+       var mtitle = Base64.encode(this.title);
+       var params = {postid:pid,boardpw:'',mdt:htmlvalue,title:mtitle};
+       if(this.passwordreq){
+
+        if(this.pwd!=undefined && this.pwd.trim()!="" && this.pwd === this.pwdre){
+          params["boardpw"]= this.pwd;
+          this.$.xhrpost.body=params;
+          this.$.xhrpost.generateRequest();
+        }
+        else if(this.pwd.trim()!="" && this.pwd != this.pwdre){
+          alert("비밀번호를 재대로 입력했는지 확인하십시오.");
+        }
+        else{
+          alert("비밀번호를 입력해주세요");
+        }
+       }else{
+        this.$.xhrpost.body=params;
+        this.$.xhrpost.generateRequest();
+       }
+      }
+    });
+  </script>
+</dom-module>

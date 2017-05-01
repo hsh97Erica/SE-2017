@@ -122,6 +122,22 @@ color: var(--paper-amber-500);
           type:Number,
           value:0
         },
+        islocal:{
+          type: Boolean,
+          notify:true,
+        },
+        isrequiredpwd:{
+          type:Boolean,
+          value: false,
+          notify:true,
+          readOnly:false,
+          reflectToAttribute: true,
+        },
+         ldb:{
+          type:Array,
+          notify:true,
+          readOnly:false,
+        },
         curbn:{
           type:Number,
           notify:true,
@@ -147,31 +163,53 @@ color: var(--paper-amber-500);
        
       },
       _doview:function(){
-        
-        this.curbn = this.boardnumber;
-        this.fire("changemode_view");
-        this.fire('selectedv');
+        if(this.islocal){
+          this.fire("setToLocalMode");
+          this.curbn = this.boardnumber;
+          this.fire("changemode_view");
+          this.fire('selectedvloc');
+        }else{
+          this.fire("setToOnlineMode");
+          this.fire(this.isrequiredpwd===true? "setpwdrequired":"setnopwdrequired");
+          this.curbn = this.boardnumber;
+          this.fire("changemode_view");
+          this.fire('selectedv');
+        }
        // window.location.href = "/edv";
        // var resolvedPageUrl = this.resolveUrl('my-' + "edv" + '.html');
         //this.importHref(resolvedPageUrl, null, function(){alert("error");}, true);
       //this.fire('changeBN',{value:3});//,'bridgeEventListener');//,'changeBN',this.getBoardNumber());
       },
       _doedit: function(){
-        this.curbn = this.boardnumber;
-        this.fire("changemode_edit");
-        this.fire('selectedv');
+        if(this.islocal){
+          this.fire("setToLocalMode");
+          this.curbn = this.boardnumber;
+          this.fire("changemode_edit");
+          this.fire('selectedvloc');
+        }else{
+          this.fire("setToOnlineMode");
+          this.fire(this.isrequiredpwd===true? "setpwdrequired":"setnopwdrequired");
+          this.curbn = this.boardnumber;
+          this.fire("changemode_edit");
+          this.fire('selectedv');
+        }
       },
       _dodelete: function(){
-        if(this.curbn==this.boardnumber){
-          this.fire("returnToHome");
-          this.curbn = 0;
+        if(this.islocal){
+          //this.fire("setToLocalMode");
+          this.ldb.locdb.splice(this.boardnumber,1);
+          this.fire('refreshLocalList');
+        }else{
+            if(this.curbn==this.boardnumber){
+              this.fire("returnToHome");
+              this.curbn = 0;
+            }
+            var pid = this.boardnumber;
+            var params = {postid:pid};
+            this.$.xhr.params=params;
+            //alert("del param: "+JSON.stringify(params));
+            this.$.xhr.generateRequest();
         }
-        var pid = this.boardnumber;
-        var params = {postid:pid};
-       this.$.xhr.params=params;
-       alert("del param: "+JSON.stringify(params));
-      this.$.xhr.generateRequest();
-
       },
        handleResponse:function(data){
         const resp = data.detail.response;
