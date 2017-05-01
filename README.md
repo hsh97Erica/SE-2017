@@ -11,6 +11,9 @@
 ![s6](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.52.57.png)
 ![s7](https://github.com/hsh97Erica/SE-2017/blob/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-04-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%2011.53.12.png)
 
+![s8](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-05-01%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%202.17.44.png)
+![s9](https://raw.githubusercontent.com/hsh97Erica/SE-2017/master/Project%233/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202017-05-01%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%202.18.00.png)
+
 ### **구현한 기능**
 * 새로운 노트 쓰기 및 저장
 * 저장한 노트 수정하고 저장하기
