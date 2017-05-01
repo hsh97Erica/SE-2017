@@ -46,7 +46,7 @@
 * 검색어가 순차적으로 보이게 할 수 있도록 라이브러리를 수정(neon-text-board 의 랜덤순서를 순차적으로 볼수 있게 수정)
 * 학사 공지사항의 제목을 클릭시 해당하는 공지사항을 볼 수 있도록 함
 * 폴리머로 로그인 창을 제작함
-
+* 타이틀바 사용자가 원하는 색상으로 변경하도록 함
 ## ref
     [polymer 1.0](https://www.polymer-project.org/1.0/docs/devguide/feature-overview)
     [webcomponents](https://www.webcomponents.org)
