@@ -35,6 +35,7 @@ background_position = [0, 0]
 # Load and set up graphics.
 background_image = pygame.image.load("space.png").convert()
 player_image = pygame.image.load("ufo.png").convert_alpha()
+player_image = pygame.transform.scale(player_image,(150,150))
 #player_image.set_colorkey(WHITE)
  
 done = False
