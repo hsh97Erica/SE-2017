@@ -1,13 +1,27 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-
+#include "./tet/GameController.hpp"
+#include <iostream>
 USING_NS_CC;
-
+using namespace std;
+using namespace Tetris;
 Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
 }
 
+void HelloWorld::makeField(){
+    /*CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    
+    for (int i = 0; i < FIELD_HEIGHT; i++) {
+        for (int j = 0; j <= FIELD_WIDTH_RIGHT_INDEX - FIELD_WIDTH_LEFT_INDEX; j++) {
+            CCLabelTTF* b = CCLabelTTF::create("□", "Arial", 12.0);
+            b->setPosition(ccp(winSize.width * (0.32 + j * 0.04), winSize.height * (0.1 + i * 0.04)));
+            b->setColor(ccc3(128, 128, 128));
+            this->addChild(b);
+        }
+    }*/
+}
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
@@ -17,7 +31,10 @@ bool HelloWorld::init()
     {
         return false;
     }
-    
+    if(HelloWorld::gc==NULL){
+        HelloWorld::gc = new GameController();
+    }
+    this->makeField();
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
@@ -62,7 +79,7 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
-    
+    cout<<"loaded ok"<<endl;
     return true;
 }
 
