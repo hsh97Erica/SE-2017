@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/external/bullet/BulletMultiThreaded/btGpu3DGridBroadphase.cpp \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletMultiThreaded/btGpuDefines.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletMultiThreaded/btGpuUtilsSharedDefs.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletMultiThreaded/btGpuUtilsSharedCode.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/LinearMath/btAlignedAllocator.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/LinearMath/btScalar.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/LinearMath/btQuickprof.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletCollision//BroadphaseCollision/btOverlappingPairCache.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletCollision//BroadphaseCollision/btBroadphaseInterface.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletCollision//BroadphaseCollision/btBroadphaseProxy.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/LinearMath/btVector3.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/LinearMath/btMinMax.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletCollision//BroadphaseCollision/btOverlappingPairCallback.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/LinearMath/btAlignedObjectArray.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/external/bullet/BulletMultiThreaded/btGpu3DGridBroadphaseSharedDefs.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/external/bullet/BulletMultiThreaded/btGpu3DGridBroadphaseSharedTypes.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/external/bullet/BulletMultiThreaded/btGpu3DGridBroadphase.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/build/../external/bullet/BulletCollision//BroadphaseCollision/btSimpleBroadphase.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/cocos2d/external/bullet/BulletMultiThreaded/btGpu3DGridBroadphaseSharedCode.h
