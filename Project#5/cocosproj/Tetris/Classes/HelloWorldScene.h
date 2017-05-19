@@ -2,7 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
-#include "./tet/GameController.hpp"
+#include "tet2/GameController.hpp"
 #include <iostream>
 using namespace std;
 using namespace Tetris;
@@ -15,12 +15,18 @@ public:
     
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
-    
+    void startGame();
+
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
     protected:
         void makeField();
-        GameController* gc = NULL;
+        Tetris::GameController* gc = NULL;
+        void play();
+        void pause();
+        void resume();
+        void stateloop();
+        void gameloop();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -117,6 +117,8 @@ include_directories(
   ${COCOS2D_ROOT}/cocos/platform
   ${COCOS2D_ROOT}/cocos/audio/include/
   Classes
+  Classes/tet
+  Classes/tet2
 )
 if ( WIN32 )
   include_directories(
@@ -128,14 +130,17 @@ endif( WIN32 )
 set(GAME_SRC
   Classes/AppDelegate.cpp
   Classes/HelloWorldScene.cpp
-  
+  Classes/tet/*.cpp
+  Classes/tet/GameController.cpp
   ${PLATFORM_SPECIFIC_SRC}
 )
 
 set(GAME_HEADERS
   Classes/AppDelegate.h
   Classes/HelloWorldScene.h
-  
+  Classes/tet/GameController.h
+  Classes/tet/*.h
+  Classes/tet2/*.hpp
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 

@@ -1,7 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-#include "./MainGameScene.h"
-#include "Temp.hpp"
+//#include "./MainGameScene.h"
+//#include "Temp.hpp"
 #include <iostream>
 using namespace std;
 // #define USE_AUDIO_ENGINE 1

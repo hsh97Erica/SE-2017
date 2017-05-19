@@ -1,4 +1,4 @@
-#include "MainGame.h"
+#include "MainGameScene.h"
 #include "SimpleAudioEngine.h"
 
 USING_NS_CC;
