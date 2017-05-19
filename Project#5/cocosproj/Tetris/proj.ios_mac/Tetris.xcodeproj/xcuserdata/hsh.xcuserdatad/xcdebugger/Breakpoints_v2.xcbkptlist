@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/HelloWorldScene.cpp"
-            timestampString = "516867626.414269"
+            timestampString = "516897775.745864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "HelloWorld::play()"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "HelloWorld::play(float dt)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

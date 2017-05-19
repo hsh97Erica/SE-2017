@@ -22,7 +22,7 @@ public:
     protected:
         void makeField();
         Tetris::GameController* gc = NULL;
-        void play();
+        void play(float dt);
         void pause();
         void resume();
         void stateloop();

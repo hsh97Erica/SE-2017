@@ -10,10 +10,12 @@
 #include "Util.hpp"
 #include "GameUserClsDelegate.hpp"
 #include "User.hpp"
+#include "BlockColor.hpp"
 using namespace std;
 //using namespace Tetris;
 //using namespace Tetris::Delegates;
 //using namespace Tetris::Users;
+using namespace Tetris::BlockSubModules;
 #define TETBLK_TYPE_I 10
 #define TETBLK_TYPE_L 20
 #define TETBLK_TYPE_J 1+TETBLK_TYPE_L
@@ -21,10 +23,12 @@ using namespace std;
 #define TETBLK_TYPE_Z 40
 #define TETBLK_TYPE_S 1+TETBLK_TYPE_Z
 #define TETBLK_TYPE_T 50
+
 namespace Tetris{
     class Block{
         public:
             Block(int type){
+               
                 this->spanshape(type);
                 this->setBlockColor(this->genRandomColor());
             }
@@ -36,21 +40,37 @@ namespace Tetris{
                     }
                     delete [] this->blkspc;
                 }
+                if(this->blkcolr!=NULL){
+                    delete this->blkcolr;
+                }
             }
             Block(int type,unsigned int color){
                 this->spanshape(type);
                 this->setBlockColor(color);
             }
             void setBlockColor(unsigned int clr){
-                this->blk_color=clr;
+                if(this->blkcolr==NULL){
+                    this->blkcolr = new BlockColor(clr);
+                }else{
+                    this->blkcolr->forceApplyColor(clr);
+                }
+               // this->blk_color=clr;
             }
             unsigned int getBlockColorAsRaw(){
-                return this->blk_color;
+                if(this->blkcolr==NULL){
+                    return 0;
+                }else{
+                    this->blkcolr->packRawColorData();
+                }
+                //return this->blk_color;
             }
+        BlockColor* getBlockColor(){
+            return this->blkcolr;
+        }
             unsigned int genRandomColor(){
-                return this->genSampleColor((unsigned char)TetrisUtil::randInt(1,7));
+                return BlockColor::genRandomColor(); //genSampleColor((unsigned char)TetrisUtil::randInt(1,7));
             }
-            unsigned int genSampleColor(const unsigned char samplenum){
+            /*unsigned int genSampleColor(const unsigned char samplenum){
                 switch(samplenum){
                     case 2:{//pink600
                         return this->genColor(0xd8,0x1b,0x60);
@@ -74,11 +94,15 @@ namespace Tetris{
                     default:return this->genColor(0x30,0x3f,0x9f);
                 }
 
-            }
+            }*/
 
             string getBlockColorAsHexString(){
                 //string rst = "";
-                stringstream ss;
+                if(this->blkcolr==NULL){
+                    return NULL;
+                }
+                return this->blkcolr->getBlockColorAsHexString();
+               /* stringstream ss;
                 unsigned int clr = this->blk_color;
                 ss.fill('0');
                 for(int i=4-2;i>=0;i--){
@@ -88,7 +112,7 @@ namespace Tetris{
                     ss<<hex<<extract;
                 }
                 //rst<<
-                return ss.str();
+                return ss.str();*/
             }
             int getBlockSpaceSize(){
                 return this->getBlockSpaceHeight()*this->getBlockSpaceWidth();
@@ -198,13 +222,14 @@ namespace Tetris{
             int blkary_height;
             int blkary_width;
             unsigned int blk_color;
+        BlockColor* blkcolr = NULL;
             bool** blkspc;
-            unsigned int genColor(unsigned char red,unsigned char green,unsigned char blue ){
+            /*unsigned int genColor(unsigned char red,unsigned char green,unsigned char blue ){
                 unsigned int rst = (unsigned int)blue;
                 rst|=((unsigned int)red<<(8*2));
                 rst|=((unsigned int)green<<(8*1));
                 return rst;
-            }
+            }*/
             void spanshape(int type){
                 switch(type){
                     case TETBLK_TYPE_I:{

@@ -2,6 +2,7 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "tet2/GameController.hpp"
+#include <cmath>
 USING_NS_CC;
 using namespace cocos2d;
 using namespace std;
@@ -10,35 +11,58 @@ Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
 }
-
 void HelloWorld::makeField(){
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    
     const int hei = (int)gc->getGameHeight();
     const int wid = (int)gc->getGameWidth();
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    const int echhei = (int)((0.9f*(float)visibleSize.height)/hei);
-    const int echwid =  (int)((0.9f*(float)visibleSize.width)/wid);
-    for (int i = 0; i < hei; i++) {
+    const float gapratio = 0.05f;
+    const int echhei = (int)(((1.0f -gapratio)*(float)visibleSize.height)/hei);
+    const int echwid =  (int)(((1.0f -gapratio)*(float)visibleSize.width)/wid);
+    const int echsz = min(echhei,echwid);
+    const int gapwid = visibleSize.width-echsz*wid;
+    const int gaphei = visibleSize.height-echsz*hei;
+   for (int i = 0; i < hei; i++) {
         for (int j = 0; j < wid; j++) {
-            auto* b = Label::createWithTTF("□", "fonts/arial.ttf", 24.0);
+            auto rectNode = DrawNode::create();
+        
+            Vec2 rect[4];
+            rect[0] = Vec2(gapwid/2+echsz*j,gaphei/2+echsz*i);
+            rect[1] = Vec2(gapwid/2+echsz*(j+1),gaphei/2+echsz*i);
+            rect[2] = Vec2(gapwid/2+echsz*(j+1),gaphei/2+echsz*(i+1));
+            rect[3] = Vec2(gapwid/2+echsz*j,gaphei/2+echsz*(i+1));
+            Color4F white(1,1,1,1);
+            Color4F transp(0,0,0,0);
+            rectNode->drawPolygon(rect, 4, transp, 1, white);
+                        this->addChild(rectNode);
+            /*auto* b = Label::createWithTTF("□", "fonts/arial.ttf", 36.0);
             b->setPosition(Vec2(origin.x + echwid*(j+1),
                              echhei*i - b->getContentSize().height));
             //b->setPosition(ccp(winSize.width * (0.32 + j * 0.04), winSize.height * (0.1 + i * 0.04)));
             //b->setColor(ccc3(128, 128, 128,255));
-            b->setColor(ccc3(128, 128, 128));
-            this->addChild(b);
+            b->setColor(Color3B(128, 128, 128));
+            this->addChild(b);*/
         }
     }
 }
 void HelloWorld::startGame(){
-    //this->scheduleOnce(schedule_selector(HelloWorld::play), 0);
+    
+    /*auto delay = DelayTime::create(0.0f);
+    auto func = CallFunc::create(CC_CALLBACK_0(HelloWorld::play, this));
+    this->runAction(Sequence::create(delay, func, NULL));*/
+    this->scheduleOnce(schedule_selector(HelloWorld::play), 1.0f);
+    this->scheduleUpdate();
+   // CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,1.0f,false);
+    cout<<"call HelloWorld::startGame()"<<endl;
 }
 void HelloWorld::gameloop(){
    // HelloWorld::gc->innergameloop();
 }
-void HelloWorld::play(){
-   // HelloWorld::gc->justinit();
+void HelloWorld::play(float dt){
+    cout<<"call HelloWorld::play()"<<endl;
+    HelloWorld::gc->justinit();
    //HelloWorld::gc->setGameStatusToOngoing();
    // this->schedule(schedule_selector(HelloWorld::gameloop), 1);
     /*while(!this->gc->forceend&&!this->isEnd()){
@@ -88,12 +112,12 @@ bool HelloWorld::init()
     }
     if(HelloWorld::gc==NULL){
         HelloWorld::gc = new GameController();
-        cout<<(int)gc->getGameHeight()<<endl;
+        //cout<<(int)gc->getGameHeight()<<endl;
     }
     this->makeField();
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
+    HelloWorld::startGame();
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
@@ -135,7 +159,7 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     //this->addChild(sprite, 0);
-    cout<<"loaded ok"<<endl;
+    //cout<<"loaded ok"<<endl;
     return true;
 }
 
