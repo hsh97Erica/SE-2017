@@ -11,6 +11,7 @@
 #include "GameUserClsDelegate.hpp"
 #include "User.hpp"
 #include "Block.hpp"
+#include "../HelloWorldScene.h"
 using namespace std;
 using namespace Tetris;
 using namespace Tetris::Delegates;
@@ -109,12 +110,18 @@ namespace Tetris{
                     this->justinit();
                 }
             }
-        void innergameloop(){
+        char** innergameloop(){
+            char** rst = NULL;
             if(!this->forceend&&this->isOngoing()){
-                this->printcurrentboard();
-                if(checkEnd()){this->setGameStatusToEnd();}
-                if(!this->usercheck())return;
+                if(!this->usercheck())return NULL;
                 Users::GameUser* guser = this->gusers[0];
+                //unsigned char* colors = guser->getCurrentBlock()->getBlockColor()->getColorAsArray();
+                rst = this->getCombinedBoard();
+                //rst = this->getVisualizedBoard();
+                this->printcurrentboard();
+                //delete colors;
+                
+                if(checkEnd()){this->setGameStatusToEnd();return rst;}
                 this->findAndRemoveLines();
                 cout<<"rm ln ok"<<endl;
                 if(this->candropdown()){
@@ -128,6 +135,7 @@ namespace Tetris{
                 gplaytime++;
                 cout<<"1 loop end"<<endl;
             }
+            return rst;
         }
             void run(){
                 this->justinit();
@@ -241,6 +249,48 @@ namespace Tetris{
                 }
                 return false;
             }
+        vector<Users::GameUser*> getUsers(){
+            return this->gusers;
+        }
+        Users::GameUser* getLocalUser(){
+            if(getUsers().size()&&getUsers()[0]!=NULL){
+                return getUsers()[0];
+            }
+            else{
+                return NULL;
+            }
+        }
+        char** getCombinedBoard(){
+            if(this->board.size()){
+                char** printboard = new char*[this->gameHeight];
+                for(int i=0;i<this->gameHeight;i++){
+                    printboard[i] = new char[this->gameWidth];
+                    for(int j=0;j<this->gameWidth;j++){
+                        printboard[i][j] = this->board[i][j]?'1':'0';
+                    }
+                }
+                if(!this->usercheck())return NULL;
+                Users::GameUser* guser = this->gusers[0];
+                unsigned short cury = guser->getCurrentY();
+                unsigned short curx = guser->getCurrentX();
+                Block* curblk = guser->getCurrentBlock();
+                const int blkhg = curblk->getBlockSpaceHeight();
+                const int blkwd = curblk->getBlockSpaceWidth();
+                bool** blddt = NULL;
+                blddt= curblk->getBlockData();
+                for(int i=0;i<blkhg;i++){
+                    for(int j=0;j<blkwd;j++){
+                        if(i+cury<this->gameHeight&&blddt[i][j]){
+                            printboard[(i+cury)][j+curx] = '2';
+                        }
+                    }
+                }
+                return printboard;
+            }
+            else{
+                return NULL;
+            }
+        }
             char** getVisualizedBoard(){
                 if(this->board.size()){
                     char** printboard = new char*[this->gameHeight];

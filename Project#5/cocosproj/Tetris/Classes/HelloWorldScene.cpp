@@ -24,19 +24,22 @@ void HelloWorld::makeField(){
     const int echsz = min(echhei,echwid);
     const int gapwid = visibleSize.width-echsz*wid;
     const int gaphei = visibleSize.height-echsz*hei;
+    Layer* lyr = Layer::create();
+    lyr->setPosition(Vec2(gapwid/2,gaphei/2));
+    lyr->setContentSize(Size(echsz*wid, echsz*hei));
    for (int i = 0; i < hei; i++) {
         for (int j = 0; j < wid; j++) {
             auto rectNode = DrawNode::create();
         
             Vec2 rect[4];
-            rect[0] = Vec2(gapwid/2+echsz*j,gaphei/2+echsz*i);
-            rect[1] = Vec2(gapwid/2+echsz*(j+1),gaphei/2+echsz*i);
-            rect[2] = Vec2(gapwid/2+echsz*(j+1),gaphei/2+echsz*(i+1));
-            rect[3] = Vec2(gapwid/2+echsz*j,gaphei/2+echsz*(i+1));
+            rect[0] = Vec2(echsz*j,echsz*i);
+            rect[1] = Vec2(echsz*(j+1),echsz*i);
+            rect[2] = Vec2(echsz*(j+1),echsz*(i+1));
+            rect[3] = Vec2(echsz*j,echsz*(i+1));
             Color4F white(1,1,1,1);
             Color4F transp(0,0,0,0);
             rectNode->drawPolygon(rect, 4, transp, 1, white);
-                        this->addChild(rectNode);
+            lyr->addChild(rectNode);
             /*auto* b = Label::createWithTTF("□", "fonts/arial.ttf", 36.0);
             b->setPosition(Vec2(origin.x + echwid*(j+1),
                              echhei*i - b->getContentSize().height));
@@ -46,24 +49,98 @@ void HelloWorld::makeField(){
             this->addChild(b);*/
         }
     }
+    this->addChild(lyr);
 }
 void HelloWorld::startGame(){
     
     /*auto delay = DelayTime::create(0.0f);
     auto func = CallFunc::create(CC_CALLBACK_0(HelloWorld::play, this));
     this->runAction(Sequence::create(delay, func, NULL));*/
-    this->scheduleOnce(schedule_selector(HelloWorld::play), 1.0f);
-    this->scheduleUpdate();
-   // CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,1.0f,false);
+    //this->scheduleOnce(schedule_selector(HelloWorld::play), 1.0f);
+    //this->scheduleUpdate();
+    //CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,1.0f,false);
+    CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,0,0,0.0f,false);
     cout<<"call HelloWorld::startGame()"<<endl;
 }
-void HelloWorld::gameloop(){
-   // HelloWorld::gc->innergameloop();
+void HelloWorld::stateloop(float dt){
+    if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
+        HelloWorld::gameloop(dt);
+    }
+    else{
+        CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(HelloWorld::mainloopfuncschedule, this);
+        cout<<"game end in scene"<<endl;
+    }
+}
+void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
+    if(board==NULL){
+        return;
+    }
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    
+    const int hei = (int)gc->getGameHeight();
+    const int wid = (int)gc->getGameWidth();
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    const float gapratio = 0.05f;
+    const int echhei = (int)(((1.0f -gapratio)*(float)visibleSize.height)/hei);
+    const int echwid =  (int)(((1.0f -gapratio)*(float)visibleSize.width)/wid);
+    const int echsz = min(echhei,echwid);
+    const int gapwid = visibleSize.width-echsz*wid;
+    const int gaphei = visibleSize.height-echsz*hei;
+    Layer* newlyr = Layer::create();
+    newlyr->setPosition(Vec2(gapwid/2,gaphei/2));
+    newlyr->setContentSize(Size(echsz*wid, echsz*hei));
+    for (int i = 0; i < hei; i++) {
+        for (int j = 0; j < wid; j++) {
+            if(board[i][j]=='2'||board[i][j]=='1'){
+            auto rectNode = DrawNode::create();
+            
+            Vec2 rect[4];
+            rect[0] = Vec2(echsz*j,echsz*i);
+            rect[1] = Vec2(echsz*(j+1),echsz*i);
+            rect[2] = Vec2(echsz*(j+1),echsz*(i+1));
+            rect[3] = Vec2(echsz*j,echsz*(i+1));
+            Color4F white(1,1,1,1);
+            Color4F transp(0,0,0,0);
+            Color4F gray(0.5f,0.5f,0.5f,1);
+                Color4F lightwhite(1,1,1,0.7f);
+            Color4F blockcolor(blk_clr[1],blk_clr[2],blk_clr[3],1);
+                if(board[i][j]=='2'){
+                    rectNode->drawPolygon(rect, 4, blockcolor, 1, lightwhite);
+                }
+                else{
+                    rectNode->drawPolygon(rect, 4, gray, 1, lightwhite);
+                }
+            newlyr->addChild(rectNode);
+            }
+        }
+    }
+    if(HelloWorld::overlayblockboard!=NULL){
+        this->removeChild(HelloWorld::overlayblockboard,true);
+        HelloWorld::overlayblockboard=NULL;
+        
+    }
+    HelloWorld::overlayblockboard = newlyr;
+    this->addChild(HelloWorld::overlayblockboard);
+}
+void HelloWorld::gameloop(float dt){
+    cout<<"call HelloWorld::gameloop()"<<endl;
+    char** board = HelloWorld::gc->innergameloop();
+    unsigned char* blkclr = HelloWorld::gc->getLocalUser()->getCurrentBlock()->getBlockColor()->getColorAsArray();
+    HelloWorld::drawboardingui(board,blkclr);
+    for(int i=0;i<HelloWorld::gc->getGameHeight();i++){
+    delete [] board[i];
+    }
+    delete [] board;
+    delete [] blkclr;
 }
 void HelloWorld::play(float dt){
     cout<<"call HelloWorld::play()"<<endl;
     HelloWorld::gc->justinit();
-   //HelloWorld::gc->setGameStatusToOngoing();
+   HelloWorld::gc->setGameStatusToOngoing();
+    HelloWorld::mainloopfuncschedule =schedule_selector(HelloWorld::stateloop);
+ CCDirector::sharedDirector()->getScheduler()->scheduleSelector(mainloopfuncschedule,this,1.0f,false);
+    
    // this->schedule(schedule_selector(HelloWorld::gameloop), 1);
     /*while(!this->gc->forceend&&!this->isEnd()){
                     while(!this->forceend&&this->gs!=GameStatus::ONGOING){

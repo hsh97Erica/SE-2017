@@ -53,6 +53,14 @@ namespace Tetris{
                 }
                 
             }
+            unsigned char* getColorAsArray(){
+                unsigned char* rst = new unsigned char[4];
+                rst[0]=this->getAlphaAsRaw();
+                rst[1] = this->getRedAsRaw();
+                rst[2] = this->getGreenAsRaw();
+                rst[3] = this->getBlueAsRaw();
+                return rst;
+            }
             unsigned char getGreenAsRaw(){
                 return this->green;
             }

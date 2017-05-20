@@ -16,7 +16,7 @@ public:
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     void startGame();
-
+    void drawboardingui(char** board,unsigned char* clr);
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
     protected:
@@ -25,8 +25,10 @@ public:
         void play(float dt);
         void pause();
         void resume();
-        void stateloop();
-        void gameloop();
+        void stateloop(float dt);
+        void gameloop(float dt);
+    cocos2d::Layer* overlayblockboard=NULL;
+    cocos2d::SEL_SCHEDULE mainloopfuncschedule = NULL;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

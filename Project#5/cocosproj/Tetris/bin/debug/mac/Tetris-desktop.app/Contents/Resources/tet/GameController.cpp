@@ -40,6 +40,7 @@ namespace Tetris{
                     }
                     this->gameHeight = 20;
                     this->gameWidth = 8;
+        this->forceend=false;
                     this->gs = GameStatus::UNKNOWN;
                     //this->board = new bool*[this->gameHeight];
                     for(int i=0;i<this->gameHeight;i++){
@@ -101,6 +102,7 @@ namespace Tetris{
             }
     void GameController::innergameloop(){
             if(!this->forceend&&this->isOngoing()){
+                
                 this->printcurrentboard();
                 if(checkEnd()){this->setGameStatusToEnd();}
                 if(!this->usercheck())return;
