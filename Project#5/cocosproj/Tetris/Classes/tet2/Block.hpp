@@ -144,7 +144,7 @@ namespace Tetris{
                 for(int i=0;i<blkary_width;i++){
                     tmpblksp[i] = new bool[blkary_height];
                     //memset(tmpblksp[i],false,sizeof(bool)*blkary_height);
-                    for(int j=0;j<blkary_height;j++) tmpblksp[i][j] = blkspc[blkary_height-1-j][i];    
+                    for(int j=0;j<blkary_height;j++) tmpblksp[i][j] = blkspc[blkary_height-1-j][i];
                 }
                 return tmpblksp;
             }
@@ -177,7 +177,7 @@ namespace Tetris{
                 }
                 for(int i=0;i<blkary_height;i++){
                     for(int j=0;j<blkary_width;j++){
-                        if(rotated_space[j][i]&&mapdata[i+cury][j+curx]){
+                        if(j+curx<boardwidth && rotated_space[j][i]&&mapdata[i+cury][j+curx]){
                             return false;
                         }
                     }
@@ -185,6 +185,7 @@ namespace Tetris{
                 return true;
             }
             bool rotate(){
+                cout<<"call rotatefunc in block"<<endl;
                 if(this->blktype==-1||this->blkspc==NULL||(this->blkspc!=NULL&&this->blkspc[0]==NULL)){
                     return false;
                 }

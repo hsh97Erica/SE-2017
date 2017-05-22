@@ -121,7 +121,7 @@ namespace Tetris{
             }
             static unsigned int genColor(unsigned char red,unsigned char green,unsigned char blue ){
                 unsigned int rst = (unsigned int)blue;
-                rst|=(((unsigned int)0xff)<<(8*3));
+                rst|=((~(unsigned int)0)<<(8*3));
                 rst|=((unsigned int)red<<(8*2));
                 rst|=((unsigned int)green<<(8*1));
                 return rst;

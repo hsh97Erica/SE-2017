@@ -27,8 +27,11 @@ public:
         void resume();
         void stateloop(float dt);
         void gameloop(float dt);
-    cocos2d::Layer* overlayblockboard=NULL;
-    cocos2d::SEL_SCHEDULE mainloopfuncschedule = NULL;
+        virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+        virtual void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
+        cocos2d::Layer* overlayblockboard=NULL;
+        cocos2d::SEL_SCHEDULE mainloopfuncschedule = NULL;
+        
 };
 
 #endif // __HELLOWORLD_SCENE_H__

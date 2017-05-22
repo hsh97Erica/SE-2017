@@ -14,7 +14,7 @@ namespace Tetris{
             Block* generateRandomBlock(){
                 return this->generateBlock(TetrisUtil::randInt(1,7)); //randint(1,7));
             }
-            Block* generateBlock(int num){
+            Block* generateBlock(const int num){
                 Block* rst = NULL;
                 switch(num){
                     case 1:{

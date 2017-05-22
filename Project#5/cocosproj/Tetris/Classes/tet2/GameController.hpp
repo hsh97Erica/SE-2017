@@ -49,9 +49,11 @@ namespace Tetris{
                     while(this->board.size()){
                         this->board.pop_back();
                     }
+                    timedeltachecker = time(NULL);
                     this->gameHeight = 20;
                     this->gameWidth = 8;
                     this->gs = GameStatus::UNKNOWN;
+                    rmLinesCnt=0;
                     //this->board = new bool*[this->gameHeight];
                     for(int i=0;i<this->gameHeight;i++){
                         bool* newrow = new bool[this->gameWidth];
@@ -91,19 +93,24 @@ namespace Tetris{
                 if(s.size())removeLines(s); 
             }
             void removeLines(stack<int> s){
-                const int restorecount = s.size();
+                const int restorecount = (int)s.size();
+                
                 while(s.size()){
                     const int pos = s.top();
                     s.pop();
                     bool* tmp = this->board[pos];
                     this->board.erase(this->board.begin()+pos);
                     delete tmp;
-                }
-                for(int i=0;i<restorecount;i++){
                     bool* newrow = new bool[this->gameWidth];
                     memset(newrow,false,this->gameWidth*sizeof(bool));
                     this->board.push_back(newrow);
                 }
+                /*for(int i=0;i<restorecount;i++){
+                    bool* newrow = new bool[this->gameWidth];
+                    memset(newrow,false,this->gameWidth*sizeof(bool));
+                    this->board.push_back(newrow);
+                }*/
+                this->rmLinesCnt+=restorecount;
             }
             void init(InitGameInfo* igi){
                 if(igi==NULL){
@@ -118,21 +125,26 @@ namespace Tetris{
                 //unsigned char* colors = guser->getCurrentBlock()->getBlockColor()->getColorAsArray();
                 rst = this->getCombinedBoard();
                 //rst = this->getVisualizedBoard();
-                this->printcurrentboard();
+                //this->printcurrentboard();
                 //delete colors;
                 
                 if(checkEnd()){this->setGameStatusToEnd();return rst;}
                 this->findAndRemoveLines();
-                cout<<"rm ln ok"<<endl;
+                time_t tmp_time_delta = time(NULL);
+                //cout<<"==tm info=="<<endl<<tmp_time_delta<<endl<<(this->timedeltachecker)<<endl<<endl;
                 if(this->candropdown()){
-                    guser->setCurrentY(guser->getCurrentY()-1);
-                    cout<<"drop if inner ok"<<endl;
+                    if(tmp_time_delta>this->timedeltachecker){
+                        guser->setCurrentY(guser->getCurrentY()-1);
+                        this->timedeltachecker = tmp_time_delta;
+                    }
                 }else{
                     this->saveBlockAndCheck(guser);
                     cout<<"save block ok"<<endl;
                 }
-                cout<<"drop down ok"<<endl;
-                gplaytime++;
+                if(tmp_time_delta>this->timedeltachecker){
+                    gplaytime++;
+                     this->timedeltachecker = tmp_time_delta;
+                }
                 cout<<"1 loop end"<<endl;
             }
             return rst;
@@ -153,8 +165,13 @@ namespace Tetris{
             void currentblockrotate(){
                 if(!this->usercheck())return;
                 Users::GameUser* guser = this->gusers[0];
-                if(guser->getCurrentBlock()->canRotate(this->board,this->gameWidth,guser->getCurrentY(),guser->getCurrentX()))
+                //cout<<"chk"<<endl;
+                //cout<<"call currentblockrotate()"<<endl;
+                
+                if(guser->getCurrentBlock()->canRotate(this->board,this->gameWidth,guser->getCurrentY(),guser->getCurrentX())){
+                    cout<<"aa rotate"<<endl;
                 guser->getCurrentBlock()->rotate();
+                }
             }
             void currentusermoveleft(){
                 if(!this->usercheck())return;
@@ -167,6 +184,7 @@ namespace Tetris{
             void currentusermoveright(){
                 if(!this->usercheck())return;
                 Users::GameUser* guser = this->gusers[0];
+               // cout<<"before check canmoveright in currentusermoveright"<<endl;
                 if(this->canmoveright()){
                     guser->setCurrentX(guser->getCurrentX()+1);
                 }
@@ -192,7 +210,7 @@ namespace Tetris{
                         cout<<"new loop"<<endl;
                         //this->printposinfo();
 
-                        this->printcurrentboard();
+                        //this->printcurrentboard();
                         cout<<"printboard ok"<<endl;
                         if(checkEnd()){this->gs = GameStatus::END;}
                         cout<<"check end ok"<<endl;
@@ -380,7 +398,7 @@ namespace Tetris{
              blddt= curblk->getBlockData();
              for(int i=0;i<blkhg;i++){
                     for(int j=0;j<blkwd;j++){
-                        if(blddt[i][j]&&board[i+cury][curx+j]){
+                        if(i+cury<this->gameHeight && curx+j<this->gameWidth && blddt[i][j]&&board[i+cury][curx+j]){
                             return false;
                         }
                     }
@@ -402,7 +420,14 @@ namespace Tetris{
                 }
                 return opt;
             }
-
+        bool forcedropdownOnce(){
+            if(candropdown()){
+                 Users::GameUser* guser = this->gusers[0];
+                guser->setCurrentY(guser->getCurrentY()-1);
+                return true;
+            }
+            return false;
+        }
             bool candropdown(){
                 if(!this->usercheck())return false;
                 Users::GameUser* guser = this->gusers[0];
@@ -435,6 +460,7 @@ namespace Tetris{
             unsigned char usercount;
             vector<Users::GameUser*> gusers;
             vector<bool*> board;
+        unsigned long long rmLinesCnt = 0;
             bool usercheck(){
                 if(usercount==0||!this->gusers.size()||(this->gusers.size()&&this->gusers[0]==NULL)){
                     return false;
@@ -463,6 +489,8 @@ namespace Tetris{
                 }
                 return true;
             }
+    private:
+        time_t timedeltachecker=time(NULL);
     };
     class InitGameInfo{
         public:
