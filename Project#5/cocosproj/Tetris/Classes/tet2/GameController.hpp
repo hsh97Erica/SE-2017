@@ -8,6 +8,10 @@
 #include <vector>
 #include <stack>
 #include <cstring>
+#include <string>
+#include <sstream>
+#include <ctime>
+#include <cstdlib>
 #include "GameUserClsDelegate.hpp"
 #include "User.hpp"
 #include "Block.hpp"
@@ -50,10 +54,12 @@ namespace Tetris{
                         this->board.pop_back();
                     }
                     timedeltachecker = time(NULL);
+                occurtimedelta=false;
                     this->gameHeight = 20;
                     this->gameWidth = 8;
                     this->gs = GameStatus::UNKNOWN;
-                    rmLinesCnt=0;
+                
+                    //rmLinesCnt=0;
                     //this->board = new bool*[this->gameHeight];
                     for(int i=0;i<this->gameHeight;i++){
                         bool* newrow = new bool[this->gameWidth];
@@ -62,6 +68,14 @@ namespace Tetris{
                     }
                     this->gplaytime = 0;
                     this->usercount=1;
+                if(gusers.size()){
+                    while(!gusers.empty()){
+                        GameUser* guser = gusers[0];
+                        gusers.erase(gusers.begin());
+                        delete guser;
+                    }
+                    gusers.clear();
+                }
                     //this->gusers = new Users::GameUser*[this->usercount];
                     for(int i=0;i<this->usercount;i++){
                         this->gusers.push_back( new Users::GameUser());
@@ -69,6 +83,7 @@ namespace Tetris{
                         //this->gusers[i]->setCurrentY(this->gameHeight - this->gusers[i]->getCurrentBlock()->getBlockSpaceHeight());
                         this->gusers[i]->setCurrentX((this->gameWidth/2) - (this->gusers[i]->getCurrentBlock()->getBlockSpaceWidth()/2));
                     }
+                getLocalUser()->setRemovedLinesCount(0);
             }
             bool canRemoveLine(int y){
                 for(int i =0;i<this->gameWidth;i++)if(!this->board[y][i])return false;
@@ -92,6 +107,16 @@ namespace Tetris{
                 }
                 if(s.size())removeLines(s); 
             }
+            bool haveTimeDelta(){
+                bool rst = this->occurtimedelta;
+                if(rst){
+                this->occurtimedelta = false;
+                }
+                return rst;
+            }
+        bool requireRemovedLinesCountRefresh(){
+            return false;
+        }
             void removeLines(stack<int> s){
                 const int restorecount = (int)s.size();
                 
@@ -110,15 +135,23 @@ namespace Tetris{
                     memset(newrow,false,this->gameWidth*sizeof(bool));
                     this->board.push_back(newrow);
                 }*/
-                this->rmLinesCnt+=restorecount;
+                this->getLocalUser()->accumulateRemovedLinesCount(restorecount);
             }
             void init(InitGameInfo* igi){
                 if(igi==NULL){
                     this->justinit();
                 }
             }
+        bool switchBlock(){
+            GameUser* guser = getLocalUser();
+            if(guser->canSwitchBlock(board,gameHeight,gameWidth, guser->getCurrentX(),guser->getCurrentY())){
+                guser->switchBlock();
+            }
+        }
         char** innergameloop(){
             char** rst = NULL;
+            //bool hasTimeDelta = false;
+            //cout<<"inner play time: "<<gplaytime<<endl;
             if(!this->forceend&&this->isOngoing()){
                 if(!this->usercheck())return NULL;
                 Users::GameUser* guser = this->gusers[0];
@@ -136,17 +169,21 @@ namespace Tetris{
                     if(tmp_time_delta>this->timedeltachecker){
                         guser->setCurrentY(guser->getCurrentY()-1);
                         this->timedeltachecker = tmp_time_delta;
+                        this->occurtimedelta=true;
+                        
                     }
                 }else{
                     this->saveBlockAndCheck(guser);
                     cout<<"save block ok"<<endl;
                 }
-                if(tmp_time_delta>this->timedeltachecker){
+                if(this->occurtimedelta||tmp_time_delta>this->timedeltachecker){
+                    srand(time(NULL));
                     gplaytime++;
                      this->timedeltachecker = tmp_time_delta;
                 }
-                cout<<"1 loop end"<<endl;
+                //cout<<"1 loop end"<<endl;
             }
+            
             return rst;
         }
             void run(){
@@ -203,6 +240,51 @@ namespace Tetris{
             void printposinfo(){
                 cout<<"y: "<<this->gusers[0]->getCurrentY()<<"  x: "<<this->gusers[0]->getCurrentX()<<endl;
             }
+        string getPlayTimeWithFormat(bool hasPrefixFormat){
+            stringstream ss;
+            if(hasPrefixFormat){
+                ss<<"-경과시간-"<<endl;
+            }
+            unsigned long long hour,minute,second;
+            second = this->gplaytime%60;
+            minute = ((this->gplaytime)/60)%60;
+            hour = (this->gplaytime/3600)%60;
+            ss.fill('0');
+            ss.width(2);
+            ss<<hour;
+            ss<<":";
+            ss.width(2);
+            ss<<minute;
+            ss<<":";
+            ss.width(2);
+            ss<<second;
+            return ss.str();
+        }
+        string getScoreWithFormatForLocalUser(bool hasPrefixFormat){
+            return getScoreWithFormatForSomeUser(this->getLocalUser(),hasPrefixFormat);
+        }
+        string getScoreWithFormatForSomeUser(GameUser* guser,bool hasPrefixFormat){
+            stringstream ss;
+            if(hasPrefixFormat){
+                ss<<"-점수-"<<endl;
+            }
+            ss<<(guser->getCurrentGameScore());
+            return ss.str();
+        }
+        string getRemovedLinesCountWithFormatForLocalUser(bool hasPrefixFormat){
+            return getRemovedLinesCountWithFormatForSomeUser(this->getLocalUser(),hasPrefixFormat);
+        }
+        string getRemovedLinesCountWithFormatForSomeUser(GameUser* guser,bool hasPrefixFormat){
+            stringstream ss;
+            if(hasPrefixFormat){
+                ss<<"-지운 라인수-"<<endl;
+            }
+            ss<<(guser->getRemovedLinesCount());
+            return ss.str();
+        }
+        unsigned long long getPlayTimeAsRaw(){
+            return this->gplaytime;
+        }
             void play(){
                 this->gs=GameStatus::ONGOING;
                 while(!this->forceend&&!this->isEnd()){
@@ -278,6 +360,10 @@ namespace Tetris{
                 return NULL;
             }
         }
+        unsigned long long getLocalScore(){
+            return getLocalUser()->getCurrentGameScore();
+        }
+        
         char** getCombinedBoard(){
             if(this->board.size()){
                 char** printboard = new char*[this->gameHeight];
@@ -460,7 +546,7 @@ namespace Tetris{
             unsigned char usercount;
             vector<Users::GameUser*> gusers;
             vector<bool*> board;
-        unsigned long long rmLinesCnt = 0;
+        
             bool usercheck(){
                 if(usercount==0||!this->gusers.size()||(this->gusers.size()&&this->gusers[0]==NULL)){
                     return false;
@@ -491,6 +577,7 @@ namespace Tetris{
             }
     private:
         time_t timedeltachecker=time(NULL);
+        bool occurtimedelta = false;
     };
     class InitGameInfo{
         public:

@@ -31,7 +31,8 @@ public:
         virtual void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
         cocos2d::Layer* overlayblockboard=NULL;
         cocos2d::SEL_SCHEDULE mainloopfuncschedule = NULL;
-        
+        cocos2d::Label* ptimelbl = NULL;
+        cocos2d::Label* pscorelbl = NULL;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -12,6 +12,7 @@ namespace Tetris{
     class BlockGenerator{
         public:
             Block* generateRandomBlock(){
+                cout<<"genrandblk"<<endl;
                 return this->generateBlock(TetrisUtil::randInt(1,7)); //randint(1,7));
             }
             Block* generateBlock(const int num){

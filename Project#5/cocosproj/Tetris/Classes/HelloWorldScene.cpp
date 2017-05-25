@@ -65,7 +65,11 @@ void HelloWorld::startGame(){
 }
 void HelloWorld::stateloop(float dt){
     if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
+        
         HelloWorld::gameloop(dt);
+        if(this->gc->haveTimeDelta()){
+            this->ptimelbl->setString(gc->getPlayTimeWithFormat(true));
+        }
     }
     else{
         CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(HelloWorld::mainloopfuncschedule, this);
@@ -124,7 +128,7 @@ void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
     this->addChild(HelloWorld::overlayblockboard);
 }
 void HelloWorld::gameloop(float dt){
-    cout<<"call HelloWorld::gameloop()"<<endl;
+    //cout<<"call HelloWorld::gameloop()"<<endl;
     char** board = HelloWorld::gc->innergameloop();
     unsigned char* blkclr = HelloWorld::gc->getLocalUser()->getCurrentBlock()->getBlockColor()->getColorAsArray();
     
@@ -188,6 +192,9 @@ void HelloWorld::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d:
             this->startGame();
         }
     }
+    else if(keyCode==KeyCode::KEY_SHIFT||keyCode==KeyCode::KEY_LEFT_SHIFT||keyCode==KeyCode::KEY_RIGHT_SHIFT){
+        this->gc->switchBlock();
+    }
 }
 
 // on "init" you need to initialize your instance
@@ -205,7 +212,6 @@ bool HelloWorld::init()
         HelloWorld::gc = new GameController();
         //cout<<(int)gc->getGameHeight()<<endl;
     }
-    
     this->makeField();
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -251,17 +257,25 @@ bool HelloWorld::init()
     const int gaphei = visibleSize.height-echsz*hei;
     infoboardlyr->setPosition(Vec2((gapwid/2+((echsz*wid)/2)),gaphei/2));
     infoboardlyr->setContentSize(Size(visibleSize.width-((echsz*wid)/2), echsz*hei));
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("Hello World", "fonts/DXSeNB-KSCpc-EUC-H.ttf", 20);
+    label->setAnchorPoint(Vec2(0.5f,0.5f));
+    auto label2 = Label::createWithTTF("Hello World2", "fonts/DXSeNB-KSCpc-EUC-H.ttf", 20);
     
-    cout<<"infoboardlyr sz: "<<(infoboardlyr->getContentSize().width)<<"x"<<(infoboardlyr->getContentSize().height)<<endl;
-    
-    auto label2 = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
     label2->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label2->getContentSize().width/2,infoboardlyr->getContentSize().height-label2->getContentSize().height));
     infoboardlyr->addChild(label2);
+    cout<<"line height: "<<label2->getLineHeight()<<" , content height: "<<(label2->getBoundingBox().getMaxY()-label2->getBoundingBox().getMinY())<<endl;
+    label->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label->getContentSize().width/2,label2->getPosition().y-label->getContentSize().height));//infoboardlyr->getContentSize().height-label->getContentSize().height-((1.2f)*label2->getContentSize().height)));
+    this->pscorelbl = label;
+    this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));
+    infoboardlyr->addChild(label);
+    
+    this->ptimelbl = label2;
+    this->ptimelbl->setString(gc->getPlayTimeWithFormat(true));
+    //this->ptimelbl = label2;
     this->addChild(infoboardlyr);
     // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
+    
+    //label->setPosition(Vec2(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
     
     // add the label as a child to this layer
     //this->addChild(label, 1);
