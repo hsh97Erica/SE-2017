@@ -13,12 +13,15 @@
 #include <ctime>
 #include <cstdlib>
 #include "GameUserClsDelegate.hpp"
+#include "ScoreManagement.hpp"
 #include "User.hpp"
 #include "Block.hpp"
 #include "../HelloWorldScene.h"
+
 using namespace std;
 using namespace Tetris;
 using namespace Tetris::Delegates;
+using namespace Tetris::ScoreManage;
 namespace Tetris{
     class InitGameInfo;
 
@@ -119,7 +122,7 @@ namespace Tetris{
         }
             void removeLines(stack<int> s){
                 const int restorecount = (int)s.size();
-                
+                int scre = 0;
                 while(s.size()){
                     const int pos = s.top();
                     s.pop();
@@ -129,13 +132,13 @@ namespace Tetris{
                     bool* newrow = new bool[this->gameWidth];
                     memset(newrow,false,this->gameWidth*sizeof(bool));
                     this->board.push_back(newrow);
+                    scre+= (ScoreManagement::getDefaultScoreWhenRemovingOneLine()+ ScoreManagement::getScoreGapWhenRemovingOneLine());
                 }
-                /*for(int i=0;i<restorecount;i++){
-                    bool* newrow = new bool[this->gameWidth];
-                    memset(newrow,false,this->gameWidth*sizeof(bool));
-                    this->board.push_back(newrow);
-                }*/
                 this->getLocalUser()->accumulateRemovedLinesCount(restorecount);
+                const float comboscore =ScoreManagement::getComboScore(getLocalUser()->getCurrentComboCount());
+                const int accscr = scre+(int)comboscore;
+                cout<<"total accumu score: "<<(accscr)<<endl<<"scre: "<<scre<<endl<<"combo score: "<<comboscore<<endl<<"cur combo cnt: "<<(getLocalUser()->getCurrentComboCount())<<endl;
+                  getLocalUser()->accumulateCurrentGameScore(accscr );
             }
             void init(InitGameInfo* igi){
                 if(igi==NULL){
@@ -147,6 +150,32 @@ namespace Tetris{
             if(guser->canSwitchBlock(board,gameHeight,gameWidth, guser->getCurrentX(),guser->getCurrentY())){
                 guser->switchBlock();
             }
+        }
+        bool checkRmCntDisplayRefresh(){
+            const bool rst = this->rmLinesCntDeltaChecker<getLocalUser()->getRemovedLinesCount();
+            if(rst){
+                this->rmLinesCntDeltaChecker=getLocalUser()->getRemovedLinesCount();
+            }
+            return rst;
+        }
+        bool checkScoreDisplayRefresh(){
+            const bool rst = this->scorechecker<getLocalUser()->getCurrentGameScore();
+            if(rst){
+                this->scorechecker=getLocalUser()->getCurrentGameScore();
+            }
+            return rst;
+        }
+        string getRemovedLinesCountWithFormat(bool withCategoryFormat){
+            return getRemovedLinesCountWithFormatForSomeone(getLocalUser(),withCategoryFormat);
+        }
+        string getRemovedLinesCountWithFormatForSomeone(GameUser* guser,bool withCategoryFormat){
+            stringstream ss;
+            if(withCategoryFormat){
+                ss<<"-지운 줄수-"<<endl;
+                
+            }
+            ss<<(guser->getRemovedLinesCount());
+            return ss.str();
         }
         char** innergameloop(){
             char** rst = NULL;
@@ -177,6 +206,7 @@ namespace Tetris{
                     cout<<"save block ok"<<endl;
                 }
                 if(this->occurtimedelta||tmp_time_delta>this->timedeltachecker){
+                    getLocalUser()->checkRequireComboReset(true);
                     srand(time(NULL));
                     gplaytime++;
                      this->timedeltachecker = tmp_time_delta;
@@ -578,6 +608,8 @@ namespace Tetris{
     private:
         time_t timedeltachecker=time(NULL);
         bool occurtimedelta = false;
+        unsigned long long rmLinesCntDeltaChecker = 0;
+        unsigned long long scorechecker = 0;
     };
     class InitGameInfo{
         public:

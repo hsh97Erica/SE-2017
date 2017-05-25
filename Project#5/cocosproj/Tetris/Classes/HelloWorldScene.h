@@ -33,6 +33,7 @@ public:
         cocos2d::SEL_SCHEDULE mainloopfuncschedule = NULL;
         cocos2d::Label* ptimelbl = NULL;
         cocos2d::Label* pscorelbl = NULL;
+        cocos2d::Label* rmlnscntlbl = NULL;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

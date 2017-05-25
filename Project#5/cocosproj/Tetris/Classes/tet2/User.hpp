@@ -5,10 +5,12 @@
 #include <iostream>
 #include "Block.hpp"
 #include "BlockGenerator.hpp"
+#include "ScoreManagement.hpp"
 #include <ctime>
-#define _MAX_COMBO_TIME_SEC 4
+#define _MAX_COMBO_TIME_SEC 7
 using namespace std;
 using namespace Tetris;
+using namespace Tetris::ScoreManage;
 namespace Tetris{
     namespace Users{
         class UserData{
@@ -22,6 +24,7 @@ namespace Tetris{
             public:
                 GameUser(){
                     initCls();
+                    loadUserDataFromExistLocation();
                 }
                 GameUser(UserData* mud){
                     initCls();
@@ -91,9 +94,11 @@ namespace Tetris{
                 this->current_game_score=0;
             }
             unsigned long long getCurrentGameScore(){
+                checkRequireComboReset(true);
                 return this->current_game_score;
             }
             void setCurrentGameScore(const unsigned long long newscore){
+                
                 this->current_game_score =newscore;
             }
             unsigned long long accumulateCurrentGameScore(const unsigned long long addscore){
@@ -102,21 +107,47 @@ namespace Tetris{
             }
             void resetRmCombo(){
                 continous_rmlines_cnt_as_combo=0;
+                resetLastestComboTime();
+                cout<<endl<<"%%%%%%reset combo%%%%%%"<<endl<<endl;
             }
-            bool checkRequireComboReset(){
+            bool checkRequireComboReset(bool autoresetifsucceed){
                 time_t curtime = time(NULL);
-                return (curtime-this->lastest_combo_time)<=_MAX_COMBO_TIME_SEC;
+                const bool rst =(curtime-this->lastest_combo_time)>_MAX_COMBO_TIME_SEC;
+                if(rst&&autoresetifsucceed){
+                    resetRmCombo();
+                }
+                return rst;
             }
             unsigned long long getRemovedLinesCount(){
                 return this->rmLinesCnt;
             }
             unsigned long long accumulateRemovedLinesCount(unsigned long long addrmlines){
                 this->rmLinesCnt+=addrmlines;
+                checkRequireComboReset(true);
+                continous_rmlines_cnt_as_combo+=addrmlines;
+                resetLastestComboTime();
+                return this->rmLinesCnt;
+            }
+            long long getCurrentComboCount(){
+                checkRequireComboReset(true);
+                return this->continous_rmlines_cnt_as_combo;
             }
             void setRemovedLinesCount(unsigned long long rmlines){
+                const unsigned long long before = this->rmLinesCnt;
+                if(rmlines<before){
+                    resetRmCombo();
+                }
+                else{
+                    checkRequireComboReset(true);
+                    continous_rmlines_cnt_as_combo+=(rmlines-before);
+                    resetLastestComboTime();
+                }
                 this->rmLinesCnt=rmlines;
             }
         protected:
+            virtual void loadUserDataFromExistLocation(){
+                
+            }
             virtual void initCls(){
                 this->initGameScore();
                 this->setRemovedLinesCount(0);
@@ -137,6 +168,9 @@ namespace Tetris{
                     delete ud;
                 }
                 this->ud = NULL;
+            }
+            void resetLastestComboTime(){
+                this->lastest_combo_time = time(NULL);
             }
             private:
             

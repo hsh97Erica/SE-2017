@@ -70,6 +70,12 @@ void HelloWorld::stateloop(float dt){
         if(this->gc->haveTimeDelta()){
             this->ptimelbl->setString(gc->getPlayTimeWithFormat(true));
         }
+        if(this->gc->checkRmCntDisplayRefresh()){
+            this->rmlnscntlbl-> setString(gc->getRemovedLinesCountWithFormat(true));
+        }
+        if(this->gc->checkScoreDisplayRefresh()){
+            this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));
+        }
     }
     else{
         CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(HelloWorld::mainloopfuncschedule, this);
@@ -257,18 +263,21 @@ bool HelloWorld::init()
     const int gaphei = visibleSize.height-echsz*hei;
     infoboardlyr->setPosition(Vec2((gapwid/2+((echsz*wid)/2)),gaphei/2));
     infoboardlyr->setContentSize(Size(visibleSize.width-((echsz*wid)/2), echsz*hei));
-    auto label = Label::createWithTTF("Hello World", "fonts/DXSeNB-KSCpc-EUC-H.ttf", 20);
+    const float fontsz = 20;
+    auto label = Label::createWithTTF("Hello World", "fonts/DXSeNB-KSCpc-EUC-H.ttf", fontsz);
     label->setAnchorPoint(Vec2(0.5f,0.5f));
-    auto label2 = Label::createWithTTF("Hello World2", "fonts/DXSeNB-KSCpc-EUC-H.ttf", 20);
-    
+    auto label2 = Label::createWithTTF("Hello World2", "fonts/DXSeNB-KSCpc-EUC-H.ttf", fontsz);
+    this->rmlnscntlbl = Label::createWithTTF("Hello World3", "fonts/DXSeNB-KSCpc-EUC-H.ttf", fontsz);
     label2->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label2->getContentSize().width/2,infoboardlyr->getContentSize().height-label2->getContentSize().height));
     infoboardlyr->addChild(label2);
-    cout<<"line height: "<<label2->getLineHeight()<<" , content height: "<<(label2->getBoundingBox().getMaxY()-label2->getBoundingBox().getMinY())<<endl;
-    label->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label->getContentSize().width/2,label2->getPosition().y-label->getContentSize().height));//infoboardlyr->getContentSize().height-label->getContentSize().height-((1.2f)*label2->getContentSize().height)));
+    //cout<<"line height: "<<label2->getLineHeight()<<" , content height: "<<(label2->getBoundingBox().getMaxY()-label2->getBoundingBox().getMinY())<<endl;
+    label->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label->getContentSize().width/2,label2->getPosition().y-label2->getLineHeight()-label->getContentSize().height));
+    this->rmlnscntlbl->setPosition(Vec2(infoboardlyr->getContentSize().width/2-this->rmlnscntlbl->getContentSize().width/2,label->getPosition().y-label->getContentSize().height*1.5f));
+    this->rmlnscntlbl-> setString(gc->getRemovedLinesCountWithFormat(true));
     this->pscorelbl = label;
     this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));
     infoboardlyr->addChild(label);
-    
+    infoboardlyr->addChild(this->rmlnscntlbl);
     this->ptimelbl = label2;
     this->ptimelbl->setString(gc->getPlayTimeWithFormat(true));
     //this->ptimelbl = label2;
