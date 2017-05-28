@@ -3,9 +3,11 @@
 
 #include "cocos2d.h"
 #include "tet2/GameController.hpp"
+#include "views/NextBlockRenderView.hpp"
 #include <iostream>
 using namespace std;
 using namespace Tetris;
+//using namespace Tetris::Views;
 class HelloWorld : public cocos2d::Scene
 {
 public:
@@ -34,6 +36,10 @@ public:
         cocos2d::Label* ptimelbl = NULL;
         cocos2d::Label* pscorelbl = NULL;
         cocos2d::Label* rmlnscntlbl = NULL;
+        cocos2d::Layer* nxtblkrenderingarea = NULL;
+    
+    
+        Views::NextBlockRenderBehavior* nxtblkrv = NULL;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

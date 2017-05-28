@@ -2,19 +2,23 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 #include "tet2/GameController.hpp"
+#include "views/NextBlockRenderView.hpp"
 #include <cmath>
 USING_NS_CC;
 using namespace cocos2d;
 using namespace std;
 using namespace Tetris;
 using KeyCode = cocos2d::EventKeyboard::KeyCode;
+using namespace Tetris::Views;
 Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
 }
 void HelloWorld::makeField(){
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    
+    if(this->nxtblkrenderingarea==NULL){
+        this->nxtblkrenderingarea = Layer::create();
+    }
     const int hei = (int)gc->getGameHeight();
     const int wid = (int)gc->getGameWidth();
     auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -28,6 +32,20 @@ void HelloWorld::makeField(){
     Layer* lyr = Layer::create();
     lyr->setPosition(Vec2(gapwid/2,gaphei/2));
     lyr->setContentSize(Size(echsz*wid, echsz*hei));
+    if(this->nxtblkrv==NULL){
+        this->nxtblkrv = NextBlockRenderBehavior::create();
+    }
+    this->nxtblkrv->setContentSize(Size(echsz*this->nxtblkrv->getMaxBoardSize(),echsz*this->nxtblkrv->getMaxBoardSize()));
+    const int gapwid2 =visibleSize.width-(gapwid/2+echsz*wid+this->nxtblkrv->getContentSize().width);
+    this->nxtblkrv->setPosition(Vec2(gapwid/2+echsz*wid+gapwid2/2,gaphei/2));
+  //  this->nxtblkrenderingarea->setPosition(Vec2(0,gaphei/2));//gapwid/2,gaphei/2));
+    //this->nxtblkrenderingarea->setPosition(Vec2(gapwid/2+echsz*wid,gaphei/2));
+   // auto lbl = Label::createWithTTF("blk render", "fonts/arial.ttf", 10);
+    //lbl->setPosition(Vec2(lbl->getContentSize().width/2,lbl->getContentSize().height/2));
+    //this->nxtblkrv->addChild(lbl);
+    //this->nxtblkrv->checkInstance();
+    //this->addChild(this->nxtblkrenderingarea);
+    
    for (int i = 0; i < hei; i++) {
         for (int j = 0; j < wid; j++) {
             auto rectNode = DrawNode::create();
@@ -39,15 +57,9 @@ void HelloWorld::makeField(){
             rect[3] = Vec2(echsz*j,echsz*(i+1));
             Color4F white(1,1,1,1);
             Color4F transp(0,0,0,0);
-            rectNode->drawPolygon(rect, 4, transp, 1, white);
+            rectNode->drawPolygon(rect, 4, transp, 0.7f, white);
             lyr->addChild(rectNode);
-            /*auto* b = Label::createWithTTF("□", "fonts/arial.ttf", 36.0);
-            b->setPosition(Vec2(origin.x + echwid*(j+1),
-                             echhei*i - b->getContentSize().height));
-            //b->setPosition(ccp(winSize.width * (0.32 + j * 0.04), winSize.height * (0.1 + i * 0.04)));
-            //b->setColor(ccc3(128, 128, 128,255));
-            b->setColor(Color3B(128, 128, 128));
-            this->addChild(b);*/
+
         }
     }
     this->addChild(lyr);
@@ -67,6 +79,7 @@ void HelloWorld::stateloop(float dt){
     if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
         
         HelloWorld::gameloop(dt);
+        
         if(this->gc->haveTimeDelta()){
             this->ptimelbl->setString(gc->getPlayTimeWithFormat(true));
         }
@@ -114,13 +127,13 @@ void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
             Color4F transp(0,0,0,0);
                 Color4F lightwhite(1,1,1,0.7f);
             
-                if(board[i][j]=='2'){
+                if(board[i][j]=='2'||board[i][j]==2){
                     Color4F blockcolor(((float)blk_clr[1])/255.0f,((float)blk_clr[2])/255.0f,((float)blk_clr[3])/255.0f,((float)blk_clr[0])/255.0f);
-                    rectNode->drawPolygon(rect, 4, blockcolor, 1, lightwhite);
+                    rectNode->drawPolygon(rect, 4, blockcolor, 0.7f, lightwhite);
                 }
                 else{
                     Color4F gray(0.5f,0.5f,0.5f,1);
-                    rectNode->drawPolygon(rect, 4, gray, 1, lightwhite);
+                    rectNode->drawPolygon(rect, 4, gray, 0.7f, lightwhite);
                 }
             newlyr->addChild(rectNode);
             }
@@ -137,8 +150,8 @@ void HelloWorld::gameloop(float dt){
     //cout<<"call HelloWorld::gameloop()"<<endl;
     char** board = HelloWorld::gc->innergameloop();
     unsigned char* blkclr = HelloWorld::gc->getLocalUser()->getCurrentBlock()->getBlockColor()->getColorAsArray();
-    
     HelloWorld::drawboardingui(board,blkclr);
+    this->nxtblkrv->renderNextBlock();
     if(board!=NULL){
         for(int i=0;i<HelloWorld::gc->getGameHeight();i++){
             delete [] board[i];
@@ -151,10 +164,9 @@ void HelloWorld::gameloop(float dt){
 void HelloWorld::play(float dt){
     cout<<"call HelloWorld::play()"<<endl;
     HelloWorld::gc->justinit();
-   HelloWorld::gc->setGameStatusToOngoing();
+    HelloWorld::gc->setGameStatusToOngoing();
     HelloWorld::mainloopfuncschedule =schedule_selector(HelloWorld::stateloop);
- CCDirector::sharedDirector()->getScheduler()->scheduleSelector(mainloopfuncschedule,this,1.0f/(24+1),false);
-    
+    CCDirector::sharedDirector()->getScheduler()->scheduleSelector(mainloopfuncschedule,this,1.0f/(24+1),false);
    // this->schedule(schedule_selector(HelloWorld::gameloop), 1);
     
 }
@@ -165,41 +177,45 @@ void HelloWorld::resume(){
     HelloWorld::gc->resume();
 }
 void HelloWorld::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event){
-    if(keyCode==KeyCode::KEY_LEFT_ARROW){
-        this->gc->currentusermoveleft();
-    }
-    else if(keyCode==KeyCode::KEY_RIGHT_ARROW){
-        this->gc->currentusermoveright();
-    }
-    else if(keyCode==KeyCode::KEY_DOWN_ARROW){
-        this->gc->forcedropdownOnce();
+    if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
+        if(keyCode==KeyCode::KEY_LEFT_ARROW){
+            this->gc->currentusermoveleft();
+        }
+        else if(keyCode==KeyCode::KEY_RIGHT_ARROW){
+            this->gc->currentusermoveright();
+        }
+        else if(keyCode==KeyCode::KEY_DOWN_ARROW){
+            this->gc->forcedropdownOnce();
+        }
     }
 }
 void HelloWorld::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event){
-    if(keyCode==KeyCode::KEY_SPACE){
+    if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
+        if(keyCode==KeyCode::KEY_SPACE){
         //cout<<"will call currentblockrotate"<<endl;
-        this->gc-> currentblockrotate();
+            this->gc-> currentblockrotate();
        // cout<<"called currentblockrotate"<<endl;
-    }
-    else if(keyCode==KeyCode::KEY_ENTER){
-        this->gc->fastdropdown();
-    }
-    else if(keyCode==KeyCode::KEY_ESCAPE){
-        if(!this->gc->isEnd()){
-            if(this->gc->isOngoing()){
-                this->pause();
-            }
-            else if(this->gc->isPaused()){
-                this->resume();
-            }
+        }
+        else if(keyCode==KeyCode::KEY_ENTER){
+            this->gc->fastdropdown();
+        }
+        else if(keyCode==KeyCode::KEY_ESCAPE){
+            if(!this->gc->isEnd()){
+                if(this->gc->isOngoing()){
+                    this->pause();
+                }
+                else if(this->gc->isPaused()){
+                    this->resume();
+                }
             
+            }
+            else{
+                this->startGame();
+            }
         }
-        else{
-            this->startGame();
+        else if(keyCode==KeyCode::KEY_SHIFT||keyCode==KeyCode::KEY_LEFT_SHIFT||keyCode==KeyCode::KEY_RIGHT_SHIFT){
+            this->gc->switchBlock();
         }
-    }
-    else if(keyCode==KeyCode::KEY_SHIFT||keyCode==KeyCode::KEY_LEFT_SHIFT||keyCode==KeyCode::KEY_RIGHT_SHIFT){
-        this->gc->switchBlock();
     }
 }
 
@@ -218,7 +234,11 @@ bool HelloWorld::init()
         HelloWorld::gc = new GameController();
         //cout<<(int)gc->getGameHeight()<<endl;
     }
+    //NextBlockRenderBehavior*
+    this->nxtblkrv = NextBlockRenderBehavior::create();
+    this->nxtblkrv->setGameController(gc);
     this->makeField();
+    this->addChild(this->nxtblkrv);
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     auto K_listner = EventListenerKeyboard::create();
@@ -252,7 +272,6 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     Layer* infoboardlyr = Layer::create();
-    
     const int hei = (int)gc->getGameHeight();
     const int wid = (int)gc->getGameWidth();
     const float gapratio = 0.05f;
@@ -271,8 +290,8 @@ bool HelloWorld::init()
     label2->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label2->getContentSize().width/2,infoboardlyr->getContentSize().height-label2->getContentSize().height));
     infoboardlyr->addChild(label2);
     //cout<<"line height: "<<label2->getLineHeight()<<" , content height: "<<(label2->getBoundingBox().getMaxY()-label2->getBoundingBox().getMinY())<<endl;
-    label->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label->getContentSize().width/2,label2->getPosition().y-label2->getLineHeight()-label->getContentSize().height));
-    this->rmlnscntlbl->setPosition(Vec2(infoboardlyr->getContentSize().width/2-this->rmlnscntlbl->getContentSize().width/2,label->getPosition().y-label->getContentSize().height*1.5f));
+    label->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label->getContentSize().width/2,label2->getPosition().y-label2->getLineHeight()*1.5f-label->getContentSize().height));
+    this->rmlnscntlbl->setPosition(Vec2(infoboardlyr->getContentSize().width/2-this->rmlnscntlbl->getContentSize().width/2,label->getPosition().y-label->getContentSize().height*1.5f- this->rmlnscntlbl->getContentSize().height));
     this->rmlnscntlbl-> setString(gc->getRemovedLinesCountWithFormat(true));
     this->pscorelbl = label;
     this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));

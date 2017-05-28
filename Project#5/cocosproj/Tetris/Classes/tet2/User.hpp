@@ -173,7 +173,6 @@ namespace Tetris{
                 this->lastest_combo_time = time(NULL);
             }
             private:
-            
                 unsigned short currentXpos=0;
                 unsigned short currentYpos=0;
                 Block* currentBlock=NULL;
