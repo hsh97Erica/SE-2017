@@ -15,35 +15,62 @@ namespace Tetris{
         public:
             CREATE_FUNC(NextBlockRenderBehavior);
             bool renderNextBlock(){
+                cout<<"start render block"<<endl;
                 if(this->gmctl!=NULL){
                     this->removeAllChildren();
+                    
+                    this->initInstanceLabel();
+                    Size lblsz = this->getLabelSize();
+                    if(!this->initLabelAtLeastOnce){
+                        initLabelAtLeastOnce = true;
+                        Size contsz = this->getContentSize();
+                        this->setContentSize(Size(contsz.width,contsz.height+lblsz.height));
+                    }
                     Block* nxtblk = this->gmctl->getLocalUser()->getNextBlock();
                     if(nxtblk==NULL){
                         return false;
                     }
+                    //cout<<"success init render"<<endl;
                     const int nxtblk_height = nxtblk->getBlockSpaceHeight();
                     const int nxtblk_width = nxtblk->getBlockSpaceWidth();
+                    const int prefix_view_height = this->getLabelSize().height;
                     const int boardsz = getMaxBoardSize();
                     auto colorsz =nxtblk->getBlockColor()->getColorAsArray();
                     auto blkdt = nxtblk->getBlockData();
                     auto contentsz = this->getContentSize();
-                    const unsigned long long echsz = minUll( contentsz.width/boardsz,contentsz.height/boardsz);
+                    const unsigned long long echsz = minUll( contentsz.width/boardsz,(contentsz.height-prefix_view_height)/boardsz);
                     if(colorsz==NULL||blkdt==NULL){
                         return false;
+                    }
+                    const int prefixheight =(boardsz-nxtblk_height+1)/2;
+                    const int prefixwidth = (boardsz-nxtblk_width+1)/2;
+                    bool** newblkdt = new bool*[boardsz];
+                    for(int i=0;i<boardsz;i++){
+                        newblkdt[i] = new bool[boardsz];
+                        memset(newblkdt[i],false,sizeof(bool)*boardsz);
+                    }
+                    for(int i=0;i<nxtblk_height;i++){
+                        for(int j=0;j<nxtblk_width;j++){
+                            if(blkdt[i][j]){
+                                newblkdt[i+prefixheight][j+prefixwidth] = true;
+                            }
+                        }
                     }
                     for(int i=0;i<boardsz;i++){
                         for(int j=0;j<boardsz;j++){
                             bool usecolor = false;
-                            if(i<nxtblk_height&&j<nxtblk_width&&blkdt[i][j]){
+                            if(newblkdt[i][j]){
                                 usecolor = true;
                             }
                             auto rectNode = DrawNode::create();
                             
                             Vec2 rect[4];
+
                             rect[0] = Vec2(echsz*j,echsz*i);
                             rect[1] = Vec2(echsz*(j+1),echsz*i);
                             rect[2] = Vec2(echsz*(j+1),echsz*(i+1));
                             rect[3] = Vec2(echsz*j,echsz*(i+1));
+                            
                             Color4F white(1,1,1,1);
                             Color4F transp(0,0,0,0);
                             Color4F clr(colorsz[1]/255.0f,colorsz[2]/255.0f,colorsz[3]/255.0f,colorsz[0]/255.0f);
@@ -52,10 +79,11 @@ namespace Tetris{
                             this->addChild(rectNode);
                         }
                     }
-                    
+                    cout<<"finish call rerender"<<endl;
                     return true;
                 }
                 else{
+                     cout<<"finish call rerender"<<endl;
                     return false;
                 }
             }
@@ -68,7 +96,41 @@ namespace Tetris{
             int getMaxBoardSize(){
                 return BOARD_MAX_PIXEL_SIZE;
             }
-            
+            Label* getLabel(){
+                return this->prevlbl;
+            }
+            Size getLabelSize(){
+                if(this->prevlbl==NULL){
+                    return Size();
+                }
+                else{
+                    return this->prevlbl->getContentSize();
+                }
+            }
+        protected:
+            Label* prevlbl = NULL;
+            void initInstanceLabel(){
+                if(this->prevlbl!=NULL){
+                    this->removeChild(prevlbl);
+                    this->prevlbl = NULL;
+                    initInstanceLabel();
+                    
+                }
+                else{
+                    const float fntsz = 17;
+                    prevlbl = Label::createWithTTF("-Next Block-", "fonts/DXSeNB-KSCpc-EUC-H.ttf", fntsz);
+                    float widv = prevlbl->getContentSize().width;
+                    if(widv>this->getContentSize().width){
+                        widv/=2;
+                    }
+                    else{
+                        widv = this->getContentSize().width/2-widv/2;
+                    }
+                    prevlbl->setPosition(Vec2(widv,this->getContentSize().height- prevlbl->getContentSize().height/2));
+                    this->addChild(prevlbl);
+                }
+            }
+            bool initLabelAtLeastOnce = false;
         private:
             unsigned long long minUll(unsigned long long x,unsigned long long y){
                 return x<y?x:y;

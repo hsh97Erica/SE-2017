@@ -14,7 +14,6 @@ public:
     static cocos2d::Scene* createScene();
 
     virtual bool init();
-    
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     void startGame();
@@ -36,8 +35,7 @@ public:
         cocos2d::Label* ptimelbl = NULL;
         cocos2d::Label* pscorelbl = NULL;
         cocos2d::Label* rmlnscntlbl = NULL;
-        cocos2d::Layer* nxtblkrenderingarea = NULL;
-    
+    cocos2d::Layer* nxtblkrenderingarea = NULL;
     
         Views::NextBlockRenderBehavior* nxtblkrv = NULL;
 };
