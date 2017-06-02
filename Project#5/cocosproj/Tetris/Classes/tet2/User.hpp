@@ -112,11 +112,17 @@ namespace Tetris{
             }
             bool checkRequireComboReset(bool autoresetifsucceed){
                 time_t curtime = time(NULL);
-                const bool rst =(curtime-this->lastest_combo_time)>_MAX_COMBO_TIME_SEC;
-                if(rst&&autoresetifsucceed){
-                    resetRmCombo();
+                if(this->getGameResumeState()){
+                    const time_t timegap = curtime-this->lastest_combo_time;
+                    this->lastest_combo_time = curtime-timegap;
                 }
-                return rst;
+                else{
+                    const bool rst =(curtime-this->lastest_combo_time)>_MAX_COMBO_TIME_SEC;
+                    if(rst&&autoresetifsucceed){
+                        resetRmCombo();
+                    }
+                    return rst;
+                }
             }
             unsigned long long getRemovedLinesCount(){
                 return this->rmLinesCnt;
@@ -143,6 +149,12 @@ namespace Tetris{
                     resetLastestComboTime();
                 }
                 this->rmLinesCnt=rmlines;
+            }
+            void setGameResumeState(bool isResume){
+                this->isGameResume = isResume;
+            }
+            bool getGameResumeState(){
+                return this->isGameResume;
             }
         protected:
             virtual void loadUserDataFromExistLocation(){
@@ -173,6 +185,7 @@ namespace Tetris{
                 this->lastest_combo_time = time(NULL);
             }
             private:
+            bool isGameResume = false;
                 unsigned short currentXpos=0;
                 unsigned short currentYpos=0;
                 Block* currentBlock=NULL;

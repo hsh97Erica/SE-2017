@@ -258,14 +258,21 @@ bool HelloWorld::init()
                                            "CloseSelected.png",
                                            CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
     
-    closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
+    //closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,origin.y + closeItem->getContentSize().height/2));
 
     // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
+   // auto menu = Menu::create(closeItem, NULL);
+    //menu->setPosition(Vec2::ZERO);
+    //this->addChild(menu, 1);
+    auto menuItem = MenuItemImage::create("res/images/menu_drawer.png", "res/images/menu_drawer.png", CC_CALLBACK_1(HelloWorld::menuDrawerClickCallback, this));
+    menuItem->setPosition(Vec2(origin.x+menuItem->getContentSize().width/2,origin.y+visibleSize.height-menuItem->getContentSize().height/2));
+     //closeItem->setPosition(Vec2(origin.x+closeItem->getContentSize().width/2,origin.y+visibleSize.height-closeItem->getContentSize().height/2));
+    menuItem->setScaleX((closeItem->getContentSize().width)/(menuItem->getContentSize().width));
+    menuItem->setScaleY((closeItem->getContentSize().height)/(menuItem->getContentSize().height));
+    menuItem->setPosition(Vec2(origin.x+(menuItem->getContentSize().width*menuItem->getScaleX())/2,origin.y+visibleSize.height-(menuItem->getContentSize().height*menuItem->getScaleY())/2));
+    auto menu = Menu::create(menuItem,NULL);
     menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-
+    this->addChild(menu,1);
     /////////////////////////////
     // 3. add your codes below...
 
@@ -320,7 +327,46 @@ bool HelloWorld::init()
     return true;
 }
 
+void HelloWorld::menuDrawerClickCallback(Ref* pSender){
+    if(gc->isOngoing()){
+        gc->pause();
+    }
+    if(this->gameoptionmenu==NULL){
+        this->gameoptionmenu =this->generateOptionMenu();
+        this->addChild(this->gameoptionmenu);
+    }
+    else{
+        if(gc->isPaused()){
+            gc->resume();
+        }
+        this->removeChild(this->gameoptionmenu);
+        this->gameoptionmenu = NULL;
+    }
+   // menuCloseCallback(pSender);
+}
 
+Menu* HelloWorld::generateOptionMenu(){
+    
+    auto item_1 = MenuItemFont::create("Exit", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+    auto item_3 = MenuItemFont::create("Close", CC_CALLBACK_1(HelloWorld::gameforceResumeMenuCallback, this));
+    auto menu = Menu::create(item_1,item_3,NULL);
+    menu->alignItemsVertically();
+    return menu;
+}
+void HelloWorld::gameforceResumeMenuCallback(Ref* pSender){
+    if(gc->isPaused()){
+        gc->resume();
+    }
+    if(this->gameoptionmenu!=NULL){
+        this->removeChild(this->gameoptionmenu);
+        this->gameoptionmenu=NULL;
+    }
+}
+void HelloWorld::gameforcePauseMenuCallback(Ref* pSender){
+    if(gc->isOngoing()){
+        gc->pause();
+    }
+}
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
     //Close the cocos2d-x game scene and quit the application

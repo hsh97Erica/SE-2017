@@ -16,6 +16,9 @@ public:
     virtual bool init();
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
+    void menuDrawerClickCallback(cocos2d::Ref* pSender);
+    void gameforceResumeMenuCallback(Ref* pSender);
+    void gameforcePauseMenuCallback(Ref* pSender);
     void startGame();
     void drawboardingui(char** board,unsigned char* clr);
     // implement the "static create()" method manually
@@ -35,9 +38,11 @@ public:
         cocos2d::Label* ptimelbl = NULL;
         cocos2d::Label* pscorelbl = NULL;
         cocos2d::Label* rmlnscntlbl = NULL;
-    cocos2d::Layer* nxtblkrenderingarea = NULL;
-    
+        cocos2d::Layer* nxtblkrenderingarea = NULL;
+    cocos2d::Menu* gameoptionmenu = NULL;
+        cocos2d::Menu* generateOptionMenu();
         Views::NextBlockRenderBehavior* nxtblkrv = NULL;
+        bool menuviewadded = false;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

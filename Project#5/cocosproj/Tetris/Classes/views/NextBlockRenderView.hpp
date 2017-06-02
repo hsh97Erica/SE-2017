@@ -15,7 +15,6 @@ namespace Tetris{
         public:
             CREATE_FUNC(NextBlockRenderBehavior);
             bool renderNextBlock(){
-                cout<<"start render block"<<endl;
                 if(this->gmctl!=NULL){
                     this->removeAllChildren();
                     
@@ -79,11 +78,9 @@ namespace Tetris{
                             this->addChild(rectNode);
                         }
                     }
-                    cout<<"finish call rerender"<<endl;
                     return true;
                 }
                 else{
-                     cout<<"finish call rerender"<<endl;
                     return false;
                 }
             }

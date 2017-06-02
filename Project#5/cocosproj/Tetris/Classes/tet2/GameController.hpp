@@ -179,10 +179,14 @@ namespace Tetris{
         }
         char** innergameloop(){
             char** rst = NULL;
+            if(!this->usercheck())return NULL;
+            for(int i=0;i<this->gusers.size();i++){
+                gusers[i]->setGameResumeState(isPaused());
+            }
             //bool hasTimeDelta = false;
             //cout<<"inner play time: "<<gplaytime<<endl;
             if(!this->forceend&&this->isOngoing()){
-                if(!this->usercheck())return NULL;
+                
                 Users::GameUser* guser = this->gusers[0];
                 //unsigned char* colors = guser->getCurrentBlock()->getBlockColor()->getColorAsArray();
                 rst = this->getCombinedBoard();
@@ -205,8 +209,9 @@ namespace Tetris{
                     this->saveBlockAndCheck(guser);
                     cout<<"save block ok"<<endl;
                 }
+                getLocalUser()->checkRequireComboReset(true);
                 if(this->occurtimedelta||tmp_time_delta>this->timedeltachecker){
-                    getLocalUser()->checkRequireComboReset(true);
+                    //getLocalUser()->checkRequireComboReset(true);
                     srand(time(NULL));
                     gplaytime++;
                      this->timedeltachecker = tmp_time_delta;
