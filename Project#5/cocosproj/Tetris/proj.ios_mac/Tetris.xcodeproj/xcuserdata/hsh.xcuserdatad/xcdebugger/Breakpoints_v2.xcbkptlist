@@ -301,7 +301,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "358"
             endingLineNumber = "358"
-            landmarkName = "resetGameGoal(unsigned short gmgoal)"
+            landmarkName = "setGameGoal(unsigned short gmgoal)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

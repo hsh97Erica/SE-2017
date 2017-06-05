@@ -16,13 +16,13 @@ namespace hsh{
                     return &ins;
                 }
                 static unsigned short getGoal(unsigned int order){
-                    if(order>11||order<1){
+                    if(order>8||order<1){
                         return 1024;
                     }
                     return (int)pow(2,order+3);
                 }
                 static unsigned short getRandomGoal(){
-                    return getGoal(TetrisUtil::randInt(1, 11));
+                    return getGoal(TetrisUtil::randInt(1, 10));
                 }
                 void setGoal(unsigned short register gl){
                     this->goal = gl;
@@ -64,17 +64,25 @@ namespace hsh{
                 bool isGivenUp(){
                     return this->getGiveUpState();
                 }
+                void setFailGameState(bool val){
+                    is_fail_game = val;
+                }
+            bool getFailGameState(){
+                return is_fail_game;
+            }
             protected:
                 void initCls(){
                     goal = 0;
                     current_number = 0;
                     inner_gamescore = 0;
                     is_given_up = false;
+                    is_fail_game = false;
                 }
                 unsigned short goal = 0;
                  unsigned short current_number = 0;
                 unsigned int inner_gamescore = 0;
                 bool is_given_up = false;
+            bool is_fail_game = false;
         };
     }}
 }

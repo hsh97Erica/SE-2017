@@ -80,7 +80,7 @@ void HelloWorld::startGame(){
 }
 void HelloWorld::stateloop(float dt){
     if(this->isInExtGame){
-        cout<<"in ext game "<<endl;
+        //cout<<"in ext game "<<endl;
         this->removeKListenerForMainGame();
         if(!HelloWorld::gc->forceend&&HelloWorld::gc->isOngoing()){
             this->pause();
@@ -89,7 +89,7 @@ void HelloWorld::stateloop(float dt){
         auto score = delegate->getInnerGameScore();
         auto maingamescore = gc->getLocalScore();
         auto goal = delegate->getGoal();
-        cout<<"clear? "<<(delegate->isSufficingGameGoal())<<" give up? "<<(delegate->isGivenUp())<<endl;
+        //cout<<"clear? "<<(delegate->isSufficingGameGoal())<<" give up? "<<(delegate->isGivenUp())<<endl;
         if(delegate->isSufficingGameGoal()){
             float compensationRatio = 0.5f;
             switch(goal){
@@ -134,7 +134,7 @@ void HelloWorld::stateloop(float dt){
             
             float totalscore = ((float)score*1.5f)+ (delegate->getGoal()*2) +( (float)maingamescore*compensationRatio);
             this->gc->getLocalUser()->accumulateCurrentGameScore((unsigned long long)totalscore);
-            
+            cout<<"bonus score(with 2048): "<<totalscore<<endl;
             this->isInExtGame = false;
             addOrRemove2048GameView(true);
             if(gc->isPaused()){
@@ -152,14 +152,23 @@ void HelloWorld::stateloop(float dt){
             else{
                 this->gc->getLocalUser()->setCurrentGameScore(maingamescore-(unsigned long long)totalscore);
             }
+            cout<<"bonus score(with giveup): "<<(-1*totalscore)<<endl;
             this->isInExtGame = false;
             addOrRemove2048GameView(true);
             if(gc->isPaused()){
                 resume();
             }
         }
-        else{
+        else if(delegate->getFailGameState()){
             
+            this->gc->getLocalUser()->setCurrentGameScore((unsigned long long)((float)gc->getLocalUser()->getCurrentGameScore()- score/0.2f));
+            
+            cout<<"bonus score(with fail): "<<(score)<<endl;
+            this->isInExtGame = false;
+            addOrRemove2048GameView(true);
+            if(gc->isPaused()){
+                resume();
+            }
         }
         return;
     }
@@ -181,9 +190,9 @@ void HelloWorld::stateloop(float dt){
         //cout<<"ext g checker: "<<extgamechecker<<"  bns_g_lv: "<<bonus_game_lv<<endl;
         if(bonus_game_lv<extgamechecker){
             bonus_game_lv=extgamechecker;
-            addOrRemove2048GameView(false);
             ExtGame2048Delegate::getInstance()->resetAllVar();
             ExtGame2048Delegate::getInstance()->setGoal(ExtGame2048Delegate::getRandomGoal());
+            addOrRemove2048GameView(false);
             this->isInExtGame = true;
         }
     }
@@ -194,13 +203,12 @@ void HelloWorld::stateloop(float dt){
 }
 void HelloWorld::addOrRemove2048GameView(bool remove){
     if(remove){
-        cout<<"call addOrRemove2048GameView and request remove"<<endl;
         auto nd = this->getChildByTag(2048);
         this->removeChild(nd);
         registerKListenerForMainGame();
     }else{
         auto layer2048 =Cocos2dScenes::SceneInstanceManager::createGame2048Layer();
-        layer2048->setSceneDelegateCls(hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance());
+        //layer2048->setSceneDelegateCls(hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance());
         layer2048->setTag(2048);
         removeKListenerForMainGame();
         auto sz = this->getContentSize();

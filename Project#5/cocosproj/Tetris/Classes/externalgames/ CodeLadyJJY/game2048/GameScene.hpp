@@ -9,7 +9,7 @@
 #define MAX_2048_LINE_COUNT 4
 using namespace CodeLadyJJY::game2048;
 //using namespace Tetris;
-using hsh::CodeLadyJJY::game2048::SceneDelegate;
+using SCDelegate =  hsh::CodeLadyJJY::game2048::SceneDelegate;
 namespace  CodeLadyJJY{
     namespace game2048{
 //移动方向
@@ -37,7 +37,7 @@ private:
     unsigned short max_blk_number;
     float tileWidth;
     float tileBorderWidth;
-    hsh::CodeLadyJJY::game2048::SceneDelegate* delegate;
+    //hsh::CodeLadyJJY::game2048::SceneDelegate* delegate;
 void newTile(){
 	auto card = Card::create();
 	int freeCount = 16 - allCard.size();	//剩余没有数字的网格
@@ -154,11 +154,9 @@ void newTile(){
 }
     int checkMaxNumber(){
         int rst = 0;
-        for(int i=0;i<MAX_2048_LINE_COUNT;i++){
-            for(int j=0;j<MAX_2048_LINE_COUNT;j++){
-                auto cd = allCard.at(map[i][j]-1);
+        for(int i=0;i<allCard.size();i++){
+                auto cd = allCard.at(i);
                 rst=max(rst,cd->getCurrentNumber());
-            }
         }
         return rst;
     }
@@ -354,8 +352,14 @@ void newTile(){
 	}
 }
     void calcScore(int scor){
-        this->delegate->setInnerGameScore(scor);
-        this->delegate->setCurrentNumber(checkMaxNumber());
+        SCDelegate::getInstance()->setInnerGameScore(scor);
+        SCDelegate::getInstance()->setCurrentNumber(checkMaxNumber());
+    }
+    void giveupgame(){
+        SCDelegate::getInstance()->setGiveUpState(true);
+    }
+    void setFailGameState(){
+        SCDelegate::getInstance()->setFailGameState(true);
     }
 void showGameOver(){
 	//显示GameOver
@@ -364,6 +368,7 @@ void showGameOver(){
         
 	auto label = Label::createWithTTF(config, "GAME OVER");
         label->setPosition(Vec2(winSize.width / 2, winSize.height / 2));
+    setFailGameState();
 	//label->setPosition(Vec2(winSize_width / 2, winSize_height / 2));
 	this->addChild(label);
     
@@ -390,9 +395,6 @@ public:
     bool checkSufficingGameGoal(){
         return getCurrentBlockNumber()>=getGameGoal();
     }
-    void setSceneDelegateCls(hsh::CodeLadyJJY::game2048::SceneDelegate* scdel){
-        this->delegate = scdel;
-    }
 virtual bool init(){
 	if(!Layer::init())
 		return false;
@@ -411,15 +413,20 @@ virtual bool init(){
     Color3B scoreColor(255,255,255); //142, 142, 142);
 	scoreTitle->setColor(scoreColor);
 	addChild(scoreTitle,1);
-
+    
 	//分数
 	m_score = 0;
 	auto scoreNum = Label::createWithTTF("0", "fonts/Marker Felt.ttf", (winSize.width*4/18)/6); //Label::createWithSystemFont("0", "Consolas", 60);
 	scoreNum->setTag(140);
-	scoreNum->setPosition(Vec2(winSize.width * 15 / 18, winSize.height / 2));
+    scoreNum->setPosition(Vec2(winSize.width * 15 / 18, (winSize.height * 3 / 4)-(scoreTitle->getContentSize().height*1.2f))); // winSize.height / 2));
 	scoreNum->setColor(scoreColor);
 	addChild(scoreNum,1);
-
+    
+    auto goalNum = Label::createWithTTF(StringUtils::format("-Goal-\n%3hd", SCDelegate::getInstance()->getGoal()), "fonts/Marker Felt.ttf", (winSize.width*4/18)/6);
+    
+    goalNum->setPosition(Vec2((winSize.width * 15 / 18)-goalNum->getContentSize().width/2, (scoreNum->getPosition().y)-(scoreNum->getContentSize().height*1.2f))); // winSize.height / 2));
+    goalNum->setColor(scoreColor);
+    addChild(goalNum,1);
 	//添加New Game按钮
 	//auto menuItemNew = MenuItemFont::create("New Game", CC_CALLBACK_1(GameScene::menuCallBack, this));
 	auto menuItemNew = MenuItemFont::create("Give up Game", CC_CALLBACK_1(GameScene::menuCallBack2, this));
@@ -555,8 +562,7 @@ virtual bool init(){
 	Director::getInstance()->replaceScene(scene);
 }
     void menuCallBack2(cocos2d::Ref* obj){
-        delegate->setGiveUpState(true);
-        std::cout<<"push give up btn and call function "<< (delegate->getGiveUpState())<<std::endl;
+        this->giveupgame();
     }
 	CREATE_FUNC(GameScene);
 };
