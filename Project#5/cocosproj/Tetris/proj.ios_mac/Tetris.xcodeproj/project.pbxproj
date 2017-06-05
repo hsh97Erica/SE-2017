@@ -61,6 +61,8 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		591513C91ED8505100733056 /* views in Resources */ = {isa = PBXBuildFile; fileRef = 591513C81ED8505100733056 /* views */; };
+		598DDBE41EE2461800AF41F0 /* externalgames in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE31EE2461800AF41F0 /* externalgames */; };
+		598DDBE61EE2815C00AF41F0 /* myscenes in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE51EE2815C00AF41F0 /* myscenes */; };
 		59AFC6141ECE9DF300EDB74F /* MainGameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B1831ECDED0F003FC180 /* MainGameScene.cpp */; };
 		59AFC6161ECE9DFC00EDB74F /* tet in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B1821ECDED0F003FC180 /* tet */; };
 		59AFC61F1ECEA03500EDB74F /* tet2 in Resources */ = {isa = PBXBuildFile; fileRef = 59AFC6171ECEA03500EDB74F /* tet2 */; };
@@ -169,6 +171,8 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		591513C81ED8505100733056 /* views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = views; sourceTree = "<group>"; };
+		598DDBE31EE2461800AF41F0 /* externalgames */ = {isa = PBXFileReference; lastKnownFileType = folder; path = externalgames; sourceTree = "<group>"; };
+		598DDBE51EE2815C00AF41F0 /* myscenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = myscenes; sourceTree = "<group>"; };
 		59AFC6171ECEA03500EDB74F /* tet2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tet2; sourceTree = "<group>"; };
 		59C8B1811ECDED0F003FC180 /* MainGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameScene.h; sourceTree = "<group>"; };
 		59C8B1821ECDED0F003FC180 /* tet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tet; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				598DDBE51EE2815C00AF41F0 /* myscenes */,
+				598DDBE31EE2461800AF41F0 /* externalgames */,
 				591513C81ED8505100733056 /* views */,
 				59AFC6171ECEA03500EDB74F /* tet2 */,
 				59C8B1811ECDED0F003FC180 /* MainGameScene.h */,
@@ -503,6 +509,8 @@
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				598DDBE41EE2461800AF41F0 /* externalgames in Resources */,
+				598DDBE61EE2815C00AF41F0 /* myscenes in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,

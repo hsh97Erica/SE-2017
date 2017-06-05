@@ -31,6 +31,8 @@ public:
         void resume();
         void stateloop(float dt);
         void gameloop(float dt);
+        void menuVisibleToggle(bool autopauseorpause);
+    void freeRelativeConnectionWhenDeleting();
         virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
         virtual void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
         cocos2d::Layer* overlayblockboard=NULL;
@@ -39,10 +41,17 @@ public:
         cocos2d::Label* pscorelbl = NULL;
         cocos2d::Label* rmlnscntlbl = NULL;
         cocos2d::Layer* nxtblkrenderingarea = NULL;
-    cocos2d::Menu* gameoptionmenu = NULL;
+        cocos2d::Menu* gameoptionmenu = NULL;
         cocos2d::Menu* generateOptionMenu();
         Views::NextBlockRenderBehavior* nxtblkrv = NULL;
         bool menuviewadded = false;
+        void addOrRemove2048GameView(bool remove);
+        cocos2d::EventListenerKeyboard* k_listener = NULL;
+        cocos2d::EventListenerKeyboard* createNewKListener();
+        void removeKListenerForMainGame();
+    void registerKListenerForMainGame();
+        unsigned short bonus_game_lv;
+        bool isInExtGame = false;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

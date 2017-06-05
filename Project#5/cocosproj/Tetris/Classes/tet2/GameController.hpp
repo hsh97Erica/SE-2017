@@ -27,13 +27,17 @@ namespace Tetris{
 
     class GameController{
         public:
+        //static GameController* mInstance;
             static GameController* getInstance(){
-                return new GameController();
+                static GameController ins;
+                return &ins;
+                //if(Tetris::GameController::mInstance==NULL){Tetris::GameController::mInstance = new GameController();}return Tetris::GameController::mInstance;
             }
             enum class GameStatus{UNKNOWN,ONGOING,END,PAUSE};
             GameController(){
                 //this->init(NULL);
                 //this->isEnd = false;
+                //Tetris::GameController::mInstance
                 this->justinit();
             }
             GameController(InitGameInfo* igi){
@@ -57,7 +61,8 @@ namespace Tetris{
                         this->board.pop_back();
                     }
                     timedeltachecker = time(NULL);
-                occurtimedelta=false;
+                    this->scorechecker =this->rmLinesCntDeltaChecker= 0;
+                    occurtimedelta=false;
                     this->gameHeight = 20;
                     this->gameWidth = 8;
                     this->gs = GameStatus::UNKNOWN;
@@ -75,10 +80,12 @@ namespace Tetris{
                     while(!gusers.empty()){
                         GameUser* guser = gusers[0];
                         gusers.erase(gusers.begin());
+                        cout<<"guser deleted"<<endl;
                         delete guser;
                     }
-                    gusers.clear();
+                    
                 }
+                 gusers.clear();
                     //this->gusers = new Users::GameUser*[this->usercount];
                     for(int i=0;i<this->usercount;i++){
                         this->gusers.push_back( new Users::GameUser());
@@ -608,9 +615,17 @@ namespace Tetris{
                         }
                     }
                 }
+                this->getLocalUser()->accumulateCurrentGameScore(ScoreManagement::getScoreWhenPuttingFallenDownBlock());
                 return true;
             }
+        
+        //static GameController* mInstance;
+
+        
     private:
+        
+       // static GameController* mInstance;
+        
         time_t timedeltachecker=time(NULL);
         bool occurtimedelta = false;
         unsigned long long rmLinesCntDeltaChecker = 0;
@@ -623,5 +638,7 @@ namespace Tetris{
             unsigned char gameWidth;
             short gamemode;
     };
+    
+    //GameController* GameController::mInstance = NULL;
 }
 #endif

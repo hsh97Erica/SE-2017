@@ -32,6 +32,9 @@ namespace Tetris{
                 static int getScoreGapWhenRemovingOneLine(){
                     return TetrisUtil::randInt(-5,5);
                 }
+            static int getScoreWhenPuttingFallenDownBlock(){
+                return TetrisUtil::randInt(1, 5);
+            }
         };
     }
 }

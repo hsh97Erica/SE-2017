@@ -1,12 +1,16 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+//#include "externalgames/ CodeLadyJJY/game2048/GameScene.hpp"
+#include "myscenes/SceneManagement.hpp"
 //#include "./MainGameScene.h"
 //#include "Temp.hpp"
 #include <iostream>
 using namespace std;
+using Tetris::Cocos2dScenes::SceneManagement;
+using Tetris::Cocos2dScenes::SceneInstanceManager;
+
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
-
 #if USE_AUDIO_ENGINE && USE_SIMPLE_AUDIO_ENGINE
 #error "Don't use AudioEngine and SimpleAudioEngine at the same time. Please just select one in your game!"
 #endif
@@ -95,9 +99,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     register_all_packages();
-
+    SceneManagement* scmgr = SceneManagement::getInstance();
+    auto scene= Tetris::Cocos2dScenes::SceneInstanceManager::createMainMenuScene();
+    //auto scene= Tetris::Cocos2dScenes::SceneInstanceManager::createGame2048Scene();
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    //auto scene = HelloWorld::createScene();
+    //auto scene = Tetris::Cocos2dScenes::MainMenuScene::createScene();
+    //auto scene = CodeLadyJJY::game2048::GameScene::createScene();
     //TmpCls::print();
     //auto scene = MainGame::createScene();
     // run

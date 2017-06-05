@@ -92,6 +92,7 @@ namespace Tetris{
                 }
             void initGameScore(){
                 this->current_game_score=0;
+                
             }
             unsigned long long getCurrentGameScore(){
                 checkRequireComboReset(true);
@@ -164,6 +165,7 @@ namespace Tetris{
                 this->initGameScore();
                 this->setRemovedLinesCount(0);
                 this->continous_rmlines_cnt_as_combo = 0;
+                
                 this->lastest_combo_time = 0;
                 this->currentXpos=0;
                 this->currentYpos=0;

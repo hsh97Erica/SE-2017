@@ -3,11 +3,14 @@
 #include "SimpleAudioEngine.h"
 #include "tet2/GameController.hpp"
 #include "views/NextBlockRenderView.hpp"
+#include "myscenes/SceneManagement.hpp"
+#include "externalgames/ CodeLadyJJY/game2048/hshGameDelegate.hpp"
 #include <cmath>
 USING_NS_CC;
 using namespace cocos2d;
 using namespace std;
 using namespace Tetris;
+using ExtGame2048Delegate = hsh::CodeLadyJJY::game2048::SceneDelegate;
 using KeyCode = cocos2d::EventKeyboard::KeyCode;
 using namespace Tetris::Views;
 Scene* HelloWorld::createScene()
@@ -64,18 +67,103 @@ void HelloWorld::makeField(){
     }
     this->addChild(lyr);
 }
+EventListenerKeyboard* HelloWorld::createNewKListener(){
+    auto rst = EventListenerKeyboard::create();
+    rst->onKeyPressed = CC_CALLBACK_2(HelloWorld::onKeyPressed, this);
+    rst->onKeyReleased = CC_CALLBACK_2(HelloWorld::onKeyReleased, this);
+    return rst;
+}
 void HelloWorld::startGame(){
     
-    /*auto delay = DelayTime::create(0.0f);
-    auto func = CallFunc::create(CC_CALLBACK_0(HelloWorld::play, this));
-    this->runAction(Sequence::create(delay, func, NULL));*/
-    //this->scheduleOnce(schedule_selector(HelloWorld::play), 1.0f);
-    //this->scheduleUpdate();
-    //CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,1.0f,false);
     CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,0,0,0.0f,false);
     cout<<"call HelloWorld::startGame()"<<endl;
 }
 void HelloWorld::stateloop(float dt){
+    if(this->isInExtGame){
+        cout<<"in ext game "<<endl;
+        this->removeKListenerForMainGame();
+        if(!HelloWorld::gc->forceend&&HelloWorld::gc->isOngoing()){
+            this->pause();
+        }
+        auto delegate = ExtGame2048Delegate::getInstance();
+        auto score = delegate->getInnerGameScore();
+        auto maingamescore = gc->getLocalScore();
+        auto goal = delegate->getGoal();
+        cout<<"clear? "<<(delegate->isSufficingGameGoal())<<" give up? "<<(delegate->isGivenUp())<<endl;
+        if(delegate->isSufficingGameGoal()){
+            float compensationRatio = 0.5f;
+            switch(goal){
+                case 64:{
+                    compensationRatio= 0.17f;
+                    break;
+                }
+                case 128:
+                case 256:{
+                   compensationRatio= 0.2f;
+                    break;
+                }
+                case 512:{
+                    compensationRatio= 0.3f;
+                    break;
+                }
+                case 1024:{
+                    compensationRatio= 0.5f;
+                    break;
+                }
+            
+                case 2048:{
+                    compensationRatio= 0.6f;
+                    break;
+                }
+                case 4096:{
+                    compensationRatio= 0.75f;
+                    break;
+                }
+                case 8192:{
+                    compensationRatio= 0.94f;
+                    break;
+                }
+                case 16384:{
+                    compensationRatio= 3.94f;
+                    break;
+                }
+                default:{
+                    compensationRatio = 0.15f;
+                break;}
+            }
+            
+            float totalscore = ((float)score*1.5f)+ (delegate->getGoal()*2) +( (float)maingamescore*compensationRatio);
+            this->gc->getLocalUser()->accumulateCurrentGameScore((unsigned long long)totalscore);
+            
+            this->isInExtGame = false;
+            addOrRemove2048GameView(true);
+            if(gc->isPaused()){
+                resume();
+            }
+        }
+        else if(delegate->isGivenUp()){
+            
+            double minnus = pow(10,(double)((int) log10(maingamescore)));
+            
+            float totalscore =(((float)score*3)+(maingamescore*0.15f)+minnus);
+            if((float)maingamescore<=totalscore){
+                this->gc->getLocalUser()->setCurrentGameScore(0);
+            }
+            else{
+                this->gc->getLocalUser()->setCurrentGameScore(maingamescore-(unsigned long long)totalscore);
+            }
+            this->isInExtGame = false;
+            addOrRemove2048GameView(true);
+            if(gc->isPaused()){
+                resume();
+            }
+        }
+        else{
+            
+        }
+        return;
+    }
+    
     if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
         
         HelloWorld::gameloop(dt);
@@ -89,10 +177,37 @@ void HelloWorld::stateloop(float dt){
         if(this->gc->checkScoreDisplayRefresh()){
             this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));
         }
+        int extgamechecker = (int)(log10(gc->getLocalScore())/log10(2));
+        //cout<<"ext g checker: "<<extgamechecker<<"  bns_g_lv: "<<bonus_game_lv<<endl;
+        if(bonus_game_lv<extgamechecker){
+            bonus_game_lv=extgamechecker;
+            addOrRemove2048GameView(false);
+            ExtGame2048Delegate::getInstance()->resetAllVar();
+            ExtGame2048Delegate::getInstance()->setGoal(ExtGame2048Delegate::getRandomGoal());
+            this->isInExtGame = true;
+        }
     }
     else{
         CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(HelloWorld::mainloopfuncschedule, this);
         cout<<"game end in scene"<<endl;
+    }
+}
+void HelloWorld::addOrRemove2048GameView(bool remove){
+    if(remove){
+        cout<<"call addOrRemove2048GameView and request remove"<<endl;
+        auto nd = this->getChildByTag(2048);
+        this->removeChild(nd);
+        registerKListenerForMainGame();
+    }else{
+        auto layer2048 =Cocos2dScenes::SceneInstanceManager::createGame2048Layer();
+        layer2048->setSceneDelegateCls(hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance());
+        layer2048->setTag(2048);
+        removeKListenerForMainGame();
+        auto sz = this->getContentSize();
+        layer2048->setPosition(Vec2(0,0)); //sz.width/2,sz.height/2));
+        layer2048->setContentSize(sz);
+        this->addChild(layer2048);
+        
     }
 }
 void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
@@ -100,7 +215,6 @@ void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
         return;
     }
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    
     const int hei = (int)gc->getGameHeight();
     const int wid = (int)gc->getGameWidth();
     auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -174,7 +288,9 @@ void HelloWorld::pause(){
     HelloWorld::gc -> pause();
 }
 void HelloWorld::resume(){
+    
     HelloWorld::gc->resume();
+    
 }
 void HelloWorld::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event){
     if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
@@ -189,8 +305,20 @@ void HelloWorld::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::
         }
     }
 }
+void HelloWorld::freeRelativeConnectionWhenDeleting(){
+    Director::getInstance()->getEventDispatcher()->release();
+    if(this->gc!=NULL){
+        this->gc->justinit();
+        this->gc->setGameStatusToEnd();
+        //this->gc=NULL;
+    }
+    
+}
 void HelloWorld::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event){
-    if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
+    if(keyCode==KeyCode::KEY_ESCAPE){
+        this->menuVisibleToggle(true);
+    }
+    if(!HelloWorld::gc->forceend&&HelloWorld::gc->isOngoing()){
         if(keyCode==KeyCode::KEY_SPACE){
         //cout<<"will call currentblockrotate"<<endl;
             this->gc-> currentblockrotate();
@@ -199,20 +327,7 @@ void HelloWorld::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d:
         else if(keyCode==KeyCode::KEY_ENTER){
             this->gc->fastdropdown();
         }
-        else if(keyCode==KeyCode::KEY_ESCAPE){
-            if(!this->gc->isEnd()){
-                if(this->gc->isOngoing()){
-                    this->pause();
-                }
-                else if(this->gc->isPaused()){
-                    this->resume();
-                }
-            
-            }
-            else{
-                this->startGame();
-            }
-        }
+        
         else if(keyCode==KeyCode::KEY_SHIFT||keyCode==KeyCode::KEY_LEFT_SHIFT||keyCode==KeyCode::KEY_RIGHT_SHIFT){
             this->gc->switchBlock();
         }
@@ -223,6 +338,7 @@ void HelloWorld::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d:
 bool HelloWorld::init()
 {
     //////////////////////////////
+    cout<<"call HelloWorld::init()"<<endl;
     // 1. super init first
     if ( !Scene::init() )
     {
@@ -230,29 +346,27 @@ bool HelloWorld::init()
     }
     
     HelloWorld::overlayblockboard=NULL;
+    bonus_game_lv = 4;
     if(HelloWorld::gc==NULL){
-        HelloWorld::gc = new GameController();
+        HelloWorld::gc = GameController::getInstance();
         //cout<<(int)gc->getGameHeight()<<endl;
     }
+    HelloWorld::gc->justinit();
     //NextBlockRenderBehavior*
     this->nxtblkrv = NextBlockRenderBehavior::create();
     this->nxtblkrv->setGameController(gc);
     this->makeField();
     this->addChild(this->nxtblkrv);
+    this->isInExtGame = false;
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    auto K_listner = EventListenerKeyboard::create();
-    K_listner->onKeyPressed = CC_CALLBACK_2(HelloWorld::onKeyPressed, this);
-    K_listner->onKeyReleased = CC_CALLBACK_2(HelloWorld::onKeyReleased, this);
-    //Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(K_listner, this);
-    Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(K_listner, 1);
-    
+    registerKListenerForMainGame();
     HelloWorld::startGame();
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
-
     // add a "close" icon to exit the progress. it's an autorelease object
+    
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
@@ -328,7 +442,11 @@ bool HelloWorld::init()
 }
 
 void HelloWorld::menuDrawerClickCallback(Ref* pSender){
-    if(gc->isOngoing()){
+    this->menuVisibleToggle(true);
+   // menuCloseCallback(pSender);
+}
+void HelloWorld::menuVisibleToggle(bool autopauseorresume){
+    if(gc->isOngoing()&&autopauseorresume){
         gc->pause();
     }
     if(this->gameoptionmenu==NULL){
@@ -336,15 +454,13 @@ void HelloWorld::menuDrawerClickCallback(Ref* pSender){
         this->addChild(this->gameoptionmenu);
     }
     else{
-        if(gc->isPaused()){
+        if(gc->isPaused()&&autopauseorresume){
             gc->resume();
         }
         this->removeChild(this->gameoptionmenu);
         this->gameoptionmenu = NULL;
     }
-   // menuCloseCallback(pSender);
 }
-
 Menu* HelloWorld::generateOptionMenu(){
     
     auto item_1 = MenuItemFont::create("Exit", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
@@ -354,7 +470,7 @@ Menu* HelloWorld::generateOptionMenu(){
     return menu;
 }
 void HelloWorld::gameforceResumeMenuCallback(Ref* pSender){
-    if(gc->isPaused()){
+    if(gc->isPaused()&&!isInExtGame){
         gc->resume();
     }
     if(this->gameoptionmenu!=NULL){
@@ -367,15 +483,34 @@ void HelloWorld::gameforcePauseMenuCallback(Ref* pSender){
         gc->pause();
     }
 }
+void HelloWorld::removeKListenerForMainGame(){
+    if(this->k_listener!=NULL){
+        Director::getInstance()->getEventDispatcher()->removeEventListener(this->k_listener);
+        this->k_listener = NULL;
+    }
+}
+void HelloWorld::registerKListenerForMainGame(){
+    if(this->k_listener==NULL){
+        this->k_listener = this->createNewKListener();
+        Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(this->k_listener, 1);
+    }else{
+        removeKListenerForMainGame();
+        this->registerKListenerForMainGame();
+    }
+}
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
     //Close the cocos2d-x game scene and quit the application
-    Director::getInstance()->end();
+    this->removeKListenerForMainGame();
+    Director::getInstance()->popScene();
+    //this->freeRelativeConnectionWhenDeleting();
+    //Director::getInstance()->replaceScene( Cocos2dScenes::SceneInstanceManager::createMainMenuScene());
+   /* Director::getInstance()->end();
 
     #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
-#endif
-    
+    #endif
+    */
     /*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() and exit(0) as given above,instead trigger a custom event created in RootViewController.mm as below*/
     
     //EventCustom customEndEvent("game_scene_close_event");
