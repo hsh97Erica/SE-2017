@@ -110,7 +110,6 @@ void HelloWorld::stateloop(float dt){
                     compensationRatio= 0.5f;
                     break;
                 }
-            
                 case 2048:{
                     compensationRatio= 0.6f;
                     break;
@@ -133,7 +132,7 @@ void HelloWorld::stateloop(float dt){
             }
             
             float totalscore = ((float)score*1.5f)+ (delegate->getGoal()*2) +( (float)maingamescore*compensationRatio);
-            this->gc->getLocalUser()->accumulateCurrentGameScore((unsigned long long)totalscore);
+            this->gc->getLocalUser()->accumulateCurrentGameScore(totalscore);
             cout<<"bonus score(with 2048): "<<totalscore<<endl;
             this->isInExtGame = false;
             addOrRemove2048GameView(true);
@@ -161,8 +160,7 @@ void HelloWorld::stateloop(float dt){
         }
         else if(delegate->getFailGameState()){
             
-            this->gc->getLocalUser()->setCurrentGameScore((unsigned long long)((float)gc->getLocalUser()->getCurrentGameScore()- score/0.2f));
-            
+            this->gc->getLocalUser()->setCurrentGameScore(((float)gc->getLocalUser()->getCurrentGameScore()+ score/0.2f));
             cout<<"bonus score(with fail): "<<(score)<<endl;
             this->isInExtGame = false;
             addOrRemove2048GameView(true);
@@ -197,6 +195,7 @@ void HelloWorld::stateloop(float dt){
         }
     }
     else{
+        this->getChildByTag(1024)->setVisible(true);
         CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(HelloWorld::mainloopfuncschedule, this);
         cout<<"game end in scene"<<endl;
     }
@@ -368,6 +367,11 @@ bool HelloWorld::init()
     this->isInExtGame = false;
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    auto gmoverlabel = Label::createWithTTF("GAME OVER", "fonts/arial.ttf", visibleSize.width/8);
+    
+    gmoverlabel->setColor(Color3B::WHITE);
+    gmoverlabel->setPosition(Vec2(origin.x+visibleSize.width/2, origin.y+visibleSize.height/2));
+    gmoverlabel->setTag(1024);
     registerKListenerForMainGame();
     HelloWorld::startGame();
     /////////////////////////////
@@ -431,18 +435,16 @@ bool HelloWorld::init()
     //this->ptimelbl = label2;
     this->addChild(infoboardlyr);
     // position the label on the center of the screen
-    
     //label->setPosition(Vec2(origin.x + visibleSize.width/2, origin.y + visibleSize.height - label->getContentSize().height));
-    
     // add the label as a child to this layer
     //this->addChild(label, 1);
-
     // add "HelloWorld" splash screen"
     auto sprite = Sprite::create("HelloWorld.png");
 
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
+    this->addChild(gmoverlabel);
+    gmoverlabel->setVisible(false);
     // add the sprite as a child to this layer
     //this->addChild(sprite, 0);
     //cout<<"loaded ok"<<endl;
