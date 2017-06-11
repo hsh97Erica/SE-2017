@@ -367,11 +367,7 @@ bool HelloWorld::init()
     this->isInExtGame = false;
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    auto gmoverlabel = Label::createWithTTF("GAME OVER", "fonts/arial.ttf", visibleSize.width/8);
     
-    gmoverlabel->setColor(Color3B::WHITE);
-    gmoverlabel->setPosition(Vec2(origin.x+visibleSize.width/2, origin.y+visibleSize.height/2));
-    gmoverlabel->setTag(1024);
     registerKListenerForMainGame();
     HelloWorld::startGame();
     /////////////////////////////
@@ -399,6 +395,7 @@ bool HelloWorld::init()
     auto menu = Menu::create(menuItem,NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu,1);
+    
     /////////////////////////////
     // 3. add your codes below...
 
@@ -443,8 +440,24 @@ bool HelloWorld::init()
 
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    this->addChild(gmoverlabel);
-    gmoverlabel->setVisible(false);
+    auto overgamelayer = Layer::create();
+    auto gmoverlabel = Label::createWithTTF("GAME OVER", "fonts/arial.ttf", visibleSize.width/8);
+    auto gmovermenu = this->generateGameOverMenu();
+    gmoverlabel->setPosition(Vec2());
+    //gmovermenu->setPosition(Vec2(max(gmovermenu->getContentSize().width/2,gmoverlabel->getContentSize().width/2),gmovermenu->getContentSize().height/2));
+    overgamelayer->addChild(gmovermenu);
+    gmoverlabel->setColor(Color3B::WHITE);
+    gmoverlabel->setPosition(Vec2(max(gmovermenu->getContentSize().width/2,gmovermenu->getContentSize().width/2),gmovermenu->getContentSize().height/2+gmoverlabel->getContentSize().height/2));
+    overgamelayer->addChild(gmoverlabel);
+   // gmoverlabel->setPosition(Vec2(origin.x+visibleSize.width/2, origin.y+visibleSize.height/2));
+    overgamelayer->setPosition(Vec2());
+   // overgamelayer->setPosition(Vec2(origin.x+visibleSize.width/2,origin.y+visibleSize.height/2));
+    //gmoverlabel->setTag(1024);
+    overgamelayer->setTag(1024);
+    //this->addChild(gmoverlabel);
+    this->addChild(overgamelayer,2);
+    overgamelayer->setVisible(false);
+   // gmoverlabel->setVisible(false);
     // add the sprite as a child to this layer
     //this->addChild(sprite, 0);
     //cout<<"loaded ok"<<endl;
@@ -479,6 +492,13 @@ Menu* HelloWorld::generateOptionMenu(){
     menu->alignItemsVertically();
     return menu;
 }
+Menu* HelloWorld::generateGameOverMenu(){
+    auto item_1 = MenuItemFont::create("재시작", CC_CALLBACK_1(HelloWorld::gameRestartGameCallback, this));
+    auto item_3 = MenuItemFont::create("종료", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+    auto menu = Menu::create(item_1,item_3,NULL);
+    menu->alignItemsHorizontally();
+    return menu;
+}
 void HelloWorld::gameforceResumeMenuCallback(Ref* pSender){
     if(gc->isPaused()&&!isInExtGame){
         gc->resume();
@@ -507,6 +527,11 @@ void HelloWorld::registerKListenerForMainGame(){
         removeKListenerForMainGame();
         this->registerKListenerForMainGame();
     }
+}
+void HelloWorld::gameRestartGameCallback(Ref* pSender){
+    removeKListenerForMainGame();
+    auto newscene =  HelloWorld::createScene();
+    Director::getInstance()->replaceScene(newscene);
 }
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {

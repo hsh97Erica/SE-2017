@@ -19,6 +19,7 @@ public:
     void menuDrawerClickCallback(cocos2d::Ref* pSender);
     void gameforceResumeMenuCallback(Ref* pSender);
     void gameforcePauseMenuCallback(Ref* pSender);
+    void gameRestartGameCallback(Ref* pSender);
     void startGame();
     void drawboardingui(char** board,unsigned char* clr);
     // implement the "static create()" method manually
@@ -43,6 +44,8 @@ public:
         cocos2d::Layer* nxtblkrenderingarea = NULL;
         cocos2d::Menu* gameoptionmenu = NULL;
         cocos2d::Menu* generateOptionMenu();
+        cocos2d::Menu* generateGameOverMenu();
+       // cosos2d::
         Views::NextBlockRenderBehavior* nxtblkrv = NULL;
         bool menuviewadded = false;
         void addOrRemove2048GameView(bool remove);
