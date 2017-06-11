@@ -63,6 +63,7 @@
 		591513C91ED8505100733056 /* views in Resources */ = {isa = PBXBuildFile; fileRef = 591513C81ED8505100733056 /* views */; };
 		598DDBE41EE2461800AF41F0 /* externalgames in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE31EE2461800AF41F0 /* externalgames */; };
 		598DDBE61EE2815C00AF41F0 /* myscenes in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE51EE2815C00AF41F0 /* myscenes */; };
+		598DDBE81EED7BB100AF41F0 /* cocosclses in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE71EED7BB100AF41F0 /* cocosclses */; };
 		59AFC6141ECE9DF300EDB74F /* MainGameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B1831ECDED0F003FC180 /* MainGameScene.cpp */; };
 		59AFC6161ECE9DFC00EDB74F /* tet in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B1821ECDED0F003FC180 /* tet */; };
 		59AFC61F1ECEA03500EDB74F /* tet2 in Resources */ = {isa = PBXBuildFile; fileRef = 59AFC6171ECEA03500EDB74F /* tet2 */; };
@@ -173,6 +174,7 @@
 		591513C81ED8505100733056 /* views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = views; sourceTree = "<group>"; };
 		598DDBE31EE2461800AF41F0 /* externalgames */ = {isa = PBXFileReference; lastKnownFileType = folder; path = externalgames; sourceTree = "<group>"; };
 		598DDBE51EE2815C00AF41F0 /* myscenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = myscenes; sourceTree = "<group>"; };
+		598DDBE71EED7BB100AF41F0 /* cocosclses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cocosclses; sourceTree = "<group>"; };
 		59AFC6171ECEA03500EDB74F /* tet2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tet2; sourceTree = "<group>"; };
 		59C8B1811ECDED0F003FC180 /* MainGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainGameScene.h; sourceTree = "<group>"; };
 		59C8B1821ECDED0F003FC180 /* tet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tet; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				598DDBE71EED7BB100AF41F0 /* cocosclses */,
 				598DDBE51EE2815C00AF41F0 /* myscenes */,
 				598DDBE31EE2461800AF41F0 /* externalgames */,
 				591513C81ED8505100733056 /* views */,
@@ -499,6 +502,7 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				598DDBE81EED7BB100AF41F0 /* cocosclses in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				591513C91ED8505100733056 /* views in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,

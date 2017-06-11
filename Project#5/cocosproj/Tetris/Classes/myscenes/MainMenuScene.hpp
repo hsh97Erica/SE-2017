@@ -6,6 +6,14 @@
 //#include "SceneManagement.hpp"
 #include <iostream>
 using namespace std;
+using namespace cocos2d;
+#if USE_AUDIO_ENGINE
+#include "audio/include/AudioEngine.h"
+using namespace cocos2d::experimental;
+#elif USE_SIMPLE_AUDIO_ENGINE
+#include "audio/include/SimpleAudioEngine.h"
+using namespace CocosDenshion;
+#endif
 //using namespace Tetris::Views;
 namespace Tetris{
     namespace Cocos2dScenes{
@@ -16,13 +24,26 @@ public:
        MainMenuScene* scene = MainMenuScene::create();
         return scene;
     }
-
+    virtual void onEnter(){
+        Scene::onEnter();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "res/bgms/mainmenu_bgm.mp3", true);
+    }
+    virtual void onExit(){
+        Scene::onExit();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    }
     virtual bool init(){
          if ( !Scene::init() )
     {
         return false;
     }
         auto img = Sprite::create("res/backgrounds/mainbg.jpg");
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "res/bgms/mainmenu_bgm.mp3", true);
+        
         auto visibleSize = Director::getInstance()->getVisibleSize();
         Vec2 origin = Director::getInstance()->getVisibleOrigin();
         Size spritesz = img->getContentSize();

@@ -17,7 +17,7 @@
 #include "User.hpp"
 #include "Block.hpp"
 #include "../HelloWorldScene.h"
-
+#include "../cocosclses/AudioSourceManager.hpp"
 using namespace std;
 using namespace Tetris;
 using namespace Tetris::Delegates;
@@ -115,7 +115,10 @@ namespace Tetris{
                         s.push(i);
                     }
                 }
-                if(s.size())removeLines(s); 
+                if(s.size()){removeLines(s);
+                    Tetris::Audio::AudioSourceManager::getInstance()->playRemovingBlocksEffect();
+                   // CocosDenshion::Sim
+                }
             }
             bool haveTimeDelta(){
                 bool rst = this->occurtimedelta;

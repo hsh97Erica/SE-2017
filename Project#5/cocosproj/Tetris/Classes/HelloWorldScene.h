@@ -14,6 +14,8 @@ public:
     static cocos2d::Scene* createScene();
 
     virtual bool init();
+    virtual void onEnter();
+    virtual void onExit();
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
     void menuDrawerClickCallback(cocos2d::Ref* pSender);
@@ -55,6 +57,7 @@ public:
     void registerKListenerForMainGame();
         unsigned short bonus_game_lv;
         bool isInExtGame = false;
+    unsigned int effect_ext_2048gm;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

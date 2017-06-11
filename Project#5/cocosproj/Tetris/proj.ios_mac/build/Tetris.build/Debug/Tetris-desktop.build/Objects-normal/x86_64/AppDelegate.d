@@ -11,6 +11,10 @@ dependencies: \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/tet2/BlockGenerator.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/tet2/ScoreManagement.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/tet2/../HelloWorldScene.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/tet2/../cocosclses/AudioSourceManager.hpp \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/tet2/../cocosclses/AudioEnabler.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/audio/include/SimpleAudioEngine.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/audio/include/Export.h \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/views/NextBlockRenderView.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/SceneManagement.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/MainMenuScene.hpp \

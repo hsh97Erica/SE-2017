@@ -6,10 +6,18 @@
 #include "myscenes/SceneManagement.hpp"
 #include "externalgames/ CodeLadyJJY/game2048/hshGameDelegate.hpp"
 #include <cmath>
+#include "cocosclses/AudioEnabler.h"
 USING_NS_CC;
 using namespace cocos2d;
 using namespace std;
 using namespace Tetris;
+#if USE_AUDIO_ENGINE
+#include "audio/include/AudioEngine.h"
+using namespace cocos2d::experimental;
+#elif USE_SIMPLE_AUDIO_ENGINE
+#include "audio/include/SimpleAudioEngine.h"
+using namespace CocosDenshion;
+#endif
 using ExtGame2048Delegate = hsh::CodeLadyJJY::game2048::SceneDelegate;
 using KeyCode = cocos2d::EventKeyboard::KeyCode;
 using namespace Tetris::Views;
@@ -196,6 +204,9 @@ void HelloWorld::stateloop(float dt){
     }
     else{
         this->getChildByTag(1024)->setVisible(true);
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                              "res/bgms/endgamebgm.mp3", true);
         CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(HelloWorld::mainloopfuncschedule, this);
         cout<<"game end in scene"<<endl;
     }
@@ -205,7 +216,11 @@ void HelloWorld::addOrRemove2048GameView(bool remove){
         auto nd = this->getChildByTag(2048);
         this->removeChild(nd);
         registerKListenerForMainGame();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopEffect(effect_ext_2048gm);
     }else{
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+        effect_ext_2048gm=CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/2048gamebgm.mp3",true);
         auto layer2048 =Cocos2dScenes::SceneInstanceManager::createGame2048Layer();
         //layer2048->setSceneDelegateCls(hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance());
         layer2048->setTag(2048);
@@ -217,6 +232,7 @@ void HelloWorld::addOrRemove2048GameView(bool remove){
         
     }
 }
+
 void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
     if(board==NULL){
         return;
@@ -231,6 +247,7 @@ void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
     const int echwid =  (int)(((1.0f -gapratio)*(float)visibleSize.width)/wid);
     const int echsz = min(echhei,echwid);
     const int gapwid = visibleSize.width-echsz*wid;
+    
     const int gaphei = visibleSize.height-echsz*hei;
     Layer* newlyr = Layer::create();
     newlyr->setPosition(Vec2(gapwid/2,gaphei/2));
@@ -292,22 +309,29 @@ void HelloWorld::play(float dt){
     
 }
 void HelloWorld::pause(){
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+    //removeKListenerForMainGame();
     HelloWorld::gc -> pause();
 }
 void HelloWorld::resume(){
-    
+    //registerKListenerForMainGame();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
     HelloWorld::gc->resume();
     
 }
 void HelloWorld::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event){
     if(!HelloWorld::gc->forceend&&!HelloWorld::gc->isEnd()){
         if(keyCode==KeyCode::KEY_LEFT_ARROW){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/click.mp3");
             this->gc->currentusermoveleft();
+            
         }
         else if(keyCode==KeyCode::KEY_RIGHT_ARROW){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/click.mp3");
             this->gc->currentusermoveright();
         }
         else if(keyCode==KeyCode::KEY_DOWN_ARROW){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/click.mp3");
             this->gc->forcedropdownOnce();
         }
     }
@@ -332,15 +356,28 @@ void HelloWorld::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d:
        // cout<<"called currentblockrotate"<<endl;
         }
         else if(keyCode==KeyCode::KEY_ENTER){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/teleportmove.wav",false,10);
             this->gc->fastdropdown();
         }
         
         else if(keyCode==KeyCode::KEY_SHIFT||keyCode==KeyCode::KEY_LEFT_SHIFT||keyCode==KeyCode::KEY_RIGHT_SHIFT){
+            //CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/changeblkbgm.mp3");
             this->gc->switchBlock();
         }
     }
 }
+void HelloWorld::onExit(){
+    Scene::onExit();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
 
+}
+void HelloWorld::onEnter(){
+    Scene::onEnter();
+    //CocosDenshion::SimpleAudioEngine::sharedEngine()->stop
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "res/bgms/maingame_bgm.mp3", true);
+}
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
@@ -351,7 +388,6 @@ bool HelloWorld::init()
     {
         return false;
     }
-    
     HelloWorld::overlayblockboard=NULL;
     bonus_game_lv = 4;
     if(HelloWorld::gc==NULL){
@@ -359,6 +395,7 @@ bool HelloWorld::init()
         //cout<<(int)gc->getGameHeight()<<endl;
     }
     HelloWorld::gc->justinit();
+    
     //NextBlockRenderBehavior*
     this->nxtblkrv = NextBlockRenderBehavior::create();
     this->nxtblkrv->setGameController(gc);
@@ -369,6 +406,10 @@ bool HelloWorld::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     registerKListenerForMainGame();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+                                                                          "res/bgms/maingame_bgm.mp3", true);
+    
     HelloWorld::startGame();
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -470,7 +511,8 @@ void HelloWorld::menuDrawerClickCallback(Ref* pSender){
 }
 void HelloWorld::menuVisibleToggle(bool autopauseorresume){
     if(gc->isOngoing()&&autopauseorresume){
-        gc->pause();
+        this->pause();
+        //gc->pause();
     }
     if(this->gameoptionmenu==NULL){
         this->gameoptionmenu =this->generateOptionMenu();
@@ -478,7 +520,8 @@ void HelloWorld::menuVisibleToggle(bool autopauseorresume){
     }
     else{
         if(gc->isPaused()&&autopauseorresume){
-            gc->resume();
+            this->resume();
+            //gc->resume();
         }
         this->removeChild(this->gameoptionmenu);
         this->gameoptionmenu = NULL;

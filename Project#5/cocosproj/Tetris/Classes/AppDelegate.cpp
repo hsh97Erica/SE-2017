@@ -1,20 +1,12 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-//#include "externalgames/ CodeLadyJJY/game2048/GameScene.hpp"
-#include "myscenes/SceneManagement.hpp"
-//#include "./MainGameScene.h"
-//#include "Temp.hpp"
-#include <iostream>
-using namespace std;
-using Tetris::Cocos2dScenes::SceneManagement;
-using Tetris::Cocos2dScenes::SceneInstanceManager;
-
+#include "cocosclses/AudioEnabler.h"
 // #define USE_AUDIO_ENGINE 1
-// #define USE_SIMPLE_AUDIO_ENGINE 1
+ /*#define USE_SIMPLE_AUDIO_ENGINE 1
 #if USE_AUDIO_ENGINE && USE_SIMPLE_AUDIO_ENGINE
 #error "Don't use AudioEngine and SimpleAudioEngine at the same time. Please just select one in your game!"
 #endif
-
+*/
 #if USE_AUDIO_ENGINE
 #include "audio/include/AudioEngine.h"
 using namespace cocos2d::experimental;
@@ -24,6 +16,14 @@ using namespace CocosDenshion;
 #endif
 
 USING_NS_CC;
+//#include "externalgames/ CodeLadyJJY/game2048/GameScene.hpp"
+#include "myscenes/SceneManagement.hpp"
+//#include "./MainGameScene.h"
+//#include "Temp.hpp"
+#include <iostream>
+using namespace std;
+using Tetris::Cocos2dScenes::SceneManagement;
+using Tetris::Cocos2dScenes::SceneInstanceManager;
 
 static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
