@@ -111,6 +111,7 @@ endif()
 include_directories(
   /usr/local/include/GLFW
   /usr/include/GLFW
+  Classes/db/sqlitelib
   ${COCOS2D_ROOT}
   ${COCOS2D_ROOT}/cocos
   ${COCOS2D_ROOT}/external
@@ -132,6 +133,7 @@ set(GAME_SRC
   Classes/HelloWorldScene.cpp
   Classes/tet/*.cpp
   Classes/tet/GameController.cpp
+  Classes/db/sqlitelib/sqlite3.c
   ${PLATFORM_SPECIFIC_SRC}
 )
 
@@ -141,6 +143,8 @@ set(GAME_HEADERS
   Classes/tet/GameController.h
   Classes/tet/*.h
   Classes/tet2/*.hpp
+  Classes/db/sqlitelib/sqlite3.h
+  Classes/db/sqlitelib/sqlite3ext.h
   ${PLATFORM_SPECIFIC_HEADERS}
 )
 

@@ -18,10 +18,12 @@
 #include "Block.hpp"
 #include "../HelloWorldScene.h"
 #include "../cocosclses/AudioSourceManager.hpp"
+#include "DBManagement.hpp"
 using namespace std;
 using namespace Tetris;
 using namespace Tetris::Delegates;
 using namespace Tetris::ScoreManage;
+using ScoreDBManager = Tetris::DBManagement::DBManager;
 namespace Tetris{
     class InitGameInfo;
 
@@ -35,6 +37,8 @@ namespace Tetris{
             }
             enum class GameStatus{UNKNOWN,ONGOING,END,PAUSE};
             GameController(){
+                ScoreDBManager::getInstance()->open(ScoreDBManager::getDBFileName());
+                cout<<"db open? "<<(ScoreDBManager::getInstance()->isOpened())<<endl;
                 //this->init(NULL);
                 //this->isEnd = false;
                 //Tetris::GameController::mInstance
@@ -388,6 +392,7 @@ namespace Tetris{
                 for(int i=0;i<blkhg;i++){
                     for(int j=0;j<blkwd;j++){
                         if(cury+i<this->gameHeight&&blddt[i][j]&&board[cury+i][curx+j]){
+                            ScoreDBManager::getInstance()->saveScore(getLocalScore());
                             return true;
                         }
                     }

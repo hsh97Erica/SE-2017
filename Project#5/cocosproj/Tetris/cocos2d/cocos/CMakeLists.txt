@@ -113,6 +113,7 @@ elseif(LINUX)
 elseif(MACOSX OR APPLE)
   cocos_use_pkg(cocos2dInternal GLFW3)
 
+ INCLUDE_DIRECTORIES ( ../../Classes/db/sqlitelib )
  INCLUDE_DIRECTORIES ( /System/Library/Frameworks )
 
  FIND_LIBRARY(COCOA_LIBRARY Cocoa)
