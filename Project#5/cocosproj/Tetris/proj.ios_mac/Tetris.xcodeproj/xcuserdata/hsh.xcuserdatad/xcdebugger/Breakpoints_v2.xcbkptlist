@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "170"
             endingLineNumber = "170"
-            landmarkName = "HelloWorld::play(float dt)"
+            landmarkName = "HelloWorld::stateloop(float dt)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
             endingLineNumber = "167"
-            landmarkName = "HelloWorld::play(float dt)"
+            landmarkName = "HelloWorld::stateloop(float dt)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
             endingLineNumber = "169"
-            landmarkName = "HelloWorld::play(float dt)"
+            landmarkName = "HelloWorld::stateloop(float dt)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "242"
             endingLineNumber = "242"
-            landmarkName = "HelloWorld::init()"
+            landmarkName = "HelloWorld::drawboardingui(char** board,unsigned char* blk_clr)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "HelloWorld::createNewKListener()"
+            landmarkName = "HelloWorld::makeField()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -175,7 +175,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "328"
             endingLineNumber = "328"
-            landmarkName = "HelloWorld::init()"
+            landmarkName = "HelloWorld::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -191,7 +191,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "299"
             endingLineNumber = "299"
-            landmarkName = "HelloWorld::init()"
+            landmarkName = "HelloWorld::gameloop(float dt)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "HelloWorld::init()"
+            landmarkName = "HelloWorld::drawboardingui(char** board,unsigned char* blk_clr)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -223,7 +223,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "HelloWorld::init()"
+            landmarkName = "HelloWorld::drawboardingui(char** board,unsigned char* blk_clr)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

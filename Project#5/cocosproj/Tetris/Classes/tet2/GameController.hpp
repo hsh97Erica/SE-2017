@@ -37,13 +37,28 @@ namespace Tetris{
             }
             enum class GameStatus{UNKNOWN,ONGOING,END,PAUSE};
             GameController(){
-                ScoreDBManager::getInstance()->open(ScoreDBManager::getDBFileName());
                 cout<<"db open? "<<(ScoreDBManager::getInstance()->isOpened())<<endl;
+                string toprootfolder = FileUtils::getInstance()->getWritablePath();
+                string workfolder = toprootfolder;
+                workfolder.append("tet/");
+                if(!FileUtils::getInstance()->isDirectoryExist(workfolder)){
+                    FileUtils::getInstance()->createDirectory(workfolder);
+                }
+                string dbfile = workfolder;
+                dbfile.append(ScoreDBManager::getDBFileName());
+                char* fileptr =(char*) dbfile.c_str();
+                ScoreDBManager::getInstance()->open(fileptr);
                 //this->init(NULL);
                 //this->isEnd = false;
+                cout<<"filepath: "<<(fileptr!=NULL? fileptr:"null")<<endl;
+                cout<<"db open? "<<(ScoreDBManager::getInstance()->isOpened())<<endl;
+                
                 //Tetris::GameController::mInstance
                 this->justinit();
             }
+        ~GameController(){
+            ScoreDBManager::getInstance()->close();
+        }
             GameController(InitGameInfo* igi){
                 //this->isEnd=false;
                 this->setInitGameInfo(igi,false);
@@ -111,6 +126,7 @@ namespace Tetris{
             }
             void setGameStatusToEnd(){
                 this->setGameStatus(GameStatus::END);
+                ScoreDBManager::getInstance()->saveScore(getLocalScore());
             }
             void findAndRemoveLines(){
                 stack<int> s;
@@ -200,7 +216,6 @@ namespace Tetris{
             //bool hasTimeDelta = false;
             //cout<<"inner play time: "<<gplaytime<<endl;
             if(!this->forceend&&this->isOngoing()){
-                
                 Users::GameUser* guser = this->gusers[0];
                 //unsigned char* colors = guser->getCurrentBlock()->getBlockColor()->getColorAsArray();
                 rst = this->getCombinedBoard();
@@ -208,7 +223,9 @@ namespace Tetris{
                 //this->printcurrentboard();
                 //delete colors;
                 
-                if(checkEnd()){this->setGameStatusToEnd();return rst;}
+                if(checkEnd()){
+                    cout<<"chk end"<<endl;
+                    this->setGameStatusToEnd();return rst;}
                 this->findAndRemoveLines();
                 time_t tmp_time_delta = time(NULL);
                 //cout<<"==tm info=="<<endl<<tmp_time_delta<<endl<<(this->timedeltachecker)<<endl<<endl;
@@ -343,7 +360,7 @@ namespace Tetris{
 
                         //this->printcurrentboard();
                         cout<<"printboard ok"<<endl;
-                        if(checkEnd()){this->gs = GameStatus::END;}
+                        if(checkEnd()){setGameStatusToEnd();}
                         cout<<"check end ok"<<endl;
                         if(!this->usercheck())break;
                         Users::GameUser* guser = this->gusers[0];
@@ -392,6 +409,7 @@ namespace Tetris{
                 for(int i=0;i<blkhg;i++){
                     for(int j=0;j<blkwd;j++){
                         if(cury+i<this->gameHeight&&blddt[i][j]&&board[cury+i][curx+j]){
+                            cout<<"save scr in checkEnd"<<endl;
                             ScoreDBManager::getInstance()->saveScore(getLocalScore());
                             return true;
                         }
@@ -611,7 +629,8 @@ namespace Tetris{
                 const int blkwd = blk->getBlockSpaceWidth();
                  bool** blddt = NULL;
                  if(cury+blkhg>this->gameHeight){
-                     this->gs = GameStatus::END;
+                     setGameStatusToEnd();
+                     //this->gs = GameStatus::END;
                      //this->isEnd =true;
                     return false;
                  }

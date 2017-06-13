@@ -31,7 +31,7 @@ namespace Tetris{
                 if(!conn){
                     close();
                 }
-                err = sqlite3_open(fname,&conn);
+                err = sqlite3_open_v2(fname,&conn,SQLITE_OPEN_READWRITE|SQLITE_OPEN_CREATE,NULL);
                 if(err!=SQLITE_OK){
                     close();
                     return;
@@ -50,18 +50,22 @@ namespace Tetris{
                 return DB_FILE_NAME;
             }
             void saveScore(unsigned long long score){
+                cout<<"call saveScore ain DBMGR"<<endl;
                 const time_t ts = time(NULL);
                 stringstream ss;
-                ss<<"insert into scoreboard(score,recoardtimeasts) values(";
+                ss<<"insert into scoreboard(score,recordtimeasts) values(";
                 ss<<score<<","<<ts<<");";
+                string str = (string)ss.str();
+                cout<<"[insert query] "<<str<<endl;
                 char* sql = NULL;
-                sql = (char*) ss.str().c_str();
+                sql = (char*) str.c_str();
                 if(!conn){
+                    cout<<"fail save score with null conn"<<endl;
                     return;
                 }
                 char* errmsg = NULL;
                 sqlite3_exec(conn,sql,NULL,NULL,&errmsg);
-                cout<<"score saved - "<<(errmsg!=NULL?errmsg:"")<<endl;
+                cout<<"score saved:: "<<(errmsg!=NULL?errmsg:"")<<endl;
             }
             queue<struct ScoreBoardAttributes> getScoreBoard(){
                 queue<struct ScoreBoardAttributes> q;
@@ -69,7 +73,7 @@ namespace Tetris{
                     return q;
                 }
                 sqlite3_stmt* res2 = NULL;
-                char* sql = "select _id,score,recoardtimeasts from scoreboard;";
+                char* sql = "select _id,score,recordtimeasts from scoreboard;";
                 sqlite3_prepare_v2(conn,sql,strlen(sql),&res2,NULL);
                 int ret = 0;
                 int colcnt = sqlite3_column_count(res2);
@@ -106,7 +110,32 @@ namespace Tetris{
             }
             void initTable(){
                 if(!conn)return;
-                err=sqlite3_exec(conn,"create table if not exists scoreboard(_id integer primary key auto increment,score integer default 0,recordtimeasts integer not null);",NULL,NULL,NULL);
+                err=sqlite3_exec(conn,"create table if not exists scoreboard(_id integer primary key autoincrement,score integer default 0,recordtimeasts integer not null);",NULL,NULL,NULL);
+
+                if(err!=SQLITE_OK){
+                    cout<<"initTable error"<<endl;
+                    cout<<"[error state] ";
+                    switch(err){
+                        case SQLITE_DENY:{
+                            cout<<"deny"<<endl;
+                            break;
+                        }
+                        case SQLITE_FAIL:{
+                            cout<<"fail"<<endl;
+                            break;
+                        }
+                        case SQLITE_IOERR:{
+                            cout<<"io error"<<endl;
+                            break;
+                        }
+                        default:{
+                            cout<<"else error"<<endl;
+                            break;
+                        }
+                    }
+                }else{
+                    cout<<"initTable OK"<<endl;
+                }
             }
         };
         
