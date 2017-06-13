@@ -129,15 +129,16 @@ namespace Tetris{
                 ss.fill(' ');
                 ss.width(2);
                 ss<<rank<<"  ";
-                ss.width(7);
+                ss.width(10);
                 
                 ss<<(attr.score)<<"  ";
-                ss.width(15);
+                ss.width(6);
                 ss<<(attr.playtimesec)<<"s  ";
+                ss.width(15);
                 ss<<(ctime(&(attr.ts)));
                 auto lbl = Label::createWithTTF((string)ss.str(), "fonts/DXSeNB-KSCpc-EUC-H.ttf", 20);
                 lbl->setPosition(Vec2(lbl->getContentSize().width/2,lbl->cocos2d::Node::getContentSize().height/2));
-                lbl->setAnchorPoint(Vec2(0, 0.5f));
+                //lbl->setAnchorPoint(Vec2(0, 0.5f));
                 wid1->addChild(lbl);
                 wid1->setContentSize(Size(lbl->getContentSize().width*0.9f,lbl->getContentSize().height));
                 return wid1;
@@ -147,7 +148,7 @@ namespace Tetris{
                
                 auto lbl = Label::createWithTTF("순위   점수      플레이시간   기록날짜", "fonts/DXSeNB-KSCpc-EUC-H.ttf", 40);
                 lbl->setPosition(Vec2(lbl->getContentSize().width/2,lbl->cocos2d::Node::getContentSize().height/2));
-                lbl->setAnchorPoint(Vec2(0, 0.5f));
+                //lbl->setAnchorPoint(Vec2(0, 0.5f));
                  wid1->addChild(lbl);
                 wid1->setContentSize(Size(lbl->getContentSize().width*0.9f,lbl->getContentSize().height));
                 return wid1;
