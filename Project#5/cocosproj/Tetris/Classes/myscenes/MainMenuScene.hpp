@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "../HelloWorldScene.h"
+#include "ScoreBoardScene.hpp"
 //#include "SceneManagement.hpp"
 #include <iostream>
 using namespace std;
@@ -66,13 +67,18 @@ public:
         Director::getInstance()->pushScene(scene);
         //Director::getInstance()->replaceScene(scene);
     }
+    void menuSCBRDBtnCallback(cocos2d::Ref* pSender){
+        auto scene = Tetris::Cocos2dScenes::ScoreBoardScene::createScene();
+        Director::getInstance()->pushScene(scene);
+    }
     // implement the "static create()" method manually
     CREATE_FUNC(MainMenuScene);
     protected:
         cocos2d::Menu* generateOptionMenu(){
             auto item_1 = MenuItemFont::create("New Game", CC_CALLBACK_1(MainMenuScene::menuPlayBtnCallback, this));
+            auto item_2 = MenuItemFont::create("Score Board", CC_CALLBACK_1(MainMenuScene::menuSCBRDBtnCallback, this));
             auto item_3 = MenuItemFont::create("Exit", CC_CALLBACK_1(MainMenuScene::menuCloseCallback, this));
-            auto menu = Menu::create(item_1,item_3,NULL);
+            auto menu = Menu::create(item_1,item_2,item_3,NULL);
            // menu->setPosition(Vec2::ZERO);
             menu->alignItemsVertically();
             return menu;

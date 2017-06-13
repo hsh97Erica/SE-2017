@@ -63,6 +63,7 @@
 		591513C91ED8505100733056 /* views in Resources */ = {isa = PBXBuildFile; fileRef = 591513C81ED8505100733056 /* views */; };
 		594344391EEE811D00E6F66C /* db in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBE91EED81C200AF41F0 /* db */; };
 		5943443B1EEE815E00E6F66C /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 5943443A1EEE815E00E6F66C /* sqlite3.c */; };
+		5943443D1EF0064000E6F66C /* MainMenuScene.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 5943443C1EF0064000E6F66C /* MainMenuScene.hpp */; };
 		598DDBE41EE2461800AF41F0 /* externalgames in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE31EE2461800AF41F0 /* externalgames */; };
 		598DDBE61EE2815C00AF41F0 /* myscenes in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE51EE2815C00AF41F0 /* myscenes */; };
 		598DDBE81EED7BB100AF41F0 /* cocosclses in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBE71EED7BB100AF41F0 /* cocosclses */; };
@@ -176,6 +177,7 @@
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		591513C81ED8505100733056 /* views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = views; sourceTree = "<group>"; };
 		5943443A1EEE815E00E6F66C /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		5943443C1EF0064000E6F66C /* MainMenuScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMenuScene.hpp; sourceTree = "<group>"; };
 		598DDBE31EE2461800AF41F0 /* externalgames */ = {isa = PBXFileReference; lastKnownFileType = folder; path = externalgames; sourceTree = "<group>"; };
 		598DDBE51EE2815C00AF41F0 /* myscenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = myscenes; sourceTree = "<group>"; };
 		598DDBE71EED7BB100AF41F0 /* cocosclses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cocosclses; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				5943443C1EF0064000E6F66C /* MainMenuScene.hpp */,
 				5943443A1EEE815E00E6F66C /* sqlite3.c */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
@@ -568,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5943443D1EF0064000E6F66C /* MainMenuScene.hpp in Sources */,
 				5943443B1EEE815E00E6F66C /* sqlite3.c in Sources */,
 				594344391EEE811D00E6F66C /* db in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,

@@ -8,6 +8,7 @@ namespace Tetris{
       struct ScoreBoardAttributes{
             int dbsaveorder;
             unsigned long long score;
+            unsigned long long playtimesec;
             time_t ts;
             bool datasaved;
         };

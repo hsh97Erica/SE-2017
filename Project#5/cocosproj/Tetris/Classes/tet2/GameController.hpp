@@ -126,7 +126,7 @@ namespace Tetris{
             }
             void setGameStatusToEnd(){
                 this->setGameStatus(GameStatus::END);
-                ScoreDBManager::getInstance()->saveScore(getLocalScore());
+                ScoreDBManager::getInstance()->saveScore(getLocalScore(),getPlayTimeAsRaw());
             }
             void findAndRemoveLines(){
                 stack<int> s;
@@ -410,7 +410,7 @@ namespace Tetris{
                     for(int j=0;j<blkwd;j++){
                         if(cury+i<this->gameHeight&&blddt[i][j]&&board[cury+i][curx+j]){
                             cout<<"save scr in checkEnd"<<endl;
-                            ScoreDBManager::getInstance()->saveScore(getLocalScore());
+                            ScoreDBManager::getInstance()->saveScore(getLocalScore(),getPlayTimeAsRaw());
                             return true;
                         }
                     }

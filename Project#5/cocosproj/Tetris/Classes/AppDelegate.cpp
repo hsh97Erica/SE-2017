@@ -18,6 +18,7 @@ using namespace CocosDenshion;
 USING_NS_CC;
 //#include "externalgames/ CodeLadyJJY/game2048/GameScene.hpp"
 #include "myscenes/SceneManagement.hpp"
+#include "tet2/DBManagement.hpp"
 //#include "./MainGameScene.h"
 //#include "Temp.hpp"
 #include <iostream>
@@ -36,6 +37,7 @@ AppDelegate::AppDelegate()
 
 AppDelegate::~AppDelegate() 
 {
+    Tetris::DBManagement::DBManager::getInstance()->close();
 #if USE_AUDIO_ENGINE
     AudioEngine::end();
 #elif USE_SIMPLE_AUDIO_ENGINE

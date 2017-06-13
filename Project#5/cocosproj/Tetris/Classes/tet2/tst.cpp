@@ -4,26 +4,17 @@
 #include <queue>
 #include "ScoreManagement.hpp"
 #include "BaseDBManagement.hpp"
-#include "DBManagement2.hpp"
+#include "DBManagement.hpp"
 using namespace std;
 using namespace Tetris::DBManagement;
 /*int main(){
-    DBManager2* mgr = DBManager2::getInstance();
-    FILE* fp = mgr->getWritableDBFile();
-    for(unsigned long long i=1;i<4;i++){
-    mgr->saveNewRecord(&fp,i,false);
-    }
-    mgr->closeDBFile(&fp);
-    cout<<"finish saving"<<endl;
-    fp = mgr->getReadOnlyDBFile();
-    queue<struct ScoreBoardAttributes> q = mgr->getRecords(&fp,true);
+    DBManager* mgr = DBManager::getInstance();
+    mgr->open("/Users/hsh/Documents/tet/tet_db.db");
+    queue<struct ScoreBoardAttributes> q = mgr->getScoreBoard();
     while(q.size()){
-        struct ScoreBoardAttributes attr={0,};
-        attr = q.front();
+        struct ScoreBoardAttributes s = q.front();
         q.pop();
-        cout<<"attr info: "<<(attr.score)<<" | "<<(attr.ts)<<endl;
+        cout<<"score: "<<(s.score)<<endl;
     }
-    cout<<"finish program."<<endl;
-    //struct ScoreBoardAttributes attr;
     return 0;
 }*/

@@ -3,8 +3,10 @@
 #include "cocos2d.h"
 #include "MainMenuScene.hpp"
 #include "../HelloWorldScene.h"
+#include "ScoreBoardScene.hpp"
 #include "../externalgames/ CodeLadyJJY/game2048/GameScene.hpp"
 using Tetris::Cocos2dScenes::MainMenuScene;
+using Tetris::Cocos2dScenes::ScoreBoardScene;
 //using CodeLadyJJY::game2048::GameScene;
 using cocos2d::Scene;
 namespace Tetris{
@@ -26,6 +28,9 @@ namespace Tetris{
         }
         static CodeLadyJJY::game2048::GameScene* createGame2048Layer(){
             return CodeLadyJJY::game2048::GameScene::create();
+        }
+        static Scene* createScoreBoardScene(){
+            return ScoreBoardScene::createScene();
         }
         Scene* getStoredMainMenuScene(){
             if(mmsc==NULL){
