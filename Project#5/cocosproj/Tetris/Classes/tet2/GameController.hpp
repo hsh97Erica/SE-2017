@@ -37,22 +37,10 @@ namespace Tetris{
             }
             enum class GameStatus{UNKNOWN,ONGOING,END,PAUSE};
             GameController(){
-                cout<<"db open? "<<(ScoreDBManager::getInstance()->isOpened())<<endl;
-                string toprootfolder = FileUtils::getInstance()->getWritablePath();
-                string workfolder = toprootfolder;
-                workfolder.append("tet/");
-                if(!FileUtils::getInstance()->isDirectoryExist(workfolder)){
-                    FileUtils::getInstance()->createDirectory(workfolder);
+                if(!ScoreDBManager::getInstance()->isOpened()){
+                    char* fileptr =(char*) (ScoreDBManager::getDBLocationForTetrisGame()) .c_str();
+                    ScoreDBManager::getInstance()->open(fileptr);
                 }
-                string dbfile = workfolder;
-                dbfile.append(ScoreDBManager::getDBFileName());
-                char* fileptr =(char*) dbfile.c_str();
-                ScoreDBManager::getInstance()->open(fileptr);
-                //this->init(NULL);
-                //this->isEnd = false;
-                cout<<"filepath: "<<(fileptr!=NULL? fileptr:"null")<<endl;
-                cout<<"db open? "<<(ScoreDBManager::getInstance()->isOpened())<<endl;
-                
                 //Tetris::GameController::mInstance
                 this->justinit();
             }

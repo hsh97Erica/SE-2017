@@ -22,8 +22,10 @@ public:
     void gameforceResumeMenuCallback(Ref* pSender);
     void gameforcePauseMenuCallback(Ref* pSender);
     void gameRestartGameCallback(Ref* pSender);
+    void menuSoundEnableCallback(cocos2d::Ref* pSender);
     void startGame();
     void drawboardingui(char** board,unsigned char* clr);
+    MenuItemLabel* sounditem = NULL;
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
     protected:
@@ -58,6 +60,9 @@ public:
         unsigned short bonus_game_lv;
         bool isInExtGame = false;
     unsigned int effect_ext_2048gm;
+    bool readSoundEnable();
+    
+    string getMenuTextSoundEnabler(bool enable);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

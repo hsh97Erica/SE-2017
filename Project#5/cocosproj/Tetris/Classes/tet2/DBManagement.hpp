@@ -52,6 +52,7 @@ namespace Tetris{
                 }
                 string dbfile = workfolder;
                 dbfile.append(getDBFileName());
+                cout<<"db file path: "<<dbfile<<endl;
                 return dbfile;
             }
             bool isOpened(){
@@ -86,7 +87,7 @@ namespace Tetris{
                     return q;
                 }
                 sqlite3_stmt* res2 = NULL;
-                char* sql = "select _id,score,playtimesec,recordtimeasts from scoreboard;";
+                char* sql = "select _id,score,playtimesec,recordtimeasts from scoreboard order by score desc,playtimesec desc, recordtimeasts desc;";
                 sqlite3_prepare_v2(conn,sql,strlen(sql),&res2,NULL);
                 int ret = 0;
                 int colcnt = sqlite3_column_count(res2);
@@ -138,8 +139,11 @@ namespace Tetris{
                 }
                 return true;
             }
+            bool readAppSettingAsBool(string key){
+                return readAppSettingAsInt(key)==0?false:true;
+            }
             int readAppSettingAsInt(string key){
-                if((!conn)||(conn&&isExistAppSetting(key))){
+                if((!conn)||(conn&&!isExistAppSetting(key))){
                     return 0;
                 }
                 int result =0;
@@ -156,7 +160,10 @@ namespace Tetris{
                 while(true){
                     ret = sqlite3_step(res2);
                     if(ret==SQLITE_ROW){
+                        cout<<"before setting int result"<<endl;
+                        //sqlite3_
                         result = sqlite3_column_int(res2, 0);
+                        cout<<"after setting int result"<<result<<endl;
                     }
                     else{
                         break;
@@ -227,17 +234,28 @@ namespace Tetris{
                     return false;
                 }
                 string sqlstr = "";
+                sqlite3_exec(conn, "BEGIN TRANSACTION;", NULL, NULL, NULL);
                 stringstream ss;
-                ss<<"insert into appsetting values('"<<key<<"', "<<value<<");";
+                ss<<"update appsetting set value="<<value<<" where setting_name='"<<key<<"';";
                 sqlstr = (string)ss.str();
-                err=sqlite3_exec(conn,(char*)sqlstr.c_str(),NULL,NULL,NULL);
+                cout<<"[update query] "<<sqlstr<<endl;
+                char* errmsg = NULL;
+                err=sqlite3_exec(conn,(char*)sqlstr.c_str(),NULL,NULL,&errmsg);
                 logdberr("changeIntSetting");
+                sqlite3_exec(conn, "END TRANSACTION;", NULL, NULL, NULL);
+                if(err){
+                    cout<<errmsg<<endl;
+                }
+                else{
+                    err=sqlite3_exec(conn,"commit;",NULL,NULL,&errmsg);
+                    
+                }
                 return true;
             }
             bool changeBoolSetting(string key,bool value){
                 return changeIntSetting(key,value?1:0);
             }
-            string getSoundEnablerKey(){
+            static string getSoundEnablerKey(){
                 return "effect_output";
             }
         private:

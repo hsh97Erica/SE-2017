@@ -4,6 +4,8 @@
 #include "cocos2d.h"
 #include "../HelloWorldScene.h"
 #include "ScoreBoardScene.hpp"
+#include "../tet2/BaseDBManagement.hpp"
+#include "../tet2/DBManagement.hpp"
 //#include "SceneManagement.hpp"
 #include <iostream>
 using namespace std;
@@ -30,6 +32,13 @@ public:
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
                                                                               "res/bgms/mainmenu_bgm.mp3", true);
+        if(!ScoreDBManager::getInstance()->isOpened()){
+            char* fileptr =(char*) (ScoreDBManager::getDBLocationForTetrisGame()) .c_str();
+            ScoreDBManager::getInstance()->open(fileptr);
+        }
+        if(!readSoundEnable()){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+        }
     }
     virtual void onExit(){
         Scene::onExit();
@@ -40,6 +49,10 @@ public:
     {
         return false;
     }
+        if(!ScoreDBManager::getInstance()->isOpened()){
+            char* fileptr =(char*) (ScoreDBManager::getDBLocationForTetrisGame()) .c_str();
+            ScoreDBManager::getInstance()->open(fileptr);
+        }
         auto img = Sprite::create("res/backgrounds/mainbg.jpg");
         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
@@ -71,14 +84,40 @@ public:
         auto scene = Tetris::Cocos2dScenes::ScoreBoardScene::createScene();
         Director::getInstance()->pushScene(scene);
     }
+    void menuSoundEnableCallback(cocos2d::Ref* pSender){
+        const bool changedstate = !readSoundEnable();
+        DBManager::getInstance()->changeBoolSetting(DBManager::getSoundEnablerKey(),changedstate);
+        cout<<"finish change state in sqlite"<<endl;
+         sounditem->setString(getMenuTextSoundEnabler(changedstate));
+        if(changedstate){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+        }
+        else{
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+        }
+        //((Label*)mitem->getLabel())->setString(getMenuTextSoundEnabler(changedstate));
+        cout<<"finish change state in menuitem"<<endl;
+    }
     // implement the "static create()" method manually
     CREATE_FUNC(MainMenuScene);
     protected:
+    string getMenuTextSoundEnabler(bool enable){
+        string result = "Sound: ";
+        result.append(enable?"On":"Off");
+        return result;
+    }
+    MenuItemLabel* sounditem = NULL;
+    bool readSoundEnable(){
+        return DBManager::getInstance()->readAppSettingAsBool(DBManager::getSoundEnablerKey());
+    }
         cocos2d::Menu* generateOptionMenu(){
             auto item_1 = MenuItemFont::create("New Game", CC_CALLBACK_1(MainMenuScene::menuPlayBtnCallback, this));
             auto item_2 = MenuItemFont::create("Score Board", CC_CALLBACK_1(MainMenuScene::menuSCBRDBtnCallback, this));
+            //auto item_2dot5
+            sounditem= MenuItemFont::create(getMenuTextSoundEnabler(readSoundEnable()), CC_CALLBACK_1(MainMenuScene::menuSoundEnableCallback, this));
+            //item_2dot5->setTag(7007);
             auto item_3 = MenuItemFont::create("Exit", CC_CALLBACK_1(MainMenuScene::menuCloseCallback, this));
-            auto menu = Menu::create(item_1,item_2,item_3,NULL);
+            auto menu = Menu::create(item_1,item_2,sounditem,item_3,NULL);
            // menu->setPosition(Vec2::ZERO);
             menu->alignItemsVertically();
             return menu;

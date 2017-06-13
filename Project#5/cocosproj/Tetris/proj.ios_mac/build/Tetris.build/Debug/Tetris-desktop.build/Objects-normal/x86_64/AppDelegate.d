@@ -22,6 +22,38 @@ dependencies: \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/SceneManagement.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/MainMenuScene.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/ScoreBoardScene.hpp \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/CocosGUI.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIWidget.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UILayoutParameter.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/GUIExport.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/GUIDefine.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/base/ObjectFactory.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UILayout.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIButton.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UICheckBox.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIAbstractCheckButton.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIRadioButton.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIImageView.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIText.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UITextAtlas.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UILoadingBar.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIScrollView.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIListView.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UISlider.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UITextField.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UITextBMFont.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIPageView.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIHelper.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIRichText.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIHBox.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIVBox.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIRelativeBox.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIDeprecated.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIScale9Sprite.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UIEditBox/UIEditBox.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UILayoutComponent.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/ui/UITabControl.h \
+  /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/proj.ios_mac/../cocos2d/cocos/editor-support/cocostudio/CocosStudioExtension.h \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/../externalgames/\ CodeLadyJJY/game2048/GameScene.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/../externalgames/\ CodeLadyJJY/game2048/Card.hpp \
   /Users/hsh/Documents/gitfld/github.hsh97Erica/SE-2017/Project\#5/cocosproj/Tetris/Classes/myscenes/../externalgames/\ CodeLadyJJY/game2048/hshGameDelegate.hpp
