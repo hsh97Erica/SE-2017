@@ -1,0 +1,18 @@
+<map id="sqlite3_exec" name="sqlite3_exec">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#ab6abfc9b1c1a3c71a67e3b891a523016" title="createSelftestTable" alt="" coords="634,31,769,56"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1" title="do_meta_command" alt="" coords="837,107,976,132"/>
+<area shape="rect" id="node7" href="$d6/d4f/shell_8c.html#a86ee25abe4a10448e63d8cdf253ee77f" title="toggleSelectOrder" alt="" coords="189,132,318,158"/>
+<area shape="rect" id="node9" href="$d6/d4f/shell_8c.html#ad779d0d1b64b032187a57c9106ca82fb" title="run_schema_dump_query" alt="" coords="613,132,789,158"/>
+<area shape="rect" id="node10" href="$d6/d4f/shell_8c.html#aa6b478ad8bf363608c24e73f313b5d5d" title="tryToCloneSchema" alt="" coords="186,234,320,259"/>
+<area shape="rect" id="node11" href="$d6/d4f/shell_8c.html#a8cb297124b954d24bbe8b9d476670477" title="tryToClone" alt="" coords="443,234,528,259"/>
+<area shape="rect" id="node12" href="$da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#aef16da1d2e564caa309bfc3b3e419d7e" title="Tetris::DBManagement\l::DBManager::saveScore" alt="" coords="168,335,338,374"/>
+<area shape="rect" id="node15" href="$da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#aead8bb3f2a64fdf6ac59c69bfd21a01e" title="Tetris::DBManagement\l::DBManager::changeIntSetting" alt="" coords="150,398,357,436"/>
+<area shape="rect" id="node16" href="$da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a07a391f97339bacd983f2598dd7a3ade" title="Tetris::DBManagement\l::DBManager::initTable" alt="" coords="175,460,332,499"/>
+<area shape="rect" id="node17" href="$da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a08f9bdc18cc015a7746e47c37eba613c" title="Tetris::DBManagement\l::DBManager::initAppSetting\lValuesIfNotExist" alt="" coords="159,523,348,575"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#a28ee64282e3608a01508cc72b184cdb2" title="process_input" alt="" coords="1024,107,1128,132"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#ac931daf5abf20567dcdd053c22142b95" title="main" alt="" coords="1342,107,1392,132"/>
+<area shape="rect" id="node5" href="$d6/d4f/shell_8c.html#a121d06853a2e10f82487dd74adcb8525" title="process_sqliterc" alt="" coords="1176,56,1294,82"/>
+<area shape="rect" id="node8" href="$d6/d4f/shell_8c.html#a57a4b1600ae8c8582a996ee3e4299494" title="dump_callback" alt="" coords="430,132,540,158"/>
+<area shape="rect" id="node13" href="$db/dd2/class_tetris_1_1_game_controller.html#a3c5e6034b2e2faf70371a13eb5f9c5bb" title="Tetris::GameController\l::setGameStatusToEnd" alt="" coords="406,310,565,348"/>
+<area shape="rect" id="node14" href="$db/dd2/class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a" title="Tetris::GameController\l::checkEnd" alt="" coords="408,372,563,411"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="sqlite3_stmt_readonly" name="sqlite3_stmt_readonly">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#a45605123477af036a543563ae898a111" title="sha3QueryFunc" alt="" coords="206,81,322,106"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#addd9d96dc61d55020cbbd8eaff73fdc2" title="open_db" alt="" coords="371,81,445,106"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#ae14540c85a0c98d51e624a74a054cd50" title="shell_dbinfo_command" alt="" coords="494,5,653,30"/>
+<area shape="rect" id="node5" href="$d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1" title="do_meta_command" alt="" coords="701,55,840,81"/>
+<area shape="rect" id="node8" href="$d6/d4f/shell_8c.html#ac931daf5abf20567dcdd053c22142b95" title="main" alt="" coords="1206,81,1256,106"/>
+<area shape="rect" id="node9" href="$d6/d4f/shell_8c.html#ad8935106a498f906f5667d205623dfa3" title="runOneSqlLine" alt="" coords="716,105,826,130"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#a28ee64282e3608a01508cc72b184cdb2" title="process_input" alt="" coords="888,55,992,81"/>
+<area shape="rect" id="node7" href="$d6/d4f/shell_8c.html#a121d06853a2e10f82487dd74adcb8525" title="process_sqliterc" alt="" coords="1040,106,1158,131"/>
+</map>

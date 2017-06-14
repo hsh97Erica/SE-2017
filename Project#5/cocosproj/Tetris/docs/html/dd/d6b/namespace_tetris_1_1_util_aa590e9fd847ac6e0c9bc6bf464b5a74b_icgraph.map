@@ -1,0 +1,5 @@
+<map id="Tetris::Util::randInt" name="Tetris::Util::randInt">
+<area shape="rect" id="node2" href="$df/d05/class_tetris_1_1_block.html#a4bae85cab786853cb3ff76aa7fe72edc" title="Tetris::Block::genRandom\lColor" alt="" coords="184,5,357,43"/>
+<area shape="rect" id="node3" href="$d3/d50/class_tetris_1_1_block_generator.html#a10dfe1467d40437ad41c5ae76437ad78" title="Tetris::BlockGenerator\l::generateRandomBlock" alt="" coords="188,67,353,106"/>
+<area shape="rect" id="node4" href="$d3/d50/class_tetris_1_1_block_generator.html#a581b22cebe170d3fe8b51130c01e7a22" title="Tetris::BlockGenerator\l::generateBlock" alt="" coords="194,130,347,169"/>
+</map>

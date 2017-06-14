@@ -1,0 +1,21 @@
+<map id="lintDotCommand" name="lintDotCommand">
+<area shape="rect" id="node2" href="$de/dd3/sqlite3_8h.html#a447f0d33bec85d66c5e1ea6c71e41101" title="sqlite3_strnicmp" alt="" coords="357,5,475,30"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#a6dbffcc6971ac9cafac343d7cd422a4e" title="usage" alt="" coords="202,326,259,351"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#a84fb215c17aeff373af2262b1bb4042a" title="lintFkeyIndexes" alt="" coords="174,277,288,302"/>
+<area shape="rect" id="node5" href="$de/dd3/sqlite3_8h.html#a4532ad3e2f9ee8707fe66d8b7065ad0f" title="sqlite3_create_function" alt="" coords="337,202,495,227"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#ab58b75d6f4760b9352046b71749bcbc4" title="shellFkeyCollateClause" alt="" coords="336,251,496,277"/>
+<area shape="rect" id="node11" href="$de/dd3/sqlite3_8h.html#aaa53981a07ebaa0c9d16b24032fb943c" title="sqlite3_stricmp" alt="" coords="562,303,672,329"/>
+<area shape="rect" id="node12" href="$de/dd3/sqlite3_8h.html#a9533933e57f7ccbb48c32041ce3a8862" title="sqlite3_mprintf" alt="" coords="563,353,671,378"/>
+<area shape="rect" id="node13" href="$de/dd3/sqlite3_8h.html#a6552349e36a8a691af5487999ab09519" title="sqlite3_free" alt="" coords="572,402,662,427"/>
+<area shape="rect" id="node14" href="$de/dd3/sqlite3_8h.html#a85d4203bb54c984c5325c2f5b3664985" title="sqlite3_prepare_v2" alt="" coords="349,454,483,479"/>
+<area shape="rect" id="node15" href="$de/dd3/sqlite3_8h.html#aa6d5cc21ec0004b2e0bdce3395590aad" title="sqlite3_bind_int" alt="" coords="359,503,473,529"/>
+<area shape="rect" id="node16" href="$de/dd3/sqlite3_8h.html#ac1e491ce36b7471eb28387f7d3c74334" title="sqlite3_step" alt="" coords="370,553,462,578"/>
+<area shape="rect" id="node17" href="$de/dd3/sqlite3_8h.html#a2f04c4c4fcf17f6e866236cce8c0d426" title="sqlite3_column_text" alt="" coords="346,602,486,627"/>
+<area shape="rect" id="node18" href="$de/dd3/sqlite3_8h.html#a15e4bdff3e3cd06c68de326d03f4aa37" title="sqlite3_strglob" alt="" coords="362,54,470,79"/>
+<area shape="rect" id="node19" href="$de/dd3/sqlite3_8h.html#a801195c0f771d40bb4be1e40f3b88945" title="sqlite3_finalize" alt="" coords="362,103,470,129"/>
+<area shape="rect" id="node20" href="$de/dd3/sqlite3_8h.html#a837fcee5d377d9b9b1ba08b61a5bbb42" title="sqlite3_errmsg" alt="" coords="362,153,470,178"/>
+<area shape="rect" id="node7" href="$de/dd3/sqlite3_8h.html#a5d6c5f2e81a8a245c4f8c384ad2442d4" title="sqlite3_context_db\l_handle" alt="" coords="551,142,684,181"/>
+<area shape="rect" id="node8" href="$de/dd3/sqlite3_8h.html#a78e024c17b349c4d40fd82d0e02a4a2c" title="sqlite3_value_text" alt="" coords="553,205,681,230"/>
+<area shape="rect" id="node9" href="$de/dd3/sqlite3_8h.html#a2c06bc83045bd7986b89e5e8bd689bdf" title="sqlite3_result_text" alt="" coords="553,254,682,279"/>
+<area shape="rect" id="node10" href="$de/dd3/sqlite3_8h.html#a06e67f67fc1ac02e1f07490cc837c03f" title="sqlite3_table_column\l_metadata" alt="" coords="544,79,691,118"/>
+</map>

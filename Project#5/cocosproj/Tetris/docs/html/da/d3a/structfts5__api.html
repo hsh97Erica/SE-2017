@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>테트리스: fts5_api 구조체 참조</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">테트리스
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">테트리스 도큐멘트 by doxygen</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">데이터 필드</a>  </div>
+  <div class="headertitle">
+<div class="title">fts5_api 구조체 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a>&gt;</code></p>
+<div class="dynheader">
+fts5_api에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/ddd/structfts5__api__coll__graph.png" border="0" usemap="#fts5__api_coll__map" alt="Collaboration graph"/></div>
+<map name="fts5__api_coll__map" id="fts5__api_coll__map">
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+데이터 필드</h2></td></tr>
+<tr class="memitem:a3c338289abb33e1805da870172956a7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3a/structfts5__api.html#a3c338289abb33e1805da870172956a7c">iVersion</a></td></tr>
+<tr class="separator:a3c338289abb33e1805da870172956a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe3663f85eab512d5c461e1674da129"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3a/structfts5__api.html#a7fe3663f85eab512d5c461e1674da129">xCreateTokenizer</a> )(<a class="el" href="../../da/d3a/structfts5__api.html">fts5_api</a> *pApi, const char *zName, void *pContext, <a class="el" href="../../d7/d6f/structfts5__tokenizer.html">fts5_tokenizer</a> *pTokenizer, void(*xDestroy)(void *))</td></tr>
+<tr class="separator:a7fe3663f85eab512d5c461e1674da129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a23794695fa61e2892ad1243b16b67"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3a/structfts5__api.html#a20a23794695fa61e2892ad1243b16b67">xFindTokenizer</a> )(<a class="el" href="../../da/d3a/structfts5__api.html">fts5_api</a> *pApi, const char *zName, void **ppContext, <a class="el" href="../../d7/d6f/structfts5__tokenizer.html">fts5_tokenizer</a> *pTokenizer)</td></tr>
+<tr class="separator:a20a23794695fa61e2892ad1243b16b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1a0612be3b91b908f38ecbc6735d17"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d3a/structfts5__api.html#acf1a0612be3b91b908f38ecbc6735d17">xCreateFunction</a> )(<a class="el" href="../../da/d3a/structfts5__api.html">fts5_api</a> *pApi, const char *zName, void *pContext, <a class="el" href="../../de/dd3/sqlite3_8h.html#a8a1df7b5a066b194f490be5936e85c17">fts5_extension_function</a> xFunction, void(*xDestroy)(void *))</td></tr>
+<tr class="separator:acf1a0612be3b91b908f38ecbc6735d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a> 파일의 <a class="el" href="../../de/dd3/sqlite3_8h_source.html#l10460">10460</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">필드 문서화</h2>
+<a id="a3c338289abb33e1805da870172956a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c338289abb33e1805da870172956a7c">&#9670;&nbsp;</a></span>iVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fts5_api::iVersion</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a> 파일의 <a class="el" href="../../de/dd3/sqlite3_8h_source.html#l10461">10461</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acf1a0612be3b91b908f38ecbc6735d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1a0612be3b91b908f38ecbc6735d17">&#9670;&nbsp;</a></span>xCreateFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* fts5_api::xCreateFunction) (<a class="el" href="../../da/d3a/structfts5__api.html">fts5_api</a> *pApi, const char *zName, void *pContext, <a class="el" href="../../de/dd3/sqlite3_8h.html#a8a1df7b5a066b194f490be5936e85c17">fts5_extension_function</a> xFunction, void(*xDestroy)(void *))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a> 파일의 <a class="el" href="../../de/dd3/sqlite3_8h_source.html#l10481">10481</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7fe3663f85eab512d5c461e1674da129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe3663f85eab512d5c461e1674da129">&#9670;&nbsp;</a></span>xCreateTokenizer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* fts5_api::xCreateTokenizer) (<a class="el" href="../../da/d3a/structfts5__api.html">fts5_api</a> *pApi, const char *zName, void *pContext, <a class="el" href="../../d7/d6f/structfts5__tokenizer.html">fts5_tokenizer</a> *pTokenizer, void(*xDestroy)(void *))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a> 파일의 <a class="el" href="../../de/dd3/sqlite3_8h_source.html#l10464">10464</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a20a23794695fa61e2892ad1243b16b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a23794695fa61e2892ad1243b16b67">&#9670;&nbsp;</a></span>xFindTokenizer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* fts5_api::xFindTokenizer) (<a class="el" href="../../da/d3a/structfts5__api.html">fts5_api</a> *pApi, const char *zName, void **ppContext, <a class="el" href="../../d7/d6f/structfts5__tokenizer.html">fts5_tokenizer</a> *pTokenizer)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a> 파일의 <a class="el" href="../../de/dd3/sqlite3_8h_source.html#l10473">10473</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>Classes/db/sqlitelib/<a class="el" href="../../de/dd3/sqlite3_8h_source.html">sqlite3.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

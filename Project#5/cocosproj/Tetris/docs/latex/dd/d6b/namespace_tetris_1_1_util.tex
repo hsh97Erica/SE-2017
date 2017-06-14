@@ -1,0 +1,36 @@
+\hypertarget{namespace_tetris_1_1_util}{}\section{Tetris\+:\+:Util 네임스페이스 참조}
+\label{namespace_tetris_1_1_util}\index{Tetris\+::\+Util@{Tetris\+::\+Util}}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b}{rand\+Int} (int st, int ed)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b}\label{namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b}} 
+\index{Tetris\+::\+Util@{Tetris\+::\+Util}!rand\+Int@{rand\+Int}}
+\index{rand\+Int@{rand\+Int}!Tetris\+::\+Util@{Tetris\+::\+Util}}
+\subsubsection{\texorpdfstring{rand\+Int()}{randInt()}}
+{\footnotesize\ttfamily int Tetris\+::\+Util\+::rand\+Int (\begin{DoxyParamCaption}\item[{int}]{st,  }\item[{int}]{ed }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 7 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+7                                    \{
+8             \textcolor{keywordflow}{if}(st>ed)\textcolor{keywordflow}{return} \hyperlink{namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b}{randInt}(ed,st);
+9             srand(time(NULL));
+10             \textcolor{keywordflow}{return} ((rand())%(ed-st))+st;
+11         \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{dd/d6b/namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b_icgraph}
+\end{center}
+\end{figure}

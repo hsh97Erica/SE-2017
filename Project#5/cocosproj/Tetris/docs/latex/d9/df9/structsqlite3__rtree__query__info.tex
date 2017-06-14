@@ -1,0 +1,226 @@
+\hypertarget{structsqlite3__rtree__query__info}{}\section{sqlite3\+\_\+rtree\+\_\+query\+\_\+info 구조체 참조}
+\label{structsqlite3__rtree__query__info}\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}
+
+
+
+sqlite3\+\_\+rtree\+\_\+query\+\_\+info에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d2/de4/structsqlite3__rtree__query__info__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{데이터 필드}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{structsqlite3__rtree__query__info_a21e4964ceeddedce2211c8a75067936d}{p\+Context}
+\item 
+int \hyperlink{structsqlite3__rtree__query__info_a9df4acb109f572455c8e2fb443027157}{n\+Param}
+\item 
+\hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl} $\ast$ \hyperlink{structsqlite3__rtree__query__info_a61352eac82151fee3e4c7ff718612179}{a\+Param}
+\item 
+void $\ast$ \hyperlink{structsqlite3__rtree__query__info_a7c1d4f1f20c14b88c4dc02643e6706a0}{p\+User}
+\item 
+void($\ast$ \hyperlink{structsqlite3__rtree__query__info_a23bcc6df883995d42d65449a27f45f85}{x\+Del\+User} )(void $\ast$)
+\item 
+\hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl} $\ast$ \hyperlink{structsqlite3__rtree__query__info_a9d6e605e62fcf49d57dfc0d192076542}{a\+Coord}
+\item 
+unsigned int $\ast$ \hyperlink{structsqlite3__rtree__query__info_ace9f952557eb7b0e050d879ebb80905a}{an\+Queue}
+\item 
+int \hyperlink{structsqlite3__rtree__query__info_aa4b95a36fe7306e17e8cf9329fcb0964}{n\+Coord}
+\item 
+int \hyperlink{structsqlite3__rtree__query__info_af91ca2d5f867b3b0aa9c91920a3b5b45}{i\+Level}
+\item 
+int \hyperlink{structsqlite3__rtree__query__info_ac84533734fb4c86c3f2deba904118785}{mx\+Level}
+\item 
+\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64} \hyperlink{structsqlite3__rtree__query__info_a9e43489993c8aeace851f86eaa00ec26}{i\+Rowid}
+\item 
+\hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl} \hyperlink{structsqlite3__rtree__query__info_af7da93e7fc405eec7e7ec90ab237eab2}{r\+Parent\+Score}
+\item 
+int \hyperlink{structsqlite3__rtree__query__info_a8bd37c6af5427c35830f674a4db682c3}{e\+Parent\+Within}
+\item 
+int \hyperlink{structsqlite3__rtree__query__info_ad1038309f7ea55472a7ff99bf4f9d514}{e\+Within}
+\item 
+\hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl} \hyperlink{structsqlite3__rtree__query__info_af449e4a3607573d17b3d31c67b6e1584}{r\+Score}
+\item 
+\hyperlink{sqlite3_8h_ac2fa1ecdb2290d9af6010edbd1cbc83c}{sqlite3\+\_\+value} $\ast$$\ast$ \hyperlink{structsqlite3__rtree__query__info_a57ccb3cce45dd946e5184b5addeb0326}{ap\+Sql\+Param}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+sqlite3.\+h 파일의 8595 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a9d6e605e62fcf49d57dfc0d192076542}\label{structsqlite3__rtree__query__info_a9d6e605e62fcf49d57dfc0d192076542}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!a\+Coord@{a\+Coord}}
+\index{a\+Coord@{a\+Coord}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{a\+Coord}{aCoord}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl}$\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::a\+Coord}
+
+
+
+sqlite3.\+h 파일의 8601 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_ace9f952557eb7b0e050d879ebb80905a}\label{structsqlite3__rtree__query__info_ace9f952557eb7b0e050d879ebb80905a}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!an\+Queue@{an\+Queue}}
+\index{an\+Queue@{an\+Queue}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{an\+Queue}{anQueue}}
+{\footnotesize\ttfamily unsigned int$\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::an\+Queue}
+
+
+
+sqlite3.\+h 파일의 8602 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a61352eac82151fee3e4c7ff718612179}\label{structsqlite3__rtree__query__info_a61352eac82151fee3e4c7ff718612179}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!a\+Param@{a\+Param}}
+\index{a\+Param@{a\+Param}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{a\+Param}{aParam}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl}$\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::a\+Param}
+
+
+
+sqlite3.\+h 파일의 8598 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a57ccb3cce45dd946e5184b5addeb0326}\label{structsqlite3__rtree__query__info_a57ccb3cce45dd946e5184b5addeb0326}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!ap\+Sql\+Param@{ap\+Sql\+Param}}
+\index{ap\+Sql\+Param@{ap\+Sql\+Param}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{ap\+Sql\+Param}{apSqlParam}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_ac2fa1ecdb2290d9af6010edbd1cbc83c}{sqlite3\+\_\+value}$\ast$$\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::ap\+Sql\+Param}
+
+
+
+sqlite3.\+h 파일의 8612 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a8bd37c6af5427c35830f674a4db682c3}\label{structsqlite3__rtree__query__info_a8bd37c6af5427c35830f674a4db682c3}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!e\+Parent\+Within@{e\+Parent\+Within}}
+\index{e\+Parent\+Within@{e\+Parent\+Within}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{e\+Parent\+Within}{eParentWithin}}
+{\footnotesize\ttfamily int sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::e\+Parent\+Within}
+
+
+
+sqlite3.\+h 파일의 8608 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_ad1038309f7ea55472a7ff99bf4f9d514}\label{structsqlite3__rtree__query__info_ad1038309f7ea55472a7ff99bf4f9d514}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!e\+Within@{e\+Within}}
+\index{e\+Within@{e\+Within}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{e\+Within}{eWithin}}
+{\footnotesize\ttfamily int sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::e\+Within}
+
+
+
+sqlite3.\+h 파일의 8609 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_af91ca2d5f867b3b0aa9c91920a3b5b45}\label{structsqlite3__rtree__query__info_af91ca2d5f867b3b0aa9c91920a3b5b45}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!i\+Level@{i\+Level}}
+\index{i\+Level@{i\+Level}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{i\+Level}{iLevel}}
+{\footnotesize\ttfamily int sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::i\+Level}
+
+
+
+sqlite3.\+h 파일의 8604 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a9e43489993c8aeace851f86eaa00ec26}\label{structsqlite3__rtree__query__info_a9e43489993c8aeace851f86eaa00ec26}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!i\+Rowid@{i\+Rowid}}
+\index{i\+Rowid@{i\+Rowid}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{i\+Rowid}{iRowid}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64} sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::i\+Rowid}
+
+
+
+sqlite3.\+h 파일의 8606 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_ac84533734fb4c86c3f2deba904118785}\label{structsqlite3__rtree__query__info_ac84533734fb4c86c3f2deba904118785}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!mx\+Level@{mx\+Level}}
+\index{mx\+Level@{mx\+Level}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{mx\+Level}{mxLevel}}
+{\footnotesize\ttfamily int sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::mx\+Level}
+
+
+
+sqlite3.\+h 파일의 8605 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_aa4b95a36fe7306e17e8cf9329fcb0964}\label{structsqlite3__rtree__query__info_aa4b95a36fe7306e17e8cf9329fcb0964}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!n\+Coord@{n\+Coord}}
+\index{n\+Coord@{n\+Coord}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{n\+Coord}{nCoord}}
+{\footnotesize\ttfamily int sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::n\+Coord}
+
+
+
+sqlite3.\+h 파일의 8603 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a9df4acb109f572455c8e2fb443027157}\label{structsqlite3__rtree__query__info_a9df4acb109f572455c8e2fb443027157}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!n\+Param@{n\+Param}}
+\index{n\+Param@{n\+Param}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{n\+Param}{nParam}}
+{\footnotesize\ttfamily int sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::n\+Param}
+
+
+
+sqlite3.\+h 파일의 8597 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a21e4964ceeddedce2211c8a75067936d}\label{structsqlite3__rtree__query__info_a21e4964ceeddedce2211c8a75067936d}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!p\+Context@{p\+Context}}
+\index{p\+Context@{p\+Context}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{p\+Context}{pContext}}
+{\footnotesize\ttfamily void$\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::p\+Context}
+
+
+
+sqlite3.\+h 파일의 8596 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a7c1d4f1f20c14b88c4dc02643e6706a0}\label{structsqlite3__rtree__query__info_a7c1d4f1f20c14b88c4dc02643e6706a0}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!p\+User@{p\+User}}
+\index{p\+User@{p\+User}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{p\+User}{pUser}}
+{\footnotesize\ttfamily void$\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::p\+User}
+
+
+
+sqlite3.\+h 파일의 8599 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_af7da93e7fc405eec7e7ec90ab237eab2}\label{structsqlite3__rtree__query__info_af7da93e7fc405eec7e7ec90ab237eab2}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!r\+Parent\+Score@{r\+Parent\+Score}}
+\index{r\+Parent\+Score@{r\+Parent\+Score}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{r\+Parent\+Score}{rParentScore}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl} sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::r\+Parent\+Score}
+
+
+
+sqlite3.\+h 파일의 8607 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_af449e4a3607573d17b3d31c67b6e1584}\label{structsqlite3__rtree__query__info_af449e4a3607573d17b3d31c67b6e1584}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!r\+Score@{r\+Score}}
+\index{r\+Score@{r\+Score}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{r\+Score}{rScore}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_ae9156ff58620c1ceae9391f1afabae1b}{sqlite3\+\_\+rtree\+\_\+dbl} sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::r\+Score}
+
+
+
+sqlite3.\+h 파일의 8610 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__rtree__query__info_a23bcc6df883995d42d65449a27f45f85}\label{structsqlite3__rtree__query__info_a23bcc6df883995d42d65449a27f45f85}} 
+\index{sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}!x\+Del\+User@{x\+Del\+User}}
+\index{x\+Del\+User@{x\+Del\+User}!sqlite3\+\_\+rtree\+\_\+query\+\_\+info@{sqlite3\+\_\+rtree\+\_\+query\+\_\+info}}
+\subsubsection{\texorpdfstring{x\+Del\+User}{xDelUser}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+rtree\+\_\+query\+\_\+info\+::x\+Del\+User) (void $\ast$)}
+
+
+
+sqlite3.\+h 파일의 8600 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/db/sqlitelib/\hyperlink{sqlite3_8h}{sqlite3.\+h}\end{DoxyCompactItemize}

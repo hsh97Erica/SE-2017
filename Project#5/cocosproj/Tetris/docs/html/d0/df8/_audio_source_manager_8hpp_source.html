@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>테트리스: Classes/cocosclses/AudioSourceManager.hpp 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">테트리스
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">테트리스 도큐멘트 by doxygen</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_0c68614ac8d8401edbf4146ded722294.html">Classes</a></li><li class="navelem"><a class="el" href="../../dir_594fb6da522d410e050e6857f11e0d83.html">cocosclses</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AudioSourceManager.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/df8/_audio_source_manager_8hpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _AudioSRC_MGR_H_INC_</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _AudioSRC_MGR_H_INC_</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d05/_audio_enabler_8h.html">AudioEnabler.h</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;cocos2d.h&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d2/dc0/namespacecocos2d.html">cocos2d</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#if USE_AUDIO_ENGINE</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;audio/include/AudioEngine.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span>cocos2d::experimental;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#elif USE_SIMPLE_AUDIO_ENGINE</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;audio/include/SimpleAudioEngine.h&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="../../d7/d39/namespace_cocos_denshion.html">CocosDenshion</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d2/de2/namespace_tetris.html">   19</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d2/de2/namespace_tetris.html">Tetris</a>{</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d7/d22/namespace_tetris_1_1_audio.html">   20</a></span>&#160;<span class="keyword">namespace </span>Audio{</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html">   21</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html">AudioSourceManager</a>{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a561c580924ee6a13e6453b2d94764548">   23</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html">AudioSourceManager</a>* <a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a561c580924ee6a13e6453b2d94764548">getInstance</a>(){</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keyword">static</span> <a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html">AudioSourceManager</a> Ins;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordflow">return</span> &amp;Ins;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a64d6e7c7f0849d5de7cc26898079986c">   27</a></span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a64d6e7c7f0849d5de7cc26898079986c">getMainMenuBGMPlayID</a>(){</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span> mainmenuid;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a44c761f0200291a2c8f282d8d52aa081">   30</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a44c761f0200291a2c8f282d8d52aa081">playRemovingBlocksEffect</a>(){</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            CocosDenshion::SimpleAudioEngine::sharedEngine()-&gt;playEffect(<span class="stringliteral">&quot;res/bgms/rmblksbgm.mp3&quot;</span>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">//void</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">private</span>:</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a6baf8cdd348f47e49ae2337eb9548fa0">   35</a></span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  <a class="code" href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a6baf8cdd348f47e49ae2337eb9548fa0">mainmenuid</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;           <span class="comment">// unsigned int </span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_tetris_1_1_audio_1_1_audio_source_manager_html_a6baf8cdd348f47e49ae2337eb9548fa0"><div class="ttname"><a href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a6baf8cdd348f47e49ae2337eb9548fa0">Tetris::Audio::AudioSourceManager::mainmenuid</a></div><div class="ttdeci">unsigned int mainmenuid</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/_audio_source_manager_8hpp_source.html#l00035">AudioSourceManager.hpp:35</a></div></div>
+<div class="ttc" id="class_tetris_1_1_audio_1_1_audio_source_manager_html_a561c580924ee6a13e6453b2d94764548"><div class="ttname"><a href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a561c580924ee6a13e6453b2d94764548">Tetris::Audio::AudioSourceManager::getInstance</a></div><div class="ttdeci">static AudioSourceManager * getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/_audio_source_manager_8hpp_source.html#l00023">AudioSourceManager.hpp:23</a></div></div>
+<div class="ttc" id="class_tetris_1_1_audio_1_1_audio_source_manager_html"><div class="ttname"><a href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html">Tetris::Audio::AudioSourceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/_audio_source_manager_8hpp_source.html#l00021">AudioSourceManager.hpp:21</a></div></div>
+<div class="ttc" id="namespace_tetris_html"><div class="ttname"><a href="../../d2/de2/namespace_tetris.html">Tetris</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/_audio_source_manager_8hpp_source.html#l00019">AudioSourceManager.hpp:19</a></div></div>
+<div class="ttc" id="class_tetris_1_1_audio_1_1_audio_source_manager_html_a44c761f0200291a2c8f282d8d52aa081"><div class="ttname"><a href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a44c761f0200291a2c8f282d8d52aa081">Tetris::Audio::AudioSourceManager::playRemovingBlocksEffect</a></div><div class="ttdeci">void playRemovingBlocksEffect()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/_audio_source_manager_8hpp_source.html#l00030">AudioSourceManager.hpp:30</a></div></div>
+<div class="ttc" id="namespace_cocos_denshion_html"><div class="ttname"><a href="../../d7/d39/namespace_cocos_denshion.html">CocosDenshion</a></div></div>
+<div class="ttc" id="_audio_enabler_8h_html"><div class="ttname"><a href="../../dc/d05/_audio_enabler_8h.html">AudioEnabler.h</a></div><div class="ttdoc">음성 라이브러리 로드 </div></div>
+<div class="ttc" id="class_tetris_1_1_audio_1_1_audio_source_manager_html_a64d6e7c7f0849d5de7cc26898079986c"><div class="ttname"><a href="../../d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a64d6e7c7f0849d5de7cc26898079986c">Tetris::Audio::AudioSourceManager::getMainMenuBGMPlayID</a></div><div class="ttdeci">unsigned int getMainMenuBGMPlayID()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/df8/_audio_source_manager_8hpp_source.html#l00027">AudioSourceManager.hpp:27</a></div></div>
+<div class="ttc" id="namespacecocos2d_html"><div class="ttname"><a href="../../d2/dc0/namespacecocos2d.html">cocos2d</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,1439 @@
+\hypertarget{class_tetris_1_1_block}{}\section{Tetris\+:\+:Block 클래스 참조}
+\label{class_tetris_1_1_block}\index{Tetris\+::\+Block@{Tetris\+::\+Block}}
+
+
+테트리스 블럭데이터를 저장하고 불러오는 객체  
+
+
+
+
+{\ttfamily \#include $<$Block.\+h$>$}
+
+
+
+Tetris\+:\+:Block에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/d68/class_tetris_1_1_block__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}{Block} (int type)
+\item 
+\hyperlink{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}{$\sim$\+Block} ()
+\item 
+\hyperlink{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}{Block} (int type, unsigned int color)
+\item 
+void \hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{set\+Block\+Color} (unsigned int clr)
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}{get\+Block\+Color\+As\+Raw} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}{gen\+Random\+Color} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}{gen\+Sample\+Color} (const unsigned char samplenum)
+\item 
+string \hyperlink{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}{get\+Block\+Color\+As\+Hex\+String} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}{get\+Block\+Space\+Size} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}{get\+Block\+Space\+Height} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}{get\+Block\+Space\+Width} ()
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f}{get\+Block\+Data} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}{get\+Block\+Type} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}{freeblockspace} (bool $\ast$$\ast$$\ast$spc)
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}{get\+Rotated\+Space\+Data} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}{can\+Rotate} (const vector$<$ bool $\ast$$>$ mapdata, const unsigned char boardwidth, unsigned char cury, unsigned char curx)
+\item 
+bool \hyperlink{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}{rotate} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}{roatespec} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}{printspace} ()
+\item 
+\hyperlink{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}{Block} (int type)
+\item 
+\hyperlink{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}{$\sim$\+Block} ()
+\item 
+\hyperlink{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}{Block} (int type, unsigned int color)
+\item 
+void \hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{set\+Block\+Color} (unsigned int clr)
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}{get\+Block\+Color\+As\+Raw} ()
+\item 
+\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{Block\+Color} $\ast$ \hyperlink{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}{get\+Block\+Color} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}{gen\+Random\+Color} ()
+\item 
+string \hyperlink{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}{get\+Block\+Color\+As\+Hex\+String} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}{get\+Block\+Space\+Size} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}{get\+Block\+Space\+Height} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}{get\+Block\+Space\+Width} ()
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_a2e17230774c905e35aa9868986c49b09}{get\+Block\+Data} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}{get\+Block\+Type} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}{freeblockspace} (bool $\ast$$\ast$$\ast$spc)
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_ada769278572785b24e8a91f620b97b81}{get\+Rotated\+Space\+Data} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}{can\+Rotate} (const vector$<$ bool $\ast$$>$ mapdata, const unsigned char boardwidth, unsigned char cury, unsigned char curx)
+\item 
+bool \hyperlink{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}{rotate} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}{roatespec} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}{printspace} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{gen\+Color} (unsigned char red, unsigned char green, unsigned char blue)
+\item 
+void \hyperlink{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}{spanshape} (int type)
+\item 
+void \hyperlink{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}{spanshape} (int type)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}
+\item 
+int \hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\+\_\+height}
+\item 
+int \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\+\_\+width}
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_acf78e864526e38c9c72fa0b012d5b344}{blk\+\_\+color}
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}
+\item 
+\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{Block\+Color} $\ast$ \hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+테트리스 블럭데이터를 저장하고 불러오는 객체 
+
+Block.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}\label{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+30                        \{
+31             this->\hyperlink{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}{spanshape}(type);
+32             this->\hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{setBlockColor}(this->\hyperlink{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}{genRandomColor}());
+33         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}\label{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!````~Block@{$\sim$\+Block}}
+\index{````~Block@{$\sim$\+Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Block()}{~Block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::$\sim$\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+34                 \{
+35             \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}!=NULL)\{
+36                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+37                     \textcolor{keyword}{delete} [] this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i];
+38                 \}
+39                 \textcolor{keyword}{delete} [] this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc};
+40             \}
+41         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}\label{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{unsigned int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+42                                           \{
+43             this->\hyperlink{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}{spanshape}(type);
+44             this->\hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{setBlockColor}(color);
+45         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}\label{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+constructor 
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+type이 연속된 번호범위를 벗어나면 기본값으로 생성된다 
+\end{DoxyWarning}
+
+
+Block.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+41                            \{
+42                
+43                 this->\hyperlink{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}{spanshape}(type);
+44                 this->\hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{setBlockColor}(this->\hyperlink{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}{genRandomColor}());
+45             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}\label{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!````~Block@{$\sim$\+Block}}
+\index{````~Block@{$\sim$\+Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Block()}{~Block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::$\sim$\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+모름 
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+메모리 터지지 않도록 메모리 수동삭제 
+\end{DoxyWarning}
+
+
+Block.\+hpp 파일의 50 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+50                     \{
+51                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}!=NULL)\{
+52                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+53                         \textcolor{keyword}{delete} [] this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i];
+54                     \}
+55                     \textcolor{keyword}{delete} [] this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc};
+56                 \}
+57                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}!=NULL)\{
+58                     \textcolor{keyword}{delete} this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr};
+59                 \}
+60             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}\label{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{unsigned int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+constructor 
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+연속된 숫자의 범위를 벗어나면 기본값으로 생성 
+\end{DoxyWarning}
+
+
+Block.\+hpp 파일의 65 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+65                                               \{
+66                 this->\hyperlink{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}{spanshape}(type);
+67                 this->\hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{setBlockColor}(color);
+68             \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}\label{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!can\+Rotate@{can\+Rotate}}
+\index{can\+Rotate@{can\+Rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{can\+Rotate()}{canRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::can\+Rotate (\begin{DoxyParamCaption}\item[{const vector$<$ bool $\ast$$>$}]{mapdata,  }\item[{const unsigned char}]{boardwidth,  }\item[{unsigned char}]{cury,  }\item[{unsigned char}]{curx }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 116 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+116                                                                                                            
+                  \{\textcolor{comment}{//,GameUser* guser)\{}
+117                 \textcolor{keywordtype}{bool}** rotated\_space = this->\hyperlink{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}{getRotatedSpaceData}();
+118                 \textcolor{comment}{//unsigned char curx = guser->getCurrentX();}
+119                 \textcolor{comment}{//unsigned char cury = guser->getCurrentY();}
+120                 \textcolor{keywordflow}{if}(rotated\_space==NULL||!mapdata.size())\{
+121                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+122                 \}
+123                 \textcolor{keywordflow}{if}(\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}>\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}&&curx+
+      \hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}>boardwidth)\{
+124                    \textcolor{comment}{/*const int movepos = blkary\_height-blkary\_width;}
+125 \textcolor{comment}{                    int movedpos = curx-movepos;}
+126 \textcolor{comment}{                    bool movable = true;}
+127 \textcolor{comment}{                    if(movepos==0||movedpos<0)\{}
+128 \textcolor{comment}{                        return false;}
+129 \textcolor{comment}{                    \}}
+130 \textcolor{comment}{                    for(int i = 0;i<blkary\_height;i++)\{}
+131 \textcolor{comment}{                        for(int j=0;movedpos>=0&&j<=movepos;j++)\{}
+132 \textcolor{comment}{                            if(rotated\_space[j][i]&&mapdata[cury+i][movedpos+j])\{}
+133 \textcolor{comment}{                                movable = false;}
+134 \textcolor{comment}{                            \}}
+135 \textcolor{comment}{                        \}}
+136 \textcolor{comment}{                    \}}
+137 \textcolor{comment}{                    if(movable)\{}
+138 \textcolor{comment}{                        guser->setCurrentX((unsigned char)movedpos);}
+139 \textcolor{comment}{                        curx = guser->getCurrentX();}
+140 \textcolor{comment}{                    \}else*/}
+141                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+142                 \}
+143                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+144                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+145                         \textcolor{keywordflow}{if}(rotated\_space[j][i]&&mapdata[i+cury][j+curx])\{
+146                             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+147                         \}
+148                     \}
+149                 \}
+150                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+151             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d05/class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}\label{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!can\+Rotate@{can\+Rotate}}
+\index{can\+Rotate@{can\+Rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{can\+Rotate()}{canRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::can\+Rotate (\begin{DoxyParamCaption}\item[{const vector$<$ bool $\ast$$>$}]{mapdata,  }\item[{const unsigned char}]{boardwidth,  }\item[{unsigned char}]{cury,  }\item[{unsigned char}]{curx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+게임 맵에서 현재 좌표에서 회전이 가능한지 유무 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 168 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+168                                                                                                            
+                         \{\textcolor{comment}{//,GameUser* guser)\{}
+169                 \textcolor{keywordtype}{bool}** rotated\_space = this->\hyperlink{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}{getRotatedSpaceData}();
+170                 \textcolor{comment}{//unsigned char curx = guser->getCurrentX();}
+171                 \textcolor{comment}{//unsigned char cury = guser->getCurrentY();}
+172                 \textcolor{keywordflow}{if}(rotated\_space==NULL||!mapdata.size())\{
+173                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+174                 \}
+175                 \textcolor{keywordflow}{if}(\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}>\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}&&curx+
+      \hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}>boardwidth)\{
+176                    \textcolor{comment}{/*const int movepos = blkary\_height-blkary\_width;}
+177 \textcolor{comment}{                    int movedpos = curx-movepos;}
+178 \textcolor{comment}{                    bool movable = true;}
+179 \textcolor{comment}{                    if(movepos==0||movedpos<0)\{}
+180 \textcolor{comment}{                        return false;}
+181 \textcolor{comment}{                    \}}
+182 \textcolor{comment}{                    for(int i = 0;i<blkary\_height;i++)\{}
+183 \textcolor{comment}{                        for(int j=0;movedpos>=0&&j<=movepos;j++)\{}
+184 \textcolor{comment}{                            if(rotated\_space[j][i]&&mapdata[cury+i][movedpos+j])\{}
+185 \textcolor{comment}{                                movable = false;}
+186 \textcolor{comment}{                            \}}
+187 \textcolor{comment}{                        \}}
+188 \textcolor{comment}{                    \}}
+189 \textcolor{comment}{                    if(movable)\{}
+190 \textcolor{comment}{                        guser->setCurrentX((unsigned char)movedpos);}
+191 \textcolor{comment}{                        curx = guser->getCurrentX();}
+192 \textcolor{comment}{                    \}else*/}
+193                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+194                 \}
+195                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+196                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+197                         \textcolor{keywordflow}{if}(j+curx<boardwidth && rotated\_space[j][i]&&mapdata[i+cury][j+curx])\{
+198                             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+199                         \}
+200                     \}
+201                 \}
+202                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+203             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}\label{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!freeblockspace@{freeblockspace}}
+\index{freeblockspace@{freeblockspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{freeblockspace()}{freeblockspace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::freeblockspace (\begin{DoxyParamCaption}\item[{bool $\ast$$\ast$$\ast$}]{spc }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 97 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+97                                      \{
+98                 \textcolor{keywordtype}{bool}** blockspace = *spc;
+99                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+100                     \textcolor{keyword}{delete} [] blockspace[i];
+101                 \}
+102                 \textcolor{keyword}{delete} [] blockspace;
+103             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}\label{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!freeblockspace@{freeblockspace}}
+\index{freeblockspace@{freeblockspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{freeblockspace()}{freeblockspace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::freeblockspace (\begin{DoxyParamCaption}\item[{bool $\ast$$\ast$$\ast$}]{spc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+hpp 파일의 143 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+143                                             \{
+144                 \textcolor{keywordtype}{bool}** blockspace = *spc;
+145                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+146                     \textcolor{keyword}{delete} [] blockspace[i];
+147                 \}
+148                 \textcolor{keyword}{delete} [] blockspace;
+149             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}\label{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Color@{gen\+Color}}
+\index{gen\+Color@{gen\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Color()}{genColor()}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Color (\begin{DoxyParamCaption}\item[{unsigned char}]{red,  }\item[{unsigned char}]{green,  }\item[{unsigned char}]{blue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+cpp 파일의 186 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+186                                                                                      \{
+187                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rst = (\textcolor{keywordtype}{unsigned} int)blue;
+188                 rst|=((\textcolor{keywordtype}{unsigned} int)red<<(8*2));
+189                 rst|=((\textcolor{keywordtype}{unsigned} int)green<<(8*1));
+190                 \textcolor{keywordflow}{return} rst;
+191             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}\label{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Random\+Color@{gen\+Random\+Color}}
+\index{gen\+Random\+Color@{gen\+Random\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Random\+Color()}{genRandomColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+39                                   \{
+40                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}{genSampleColor}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})
+      \hyperlink{namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b}{Tetris::Util::randInt}(1,7));
+41             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{df/d05/class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}\label{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Random\+Color@{gen\+Random\+Color}}
+\index{gen\+Random\+Color@{gen\+Random\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Random\+Color()}{genRandomColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+지정된 색상 안에서 랜덤으로 색상을 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 100 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+100                                          \{
+101                 \textcolor{keywordflow}{return} BlockColor::genRandomColor(); \textcolor{comment}{//genSampleColor((unsigned
+       char)TetrisUtil::randInt(1,7));}
+102             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}\label{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Sample\+Color@{gen\+Sample\+Color}}
+\index{gen\+Sample\+Color@{gen\+Sample\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Sample\+Color()}{genSampleColor()}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Sample\+Color (\begin{DoxyParamCaption}\item[{const unsigned char}]{samplenum }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 42 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+42                                                                \{
+43                 \textcolor{keywordflow}{switch}(samplenum)\{
+44                     \textcolor{keywordflow}{case} 2:\{\textcolor{comment}{//pink600}
+45                         \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0xd8,0x1b,0x60);
+46                     \}
+47                     \textcolor{keywordflow}{case} 3:\{\textcolor{comment}{//purple700}
+48                         \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0x7b,0x1f,0xa2);
+49                     \}
+50                     \textcolor{keywordflow}{case} 4:\{\textcolor{comment}{//deeppurpleA400}
+51                         \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0x65,0x1f,0xff);
+52                     \}
+53                     \textcolor{keywordflow}{case} 5:\{\textcolor{comment}{//teal600}
+54                         \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0x00,0x89,0x7b);
+55                     \}
+56                     \textcolor{keywordflow}{case} 6:\{\textcolor{comment}{//red500}
+57                         \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0xf4,0x43,0x36);
+58                     \}
+59                     \textcolor{keywordflow}{case} 7:\{\textcolor{comment}{//red900}
+60                         \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0xb7,0xc1,0xc1);
+61                     \}
+62                     \textcolor{keywordflow}{case} 1:
+63                     \textcolor{keywordflow}{default}:\textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a7362b9c1679a87823590a3c20ca53a55}{genColor}(0x30,0x3f,0x9f);
+64                 \}
+65 
+66             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}\label{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color@{get\+Block\+Color}}
+\index{get\+Block\+Color@{get\+Block\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color()}{getBlockColor()}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{Block\+Color}$\ast$ Tetris\+::\+Block\+::get\+Block\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 색상 객체를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 94 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+94                                    \{
+95             \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr};
+96         \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d05/class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}\label{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}}
+\index{get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Hex\+String()}{getBlockColorAsHexString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Tetris\+::\+Block\+::get\+Block\+Color\+As\+Hex\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+68                                       \{
+69                 \textcolor{comment}{//string rst = "";}
+70                 stringstream ss;
+71                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} clr = this->\hyperlink{class_tetris_1_1_block_acf78e864526e38c9c72fa0b012d5b344}{blk\_color};
+72                 ss.fill(\textcolor{charliteral}{'0'});
+73                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=4-2;i>=0;i--)\{
+74                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} inters = (~((~(\textcolor{keywordtype}{unsigned} int)0)<<8))<<(8*i);
+75                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} extract = (clr&inters)>>(8*i);
+76                     ss.width(2);
+77                     ss<<hex<<extract;
+78                 \}
+79                 \textcolor{comment}{//rst<<}
+80                 \textcolor{keywordflow}{return} ss.str();
+81             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}\label{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}}
+\index{get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Hex\+String()}{getBlockColorAsHexString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Tetris\+::\+Block\+::get\+Block\+Color\+As\+Hex\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭색상을 rgba hex로 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 106 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+106                                              \{
+107                 \textcolor{comment}{//string rst = "";}
+108                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}==NULL)\{
+109                     \textcolor{keywordflow}{return} NULL;
+110                 \}
+111                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a79cc837f207645628542876997c9e919}{getBlockColorAsHexString}();
+112             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}\label{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}}
+\index{get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Raw()}{getBlockColorAsRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::get\+Block\+Color\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 36 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+36                                       \{
+37                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_acf78e864526e38c9c72fa0b012d5b344}{blk\_color};
+38             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}\label{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}}
+\index{get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Raw()}{getBlockColorAsRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::get\+Block\+Color\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+설정된 블럭 색상을 4바이트 연속된 데이터로 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 83 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+83                                              \{
+84                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}==NULL)\{
+85                     \textcolor{keywordflow}{return} 0;
+86                 \}\textcolor{keywordflow}{else}\{
+87                     this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a}{packRawColorData}();
+88                 \}
+89                 \textcolor{comment}{//return this->blk\_color;}
+90             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f}\label{class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Data@{get\+Block\+Data}}
+\index{get\+Block\+Data@{get\+Block\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Data()}{getBlockData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool $\ast$$\ast$ Tetris\+::\+Block\+::get\+Block\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 91 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+91                           \{
+92                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc};
+93             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d05/class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_a2e17230774c905e35aa9868986c49b09}\label{class_tetris_1_1_block_a2e17230774c905e35aa9868986c49b09}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Data@{get\+Block\+Data}}
+\index{get\+Block\+Data@{get\+Block\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Data()}{getBlockData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool$\ast$$\ast$ Tetris\+::\+Block\+::get\+Block\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양 메트릭스 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 134 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+134                                  \{
+135                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc};
+136             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}\label{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Height@{get\+Block\+Space\+Height}}
+\index{get\+Block\+Space\+Height@{get\+Block\+Space\+Height}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Height()}{getBlockSpaceHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+85                               \{
+86                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};
+87             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d05/class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}\label{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Height@{get\+Block\+Space\+Height}}
+\index{get\+Block\+Space\+Height@{get\+Block\+Space\+Height}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Height()}{getBlockSpaceHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양의 높이를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 122 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+122                                      \{
+123                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};
+124             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}\label{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Size@{get\+Block\+Space\+Size}}
+\index{get\+Block\+Space\+Size@{get\+Block\+Space\+Size}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Size()}{getBlockSpaceSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+82                             \{
+83                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}{getBlockSpaceHeight}()*this->
+      \hyperlink{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}{getBlockSpaceWidth}();
+84             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}\label{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Size@{get\+Block\+Space\+Size}}
+\index{get\+Block\+Space\+Size@{get\+Block\+Space\+Size}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Size()}{getBlockSpaceSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양의 공간 크기를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 116 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+116                                    \{
+117                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}{getBlockSpaceHeight}()*this->
+      \hyperlink{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}{getBlockSpaceWidth}();
+118             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}\label{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Width@{get\+Block\+Space\+Width}}
+\index{get\+Block\+Space\+Width@{get\+Block\+Space\+Width}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Width()}{getBlockSpaceWidth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 88 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+88                              \{
+89                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};
+90             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d05/class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}\label{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Width@{get\+Block\+Space\+Width}}
+\index{get\+Block\+Space\+Width@{get\+Block\+Space\+Width}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Width()}{getBlockSpaceWidth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양의 너비를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 128 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+128                                     \{
+129                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};
+130             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}\label{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Type@{get\+Block\+Type}}
+\index{get\+Block\+Type@{get\+Block\+Type}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Type()}{getBlockType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 94 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+94                        \{
+95                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype};
+96             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}\label{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Type@{get\+Block\+Type}}
+\index{get\+Block\+Type@{get\+Block\+Type}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Type()}{getBlockType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양 인식 번호 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 140 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+140                               \{
+141                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype};
+142             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}\label{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}}
+\index{get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Rotated\+Space\+Data()}{getRotatedSpaceData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool $\ast$$\ast$ Tetris\+::\+Block\+::get\+Rotated\+Space\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 104 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+104                                  \{
+105                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==-1||this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}==NULL||(this->
+      \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}!=NULL&&this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[0]==NULL)||\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==\hyperlink{_block_8h_a6da1e2b8848e1a7b5a7ee687fd6492bd}{TETBLK\_TYPE\_M})\{
+106                     \textcolor{keywordflow}{return} NULL;
+107                 \}
+108                 \textcolor{keywordtype}{bool}** tmpblksp = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+109                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};i++)\{
+110                     tmpblksp[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+111                     \textcolor{comment}{//memset(tmpblksp[i],false,sizeof(bool)*blkary\_height);}
+112                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};j++) tmpblksp[i][j] = 
+      \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[blkary\_height-1-j][i];    
+113                 \}
+114                 \textcolor{keywordflow}{return} tmpblksp;
+115             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ada769278572785b24e8a91f620b97b81}\label{class_tetris_1_1_block_ada769278572785b24e8a91f620b97b81}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}}
+\index{get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Rotated\+Space\+Data()}{getRotatedSpaceData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool$\ast$$\ast$ Tetris\+::\+Block\+::get\+Rotated\+Space\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+반시계 방향으로 90도 회전된 블록 데이터를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 153 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+153                                         \{
+154                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==-1||this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}==NULL||(this->
+      \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}!=NULL&&this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[0]==NULL)||\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==\hyperlink{_block_8hpp_a6da1e2b8848e1a7b5a7ee687fd6492bd}{TETBLK\_TYPE\_M})\{
+155                     \textcolor{keywordflow}{return} NULL;
+156                 \}
+157                 \textcolor{keywordtype}{bool}** tmpblksp = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+158                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};i++)\{
+159                     tmpblksp[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+160                     \textcolor{comment}{//memset(tmpblksp[i],false,sizeof(bool)*blkary\_height);}
+161                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};j++) tmpblksp[i][j] = 
+      \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[blkary\_height-1-j][i];
+162                 \}
+163                 \textcolor{keywordflow}{return} tmpblksp;
+164             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}\label{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!printspace@{printspace}}
+\index{printspace@{printspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{printspace()}{printspace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::printspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 173 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+173                       \{
+174                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==-1||this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}==NULL)\{
+175                     cout<<\textcolor{stringliteral}{"we can't show space info"}<<endl;
+176                     \textcolor{keywordflow}{return};
+177                 \}
+178                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+179                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+180                         cout<<\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][j]<<\textcolor{charliteral}{' '};
+181                     \}
+182                     cout<<endl;
+183                 \}
+184             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}\label{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!printspace@{printspace}}
+\index{printspace@{printspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{printspace()}{printspace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::printspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+콘솔에서 모양 디버깅시 확인 함수 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 231 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+231                              \{
+232                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==-1||this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}==NULL)\{
+233                     cout<<\textcolor{stringliteral}{"we can't show space info"}<<endl;
+234                     \textcolor{keywordflow}{return};
+235                 \}
+236                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+237                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+238                         cout<<\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][j]<<\textcolor{charliteral}{' '};
+239                     \}
+240                     cout<<endl;
+241                 \}
+242             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}\label{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!roatespec@{roatespec}}
+\index{roatespec@{roatespec}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{roatespec()}{roatespec()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::roatespec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 169 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+169                          \{
+170                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+171             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}\label{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!roatespec@{roatespec}}
+\index{roatespec@{roatespec}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{roatespec()}{roatespec()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::roatespec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+hpp 파일의 225 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+225                             \{
+226                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+227             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}\label{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!rotate@{rotate}}
+\index{rotate@{rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 152 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+152                   \{
+153                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==-1||this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}==NULL||(this->
+      \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}!=NULL&&this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[0]==NULL))\{
+154                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+155                 \}
+156                 \textcolor{keywordflow}{if}(\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==\hyperlink{_block_8h_a6da1e2b8848e1a7b5a7ee687fd6492bd}{TETBLK\_TYPE\_M})\{
+157                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+158                 \}
+159                 \textcolor{keywordtype}{bool}** tmpblksp = this->\hyperlink{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}{getRotatedSpaceData}();
+160 
+161                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+162                     \textcolor{keyword}{delete} [] \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i];
+163                 \}
+164                 \textcolor{keyword}{delete} [] \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc};
+165                 \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} = tmpblksp;
+166                 this->blkary\_height^=this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}^=this->blkary\_height^=this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};
+167                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+168             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{df/d05/class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}\label{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!rotate@{rotate}}
+\index{rotate@{rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+회전 성공 유무 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 207 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+207                          \{
+208                 cout<<\textcolor{stringliteral}{"call rotatefunc in block"}<<endl;
+209                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==-1||this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}==NULL||(this->
+      \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}!=NULL&&this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[0]==NULL))\{
+210                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+211                 \}
+212                 \textcolor{keywordflow}{if}(\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}==\hyperlink{_block_8hpp_a6da1e2b8848e1a7b5a7ee687fd6492bd}{TETBLK\_TYPE\_M})\{
+213                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+214                 \}
+215                 \textcolor{keywordtype}{bool}** tmpblksp = this->\hyperlink{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}{getRotatedSpaceData}();
+216 
+217                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+218                     \textcolor{keyword}{delete} [] \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i];
+219                 \}
+220                 \textcolor{keyword}{delete} [] \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc};
+221                 \hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} = tmpblksp;
+222                 this->blkary\_height^=this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}^=this->blkary\_height^=this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};
+223                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+224             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}\label{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!set\+Block\+Color@{set\+Block\+Color}}
+\index{set\+Block\+Color@{set\+Block\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Block\+Color()}{setBlockColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::set\+Block\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{clr }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 33 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+33                                          \{
+34                 this->\hyperlink{class_tetris_1_1_block_acf78e864526e38c9c72fa0b012d5b344}{blk\_color}=clr;
+35             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}\label{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!set\+Block\+Color@{set\+Block\+Color}}
+\index{set\+Block\+Color@{set\+Block\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Block\+Color()}{setBlockColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::set\+Block\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{clr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+리턴은 없지만 블럭 색상 설정 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 72 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+72                                                 \{
+73                 \textcolor{keywordflow}{if}(this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}==NULL)\{
+74                     this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr} = \textcolor{keyword}{new} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{BlockColor}(clr);
+75                 \}\textcolor{keywordflow}{else}\{
+76                     this->\hyperlink{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}{blkcolr}->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a260b5dd85cdf3145be7564dc2c0ee53d}{forceApplyColor}(clr);
+77                 \}
+78                \textcolor{comment}{// this->blk\_color=clr;}
+79             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}\label{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!spanshape@{spanshape}}
+\index{spanshape@{spanshape}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{spanshape()}{spanshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::spanshape (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+cpp 파일의 192 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+192                              \{
+193                 \textcolor{keywordflow}{switch}(type)\{
+194                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_ac9fe505a10c9ea541483202000c72dfe}{TETBLK\_TYPE\_I}:\{
+195                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+196                         this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}=4;
+197                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=1;
+198                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+199                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+200                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+201                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+202                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][0]=\textcolor{keyword}{true};
+203                         \}
+204 
+205                         \textcolor{keywordflow}{break};
+206                     \}
+207                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_a6da1e2b8848e1a7b5a7ee687fd6492bd}{TETBLK\_TYPE\_M}:\{
+208                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+209                         this->blkary\_height=2;
+210                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=2;
+211                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+212                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+213                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+214                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+215                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+216                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][j]=\textcolor{keyword}{true};
+217                             \}
+218                         \}
+219                         \textcolor{keywordflow}{break};
+220                     \}
+221                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_aa624341303e91efd01c17dfb25d15010}{TETBLK\_TYPE\_T}:\{
+222                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+223                         this->blkary\_height=2;
+224                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=3;
+225                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+226                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+227                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+228                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+229                             \textcolor{keywordflow}{if}(i==0)\{
+230                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+231                                     this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][j]=\textcolor{keyword}{true};
+232                                 \}
+233                             \}\textcolor{keywordflow}{else}\{
+234                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+235                             \}
+236                         \}
+237 
+238                         \textcolor{keywordflow}{break};
+239                     \}
+240                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_aa30a45ef914d6bd7caf960c42af38197}{TETBLK\_TYPE\_L}:\{
+241                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+242                         this->blkary\_height=3;
+243                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=2;
+244                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+245                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+246                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+247                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+248                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][0]=\textcolor{keyword}{true};
+249                             \textcolor{keywordflow}{if}(i+1==blkary\_height)\{
+250                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+251                             \}
+252                         \}
+253 
+254                         \textcolor{keywordflow}{break};
+255                     \}
+256                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_a3a84ffcf3638f400ed5ebc303d152a94}{TETBLK\_TYPE\_J}:\{
+257                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+258                         this->blkary\_height=3;
+259                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=2;
+260                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+261                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+262                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+263                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+264                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+265                             \textcolor{keywordflow}{if}(i+1==blkary\_height)\{
+266                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][0]=\textcolor{keyword}{true};
+267                             \}
+268                         \}
+269                         \textcolor{keywordflow}{break};
+270                     \}
+271                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_a50283efc563e3ebe3b8ac84947491f5d}{TETBLK\_TYPE\_Z}:\{
+272                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+273                         this->blkary\_height=2;
+274                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=3;
+275                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+276                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+277                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+278                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+279                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+280                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][i==0?0:2] = \textcolor{keyword}{true};
+281                         \}
+282 
+283                         \textcolor{keywordflow}{break};
+284                     \}
+285                     \textcolor{keywordflow}{case} \hyperlink{_block_8h_afb6b4a709481a06422a9a9daedb334ee}{TETBLK\_TYPE\_S}:\{
+286                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+287                         this->blkary\_height=2;
+288                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=3;
+289                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+290                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+291                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+292                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+293                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+294                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][i!=0?0:2] = \textcolor{keyword}{true};
+295                         \}
+296                         \textcolor{keywordflow}{break};
+297                     \}
+298                     \textcolor{comment}{//}
+299                     \textcolor{keywordflow}{default}:\{
+300                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}=-1;
+301                         \textcolor{keywordflow}{break};
+302                     \}
+303                 \}
+304             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}\label{class_tetris_1_1_block_ad683f161157c16b80d5df8929bca468c}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!spanshape@{spanshape}}
+\index{spanshape@{spanshape}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{spanshape()}{spanshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::spanshape (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\begin{DoxyReturn}{반환값}
+지정된 블럭 인식번호에 의해서 함수내에서 모양 직접 설정 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 259 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+259                                     \{
+260                 \textcolor{keywordflow}{switch}(type)\{
+261                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_ac9fe505a10c9ea541483202000c72dfe}{TETBLK\_TYPE\_I}:\{
+262                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+263                         this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}=4;
+264                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=1;
+265                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+266                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+267                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+268                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+269                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][0]=\textcolor{keyword}{true};
+270                         \}
+271 
+272                         \textcolor{keywordflow}{break};
+273                     \}
+274                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_a6da1e2b8848e1a7b5a7ee687fd6492bd}{TETBLK\_TYPE\_M}:\{
+275                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+276                         this->blkary\_height=2;
+277                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=2;
+278                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+279                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+280                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+281                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+282                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+283                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][j]=\textcolor{keyword}{true};
+284                             \}
+285                         \}
+286                         \textcolor{keywordflow}{break};
+287                     \}
+288                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_aa624341303e91efd01c17dfb25d15010}{TETBLK\_TYPE\_T}:\{
+289                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+290                         this->blkary\_height=2;
+291                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=3;
+292                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+293                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+294                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+295                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+296                             \textcolor{keywordflow}{if}(i==0)\{
+297                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width};j++)\{
+298                                     this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][j]=\textcolor{keyword}{true};
+299                                 \}
+300                             \}\textcolor{keywordflow}{else}\{
+301                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+302                             \}
+303                         \}
+304 
+305                         \textcolor{keywordflow}{break};
+306                     \}
+307                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_aa30a45ef914d6bd7caf960c42af38197}{TETBLK\_TYPE\_L}:\{
+308                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+309                         this->blkary\_height=3;
+310                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=2;
+311                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+312                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+313                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+314                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+315                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][0]=\textcolor{keyword}{true};
+316                             \textcolor{keywordflow}{if}(i+1==blkary\_height)\{
+317                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+318                             \}
+319                         \}
+320 
+321                         \textcolor{keywordflow}{break};
+322                     \}
+323                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_a3a84ffcf3638f400ed5ebc303d152a94}{TETBLK\_TYPE\_J}:\{
+324                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+325                         this->blkary\_height=3;
+326                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=2;
+327                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+328                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+329                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+330                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+331                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+332                             \textcolor{keywordflow}{if}(i+1==blkary\_height)\{
+333                                 this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][0]=\textcolor{keyword}{true};
+334                             \}
+335                         \}
+336                         \textcolor{keywordflow}{break};
+337                     \}
+338                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_a50283efc563e3ebe3b8ac84947491f5d}{TETBLK\_TYPE\_Z}:\{
+339                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+340                         this->blkary\_height=2;
+341                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=3;
+342                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+343                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+344                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+345                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+346                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+347                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][i==0?0:2] = \textcolor{keyword}{true};
+348                         \}
+349 
+350                         \textcolor{keywordflow}{break};
+351                     \}
+352                     \textcolor{keywordflow}{case} \hyperlink{_block_8hpp_afb6b4a709481a06422a9a9daedb334ee}{TETBLK\_TYPE\_S}:\{
+353                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype} = type;
+354                         this->blkary\_height=2;
+355                         this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}=3;
+356                         this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc} =  \textcolor{keyword}{new} \textcolor{keywordtype}{bool}*[this->\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height}];
+357                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}{blkary\_height};i++)\{
+358                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[this->\hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width}];
+359                             memset(this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i],\textcolor{keyword}{false},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})*this->
+      \hyperlink{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}{blkary\_width});
+360                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][1]=\textcolor{keyword}{true};
+361                             this->\hyperlink{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}{blkspc}[i][i!=0?0:2] = \textcolor{keyword}{true};
+362                         \}
+363                         \textcolor{keywordflow}{break};
+364                     \}
+365                     \textcolor{comment}{//}
+366                     \textcolor{keywordflow}{default}:\{
+367                         this->\hyperlink{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}{blktype}=-1;
+368                         \textcolor{keywordflow}{break};
+369                     \}
+370                 \}
+371             \}
+\end{DoxyCode}
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_acf78e864526e38c9c72fa0b012d5b344}\label{class_tetris_1_1_block_acf78e864526e38c9c72fa0b012d5b344}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!blk\+\_\+color@{blk\+\_\+color}}
+\index{blk\+\_\+color@{blk\+\_\+color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{blk\+\_\+color}{blk\_color}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::blk\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+h 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}\label{class_tetris_1_1_block_abbea7737c2b1fb7339aab4dff13de27c}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!blkary\+\_\+height@{blkary\+\_\+height}}
+\index{blkary\+\_\+height@{blkary\+\_\+height}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{blkary\+\_\+height}{blkary\_height}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::blkary\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+h 파일의 66 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}\label{class_tetris_1_1_block_a96548cab58eb788af744b54192c7bea1}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!blkary\+\_\+width@{blkary\+\_\+width}}
+\index{blkary\+\_\+width@{blkary\+\_\+width}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{blkary\+\_\+width}{blkary\_width}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::blkary\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+h 파일의 67 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}\label{class_tetris_1_1_block_ab7cfb062eb49e791c94bac4a2e7a7ca9}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!blkcolr@{blkcolr}}
+\index{blkcolr@{blkcolr}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{blkcolr}{blkcolr}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{Block\+Color}$\ast$ Tetris\+::\+Block\+::blkcolr = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+hpp 파일의 248 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}\label{class_tetris_1_1_block_af2f96c83a3511d32321672f794aa4db1}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!blkspc@{blkspc}}
+\index{blkspc@{blkspc}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{blkspc}{blkspc}}
+{\footnotesize\ttfamily bool $\ast$$\ast$ Tetris\+::\+Block\+::blkspc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+h 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}\label{class_tetris_1_1_block_aceac58dcf8d8afaa82c2bab101cb3cff}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!blktype@{blktype}}
+\index{blktype@{blktype}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{blktype}{blktype}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::blktype\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Block.\+h 파일의 65 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/tet/\hyperlink{_block_8h}{Block.\+h}\item 
+Classes/tet2/\hyperlink{_block_8hpp}{Block.\+hpp}\item 
+Classes/tet/\hyperlink{_block_8cpp}{Block.\+cpp}\end{DoxyCompactItemize}

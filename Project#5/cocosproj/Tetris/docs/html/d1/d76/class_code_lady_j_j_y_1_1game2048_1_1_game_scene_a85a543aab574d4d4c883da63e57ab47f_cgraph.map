@@ -1,0 +1,4 @@
+<map id="CodeLadyJJY::game2048::GameScene::setFailGameState" name="CodeLadyJJY::game2048::GameScene::setFailGameState">
+<area shape="rect" id="node2" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a332a574da455fb687b5d283399a6976c" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getInstance" alt="" coords="288,5,491,43"/>
+<area shape="rect" id="node3" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#adc205b068a4df3da173c37d4236a4e25" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::setFailGameState" alt="" coords="272,67,506,106"/>
+</map>

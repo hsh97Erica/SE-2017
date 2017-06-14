@@ -1,0 +1,1105 @@
+\hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene}{}\section{Code\+Lady\+J\+JY\+:\+:game2048\+:\+:Game\+Scene 클래스 참조}
+\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene}\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+
+
+{\ttfamily \#include $<$Game\+Scene.\+hpp$>$}
+
+
+
+Code\+Lady\+J\+JY\+:\+:game2048\+:\+:Game\+Scene에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d0/d64/class_code_lady_j_j_y_1_1game2048_1_1_game_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Code\+Lady\+J\+JY\+:\+:game2048\+:\+:Game\+Scene에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/dc7/class_code_lady_j_j_y_1_1game2048_1_1_game_scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ae674d90ff1c81818e308c99da876fbe8}{set\+Game\+Goal} (unsigned short gmgoal)
+\item 
+unsigned short \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a91a4b92af4105f3a0e60b58b96ec0cb5}{get\+Game\+Goal} ()
+\item 
+unsigned short \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a102fddfdf3e911218583dbc375786402}{get\+Current\+Block\+Number} ()
+\item 
+bool \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a9e9ea53a4ff493d0aafc2197c3bae12c}{check\+Sufficing\+Game\+Goal} ()
+\item 
+virtual bool \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab0ccbc102ba9ceca94daddc2e8f253ba}{init} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac748b7487b72bc4722b7bbdb181e7267}{menu\+Call\+Back} (cocos2d\+::\+Ref $\ast$obj)
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a5fb8ef01d49e87cd898f4d9646dd3034}{menu\+Call\+Back2} (cocos2d\+::\+Ref $\ast$obj)
+\item 
+\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ae4a2a6b84c48c11a1be2339b59720b5e}{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene}{Game\+Scene})
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static cocos2d\+::\+Scene $\ast$ \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab573bac307156883fc8c632821b061e4}{create\+Scene} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac036ab4708fc6a171ced9b66e48ffa84}{new\+Tile} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a02da4d987524f8b139bc11a60d94fe6e}{move\+All\+Tile} ()
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af5621ff5eb0f168f9c8812c72018a82d}{check\+Max\+Number} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a349029ddf5f814098e6baaec7d9d0a80}{move\+Up} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aeab011d4ae7c31cf2f83ae8ab883ccee}{move\+Down} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af8bb00dc442393f68910ca3eb80e92eb}{move\+Right} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abb3016da3b2e356d2e05725fb5ce3b96}{move\+Left} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ad08ac2bf0b55768bfbb825dea8d6e6b3}{calc\+Score} (int scor)
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a555636f47220602c6b2b25f6594b9dd0}{giveupgame} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a85a543aab574d4d4c883da63e57ab47f}{set\+Fail\+Game\+State} ()
+\item 
+void \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aa4bf235881780a4db15f68759db4f922}{show\+Game\+Over} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a199eba778f36532a166124213aaea11f}{m\+\_\+startmove}
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\+\_\+sound\+\_\+clear}
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\+\_\+score}
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}{m\+\_\+x}
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}{m\+\_\+y}
+\item 
+int \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map} \mbox{[}\hyperlink{_game_scene_8hpp_ab1b9aa851d1926d0b52bc8fb01ae6707}{M\+A\+X\+\_\+2048\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+U\+NT}\mbox{]}\mbox{[}\hyperlink{_game_scene_8hpp_ab1b9aa851d1926d0b52bc8fb01ae6707}{M\+A\+X\+\_\+2048\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\item 
+\hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08f}{E\+N\+U\+M\+\_\+\+D\+IR} \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}{dir}
+\item 
+bool \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{is\+Move}
+\item 
+cocos2d\+::\+Layer\+Color $\ast$ \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}{Game\+Color}
+\item 
+cocos2d\+::\+Vector$<$ \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_card}{Card} $\ast$ $>$ \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{all\+Card}
+\item 
+unsigned short \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a32978808e5a60713a1d8bf085c2d3e11}{game\+\_\+goal}
+\item 
+unsigned short \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a8e51807adfe412a0b206f0d35341851e}{max\+\_\+blk\+\_\+number}
+\item 
+float \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}{tile\+Width}
+\item 
+float \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}{tile\+Border\+Width}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Game\+Scene.\+hpp 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ad08ac2bf0b55768bfbb825dea8d6e6b3}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ad08ac2bf0b55768bfbb825dea8d6e6b3}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!calc\+Score@{calc\+Score}}
+\index{calc\+Score@{calc\+Score}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{calc\+Score()}{calcScore()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::calc\+Score (\begin{DoxyParamCaption}\item[{int}]{scor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 354 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+354                             \{
+355         \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{SCDelegate::getInstance}()->\hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_abd34ec6afe537cccfd469f2e1fc090fc}{setInnerGameScore}(scor);
+356         \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{SCDelegate::getInstance}()->\hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a5a18f6b50e0a4d8b4a92b13e1fb3fd85}{setCurrentNumber}(
+      \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af5621ff5eb0f168f9c8812c72018a82d}{checkMaxNumber}());
+357     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ad08ac2bf0b55768bfbb825dea8d6e6b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af5621ff5eb0f168f9c8812c72018a82d}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af5621ff5eb0f168f9c8812c72018a82d}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!check\+Max\+Number@{check\+Max\+Number}}
+\index{check\+Max\+Number@{check\+Max\+Number}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{check\+Max\+Number()}{checkMaxNumber()}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::check\+Max\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 155 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+155                         \{
+156         \textcolor{keywordtype}{int} rst = 0;
+157         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.size();i++)\{
+158                 \textcolor{keyword}{auto} cd = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(i);
+159                 rst=max(rst,cd->getCurrentNumber());
+160         \}
+161         \textcolor{keywordflow}{return} rst;
+162     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a9e9ea53a4ff493d0aafc2197c3bae12c}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a9e9ea53a4ff493d0aafc2197c3bae12c}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!check\+Sufficing\+Game\+Goal@{check\+Sufficing\+Game\+Goal}}
+\index{check\+Sufficing\+Game\+Goal@{check\+Sufficing\+Game\+Goal}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{check\+Sufficing\+Game\+Goal()}{checkSufficingGameGoal()}}
+{\footnotesize\ttfamily bool Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::check\+Sufficing\+Game\+Goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Game\+Scene.\+hpp 파일의 395 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+395                                  \{
+396         \textcolor{keywordflow}{return} \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a102fddfdf3e911218583dbc375786402}{getCurrentBlockNumber}()>=\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a91a4b92af4105f3a0e60b58b96ec0cb5}{getGameGoal}();
+397     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ae4a2a6b84c48c11a1be2339b59720b5e}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ae4a2a6b84c48c11a1be2339b59720b5e}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}}
+\index{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+N\+C()}{CREATE\_FUNC()}}
+{\footnotesize\ttfamily Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::\+C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene}{Game\+Scene}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab573bac307156883fc8c632821b061e4}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab573bac307156883fc8c632821b061e4}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily static cocos2d\+::\+Scene$\ast$ Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::create\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Game\+Scene.\+hpp 파일의 378 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+378                                        \{
+379     \textcolor{keyword}{auto} scene = Scene::create();
+380     \textcolor{keyword}{auto} layer = GameScene::create();
+381     scene->addChild(layer);
+382     \textcolor{keywordflow}{return} scene;
+383     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab573bac307156883fc8c632821b061e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a102fddfdf3e911218583dbc375786402}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a102fddfdf3e911218583dbc375786402}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!get\+Current\+Block\+Number@{get\+Current\+Block\+Number}}
+\index{get\+Current\+Block\+Number@{get\+Current\+Block\+Number}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{get\+Current\+Block\+Number()}{getCurrentBlockNumber()}}
+{\footnotesize\ttfamily unsigned short Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::get\+Current\+Block\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Game\+Scene.\+hpp 파일의 392 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+392                                           \{
+393         \textcolor{keywordflow}{return} \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a8e51807adfe412a0b206f0d35341851e}{max\_blk\_number};
+394     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a91a4b92af4105f3a0e60b58b96ec0cb5}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a91a4b92af4105f3a0e60b58b96ec0cb5}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!get\+Game\+Goal@{get\+Game\+Goal}}
+\index{get\+Game\+Goal@{get\+Game\+Goal}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{get\+Game\+Goal()}{getGameGoal()}}
+{\footnotesize\ttfamily unsigned short Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::get\+Game\+Goal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Game\+Scene.\+hpp 파일의 389 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+389                                 \{
+390         \textcolor{keywordflow}{return} \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a32978808e5a60713a1d8bf085c2d3e11}{game\_goal};
+391     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a555636f47220602c6b2b25f6594b9dd0}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a555636f47220602c6b2b25f6594b9dd0}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!giveupgame@{giveupgame}}
+\index{giveupgame@{giveupgame}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{giveupgame()}{giveupgame()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::giveupgame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 358 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+358                      \{
+359         \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{SCDelegate::getInstance}()->\hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a26d362200e9644c85f892e71592eef92}{setGiveUpState}(\textcolor{keyword}{true});
+360     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a555636f47220602c6b2b25f6594b9dd0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab0ccbc102ba9ceca94daddc2e8f253ba}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab0ccbc102ba9ceca94daddc2e8f253ba}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!init@{init}}
+\index{init@{init}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Game\+Scene.\+hpp 파일의 398 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+398                    \{
+399     \textcolor{keywordflow}{if}(!Layer::init())
+400         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+401     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}{tileBorderWidth} = 8;
+402     \textcolor{comment}{//max\_blk\_number =game\_goal= 0;}
+403     this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 0;
+404     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+405     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}{tileWidth} = (winSize.height-\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}{tileBorderWidth}*5)/4;
+406     \textcolor{comment}{//背景色}
+407     \textcolor{keyword}{auto} BGColor = LayerColor::create(Color4B(211, 211, 211, 255));
+408     this->addChild(BGColor);
+409     TTFConfig config(\textcolor{stringliteral}{"fonts/Marker Felt.ttf"}, winSize.width / 8);
+410     \textcolor{comment}{//分数标题}
+411     \textcolor{keyword}{auto} scoreTitle = Label::createWithTTF(\textcolor{stringliteral}{"SCORE"}, \textcolor{stringliteral}{"fonts/Marker Felt.ttf"}, (winSize.width*4/18)/5); \textcolor{comment}{//
+      Label::createWithSystemFont("SCORE", "Consolas", 70);}
+412     scoreTitle->setPosition(Vec2(winSize.width * 15 / 18, winSize.height * 3 / 4));
+413     Color3B scoreColor(255,255,255); \textcolor{comment}{//142, 142, 142);}
+414     scoreTitle->setColor(scoreColor);
+415     addChild(scoreTitle,1);
+416     
+417     \textcolor{comment}{//分数}
+418     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score} = 0;
+419     \textcolor{keyword}{auto} scoreNum = Label::createWithTTF(\textcolor{stringliteral}{"0"}, \textcolor{stringliteral}{"fonts/Marker Felt.ttf"}, (winSize.width*4/18)/6); \textcolor{comment}{//
+      Label::createWithSystemFont("0", "Consolas", 60);}
+420     scoreNum->setTag(140);
+421     scoreNum->setPosition(Vec2(winSize.width * 15 / 18, (winSize.height * 3 / 4)-(scoreTitle->
+      getContentSize().height*1.2f))); \textcolor{comment}{// winSize.height / 2));}
+422     scoreNum->setColor(scoreColor);
+423     addChild(scoreNum,1);
+424     
+425     \textcolor{keyword}{auto} goalNum = Label::createWithTTF(StringUtils::format(\textcolor{stringliteral}{"-Goal-\(\backslash\)n%3hd"}, 
+      \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{SCDelegate::getInstance}()->getGoal()), \textcolor{stringliteral}{"fonts/Marker Felt.ttf"}, (winSize.width*4/18)
+      /6);
+426     
+427     goalNum->setPosition(Vec2((winSize.width * 15 / 18)-goalNum->getContentSize().width/2, (scoreNum->
+      getPosition().y)-(scoreNum->getContentSize().height*1.2f))); \textcolor{comment}{// winSize.height / 2));}
+428     goalNum->setColor(scoreColor);
+429     addChild(goalNum,1);
+430     \textcolor{comment}{//添加New Game按钮}
+431     \textcolor{comment}{//auto menuItemNew = MenuItemFont::create("New Game", CC\_CALLBACK\_1(GameScene::menuCallBack, this));}
+432     \textcolor{keyword}{auto} menuItemNew = MenuItemFont::create(\textcolor{stringliteral}{"Give up Game"}, CC\_CALLBACK\_1(
+      \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a5fb8ef01d49e87cd898f4d9646dd3034}{GameScene::menuCallBack2}, \textcolor{keyword}{this}));
+433     \textcolor{keyword}{auto} menu = Menu::create(menuItemNew, NULL);
+434 
+435     menu->setPosition(Vec2::ZERO);
+436     menuItemNew->setPosition(Vec2(winSize.width * 15 / 18, winSize.height / 8));
+437     menuItemNew->setColor(Color3B(0, 0, 0));
+438 
+439     this->addChild(menu);
+440     \textcolor{keywordtype}{float} tileMapWidth = winSize.height;
+441     \textcolor{comment}{//添加网格背景}
+442     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}{GameColor} = LayerColor::create(Color4B(142, 142, 142, 255), tileMapWidth, tileMapWidth);
+443     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}{GameColor}->setPosition(Vec2::ZERO);
+444     this->addChild(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}{GameColor});
+445 
+446     \textcolor{comment}{//添加网格的每一小块}
+447     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} row=0; row<4; row++)
+448     \{
+449         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} col=0; col<4; col++)
+450         \{
+451             \textcolor{keyword}{auto} tiled = LayerColor::create(Color4B(191, 191, 191, 255), 
+      \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}{tileWidth}, \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}{tileWidth});
+452             tiled->setPosition(Vec2(col*\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}{tileWidth}+(col+1)*
+      \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}{tileBorderWidth}, 
+453                 row*\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}{tileWidth}+(row+1)*\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}{tileBorderWidth}));
+454             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}{GameColor}->addChild(tiled);
+455         \}
+456     \}
+457 
+458     \textcolor{comment}{//初始化逻辑网格数组}
+459     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} row=0; row<4; row++)
+460     \{
+461         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} col=0; col<4; col++)
+462         \{
+463             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][col] = 0;
+464         \}
+465     \}
+466 
+467     \textcolor{comment}{//初始化数字块}
+468     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac036ab4708fc6a171ced9b66e48ffa84}{newTile}();
+469 
+470     \textcolor{comment}{//触摸侦听}
+471     \textcolor{keyword}{auto} listener = EventListenerTouchOneByOne::create();
+472     listener->setSwallowTouches(\textcolor{keyword}{true});\textcolor{comment}{//跟随鼠标移动}
+473 
+474     listener->onTouchBegan = [&](Touch * t, Event * e)\{\textcolor{comment}{//记录鼠标起始位置}
+475         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}{m\_x} = t->getLocation().x;
+476         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}{m\_y} = t->getLocation().y;
+477         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a199eba778f36532a166124213aaea11f}{m\_startmove} = \textcolor{keyword}{true};
+478         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+479     \};
+480 
+481     listener->onTouchMoved = [&](Touch * t, Event * e)\{
+482         \textcolor{keywordtype}{int} x = t->getLocation().x;
+483         \textcolor{keywordtype}{int} y = t->getLocation().y;
+484 
+485         \textcolor{comment}{//判断移动方向}
+486         \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a199eba778f36532a166124213aaea11f}{m\_startmove} && (abs(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}{m\_x} - x) > 10 || abs(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}{m\_y} - y) > 10))
+487         \{
+488             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a199eba778f36532a166124213aaea11f}{m\_startmove} = \textcolor{keyword}{false};
+489             \textcolor{keywordflow}{if}(abs(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}{m\_x} - x) > abs(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}{m\_y} - y))
+490             \{
+491                 \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}{m\_x} < x)
+492                     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}{dir} = \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08fa21507b40c80068eda19865706fdc2403}{ENUM\_DIR::RIGHT};
+493                 \textcolor{keywordflow}{else}
+494                     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}{dir} = \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08fa684d325a7303f52e64011467ff5c5758}{ENUM\_DIR::LEFT};
+495             \}
+496             \textcolor{keywordflow}{else}
+497             \{
+498                 \textcolor{keywordflow}{if} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}{m\_y} < y)
+499                     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}{dir} = \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08fafbaedde498cdead4f2780217646e9ba1}{ENUM\_DIR::UP};
+500                 \textcolor{keywordflow}{else}
+501                     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}{dir} = \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08faa175ed5748a200aaf331a4284383e2cd}{ENUM\_DIR::DOWM};
+502             \}
+503             \textcolor{comment}{//移动所有块}
+504             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a02da4d987524f8b139bc11a60d94fe6e}{moveAllTile}();
+505             \textcolor{comment}{//产生新块}
+506             \textcolor{keywordflow}{if} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove})
+507             \{
+508                 \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac036ab4708fc6a171ced9b66e48ffa84}{newTile}();
+509                 \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 0;
+510             \}   
+511         \}
+512     \};
+513 
+514     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, \textcolor{keyword}{this});
+515 
+516     \textcolor{comment}{//键盘事件侦听}
+517     \textcolor{keyword}{auto} keyboardListener = EventListenerKeyboard::create();
+518 
+519     keyboardListener->onKeyPressed = [&](\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{EventKeyboard::KeyCode} k, Event * e)\{\textcolor{comment}{//
+      判断移动方向并改变方向}
+520         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\_sound\_clear} = \textcolor{keyword}{false};
+521 
+522         \textcolor{keywordflow}{switch} (k)
+523         \{
+524         \textcolor{keywordflow}{case} cocos2d::EventKeyboard::KeyCode::KEY\_LEFT\_ARROW:
+525             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abb3016da3b2e356d2e05725fb5ce3b96}{moveLeft}();
+526             \textcolor{keywordflow}{break};
+527         \textcolor{keywordflow}{case} cocos2d::EventKeyboard::KeyCode::KEY\_RIGHT\_ARROW:
+528             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af8bb00dc442393f68910ca3eb80e92eb}{moveRight}();
+529             \textcolor{keywordflow}{break};
+530         \textcolor{keywordflow}{case} cocos2d::EventKeyboard::KeyCode::KEY\_UP\_ARROW:
+531             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a349029ddf5f814098e6baaec7d9d0a80}{moveUp}();
+532             \textcolor{keywordflow}{break};
+533         \textcolor{keywordflow}{case} cocos2d::EventKeyboard::KeyCode::KEY\_DOWN\_ARROW:
+534             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aeab011d4ae7c31cf2f83ae8ab883ccee}{moveDown}();
+535             \textcolor{keywordflow}{break};
+536         \textcolor{keywordflow}{default}:
+537             \textcolor{keywordflow}{break};
+538         \}
+539 
+540         \textcolor{comment}{//音效}
+541         \textcolor{comment}{//if (m\_sound\_clear)SimpleAudioEngine::getInstance()->playEffect("moveClear.mp3");}
+542 
+543         \textcolor{comment}{//分数变化}
+544         \textcolor{keyword}{auto} score = (Label *)this->getChildByTag(140);
+545         score->setString(StringUtils::format(\textcolor{stringliteral}{"%d"}, \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score}));
+546         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ad08ac2bf0b55768bfbb825dea8d6e6b3}{calcScore} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score});
+547         \textcolor{keywordflow}{if} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove})
+548         \{
+549             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac036ab4708fc6a171ced9b66e48ffa84}{newTile}();
+550             \textcolor{comment}{//SimpleAudioEngine::getInstance()->playEffect("move.wav");}
+551             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 0;
+552         \}
+553     \};
+554 
+555     \_eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener, \textcolor{keyword}{this});
+556 
+557     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+558 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab0ccbc102ba9ceca94daddc2e8f253ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac748b7487b72bc4722b7bbdb181e7267}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac748b7487b72bc4722b7bbdb181e7267}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!menu\+Call\+Back@{menu\+Call\+Back}}
+\index{menu\+Call\+Back@{menu\+Call\+Back}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{menu\+Call\+Back()}{menuCallBack()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::menu\+Call\+Back (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Game\+Scene.\+hpp 파일의 560 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+560                                       \{
+561     \textcolor{keyword}{auto} scene = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab573bac307156883fc8c632821b061e4}{GameScene::createScene}();
+562     Director::getInstance()->replaceScene(scene);
+563 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac748b7487b72bc4722b7bbdb181e7267_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a5fb8ef01d49e87cd898f4d9646dd3034}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a5fb8ef01d49e87cd898f4d9646dd3034}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!menu\+Call\+Back2@{menu\+Call\+Back2}}
+\index{menu\+Call\+Back2@{menu\+Call\+Back2}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{menu\+Call\+Back2()}{menuCallBack2()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::menu\+Call\+Back2 (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Game\+Scene.\+hpp 파일의 564 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+564                                        \{
+565         this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a555636f47220602c6b2b25f6594b9dd0}{giveupgame}();
+566     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a5fb8ef01d49e87cd898f4d9646dd3034_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a02da4d987524f8b139bc11a60d94fe6e}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a02da4d987524f8b139bc11a60d94fe6e}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!move\+All\+Tile@{move\+All\+Tile}}
+\index{move\+All\+Tile@{move\+All\+Tile}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{move\+All\+Tile()}{moveAllTile()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::move\+All\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 122 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+122                       \{
+123     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\_sound\_clear} = \textcolor{keyword}{false};
+124 
+125     \textcolor{keywordflow}{switch} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}{dir})
+126     \{
+127     \textcolor{keywordflow}{case} \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08fafbaedde498cdead4f2780217646e9ba1}{ENUM\_DIR::UP}:
+128         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a349029ddf5f814098e6baaec7d9d0a80}{moveUp}();
+129         \textcolor{keywordflow}{break};
+130     \textcolor{keywordflow}{case} \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08faa175ed5748a200aaf331a4284383e2cd}{ENUM\_DIR::DOWM}:
+131         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aeab011d4ae7c31cf2f83ae8ab883ccee}{moveDown}();
+132         \textcolor{keywordflow}{break};
+133     \textcolor{keywordflow}{case} \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08fa684d325a7303f52e64011467ff5c5758}{ENUM\_DIR::LEFT}:
+134         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abb3016da3b2e356d2e05725fb5ce3b96}{moveLeft}();
+135         \textcolor{keywordflow}{break};
+136     \textcolor{keywordflow}{case} \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08fa21507b40c80068eda19865706fdc2403}{ENUM\_DIR::RIGHT}:
+137         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af8bb00dc442393f68910ca3eb80e92eb}{moveRight}();
+138         \textcolor{keywordflow}{break};
+139     \textcolor{keywordflow}{default}:
+140         \textcolor{keywordflow}{break};
+141     \}
+142 
+143     \textcolor{comment}{//音效}
+144     \textcolor{comment}{/*if (m\_sound\_clear)}
+145 \textcolor{comment}{        SimpleAudioEngine::getInstance()->playEffect("moveClear.mp3");}
+146 \textcolor{comment}{    else}
+147 \textcolor{comment}{        SimpleAudioEngine::getInstance()->playEffect("move.wav");}
+148 \textcolor{comment}{    */}
+149     \textcolor{comment}{//分数变化}
+150     \textcolor{keyword}{auto} score = (Label *)this->getChildByTag(140);
+151         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ad08ac2bf0b55768bfbb825dea8d6e6b3}{calcScore}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score});
+152     \textcolor{comment}{//SceneDelegate::getInstance()->setInnerGameScore(m\_score);}
+153     score->setString(StringUtils::format(\textcolor{stringliteral}{"%d"}, \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score}));
+154 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aeab011d4ae7c31cf2f83ae8ab883ccee}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aeab011d4ae7c31cf2f83ae8ab883ccee}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!move\+Down@{move\+Down}}
+\index{move\+Down@{move\+Down}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{move\+Down()}{moveDown()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 213 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+213                    \{
+214     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} col = 0; col < 4; col++)
+215     \{
+216         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} row = 1; row < 4; row++)
+217         \{
+218             \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][col] > 0)
+219             \{
+220                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = row-1; i>=0; i--)
+221                 \{
+222                     \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] == 0)
+223                     \{
+224                         this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+225                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col];
+226                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col] = 0;
+227                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col]-1)->move(i, col);
+228                     \}
+229                     \textcolor{keywordflow}{else}
+230                     \{
+231                         \textcolor{keywordtype}{int} numObj = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col]-1)->m\_num;
+232                         \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col]-1)->m\_num;
+233 
+234                         \textcolor{keywordflow}{if}(numNow == numObj)
+235                         \{
+236                             this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+237                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\_sound\_clear} = \textcolor{keyword}{true};
+238                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score} += numObj*2;
+239                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col]-1)->doubleNum();
+240                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col]-1)->removeFromParent();
+241                             \textcolor{keywordtype}{int} index = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col];
+242                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.erase(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col]-1);
+243                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<4; j++)
+244                             \{
+245                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<4; k++)
+246                                 \{
+247                                     \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[j][k] > index)
+248                                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[j][k]--;
+249                                 \}
+250                             \}
+251                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i+1][col] = 0;
+252                         \}
+253                         \textcolor{keywordflow}{break};
+254                     \}
+255                 \}
+256             \}
+257         \}
+258     \}
+259 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abb3016da3b2e356d2e05725fb5ce3b96}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abb3016da3b2e356d2e05725fb5ce3b96}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!move\+Left@{move\+Left}}
+\index{move\+Left@{move\+Left}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{move\+Left()}{moveLeft()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::move\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 307 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+307                    \{
+308     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} row = 0; row < 4; row++)
+309     \{
+310         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} col = 1; col < 4; col++)
+311         \{
+312             \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][col] > 0)
+313             \{
+314                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = col-1; i>=0; i--)
+315                 \{
+316                     \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i] == 0)
+317                     \{
+318                         this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+319                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i] = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1];
+320                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1] = 0;
+321                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i]-1)->move(row, i);
+322                     \}
+323                     \textcolor{keywordflow}{else}
+324                     \{
+325                         \textcolor{keywordtype}{int} numObj = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i]-1)->m\_num;
+326                         \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1]-1)->m\_num;
+327 
+328                         \textcolor{keywordflow}{if}(numNow == numObj)
+329                         \{
+330                             this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+331                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\_sound\_clear} = \textcolor{keyword}{true};
+332                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score} += numObj*2;
+333                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i]-1)->doubleNum();
+334                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1]-1)->removeFromParent();
+335                             \textcolor{keywordtype}{int} index = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1];
+336                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.erase(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1]-1);
+337                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<4; j++)
+338                             \{
+339                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<4; k++)
+340                                 \{
+341                                     \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[j][k] > index)
+342                                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[j][k]--;
+343                                 \}
+344                             \}
+345                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][i+1] = 0;
+346                         \}
+347                         \textcolor{keywordflow}{break};
+348                     \}
+349                 \}
+350             \}
+351         \}
+352     \}
+353 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af8bb00dc442393f68910ca3eb80e92eb}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_af8bb00dc442393f68910ca3eb80e92eb}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!move\+Right@{move\+Right}}
+\index{move\+Right@{move\+Right}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{move\+Right()}{moveRight()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::move\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 260 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+260                     \{
+261     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} row = 0; row < 4; row++)
+262     \{
+263         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} col = 2; col >= 0; col--)
+264         \{
+265             \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][col] > 0)
+266             \{
+267                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = col+1; j<4; j++)
+268                 \{
+269                     \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j] == 0)
+270                     \{
+271                         this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+272                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j] = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1];
+273                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1] = 0;
+274                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j]-1)->move(row, j);
+275                     \}
+276                     \textcolor{keywordflow}{else}
+277                     \{
+278                         \textcolor{keywordtype}{int} numObj = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j]-1)->m\_num;
+279                         \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1]-1)->m\_num;
+280 
+281                         \textcolor{keywordflow}{if}(numNow == numObj)
+282                         \{
+283                             this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+284                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\_sound\_clear} = \textcolor{keyword}{true};
+285                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score} += numObj*2;
+286                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j]-1)->doubleNum();
+287                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1]-1)->removeFromParent();
+288                             \textcolor{keywordtype}{int} index = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1];
+289                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.erase(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1]-1);
+290                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<4; i++)
+291                             \{
+292                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<4; k++)
+293                                 \{
+294                                     \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][k] > index)
+295                                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][k]--;
+296                                 \}
+297                             \}
+298                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][j-1] = 0;
+299                         \}
+300                         \textcolor{keywordflow}{break};
+301                     \}
+302                 \}
+303             \}
+304         \}
+305     \}
+306 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a349029ddf5f814098e6baaec7d9d0a80}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a349029ddf5f814098e6baaec7d9d0a80}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!move\+Up@{move\+Up}}
+\index{move\+Up@{move\+Up}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{move\+Up()}{moveUp()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 163 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+163                  \{
+164     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} col = 0; col < 4; col++)
+165     \{
+166         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} row = 2; row >= 0; row--)
+167         \{
+168             \textcolor{keywordflow}{if} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[row][col] > 0)
+169             \{
+170                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = row + 1; i<4; i++)
+171                 \{
+172                     \textcolor{comment}{//移动方向上有空网格}
+173                     \textcolor{keywordflow}{if} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] == 0)
+174                     \{
+175                         this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+176                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col];
+177                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col] = 0;
+178                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] - 1)->move(i, col);
+179                     \}
+180                     \textcolor{comment}{//移动方向上是数字块}
+181                     \textcolor{keywordflow}{else}
+182                     \{
+183                         \textcolor{keywordtype}{int} numObj = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] - 1)->m\_num;
+184                         \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col] - 1)->m\_num;
+185                         
+186                         \textcolor{comment}{//数字相同，则消除}
+187                         \textcolor{keywordflow}{if} (numNow == numObj)
+188                         \{
+189                             this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}{isMove} = 1;
+190                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}{m\_sound\_clear} = \textcolor{keyword}{true};
+191                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}{m\_score} += numObj * 2;
+192                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i][col] - 1)->doubleNum();
+193                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col] - 1)->removeFromParent();
+194                             \textcolor{keywordtype}{int} index = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col];
+195                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.erase(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col] - 1);
+196                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j<4; j++)
+197                             \{
+198                                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k<4; k++)
+199                                 \{
+200                                     \textcolor{keywordflow}{if} (\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[j][k] > index)
+201                                         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[j][k]--;
+202                                 \}
+203                             \}
+204                             \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[i - 1][col] = 0;
+205                         \}
+206                         \textcolor{keywordflow}{break};
+207                     \}
+208                 \}
+209             \}
+210         \}
+211     \}
+212 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac036ab4708fc6a171ced9b66e48ffa84}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ac036ab4708fc6a171ced9b66e48ffa84}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!new\+Tile@{new\+Tile}}
+\index{new\+Tile@{new\+Tile}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{new\+Tile()}{newTile()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::new\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+41               \{
+42     \textcolor{keyword}{auto} card = Card::create();
+43     \textcolor{keywordtype}{int} freeCount = 16 - \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.size(); \textcolor{comment}{//剩余没有数字的网格}
+44     \textcolor{keywordtype}{int} n=rand()%freeCount + 1;             \textcolor{comment}{//在剩余网格中随机选择一个产生新块}
+45     \textcolor{keywordtype}{int} r = 0;
+46     \textcolor{keywordtype}{int} c = 0;
+47     \textcolor{keywordtype}{int} flag = 0;
+48     \textcolor{keywordtype}{int} count = 0;
+49 
+50     \textcolor{comment}{//找到第n个空的网格}
+51     \textcolor{keywordflow}{for} (r=0; r<4; r++)
+52     \{
+53         \textcolor{keywordflow}{for} (c=0; c<4; c++)
+54         \{
+55             \textcolor{keywordflow}{if}(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r][c] == 0)
+56                 count++;
+57             \textcolor{keywordflow}{if}(count == n)
+58             \{
+59                 flag = 1;
+60                 \textcolor{keywordflow}{break};
+61             \}
+62         \}
+63         \textcolor{keywordflow}{if} (flag == 1)
+64             \textcolor{keywordflow}{break};
+65     \}
+66 
+67     card->show(r, c);
+68     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.pushBack(card);
+69     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r][c] = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.getIndex(card)+1;
+70     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}{GameColor}->addChild(card);
+71     freeCount--;
+72     
+73     \textcolor{comment}{//剩余块数为0，判断是否死亡}
+74     \textcolor{keywordflow}{if}(freeCount == 0)
+75     \{
+76         \textcolor{keywordflow}{for}(r=0; r<4; r++)
+77         \{
+78             \textcolor{keywordflow}{for}(c=0; c<4; c++)
+79             \{
+80                 \textcolor{keywordtype}{int} numObj = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r][c]-1)->m\_num;
+81 
+82                 \textcolor{comment}{//上}
+83                 \textcolor{keywordflow}{if}(r+1 < 4)
+84                 \{
+85                     \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r+1][c]-1)->m\_num;
+86                     \textcolor{keywordflow}{if}(numObj == numNow)
+87                         return ;
+88                 \}
+89 
+90                 \textcolor{comment}{//下}
+91                 \textcolor{keywordflow}{if}(r-1 >= 0)
+92                 \{
+93                     \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r-1][c]-1)->m\_num;
+94                     \textcolor{keywordflow}{if}(numObj == numNow)
+95                         return ;
+96                 \}
+97 
+98                 \textcolor{comment}{//左}
+99                 \textcolor{keywordflow}{if}(c-1 >= 0)
+100                 \{
+101                     \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r][c-1]-1)->m\_num;
+102                     \textcolor{keywordflow}{if}(numObj == numNow)
+103                         return ;
+104                 \}
+105 
+106                 \textcolor{comment}{//右}
+107                 \textcolor{keywordflow}{if}(c+1 < 4)
+108                 \{
+109                     \textcolor{keywordtype}{int} numNow = \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}{allCard}.at(\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}{map}[r][c+1]-1)->m\_num;
+110                     \textcolor{keywordflow}{if}(numObj == numNow)
+111                         return ;
+112                 \}
+113             \}
+114         \}
+115 
+116         \textcolor{comment}{//没有可以移动的走法}
+117         this->\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aa4bf235881780a4db15f68759db4f922}{showGameOver}();
+118 
+119         return ;
+120     \}
+121 \}   \textcolor{comment}{//产生新块}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a85a543aab574d4d4c883da63e57ab47f}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a85a543aab574d4d4c883da63e57ab47f}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!set\+Fail\+Game\+State@{set\+Fail\+Game\+State}}
+\index{set\+Fail\+Game\+State@{set\+Fail\+Game\+State}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{set\+Fail\+Game\+State()}{setFailGameState()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::set\+Fail\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 361 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+361                            \{
+362         \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{SCDelegate::getInstance}()->\hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_adc205b068a4df3da173c37d4236a4e25}{setFailGameState}(\textcolor{keyword}{true});
+363     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a85a543aab574d4d4c883da63e57ab47f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ae674d90ff1c81818e308c99da876fbe8}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ae674d90ff1c81818e308c99da876fbe8}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!set\+Game\+Goal@{set\+Game\+Goal}}
+\index{set\+Game\+Goal@{set\+Game\+Goal}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{set\+Game\+Goal()}{setGameGoal()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::set\+Game\+Goal (\begin{DoxyParamCaption}\item[{unsigned short}]{gmgoal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Game\+Scene.\+hpp 파일의 385 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+385                                            \{
+386         \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a32978808e5a60713a1d8bf085c2d3e11}{game\_goal} = gmgoal;
+387     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aa4bf235881780a4db15f68759db4f922}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aa4bf235881780a4db15f68759db4f922}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!show\+Game\+Over@{show\+Game\+Over}}
+\index{show\+Game\+Over@{show\+Game\+Over}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{show\+Game\+Over()}{showGameOver()}}
+{\footnotesize\ttfamily void Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::show\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 364 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+364                    \{
+365     \textcolor{comment}{//显示GameOver}
+366         CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+367     TTFConfig config(\textcolor{stringliteral}{"fonts/Marker Felt.ttf"}, winSize.width / 8);
+368         
+369     \textcolor{keyword}{auto} label = Label::createWithTTF(config, \textcolor{stringliteral}{"GAME OVER"});
+370         label->setPosition(Vec2(winSize.width / 2, winSize.height / 2));
+371     \hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a85a543aab574d4d4c883da63e57ab47f}{setFailGameState}();
+372     \textcolor{comment}{//label->setPosition(Vec2(winSize\_width / 2, winSize\_height / 2));}
+373     this->addChild(label);
+374     
+375 \}
+\end{DoxyCode}
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_aadcd54235c70f1d794213f50f429437f}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!all\+Card@{all\+Card}}
+\index{all\+Card@{all\+Card}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{all\+Card}{allCard}}
+{\footnotesize\ttfamily cocos2d\+::\+Vector$<$\hyperlink{class_code_lady_j_j_y_1_1game2048_1_1_card}{Card} $\ast$$>$ Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::all\+Card\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a787c38369bdc3a961b877de364d999d4}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!dir@{dir}}
+\index{dir@{dir}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily \hyperlink{namespace_code_lady_j_j_y_1_1game2048_a5ce81ccb99ee47dcef151e7f8c9da08f}{E\+N\+U\+M\+\_\+\+D\+IR} Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::dir\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a32978808e5a60713a1d8bf085c2d3e11}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a32978808e5a60713a1d8bf085c2d3e11}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!game\+\_\+goal@{game\+\_\+goal}}
+\index{game\+\_\+goal@{game\+\_\+goal}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{game\+\_\+goal}{game\_goal}}
+{\footnotesize\ttfamily unsigned short Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::game\+\_\+goal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 36 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a191affcd48b814ad840883e491107a2b}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!Game\+Color@{Game\+Color}}
+\index{Game\+Color@{Game\+Color}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{Game\+Color}{GameColor}}
+{\footnotesize\ttfamily cocos2d\+::\+Layer\+Color$\ast$ Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::\+Game\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a72716d8ae260804ce013766cf4ad1505}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!is\+Move@{is\+Move}}
+\index{is\+Move@{is\+Move}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{is\+Move}{isMove}}
+{\footnotesize\ttfamily bool Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::is\+Move\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_abaa6efe9f6fe529d3ed404bc95ba14c4}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!m\+\_\+score@{m\+\_\+score}}
+\index{m\+\_\+score@{m\+\_\+score}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+score}{m\_score}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::m\+\_\+score\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a736ba67f3d81332ca29f2d49fbdbcce3}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!m\+\_\+sound\+\_\+clear@{m\+\_\+sound\+\_\+clear}}
+\index{m\+\_\+sound\+\_\+clear@{m\+\_\+sound\+\_\+clear}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+sound\+\_\+clear}{m\_sound\_clear}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::m\+\_\+sound\+\_\+clear\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a199eba778f36532a166124213aaea11f}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a199eba778f36532a166124213aaea11f}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!m\+\_\+startmove@{m\+\_\+startmove}}
+\index{m\+\_\+startmove@{m\+\_\+startmove}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+startmove}{m\_startmove}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::m\+\_\+startmove\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a28a91c0ced0131c08595ebba7459fd98}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!m\+\_\+x@{m\+\_\+x}}
+\index{m\+\_\+x@{m\+\_\+x}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+x}{m\_x}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::m\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a35a99b7ce5913181113da936ec766897}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!m\+\_\+y@{m\+\_\+y}}
+\index{m\+\_\+y@{m\+\_\+y}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{m\+\_\+y}{m\_y}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::m\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a4d8924d645182d1e2f6b44390e4101ea}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!map@{map}}
+\index{map@{map}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily int Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::map\mbox{[}\hyperlink{_game_scene_8hpp_ab1b9aa851d1926d0b52bc8fb01ae6707}{M\+A\+X\+\_\+2048\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+U\+NT}\mbox{]}\mbox{[}\hyperlink{_game_scene_8hpp_ab1b9aa851d1926d0b52bc8fb01ae6707}{M\+A\+X\+\_\+2048\+\_\+\+L\+I\+N\+E\+\_\+\+C\+O\+U\+NT}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 31 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a8e51807adfe412a0b206f0d35341851e}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a8e51807adfe412a0b206f0d35341851e}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!max\+\_\+blk\+\_\+number@{max\+\_\+blk\+\_\+number}}
+\index{max\+\_\+blk\+\_\+number@{max\+\_\+blk\+\_\+number}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{max\+\_\+blk\+\_\+number}{max\_blk\_number}}
+{\footnotesize\ttfamily unsigned short Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::max\+\_\+blk\+\_\+number\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_a6f0cd9c0147ba3acc5290d443db8d7d8}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!tile\+Border\+Width@{tile\+Border\+Width}}
+\index{tile\+Border\+Width@{tile\+Border\+Width}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{tile\+Border\+Width}{tileBorderWidth}}
+{\footnotesize\ttfamily float Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::tile\+Border\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}\label{class_code_lady_j_j_y_1_1game2048_1_1_game_scene_ab307f78ad0015cd32b2c71483fcb3cc5}} 
+\index{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}!tile\+Width@{tile\+Width}}
+\index{tile\+Width@{tile\+Width}!Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene@{Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene}}
+\subsubsection{\texorpdfstring{tile\+Width}{tileWidth}}
+{\footnotesize\ttfamily float Code\+Lady\+J\+J\+Y\+::game2048\+::\+Game\+Scene\+::tile\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Scene.\+hpp 파일의 38 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/externalgames/ Code\+Lady\+J\+J\+Y/game2048/\hyperlink{_game_scene_8hpp}{Game\+Scene.\+hpp}\end{DoxyCompactItemize}

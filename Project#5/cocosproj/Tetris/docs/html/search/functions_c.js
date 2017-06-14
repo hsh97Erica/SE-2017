@@ -1,13 +1,15 @@
 var searchData=
 [
-  ['packrawcolordata',['packRawColorData',['../class_tetris_1_1_block_sub_modules_1_1_block_color.html#a849ebbb0e900c5efdcb99784767e7a7a',1,'Tetris::BlockSubModules::BlockColor']]],
-  ['pause',['pause',['../class_hello_world.html#af72bece97d2fe997936df92723636298',1,'HelloWorld::pause()'],['../class_tetris_1_1_game_controller.html#a1f55b577248e34b4e0902ce114610edd',1,'Tetris::GameController::pause()'],['../class_tetris_1_1_game_controller.html#a1f55b577248e34b4e0902ce114610edd',1,'Tetris::GameController::pause()']]],
-  ['pclose',['pclose',['../shell_8c.html#a92e41b535f1505676ed8cbe5896606d5',1,'shell.c']]],
-  ['play',['play',['../class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944',1,'HelloWorld::play()'],['../class_tetris_1_1_game_controller.html#a766a7537d955c62969f2e4b7c0b3c73d',1,'Tetris::GameController::play()'],['../class_tetris_1_1_game_controller.html#a766a7537d955c62969f2e4b7c0b3c73d',1,'Tetris::GameController::play()']]],
-  ['playremovingblockseffect',['playRemovingBlocksEffect',['../class_tetris_1_1_audio_1_1_audio_source_manager.html#a44c761f0200291a2c8f282d8d52aa081',1,'Tetris::Audio::AudioSourceManager']]],
-  ['popen',['popen',['../shell_8c.html#a31dd4384020447c7d99d0e4aace6f17a',1,'shell.c']]],
-  ['print',['print',['../class_tmp_cls.html#a1f0f7804e9a13c4a3e34f697ec2a49d5',1,'TmpCls']]],
-  ['printcurrentboard',['printcurrentboard',['../class_tetris_1_1_game_controller.html#a5553ac767c6065148b7c332f59251e76',1,'Tetris::GameController::printcurrentboard()'],['../class_tetris_1_1_game_controller.html#a5553ac767c6065148b7c332f59251e76',1,'Tetris::GameController::printcurrentboard()']]],
-  ['printposinfo',['printposinfo',['../class_tetris_1_1_game_controller.html#a269da7d33475ae2f327ee9a51f02ef52',1,'Tetris::GameController::printposinfo()'],['../class_tetris_1_1_game_controller.html#a269da7d33475ae2f327ee9a51f02ef52',1,'Tetris::GameController::printposinfo()']]],
-  ['printspace',['printspace',['../class_tetris_1_1_block.html#ae7aadeec449fec232e9635d839593028',1,'Tetris::Block::printspace()'],['../class_tetris_1_1_block.html#ae7aadeec449fec232e9635d839593028',1,'Tetris::Block::printspace()']]]
+  ['levelup',['levelup',['../d9/d98/class_hello_world.html#af1590254503ba391a084d767df2dd858',1,'HelloWorld::levelup()'],['../d8/d9a/class_tetris_1_1_users_1_1_game_user.html#ae5f2fd276485ee3f677896c3cc03462a',1,'Tetris::Users::GameUser::levelup()']]],
+  ['leveluponce',['levelupOnce',['../d8/d9a/class_tetris_1_1_users_1_1_game_user.html#af8ec964e749d90e60df8a4d7c63b4017',1,'Tetris::Users::GameUser']]],
+  ['line_5fcontains_5fsemicolon',['line_contains_semicolon',['../d6/d4f/shell_8c.html#a024aba96902e971c529231fc190eb2dd',1,'shell.c']]],
+  ['line_5fis_5fcommand_5fterminator',['line_is_command_terminator',['../d6/d4f/shell_8c.html#a5ec09164eaef2f04563ef1f1e4237905',1,'shell.c']]],
+  ['line_5fis_5fcomplete',['line_is_complete',['../d6/d4f/shell_8c.html#a1df76818e31435c7931c2887ff412f1a',1,'shell.c']]],
+  ['lintdotcommand',['lintDotCommand',['../d6/d4f/shell_8c.html#ac2f6e16d8f424eedf80e07c021ab1c0f',1,'shell.c']]],
+  ['lintfkeyindexes',['lintFkeyIndexes',['../d6/d4f/shell_8c.html#a84fb215c17aeff373af2262b1bb4042a',1,'shell.c']]],
+  ['loaduserdatafromexistlocation',['loadUserDataFromExistLocation',['../d8/d9a/class_tetris_1_1_users_1_1_game_user.html#a730bd78525a4802685b53c67b38eca0c',1,'Tetris::Users::GameUser']]],
+  ['local_5fgetline',['local_getline',['../d6/d4f/shell_8c.html#ad885bb5dca992fbc1e19f9a35b2e6590',1,'shell.c']]],
+  ['logdberr',['logdberr',['../da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a6b723e555cef747b7402661eb960bd78',1,'Tetris::DBManagement::DBManager']]],
+  ['lvup',['lvup',['../d8/d9a/class_tetris_1_1_users_1_1_game_user.html#ad7bdfbb3fc18ca0a1cdfcb34faaed6ff',1,'Tetris::Users::GameUser']]],
+  ['lvup_5fv2',['lvup_v2',['../d8/d9a/class_tetris_1_1_users_1_1_game_user.html#aacc605ed22d2b982a106659ef94fb3c9',1,'Tetris::Users::GameUser']]]
 ];

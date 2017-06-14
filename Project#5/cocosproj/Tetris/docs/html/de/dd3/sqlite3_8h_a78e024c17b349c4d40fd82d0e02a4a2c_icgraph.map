@@ -1,0 +1,16 @@
+<map id="sqlite3_value_text" name="sqlite3_value_text">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#a51833bed43d580b8380a1e1bec8eb700" title="sha3Func" alt="" coords="221,54,301,79"/>
+<area shape="rect" id="node10" href="$d6/d4f/shell_8c.html#a45605123477af036a543563ae898a111" title="sha3QueryFunc" alt="" coords="203,103,319,129"/>
+<area shape="rect" id="node11" href="$d6/d4f/shell_8c.html#a55e9c691f5db117b63ac1f8912663eaa" title="readfileFunc" alt="" coords="214,153,309,178"/>
+<area shape="rect" id="node12" href="$d6/d4f/shell_8c.html#a11e5af10ab390682cf8fce9a534da02c" title="writefileFunc" alt="" coords="213,5,309,30"/>
+<area shape="rect" id="node13" href="$d6/d4f/shell_8c.html#ab58b75d6f4760b9352046b71749bcbc4" title="shellFkeyCollateClause" alt="" coords="181,202,342,227"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#addd9d96dc61d55020cbbd8eaff73fdc2" title="open_db" alt="" coords="410,78,483,103"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#ae14540c85a0c98d51e624a74a054cd50" title="shell_dbinfo_command" alt="" coords="553,101,711,126"/>
+<area shape="rect" id="node5" href="$d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1" title="do_meta_command" alt="" coords="760,138,899,163"/>
+<area shape="rect" id="node8" href="$d6/d4f/shell_8c.html#ac931daf5abf20567dcdd053c22142b95" title="main" alt="" coords="1264,75,1314,101"/>
+<area shape="rect" id="node9" href="$d6/d4f/shell_8c.html#ad8935106a498f906f5667d205623dfa3" title="runOneSqlLine" alt="" coords="774,75,884,101"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#a28ee64282e3608a01508cc72b184cdb2" title="process_input" alt="" coords="946,101,1051,126"/>
+<area shape="rect" id="node7" href="$d6/d4f/shell_8c.html#a121d06853a2e10f82487dd74adcb8525" title="process_sqliterc" alt="" coords="1098,50,1216,75"/>
+<area shape="rect" id="node14" href="$d6/d4f/shell_8c.html#a84fb215c17aeff373af2262b1bb4042a" title="lintFkeyIndexes" alt="" coords="390,202,504,227"/>
+<area shape="rect" id="node15" href="$d6/d4f/shell_8c.html#ac2f6e16d8f424eedf80e07c021ab1c0f" title="lintDotCommand" alt="" coords="572,202,692,227"/>
+</map>

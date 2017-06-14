@@ -1,0 +1,5 @@
+<map id="CodeLadyJJY::game2048::GameScene::calcScore" name="CodeLadyJJY::game2048::GameScene::calcScore">
+<area shape="rect" id="node2" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a332a574da455fb687b5d283399a6976c" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getInstance" alt="" coords="252,5,455,43"/>
+<area shape="rect" id="node3" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#abd34ec6afe537cccfd469f2e1fc090fc" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::setInnerGameScore" alt="" coords="230,67,477,106"/>
+<area shape="rect" id="node4" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a5a18f6b50e0a4d8b4a92b13e1fb3fd85" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::setCurrentNumber" alt="" coords="235,130,472,169"/>
+</map>

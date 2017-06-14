@@ -1,0 +1,14 @@
+<map id="sqlite3_realloc64" name="sqlite3_realloc64">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#ab3d16510062eb32cbb278eaf8d92bf40" title="explain_data_prepare" alt="" coords="177,119,327,145"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1" title="do_meta_command" alt="" coords="925,170,1064,195"/>
+<area shape="rect" id="node11" href="$d6/d4f/shell_8c.html#a7f9859493159d29216b52e19bcee70d2" title="import_append_char" alt="" coords="510,283,653,309"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#ae291a1d4b6ba24a214969111e187d9ef" title="shell_exec" alt="" coords="376,94,461,119"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#a57a4b1600ae8c8582a996ee3e4299494" title="dump_callback" alt="" coords="526,94,636,119"/>
+<area shape="rect" id="node9" href="$d6/d4f/shell_8c.html#ac931daf5abf20567dcdd053c22142b95" title="main" alt="" coords="1430,94,1480,119"/>
+<area shape="rect" id="node10" href="$d6/d4f/shell_8c.html#ad8935106a498f906f5667d205623dfa3" title="runOneSqlLine" alt="" coords="940,69,1050,94"/>
+<area shape="rect" id="node5" href="$d6/d4f/shell_8c.html#ad779d0d1b64b032187a57c9106ca82fb" title="run_schema_dump_query" alt="" coords="701,94,877,119"/>
+<area shape="rect" id="node7" href="$d6/d4f/shell_8c.html#a28ee64282e3608a01508cc72b184cdb2" title="process_input" alt="" coords="1112,119,1216,145"/>
+<area shape="rect" id="node8" href="$d6/d4f/shell_8c.html#a121d06853a2e10f82487dd74adcb8525" title="process_sqliterc" alt="" coords="1264,119,1382,145"/>
+<area shape="rect" id="node12" href="$d6/d4f/shell_8c.html#adfe221d084edef840bb79fba9fb15415" title="csv_read_one_field" alt="" coords="721,246,858,271"/>
+<area shape="rect" id="node13" href="$d6/d4f/shell_8c.html#a6ba93580d406f8a3de0be001531a0ed1" title="ascii_read_one_field" alt="" coords="718,295,861,321"/>
+</map>

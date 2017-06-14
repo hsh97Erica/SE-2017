@@ -1,6 +1,6 @@
 <map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
-<area shape="rect" id="node2" href="$class_hello_world.html" title="메인 게임창 클래스 " alt="" coords="148,5,234,30"/>
-<area shape="rect" id="node3" href="$class_main_game.html" title="MainGame" alt="" coords="147,54,234,79"/>
-<area shape="rect" id="node4" href="$class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html" title="프로그램 실행시 맨처음 뜨는창 " alt="" coords="112,103,270,142"/>
-<area shape="rect" id="node5" href="$class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene.html" title="이전에 플레이한 테트리스의 기록을 보여주는 창의 클래스 " alt="" coords="112,166,270,205"/>
+<area shape="rect" id="node2" href="$d9/d98/class_hello_world.html" title="메인 게임창 클래스 " alt="" coords="148,5,234,30"/>
+<area shape="rect" id="node3" href="$df/d8a/class_main_game.html" title="MainGame" alt="" coords="147,54,234,79"/>
+<area shape="rect" id="node4" href="$dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html" title="프로그램 실행시 맨처음 뜨는창 " alt="" coords="112,103,270,142"/>
+<area shape="rect" id="node5" href="$dc/dc7/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene.html" title="이전에 플레이한 테트리스의 기록을 보여주는 창의 클래스 " alt="" coords="112,166,270,205"/>
 </map>

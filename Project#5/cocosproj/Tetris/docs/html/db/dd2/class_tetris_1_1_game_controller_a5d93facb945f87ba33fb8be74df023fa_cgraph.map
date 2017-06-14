@@ -1,0 +1,7 @@
+<map id="Tetris::GameController::currentblockrotate" name="Tetris::GameController::currentblockrotate">
+<area shape="rect" id="node2" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#a3d4bcc74d518c28356012f8a42b85896" title="Tetris::Users::GameUser\l::getCurrentBlock" alt="" coords="208,5,376,43"/>
+<area shape="rect" id="node3" href="$df/d05/class_tetris_1_1_block.html#a56d194d0a5d56d2d1220ec32774cea38" title="Tetris::Block::canRotate" alt="" coords="211,67,373,93"/>
+<area shape="rect" id="node4" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#af5bd7ff0b575af1b42b093488cff97e2" title="Tetris::Users::GameUser\l::getCurrentY" alt="" coords="208,117,376,155"/>
+<area shape="rect" id="node5" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#ad25eace96bd27ae6df4a0c0d506be730" title="Tetris::Users::GameUser\l::getCurrentX" alt="" coords="208,179,376,218"/>
+<area shape="rect" id="node6" href="$df/d05/class_tetris_1_1_block.html#a0d1eb57e6da91832ad983f7a4fa9ca04" title="Tetris::Block::rotate" alt="" coords="225,242,359,267"/>
+</map>

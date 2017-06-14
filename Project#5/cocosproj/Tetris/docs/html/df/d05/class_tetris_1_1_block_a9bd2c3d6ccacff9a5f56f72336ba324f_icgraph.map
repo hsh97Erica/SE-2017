@@ -1,0 +1,11 @@
+<map id="Tetris::Block::getBlockData" name="Tetris::Block::getBlockData">
+<area shape="rect" id="node2" href="$db/dd2/class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a" title="Tetris::GameController\l::checkEnd" alt="" coords="269,5,424,43"/>
+<area shape="rect" id="node3" href="$db/dd2/class_tetris_1_1_game_controller.html#a78b39bdb39707e119d6e708bdb2aca17" title="Tetris::GameController\l::getVisualizedBoard" alt="" coords="269,67,424,106"/>
+<area shape="rect" id="node4" href="$db/dd2/class_tetris_1_1_game_controller.html#ae541cf926ccdce47a185c94a0c80b642" title="Tetris::GameController\l::canmoveleft" alt="" coords="269,130,424,169"/>
+<area shape="rect" id="node5" href="$db/dd2/class_tetris_1_1_game_controller.html#a6c8189bb893502049396a7de1a73a88c" title="Tetris::GameController\l::canmoveright" alt="" coords="269,193,424,231"/>
+<area shape="rect" id="node6" href="$db/dd2/class_tetris_1_1_game_controller.html#ac4993d5ad8640ac617fec341fdb301ee" title="Tetris::GameController\l::candropdown" alt="" coords="269,255,424,294"/>
+<area shape="rect" id="node7" href="$db/dd2/class_tetris_1_1_game_controller.html#adc067380df0f0da4ea4a358d00d6a123" title="Tetris::GameController\l::saveBlockAt" alt="" coords="269,318,424,357"/>
+<area shape="rect" id="node8" href="$db/dd2/class_tetris_1_1_game_controller.html#a6c22f25017881f6150428b62e4607310" title="Tetris::GameController\l::getCombinedBoard" alt="" coords="269,381,424,419"/>
+<area shape="rect" id="node9" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#a1962ed051506010440645f7f3b50760d" title="Tetris::Users::GameUser\l::canSwitchBlock" alt="" coords="263,443,430,482"/>
+<area shape="rect" id="node10" href="$d5/da8/class_tetris_1_1_views_1_1_next_block_render_behavior.html#aa9240528e0603ca129d7877f9e71b27d" title="Tetris::Views::NextBlock\lRenderBehavior::renderNextBlock" alt="" coords="235,506,458,545"/>
+</map>

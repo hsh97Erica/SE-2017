@@ -1,0 +1,11 @@
+<map id="Tetris::Views::NextBlockRenderBehavior::renderNextBlock" name="Tetris::Views::NextBlockRenderBehavior::renderNextBlock">
+<area shape="rect" id="node2" href="$df/d05/class_tetris_1_1_block.html#a5301977e32c03aaf122fa289fcba77ba" title="Tetris::Block::getBlockSpace\lHeight" alt="" coords="283,5,472,43"/>
+<area shape="rect" id="node3" href="$df/d05/class_tetris_1_1_block.html#ac390e14de476582300d815d9054ed9bd" title="Tetris::Block::getBlockSpace\lWidth" alt="" coords="283,67,472,106"/>
+<area shape="rect" id="node4" href="$df/d05/class_tetris_1_1_block.html#ad61aea379870fbb3668d49e4c3c748ed" title="Tetris::Block::getBlockColor" alt="" coords="286,130,469,155"/>
+<area shape="rect" id="node5" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac626961ee3894d89a7fc961e9f40c92f" title="Tetris::BlockSubModules\l::BlockColor::getColorAsArray" alt="" coords="278,179,477,218"/>
+<area shape="rect" id="node10" href="$df/d05/class_tetris_1_1_block.html#a9bd2c3d6ccacff9a5f56f72336ba324f" title="Tetris::Block::getBlockData" alt="" coords="287,242,467,267"/>
+<area shape="rect" id="node6" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#acb1c9b34ee534857741025bd2824201a" title="Tetris::BlockSubModules\l::BlockColor::getAlphaAsRaw" alt="" coords="528,85,723,123"/>
+<area shape="rect" id="node7" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a1795cf70c847d261645a9690afff7e9c" title="Tetris::BlockSubModules\l::BlockColor::getRedAsRaw" alt="" coords="532,147,718,186"/>
+<area shape="rect" id="node8" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a65e9230325a2f44aa433f39c199aabcd" title="Tetris::BlockSubModules\l::BlockColor::getGreenAsRaw" alt="" coords="526,210,725,249"/>
+<area shape="rect" id="node9" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac0ad44a8b001f3824447d137357f5145" title="Tetris::BlockSubModules\l::BlockColor::getBlueAsRaw" alt="" coords="531,273,719,311"/>
+</map>

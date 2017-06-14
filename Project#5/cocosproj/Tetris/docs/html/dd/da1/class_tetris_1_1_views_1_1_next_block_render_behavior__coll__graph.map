@@ -1,0 +1,4 @@
+<map id="Tetris::Views::NextBlockRenderBehavior" name="Tetris::Views::NextBlockRenderBehavior">
+<area shape="rect" id="node3" href="$db/dd2/class_tetris_1_1_game_controller.html" title="테트리스게임을 실질적으로 관리하는 클래스 " alt="" coords="90,169,288,605"/>
+<area shape="rect" id="node4" href="$dc/dbc/class_tetris_1_1_init_game_info.html" title="{Tetris::InitGameInfo\n|+ gameHeight\l+ gameWidth\l+ gamemode\l|}" alt="" coords="121,6,257,106"/>
+</map>

@@ -1,0 +1,1693 @@
+\hypertarget{class_hello_world}{}\section{Hello\+World 클래스 참조}
+\label{class_hello_world}\index{Hello\+World@{Hello\+World}}
+
+
+메인 게임창 클래스  
+
+
+
+
+{\ttfamily \#include $<$Hello\+World\+Scene.\+h$>$}
+
+
+
+Hello\+World에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d2/da7/class_hello_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Hello\+World에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d9/d20/class_hello_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_hello_world_a65e2b1525051f3690e5a39ca56608a97}{init} ()
+\item 
+virtual void \hyperlink{class_hello_world_a0e47c5b1692f5ba74b776be85422dc75}{on\+Enter} ()
+\item 
+virtual void \hyperlink{class_hello_world_a348da8e1c3061248666676878e692572}{on\+Exit} ()
+\item 
+void \hyperlink{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}{menu\+Close\+Callback} (cocos2d\+::\+Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}{menu\+Drawer\+Click\+Callback} (cocos2d\+::\+Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}{gameforce\+Resume\+Menu\+Callback} (Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_ac202dde4f557f0b9b6c3d150da4eec65}{gameforce\+Pause\+Menu\+Callback} (Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_a73ad0d041144a1e610534fe5df41d556}{game\+Restart\+Game\+Callback} (Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_aa0aab5c2537449752853c2924db53261}{menu\+Sound\+Enable\+Callback} (cocos2d\+::\+Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_aa4c36099096e160e3726819a2308dd04}{start\+Game} ()
+\item 
+void \hyperlink{class_hello_world_a0456ce3ab8880643c5e8739634156d93}{drawboardingui} (char $\ast$$\ast$board, unsigned char $\ast$clr)
+\item 
+\hyperlink{class_hello_world_a857ebfbc49f3a7f81772bee4991d186b}{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC} (\hyperlink{class_hello_world}{Hello\+World})
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static cocos2d\+::\+Scene $\ast$ \hyperlink{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}{create\+Scene} ()
+\end{DoxyCompactItemize}
+\subsection*{데이터 필드}
+\begin{DoxyCompactItemize}
+\item 
+Menu\+Item\+Label $\ast$ \hyperlink{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}{sounditem} = N\+U\+LL
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}{make\+Field} ()
+\item 
+void \hyperlink{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}{play} (float dt)
+\item 
+void \hyperlink{class_hello_world_af72bece97d2fe997936df92723636298}{pause} ()
+\item 
+void \hyperlink{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}{resume} ()
+\item 
+void \hyperlink{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}{stateloop} (float dt)
+\item 
+void \hyperlink{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}{gameloop} (float dt)
+\item 
+void \hyperlink{class_hello_world_af1590254503ba391a084d767df2dd858}{levelup} (float dt)
+\item 
+void \hyperlink{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}{menu\+Visible\+Toggle} (bool autopauseorpause)
+\item 
+void \hyperlink{class_hello_world_ab2e9dbd1b003e6d26a10a76495efcc2a}{free\+Relative\+Connection\+When\+Deleting} ()
+\item 
+virtual void \hyperlink{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}{on\+Key\+Pressed} (\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code} key\+Code, cocos2d\+::\+Event $\ast$event)
+\item 
+virtual void \hyperlink{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}{on\+Key\+Released} (\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code} key\+Code, cocos2d\+::\+Event $\ast$event)
+\item 
+cocos2d\+::\+Menu $\ast$ \hyperlink{class_hello_world_a24162678657656105f59887233f9c841}{generate\+Option\+Menu} ()
+\item 
+cocos2d\+::\+Menu $\ast$ \hyperlink{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}{generate\+Game\+Over\+Menu} ()
+\item 
+void \hyperlink{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}{add\+Or\+Remove2048\+Game\+View} (bool remove)
+\item 
+cocos2d\+::\+Event\+Listener\+Keyboard $\ast$ \hyperlink{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}{create\+New\+K\+Listener} ()
+\item 
+void \hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{remove\+K\+Listener\+For\+Main\+Game} ()
+\item 
+void \hyperlink{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}{register\+K\+Listener\+For\+Main\+Game} ()
+\item 
+bool \hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{read\+Sound\+Enable} ()
+\item 
+string \hyperlink{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}{get\+Menu\+Text\+Sound\+Enabler} (bool enable)
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tetris_1_1_game_controller}{Tetris\+::\+Game\+Controller} $\ast$ \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 게임 관리 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Layer $\ast$ \hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{overlayblockboard} =N\+U\+LL
+\item 
+cocos2d\+::\+S\+E\+L\+\_\+\+S\+C\+H\+E\+D\+U\+LE \hyperlink{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}{mainloopfuncschedule} = N\+U\+LL
+\item 
+cocos2d\+::\+Label $\ast$ \hyperlink{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}{ptimelbl} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 플레이시간을 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Label $\ast$ \hyperlink{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}{pscorelbl} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 점수를 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Label $\ast$ \hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 지운 줄 수를 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Layer $\ast$ \hyperlink{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}{nxtblkrenderingarea} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 플레이시간을 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Menu $\ast$ \hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu} = N\+U\+LL
+\item 
+\hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior}{Views\+::\+Next\+Block\+Render\+Behavior} $\ast$ \hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv} = N\+U\+LL
+\item 
+bool \hyperlink{class_hello_world_a1e1896c9d67df38903e55eb6782978d8}{menuviewadded} = false
+\item 
+cocos2d\+::\+Event\+Listener\+Keyboard $\ast$ \hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\+\_\+listener} = N\+U\+LL
+\item 
+unsigned short \hyperlink{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}{bonus\+\_\+game\+\_\+lv}
+\begin{DoxyCompactList}\small\item\em 보너스 게임이 나타날 최소조건의 점수가 2의 승수 이상임을 체크하는 변수 \end{DoxyCompactList}\item 
+bool \hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{is\+In\+Ext\+Game} = false
+\begin{DoxyCompactList}\small\item\em 보너스게임의 실행 여부 \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_hello_world_a165832200ec4d9ee283167ac727eeade}{effect\+\_\+ext\+\_\+2048gm}
+\begin{DoxyCompactList}\small\item\em 보너스게임의 bgm을 관리하는 id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+메인 게임창 클래스 
+
+Hello\+World\+Scene.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}\label{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}} 
+\index{Hello\+World@{Hello\+World}!add\+Or\+Remove2048\+Game\+View@{add\+Or\+Remove2048\+Game\+View}}
+\index{add\+Or\+Remove2048\+Game\+View@{add\+Or\+Remove2048\+Game\+View}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{add\+Or\+Remove2048\+Game\+View()}{addOrRemove2048GameView()}}
+{\footnotesize\ttfamily void Hello\+World\+::add\+Or\+Remove2048\+Game\+View (\begin{DoxyParamCaption}\item[{bool}]{remove }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+보너스게임을 실행하거나 종료할때 보너스게임을 보여주거나 사라지게하는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 246 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+246                                                    \{
+247     \textcolor{keywordflow}{if}(\textcolor{keyword}{remove})\{
+248         \textcolor{keyword}{auto} nd = this->getChildByTag(2048);
+249         this->removeChild(nd);
+250         \hyperlink{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}{registerKListenerForMainGame}();
+251         \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+252         CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+253         \}
+254         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopEffect(
+      \hyperlink{class_hello_world_a165832200ec4d9ee283167ac727eeade}{effect\_ext\_2048gm});
+255     \}\textcolor{keywordflow}{else}\{
+256         CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+257         \hyperlink{class_hello_world_a165832200ec4d9ee283167ac727eeade}{effect\_ext\_2048gm}=CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(\textcolor{stringliteral}{"
+      res/bgms/2048gamebgm.mp3"},\textcolor{keyword}{true});
+258         \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+259             CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseEffect(
+      \hyperlink{class_hello_world_a165832200ec4d9ee283167ac727eeade}{effect\_ext\_2048gm});
+260         \}
+261         \textcolor{keyword}{auto} layer2048 =Cocos2dScenes::SceneInstanceManager::createGame2048Layer();
+262         \textcolor{comment}{//layer2048->setSceneDelegateCls(hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance());}
+263         layer2048->setTag(2048);
+264         \hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{removeKListenerForMainGame}();
+265         \textcolor{keyword}{auto} sz = this->getContentSize();
+266         layer2048->setPosition(Vec2(0,0)); \textcolor{comment}{//sz.width/2,sz.height/2));}
+267         layer2048->setContentSize(sz);
+268         this->addChild(layer2048);
+269         
+270     \}
+271 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_a857ebfbc49f3a7f81772bee4991d186b}\label{class_hello_world_a857ebfbc49f3a7f81772bee4991d186b}} 
+\index{Hello\+World@{Hello\+World}!C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}}
+\index{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+N\+C()}{CREATE\_FUNC()}}
+{\footnotesize\ttfamily Hello\+World\+::\+C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{\hyperlink{class_hello_world}{Hello\+World}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}\label{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}} 
+\index{Hello\+World@{Hello\+World}!create\+New\+K\+Listener@{create\+New\+K\+Listener}}
+\index{create\+New\+K\+Listener@{create\+New\+K\+Listener}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{create\+New\+K\+Listener()}{createNewKListener()}}
+{\footnotesize\ttfamily Event\+Listener\+Keyboard $\ast$ Hello\+World\+::create\+New\+K\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+키보드 값을 받는 이벤트 객체 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 87 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+87                                                      \{
+88     \textcolor{keyword}{auto} rst = EventListenerKeyboard::create();
+89     rst->onKeyPressed = CC\_CALLBACK\_2(\hyperlink{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}{HelloWorld::onKeyPressed}, \textcolor{keyword}{this});
+90     rst->onKeyReleased = CC\_CALLBACK\_2(\hyperlink{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}{HelloWorld::onKeyReleased}, \textcolor{keyword}{this});
+91     \textcolor{keywordflow}{return} rst;
+92 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}\label{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}} 
+\index{Hello\+World@{Hello\+World}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily Scene $\ast$ Hello\+World\+::create\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keywordflow}{return} HelloWorld::create();
+30 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a1b700f5f9de04271533d3fa099d7b014_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a0456ce3ab8880643c5e8739634156d93}\label{class_hello_world_a0456ce3ab8880643c5e8739634156d93}} 
+\index{Hello\+World@{Hello\+World}!drawboardingui@{drawboardingui}}
+\index{drawboardingui@{drawboardingui}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{drawboardingui()}{drawboardingui()}}
+{\footnotesize\ttfamily void Hello\+World\+::drawboardingui (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{board,  }\item[{unsigned char $\ast$}]{blk\+\_\+clr }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{반환값}
+떨어지는 블럭이나 저장된 블럭의 위치의 블럭을 그려주는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 275 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+275                                                                   \{
+276     \textcolor{keywordflow}{if}(board==NULL)\{
+277         \textcolor{keywordflow}{return};
+278     \}
+279     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+280     \textcolor{keyword}{const} \textcolor{keywordtype}{int} hei = (int)\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a10163479e02572450b886ff0654078b4}{getGameHeight}();
+281     \textcolor{keyword}{const} \textcolor{keywordtype}{int} wid = (int)\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a256cff75224efe165e1c5409c69b0503}{getGameWidth}();
+282     \textcolor{keyword}{auto} visibleSize = Director::getInstance()->getVisibleSize();
+283     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+284     \textcolor{keyword}{const} \textcolor{keywordtype}{float} gapratio = 0.05f;
+285     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echhei = (int)(((1.0f -gapratio)*(\textcolor{keywordtype}{float})visibleSize.height)/hei);
+286     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echwid =  (int)(((1.0f -gapratio)*(float)visibleSize.width)/wid);
+287     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echsz = min(echhei,echwid);
+288     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gapwid = visibleSize.width-echsz*wid;
+289     
+290     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gaphei = visibleSize.height-echsz*hei;
+291     Layer* newlyr = Layer::create();
+292     newlyr->setPosition(Vec2(gapwid/2,gaphei/2));
+293     newlyr->setContentSize(Size(echsz*wid, echsz*hei));
+294     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < hei; i++) \{
+295         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < wid; j++) \{
+296             \textcolor{keywordflow}{if}(board[i][j]==\textcolor{charliteral}{'2'}||board[i][j]==\textcolor{charliteral}{'1'})\{
+297             \textcolor{keyword}{auto} rectNode = DrawNode::create();
+298             Vec2 rect[4];
+299             rect[0] = Vec2(echsz*j,echsz*i);
+300             rect[1] = Vec2(echsz*(j+1),echsz*i);
+301             rect[2] = Vec2(echsz*(j+1),echsz*(i+1));
+302             rect[3] = Vec2(echsz*j,echsz*(i+1));
+303             Color4F white(1,1,1,1);
+304             Color4F transp(0,0,0,0);
+305                 Color4F lightwhite(1,1,1,0.7f);
+306             
+307                 \textcolor{keywordflow}{if}(board[i][j]==\textcolor{charliteral}{'2'}||board[i][j]==2)\{
+308                     Color4F blockcolor(((\textcolor{keywordtype}{float})blk\_clr[1])/255.0f,((\textcolor{keywordtype}{float})blk\_clr[2])/255.0f,((\textcolor{keywordtype}{float})
+      blk\_clr[3])/255.0f,((\textcolor{keywordtype}{float})blk\_clr[0])/255.0f);
+309                     rectNode->drawPolygon(rect, 4, blockcolor, 0.7f, lightwhite);
+310                 \}
+311                 \textcolor{keywordflow}{else}\{
+312                     Color4F gray(0.5f,0.5f,0.5f,1);
+313                     rectNode->drawPolygon(rect, 4, gray, 0.7f, lightwhite);
+314                 \}
+315             newlyr->addChild(rectNode);
+316             \}
+317         \}
+318     \}
+319     \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{HelloWorld::overlayblockboard}!=NULL)\{
+320         this->removeChild(\hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{HelloWorld::overlayblockboard},\textcolor{keyword}{true});
+321         \hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{HelloWorld::overlayblockboard}=NULL;
+322     \}
+323     \hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{HelloWorld::overlayblockboard} = newlyr;
+324     this->addChild(\hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{HelloWorld::overlayblockboard});
+325 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a0456ce3ab8880643c5e8739634156d93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_ab2e9dbd1b003e6d26a10a76495efcc2a}\label{class_hello_world_ab2e9dbd1b003e6d26a10a76495efcc2a}} 
+\index{Hello\+World@{Hello\+World}!free\+Relative\+Connection\+When\+Deleting@{free\+Relative\+Connection\+When\+Deleting}}
+\index{free\+Relative\+Connection\+When\+Deleting@{free\+Relative\+Connection\+When\+Deleting}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{free\+Relative\+Connection\+When\+Deleting()}{freeRelativeConnectionWhenDeleting()}}
+{\footnotesize\ttfamily void Hello\+World\+::free\+Relative\+Connection\+When\+Deleting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 417 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+417                                                    \{
+418     Director::getInstance()->getEventDispatcher()->release();
+419     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}!=NULL)\{
+420         this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_aef406397d4719c9edd49774d0343ce05}{justinit}();
+421         this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a3c5e6034b2e2faf70371a13eb5f9c5bb}{setGameStatusToEnd}();
+422         \textcolor{comment}{//this->gc=NULL;}
+423     \}
+424     
+425 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_ac202dde4f557f0b9b6c3d150da4eec65}\label{class_hello_world_ac202dde4f557f0b9b6c3d150da4eec65}} 
+\index{Hello\+World@{Hello\+World}!gameforce\+Pause\+Menu\+Callback@{gameforce\+Pause\+Menu\+Callback}}
+\index{gameforce\+Pause\+Menu\+Callback@{gameforce\+Pause\+Menu\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameforce\+Pause\+Menu\+Callback()}{gameforcePauseMenuCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::gameforce\+Pause\+Menu\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 694 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+694                                                        \{
+695     \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_aecd04e471f7819a8b3f80e0dda748bdc}{isOngoing}())\{
+696         \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a1f55b577248e34b4e0902ce114610edd}{pause}();
+697     \}
+698 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}\label{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}} 
+\index{Hello\+World@{Hello\+World}!gameforce\+Resume\+Menu\+Callback@{gameforce\+Resume\+Menu\+Callback}}
+\index{gameforce\+Resume\+Menu\+Callback@{gameforce\+Resume\+Menu\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameforce\+Resume\+Menu\+Callback()}{gameforceResumeMenuCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::gameforce\+Resume\+Menu\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 684 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+684                                                         \{
+685     \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a18e513f45750361e14af091704e9f1d4}{isPaused}()&&!\hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{isInExtGame})\{
+686         \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ab9ff093ea91e3d248a8a287289e758b0}{resume}();
+687     \}
+688     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu}!=NULL)\{
+689         this->removeChild(this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu});
+690         this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu}=NULL;
+691     \}
+692 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}\label{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}} 
+\index{Hello\+World@{Hello\+World}!gameloop@{gameloop}}
+\index{gameloop@{gameloop}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameloop()}{gameloop()}}
+{\footnotesize\ttfamily void Hello\+World\+::gameloop (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+Game\+Controller에서 진행되는 게임 상황을 gui에 그려주는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 329 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+329                                  \{
+330     \textcolor{comment}{//cout<<"call HelloWorld::gameloop()"<<endl;}
+331     \textcolor{keywordtype}{char}** board = \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_a9dd5159934835ef54cb3c0b24cbc1fd6}{innergameloop}();
+332     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* blkclr = \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->
+      \hyperlink{class_tetris_1_1_users_1_1_game_user_a3d4bcc74d518c28356012f8a42b85896}{getCurrentBlock}()->\hyperlink{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}{getBlockColor}()->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac626961ee3894d89a7fc961e9f40c92f}{getColorAsArray}();
+333     \hyperlink{class_hello_world_a0456ce3ab8880643c5e8739634156d93}{HelloWorld::drawboardingui}(board,blkclr);
+334     this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->\hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior_aa9240528e0603ca129d7877f9e71b27d}{renderNextBlock}();
+335     \textcolor{keywordflow}{if}(board!=NULL)\{
+336         
+337         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_a10163479e02572450b886ff0654078b4}{getGameHeight}();i++)\{
+338             \textcolor{keyword}{delete} [] board[i];
+339         \}
+340         \textcolor{keyword}{delete} [] board;
+341     \}
+342     \textcolor{keywordflow}{if}(blkclr!=NULL)
+343     \textcolor{keyword}{delete} [] blkclr;
+344 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a73ad0d041144a1e610534fe5df41d556}\label{class_hello_world_a73ad0d041144a1e610534fe5df41d556}} 
+\index{Hello\+World@{Hello\+World}!game\+Restart\+Game\+Callback@{game\+Restart\+Game\+Callback}}
+\index{game\+Restart\+Game\+Callback@{game\+Restart\+Game\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{game\+Restart\+Game\+Callback()}{gameRestartGameCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::game\+Restart\+Game\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 714 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+714                                                     \{
+715     \hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{removeKListenerForMainGame}();
+716     \textcolor{keyword}{auto} newscene =  \hyperlink{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}{HelloWorld::createScene}();
+717     Director::getInstance()->replaceScene(newscene);
+718 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a73ad0d041144a1e610534fe5df41d556_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a73ad0d041144a1e610534fe5df41d556_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}\label{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}} 
+\index{Hello\+World@{Hello\+World}!generate\+Game\+Over\+Menu@{generate\+Game\+Over\+Menu}}
+\index{generate\+Game\+Over\+Menu@{generate\+Game\+Over\+Menu}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{generate\+Game\+Over\+Menu()}{generateGameOverMenu()}}
+{\footnotesize\ttfamily Menu $\ast$ Hello\+World\+::generate\+Game\+Over\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+게임종료시 더할건지 나갈건지 물어보는 메뉴객체 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 677 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+677                                       \{
+678     \textcolor{keyword}{auto} item\_1 = MenuItemFont::create(\textcolor{stringliteral}{"재시작"}, CC\_CALLBACK\_1(
+      \hyperlink{class_hello_world_a73ad0d041144a1e610534fe5df41d556}{HelloWorld::gameRestartGameCallback}, \textcolor{keyword}{this}));
+679     \textcolor{keyword}{auto} item\_3 = MenuItemFont::create(\textcolor{stringliteral}{"종료"}, CC\_CALLBACK\_1(
+      \hyperlink{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}{HelloWorld::menuCloseCallback}, \textcolor{keyword}{this}));
+680     \textcolor{keyword}{auto} menu = Menu::create(item\_1,item\_3,NULL);
+681     menu->alignItemsHorizontally();
+682     \textcolor{keywordflow}{return} menu;
+683 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a7b22f04ccc721e47e59c4f5470768790_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a24162678657656105f59887233f9c841}\label{class_hello_world_a24162678657656105f59887233f9c841}} 
+\index{Hello\+World@{Hello\+World}!generate\+Option\+Menu@{generate\+Option\+Menu}}
+\index{generate\+Option\+Menu@{generate\+Option\+Menu}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{generate\+Option\+Menu()}{generateOptionMenu()}}
+{\footnotesize\ttfamily Menu $\ast$ Hello\+World\+::generate\+Option\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+메뉴 탭을 누르면 나타나는 메뉴객체 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 665 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+665                                     \{
+666     
+667     \textcolor{keyword}{auto} item\_1 = MenuItemFont::create(\textcolor{stringliteral}{"Exit"}, CC\_CALLBACK\_1(
+      \hyperlink{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}{HelloWorld::menuCloseCallback}, \textcolor{keyword}{this}));
+668      \hyperlink{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}{sounditem}= MenuItemFont::create(\hyperlink{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}{getMenuTextSoundEnabler}(
+      \hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}()), CC\_CALLBACK\_1(
+      \hyperlink{class_hello_world_aa0aab5c2537449752853c2924db53261}{HelloWorld::menuSoundEnableCallback}, \textcolor{keyword}{this}));
+669     \textcolor{keyword}{auto} item\_3 = MenuItemFont::create(\textcolor{stringliteral}{"Close"}, CC\_CALLBACK\_1(
+      \hyperlink{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}{HelloWorld::gameforceResumeMenuCallback}, \textcolor{keyword}{this}));
+670     \textcolor{keyword}{auto} menu = Menu::create(item\_1,\hyperlink{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}{sounditem},item\_3,NULL);
+671     menu->alignItemsVertically();
+672     \textcolor{keywordflow}{return} menu;
+673 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a24162678657656105f59887233f9c841_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}\label{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}} 
+\index{Hello\+World@{Hello\+World}!get\+Menu\+Text\+Sound\+Enabler@{get\+Menu\+Text\+Sound\+Enabler}}
+\index{get\+Menu\+Text\+Sound\+Enabler@{get\+Menu\+Text\+Sound\+Enabler}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{get\+Menu\+Text\+Sound\+Enabler()}{getMenuTextSoundEnabler()}}
+{\footnotesize\ttfamily string Hello\+World\+::get\+Menu\+Text\+Sound\+Enabler (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+소리 키고 끄는 메뉴의 텍스트 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 630 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+630                                                      \{
+631     \textcolor{keywordtype}{string} result = \textcolor{stringliteral}{"Sound: "};
+632     result.append(enable?\textcolor{stringliteral}{"On"}:\textcolor{stringliteral}{"Off"});
+633     \textcolor{keywordflow}{return} result;
+634 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_a65e2b1525051f3690e5a39ca56608a97}\label{class_hello_world_a65e2b1525051f3690e5a39ca56608a97}} 
+\index{Hello\+World@{Hello\+World}!init@{init}}
+\index{init@{init}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Hello\+World\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 466 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+467 \{
+469     cout<<\textcolor{stringliteral}{"call HelloWorld::init()"}<<endl;
+470     \textcolor{comment}{// 1. super init first}
+471     \textcolor{keywordflow}{if} ( !Scene::init() )
+472     \{
+473         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+474     \}
+475     \hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{HelloWorld::overlayblockboard}=NULL;
+476     \hyperlink{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}{bonus\_game\_lv} = 7;
+477     \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}==NULL)\{
+478         \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc} = GameController::getInstance();
+479         \textcolor{comment}{//cout<<(int)gc->getGameHeight()<<endl;}
+480     \}
+481     \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_aef406397d4719c9edd49774d0343ce05}{justinit}();
+482     
+483     \textcolor{comment}{//NextBlockRenderBehavior*}
+484     this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv} = NextBlockRenderBehavior::create();
+485     this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->\hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior_a35709270c896ca2a21266b52727412ae}{setGameController}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc});
+486     this->\hyperlink{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}{makeField}();
+487     this->addChild(this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv});
+488     this->\hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{isInExtGame} = \textcolor{keyword}{false};
+489     \textcolor{keyword}{auto} visibleSize = Director::getInstance()->getVisibleSize();
+490     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+491     
+492     \hyperlink{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}{registerKListenerForMainGame}();
+493     CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+494     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+495                                                                           \textcolor{stringliteral}{"res/bgms/maingame\_bgm.mp3"}, \textcolor{keyword}{true}
+      );
+496     \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+497         CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+498     \}
+499     \hyperlink{class_hello_world_aa4c36099096e160e3726819a2308dd04}{HelloWorld::startGame}();
+501     \textcolor{comment}{// 2. add a menu item with "X" image, which is clicked to quit the program}
+502     \textcolor{comment}{//    you may modify it.}
+503     \textcolor{comment}{// add a "close" icon to exit the progress. it's an autorelease object}
+504     
+505     \textcolor{keyword}{auto} closeItem = MenuItemImage::create(
+506                                            \textcolor{stringliteral}{"CloseNormal.png"},
+507                                            \textcolor{stringliteral}{"CloseSelected.png"},
+508                                            CC\_CALLBACK\_1(
+      \hyperlink{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}{HelloWorld::menuCloseCallback}, \textcolor{keyword}{this}));
+509     
+510     \textcolor{comment}{//closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2
+       ,origin.y + closeItem->getContentSize().height/2));}
+511 
+512     \textcolor{comment}{// create menu, it's an autorelease object}
+513    \textcolor{comment}{// auto menu = Menu::create(closeItem, NULL);}
+514     \textcolor{comment}{//menu->setPosition(Vec2::ZERO);}
+515     \textcolor{comment}{//this->addChild(menu, 1);}
+516     \textcolor{keyword}{auto} menuItem = MenuItemImage::create(\textcolor{stringliteral}{"res/images/menu\_drawer.png"}, \textcolor{stringliteral}{"res/images/menu\_drawer.png"}, 
+      CC\_CALLBACK\_1(\hyperlink{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}{HelloWorld::menuDrawerClickCallback}, \textcolor{keyword}{this}));
+517     menuItem->setPosition(Vec2(origin.x+menuItem->getContentSize().width/2,origin.y+visibleSize.height-
+      menuItem->getContentSize().height/2));
+518      \textcolor{comment}{//
+      closeItem->setPosition(Vec2(origin.x+closeItem->getContentSize().width/2,origin.y+visibleSize.height-closeItem->getContentSize().height/2));}
+519     menuItem->setScaleX((closeItem->getContentSize().width)/(menuItem->getContentSize().width));
+520     menuItem->setScaleY((closeItem->getContentSize().height)/(menuItem->getContentSize().height));
+521     menuItem->setPosition(Vec2(origin.x+(menuItem->getContentSize().width*menuItem->getScaleX())/2,origin.y
+      +visibleSize.height-(menuItem->getContentSize().height*menuItem->getScaleY())/2));
+522     \textcolor{keyword}{auto} menu = Menu::create(menuItem,NULL);
+523     menu->setPosition(Vec2::ZERO);
+524     this->addChild(menu,1);
+525     
+527     \textcolor{comment}{// 3. add your codes below...}
+528 
+529     \textcolor{comment}{// add a label shows "Hello World"}
+530     \textcolor{comment}{// create and initialize a label}
+531     Layer* infoboardlyr = Layer::create();
+532     \textcolor{keyword}{const} \textcolor{keywordtype}{int} hei = (int)\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a10163479e02572450b886ff0654078b4}{getGameHeight}();
+533     \textcolor{keyword}{const} \textcolor{keywordtype}{int} wid = (int)\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a256cff75224efe165e1c5409c69b0503}{getGameWidth}();
+534     \textcolor{keyword}{const} \textcolor{keywordtype}{float} gapratio = 0.05f;
+535     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echhei = (int)(((1.0f -gapratio)*(\textcolor{keywordtype}{float})visibleSize.height)/hei);
+536     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echwid =  (int)(((1.0f -gapratio)*(float)visibleSize.width)/wid);
+537     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echsz = min(echhei,echwid);
+538     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gapwid = visibleSize.width-echsz*wid;
+539     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gaphei = visibleSize.height-echsz*hei;
+540     infoboardlyr->setPosition(Vec2((gapwid/2+((echsz*wid)/2)),gaphei/2));
+541     infoboardlyr->setContentSize(Size(visibleSize.width-((echsz*wid)/2), echsz*hei));
+542     \textcolor{keyword}{const} \textcolor{keywordtype}{float} fontsz = 20;
+543     \textcolor{keyword}{auto} label = Label::createWithTTF(\textcolor{stringliteral}{"Hello World"}, \textcolor{stringliteral}{"fonts/DXSeNB-KSCpc-EUC-H.ttf"}, fontsz);
+544     label->setAnchorPoint(Vec2(0.5f,0.5f));
+545     \textcolor{keyword}{auto} label2 = Label::createWithTTF(\textcolor{stringliteral}{"Hello World2"}, \textcolor{stringliteral}{"fonts/DXSeNB-KSCpc-EUC-H.ttf"}, fontsz);
+546     this->\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl} = Label::createWithTTF(\textcolor{stringliteral}{"Hello World3"}, \textcolor{stringliteral}{"fonts/DXSeNB-KSCpc-EUC-H.ttf"}, 
+      fontsz);
+547     label2->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label2->getContentSize().width/2,
+      infoboardlyr->getContentSize().height-label2->getContentSize().height));
+548     infoboardlyr->addChild(label2);
+549     \textcolor{comment}{//cout<<"line height: "<<label2->getLineHeight()<<" , content height:
+       "<<(label2->getBoundingBox().getMaxY()-label2->getBoundingBox().getMinY())<<endl;}
+550     label->setPosition(Vec2(infoboardlyr->getContentSize().width/2-label->getContentSize().width/2,label2->
+      getPosition().y-label2->getLineHeight()*1.5f-label->getContentSize().height));
+551     this->\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl}->setPosition(Vec2(infoboardlyr->getContentSize().width/2-this->
+      \hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl}->getContentSize().width/2,label->getPosition().y-label->getContentSize().height*1.5f
+      - this->\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl}->getContentSize().height));
+552     this->\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl}-> setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->
+      \hyperlink{class_tetris_1_1_game_controller_acd543d841613ed6c3645659d34e0b723}{getRemovedLinesCountWithFormat}(\textcolor{keyword}{true}));
+553     this->\hyperlink{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}{pscorelbl} = label;
+554     this->pscorelbl->setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a84270bd9c52aae8ba1434d96a96b6c3c}{getScoreWithFormatForLocalUser}(\textcolor{keyword}{true}));
+555     infoboardlyr->addChild(label);
+556     infoboardlyr->addChild(this->\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl});
+557     this->\hyperlink{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}{ptimelbl} = label2;
+558     this->\hyperlink{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}{ptimelbl}->setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a71765a7d8b76400832c98002a113ed26}{getPlayTimeWithFormat}(\textcolor{keyword}{true}));
+559     \textcolor{keyword}{auto} lvlblheader = Label::createWithTTF(\textcolor{stringliteral}{"=LEVEL="}, \textcolor{stringliteral}{"fonts/arial.ttf"}, fontsz);
+560     lvlblheader->setTextColor(Color4B::WHITE);
+561     lvlblheader->setPosition(Vec2(infoboardlyr->getContentSize().width/2-lvlblheader->getContentSize().
+      width/2,\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl}->getPosition().y-lvlblheader->getContentSize().height*2));
+562     \textcolor{keyword}{auto} lvlbl = Label::createWithTTF(\textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"fonts/arial.ttf"}, fontsz);
+563     lvlbl->setTextColor(Color4B::WHITE);
+564     lvlbl->setString(StringUtils::format(\textcolor{stringliteral}{"%llu"},this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->
+      \hyperlink{class_tetris_1_1_users_1_1_game_user_ae052e17a9bdcb0d8bc98c287592f7d7b}{getLevel}()));
+565     lvlbl->setPosition(Vec2(infoboardlyr->getContentSize().width/2-lvlbl->getContentSize().width/2,
+      lvlblheader->getPosition().y-lvlbl->getContentSize().height*2));
+566     lvlbl->setTag(707);
+567     infoboardlyr->addChild(lvlblheader);
+568     infoboardlyr->addChild(lvlbl);
+569     infoboardlyr->setTag(700);
+570     \textcolor{comment}{//this->ptimelbl = label2;}
+571     this->addChild(infoboardlyr);
+572     \textcolor{comment}{// position the label on the center of the screen}
+573     \textcolor{comment}{//label->setPosition(Vec2(origin.x + visibleSize.width/2, origin.y + visibleSize.height -
+       label->getContentSize().height));}
+574     \textcolor{comment}{// add the label as a child to this layer}
+575     \textcolor{comment}{//this->addChild(label, 1);}
+576     \textcolor{comment}{// add "HelloWorld" splash screen"}
+577     \textcolor{keyword}{auto} sprite = Sprite::create(\textcolor{stringliteral}{"HelloWorld.png"});
+578 
+579     \textcolor{comment}{// position the sprite on the center of the screen}
+580     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+581     \textcolor{keyword}{auto} overgamelayer = Layer::create();
+582     \textcolor{keyword}{auto} gmoverlabel = Label::createWithTTF(\textcolor{stringliteral}{"GAME OVER"}, \textcolor{stringliteral}{"fonts/arial.ttf"}, visibleSize.width/8);
+583     \textcolor{keyword}{auto} gmovermenu = this->\hyperlink{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}{generateGameOverMenu}();
+584     gmoverlabel->setPosition(Vec2());
+585     \textcolor{comment}{//
+      gmovermenu->setPosition(Vec2(max(gmovermenu->getContentSize().width/2,gmoverlabel->getContentSize().width/2),gmovermenu->getContentSize().height/2));}
+586     overgamelayer->addChild(gmovermenu);
+587     gmoverlabel->setColor(Color3B::WHITE);
+588     gmoverlabel->setPosition(Vec2(max(gmovermenu->getContentSize().width/2,gmovermenu->getContentSize().
+      width/2),gmovermenu->getContentSize().height/2+gmoverlabel->getContentSize().height/2));
+589     overgamelayer->addChild(gmoverlabel);
+590    \textcolor{comment}{// gmoverlabel->setPosition(Vec2(origin.x+visibleSize.width/2, origin.y+visibleSize.height/2));}
+591     overgamelayer->setPosition(Vec2());
+592    \textcolor{comment}{// overgamelayer->setPosition(Vec2(origin.x+visibleSize.width/2,origin.y+visibleSize.height/2));}
+593     \textcolor{comment}{//gmoverlabel->setTag(1024);}
+594     overgamelayer->setTag(1024);
+595     \textcolor{comment}{//this->addChild(gmoverlabel);}
+596     this->addChild(overgamelayer,2);
+597     overgamelayer->setVisible(\textcolor{keyword}{false});
+598    \textcolor{comment}{// gmoverlabel->setVisible(false);}
+599     \textcolor{comment}{// add the sprite as a child to this layer}
+600     \textcolor{comment}{//this->addChild(sprite, 0);}
+601     \textcolor{comment}{//cout<<"loaded ok"<<endl;}
+602     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+603 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a65e2b1525051f3690e5a39ca56608a97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_af1590254503ba391a084d767df2dd858}\label{class_hello_world_af1590254503ba391a084d767df2dd858}} 
+\index{Hello\+World@{Hello\+World}!levelup@{levelup}}
+\index{levelup@{levelup}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{levelup()}{levelup()}}
+{\footnotesize\ttfamily void Hello\+World\+::levelup (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+레벨업을 시켜주는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 348 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+348                                 \{
+349     cout<<\textcolor{stringliteral}{"call levelup"}<<endl;
+350     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}!=NULL)\{
+351         cout<<\textcolor{stringliteral}{"dlv= "}<<(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_a1a55323cff69015417ad4d214b985724}{getDeltaLv}())<<endl;
+352         this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_ae5f2fd276485ee3f677896c3cc03462a}{levelup}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->
+      \hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_a1a55323cff69015417ad4d214b985724}{getDeltaLv}());
+353         \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+354             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(\textcolor{stringliteral}{"res/bgms/lvup.mp3"});
+355         \}
+356         \textcolor{keywordflow}{if}(this->getChildByTag(700)->getChildByTag(707)!=NULL)\{
+357             ((Label*)this->getChildByTag(700)->getChildByTag(707))->setString(StringUtils::format(\textcolor{stringliteral}{"%llu"},
+      this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_ae052e17a9bdcb0d8bc98c287592f7d7b}{getLevel}()));
+358         \}
+359         \textcolor{keywordflow}{else}\{
+360             cout<<\textcolor{stringliteral}{"this->getChildByTag(707) is null"}<<endl;
+361         \}
+362     \textcolor{comment}{//CocosDenshion::SimpleAudioEngine::sharedEngine()->play}
+363     \}
+364 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}\label{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}} 
+\index{Hello\+World@{Hello\+World}!make\+Field@{make\+Field}}
+\index{make\+Field@{make\+Field}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{make\+Field()}{makeField()}}
+{\footnotesize\ttfamily void Hello\+World\+::make\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+테트리스가 가능한 영역을 나타내는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+34                           \{
+35     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+36     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}{nxtblkrenderingarea}==NULL)\{
+37         this->\hyperlink{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}{nxtblkrenderingarea} = Layer::create();
+38     \}
+39     \textcolor{keyword}{const} \textcolor{keywordtype}{int} hei = (int)\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a10163479e02572450b886ff0654078b4}{getGameHeight}();
+40     \textcolor{keyword}{const} \textcolor{keywordtype}{int} wid = (int)\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a256cff75224efe165e1c5409c69b0503}{getGameWidth}();
+41     \textcolor{keyword}{auto} visibleSize = Director::getInstance()->getVisibleSize();
+42     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+43     \textcolor{keyword}{const} \textcolor{keywordtype}{float} gapratio = 0.05f;
+44     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echhei = (int)(((1.0f -gapratio)*(\textcolor{keywordtype}{float})visibleSize.height)/hei);
+45     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echwid =  (int)(((1.0f -gapratio)*(float)visibleSize.width)/wid);
+46     \textcolor{keyword}{const} \textcolor{keywordtype}{int} echsz = min(echhei,echwid);
+47     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gapwid = visibleSize.width-echsz*wid;
+48     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gaphei = visibleSize.height-echsz*hei;
+49     Layer* lyr = Layer::create();
+50     lyr->setPosition(Vec2(gapwid/2,gaphei/2));
+51     lyr->setContentSize(Size(echsz*wid, echsz*hei));
+52     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}==NULL)\{
+53         this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv} = NextBlockRenderBehavior::create();
+54     \}
+55     this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->setContentSize(Size(echsz*this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->
+      \hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior_aa1d5fbc45ec963fa86fff0f73359d028}{getMaxBoardSize}(),echsz*this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->\hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior_aa1d5fbc45ec963fa86fff0f73359d028}{getMaxBoardSize}()));
+56     \textcolor{keyword}{const} \textcolor{keywordtype}{int} gapwid2 =visibleSize.width-(gapwid/2+echsz*wid+this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->getContentSize().width
+      );
+57     this->\hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv}->setPosition(Vec2(gapwid/2+echsz*wid+gapwid2/2,gaphei/2));
+58   \textcolor{comment}{//  this->nxtblkrenderingarea->setPosition(Vec2(0,gaphei/2));//gapwid/2,gaphei/2));}
+59     \textcolor{comment}{//this->nxtblkrenderingarea->setPosition(Vec2(gapwid/2+echsz*wid,gaphei/2));}
+60    \textcolor{comment}{// auto lbl = Label::createWithTTF("blk render", "fonts/arial.ttf", 10);}
+61     \textcolor{comment}{//lbl->setPosition(Vec2(lbl->getContentSize().width/2,lbl->getContentSize().height/2));}
+62     \textcolor{comment}{//this->nxtblkrv->addChild(lbl);}
+63     \textcolor{comment}{//this->nxtblkrv->checkInstance();}
+64     \textcolor{comment}{//this->addChild(this->nxtblkrenderingarea);}
+65     
+66    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < hei; i++) \{
+67         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < wid; j++) \{
+68             \textcolor{keyword}{auto} rectNode = DrawNode::create();
+69         
+70             Vec2 rect[4];
+71             rect[0] = Vec2(echsz*j,echsz*i);
+72             rect[1] = Vec2(echsz*(j+1),echsz*i);
+73             rect[2] = Vec2(echsz*(j+1),echsz*(i+1));
+74             rect[3] = Vec2(echsz*j,echsz*(i+1));
+75             Color4F white(1,1,1,1);
+76             Color4F transp(0,0,0,0);
+77             rectNode->drawPolygon(rect, 4, transp, 0.7f, white);
+78             lyr->addChild(rectNode);
+79 
+80         \}
+81     \}
+82     this->addChild(lyr);
+83 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}\label{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}} 
+\index{Hello\+World@{Hello\+World}!menu\+Close\+Callback@{menu\+Close\+Callback}}
+\index{menu\+Close\+Callback@{menu\+Close\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Close\+Callback()}{menuCloseCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Close\+Callback (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 719 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+720 \{
+721     \textcolor{comment}{//Close the cocos2d-x game scene and quit the application}
+722     this->\hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{removeKListenerForMainGame}();
+723     Director::getInstance()->popScene();
+724     \textcolor{comment}{//this->freeRelativeConnectionWhenDeleting();}
+725     \textcolor{comment}{//Director::getInstance()->replaceScene( Cocos2dScenes::SceneInstanceManager::createMainMenuScene());}
+726    \textcolor{comment}{/* Director::getInstance()->end();}
+727 \textcolor{comment}{}
+728 \textcolor{comment}{    #if (CC\_TARGET\_PLATFORM == CC\_PLATFORM\_IOS)}
+729 \textcolor{comment}{    exit(0);}
+730 \textcolor{comment}{    #endif}
+731 \textcolor{comment}{    */}
+732     \textcolor{comment}{/*To navigate back to native iOS screen(if present) without quitting the application  ,do not use
+       Director::getInstance()->end() and exit(0) as given above,instead trigger a custom event created in
+       RootViewController.mm as below*/}
+733     
+734     \textcolor{comment}{//EventCustom customEndEvent("game\_scene\_close\_event");}
+735     \textcolor{comment}{//\_eventDispatcher->dispatchEvent(&customEndEvent);}
+736     
+737     
+738 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}\label{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}} 
+\index{Hello\+World@{Hello\+World}!menu\+Drawer\+Click\+Callback@{menu\+Drawer\+Click\+Callback}}
+\index{menu\+Drawer\+Click\+Callback@{menu\+Drawer\+Click\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Drawer\+Click\+Callback()}{menuDrawerClickCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Drawer\+Click\+Callback (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 605 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+605                                                     \{
+606     this->\hyperlink{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}{menuVisibleToggle}(\textcolor{keyword}{true});
+607    \textcolor{comment}{// menuCloseCallback(pSender);}
+608 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_aa0aab5c2537449752853c2924db53261}\label{class_hello_world_aa0aab5c2537449752853c2924db53261}} 
+\index{Hello\+World@{Hello\+World}!menu\+Sound\+Enable\+Callback@{menu\+Sound\+Enable\+Callback}}
+\index{menu\+Sound\+Enable\+Callback@{menu\+Sound\+Enable\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Sound\+Enable\+Callback()}{menuSoundEnableCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Sound\+Enable\+Callback (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 642 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+642                                                            \{
+643     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} changedstate = !\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}();
+644     DBManager::getInstance()->changeBoolSetting(DBManager::getSoundEnablerKey(),changedstate);
+645     cout<<\textcolor{stringliteral}{"finish change state in sqlite"}<<endl;
+646     \hyperlink{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}{sounditem}->setString(\hyperlink{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}{getMenuTextSoundEnabler}(changedstate));
+647     \textcolor{comment}{/*if(changedstate)\{}
+648 \textcolor{comment}{        if(!isInExtGame)}
+649 \textcolor{comment}{        CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();}
+650 \textcolor{comment}{        else}
+651 \textcolor{comment}{            CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeEffect(effect\_ext\_2048gm);}
+652 \textcolor{comment}{    \}}
+653 \textcolor{comment}{    else\{}
+654 \textcolor{comment}{        }
+655 \textcolor{comment}{        CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();}
+656 \textcolor{comment}{        if(isInExtGame)\{}
+657 \textcolor{comment}{            CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseEffect(effect\_ext\_2048gm);}
+658 \textcolor{comment}{        \}}
+659 \textcolor{comment}{    \}*/}
+660     \textcolor{comment}{//((Label*)mitem->getLabel())->setString(getMenuTextSoundEnabler(changedstate));}
+661 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_aa0aab5c2537449752853c2924db53261_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}\label{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}} 
+\index{Hello\+World@{Hello\+World}!menu\+Visible\+Toggle@{menu\+Visible\+Toggle}}
+\index{menu\+Visible\+Toggle@{menu\+Visible\+Toggle}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Visible\+Toggle()}{menuVisibleToggle()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Visible\+Toggle (\begin{DoxyParamCaption}\item[{bool}]{autopauseorpause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 609 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+609                                                         \{
+610     \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_aecd04e471f7819a8b3f80e0dda748bdc}{isOngoing}()&&autopauseorresume)\{
+611         this->\hyperlink{class_hello_world_af72bece97d2fe997936df92723636298}{pause}();
+612         \textcolor{comment}{//gc->pause();}
+613     \}
+614     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu}==NULL)\{
+615         this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu} =this->\hyperlink{class_hello_world_a24162678657656105f59887233f9c841}{generateOptionMenu}();
+616         this->addChild(this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu});
+617     \}
+618     \textcolor{keywordflow}{else}\{
+619         \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a18e513f45750361e14af091704e9f1d4}{isPaused}()&&autopauseorresume)\{
+620             this->\hyperlink{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}{resume}();
+621             \textcolor{comment}{//gc->resume();}
+622         \}
+623         this->removeChild(this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu});
+624         this->\hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu} = NULL;
+625     \}
+626 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_a0e47c5b1692f5ba74b776be85422dc75}\label{class_hello_world_a0e47c5b1692f5ba74b776be85422dc75}} 
+\index{Hello\+World@{Hello\+World}!on\+Enter@{on\+Enter}}
+\index{on\+Enter@{on\+Enter}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Enter()}{onEnter()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 454 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+454                         \{
+455     Scene::onEnter();
+456     \textcolor{comment}{//CocosDenshion::SimpleAudioEngine::sharedEngine()->stop}
+457     CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+458     CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+459                                                                           \textcolor{stringliteral}{"res/bgms/maingame\_bgm.mp3"}, \textcolor{keyword}{true}
+      );
+460     \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+461         CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+462     \}
+463 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_a348da8e1c3061248666676878e692572}\label{class_hello_world_a348da8e1c3061248666676878e692572}} 
+\index{Hello\+World@{Hello\+World}!on\+Exit@{on\+Exit}}
+\index{on\+Exit@{on\+Exit}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Exit()}{onExit()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 449 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+449                        \{
+450     Scene::onExit();
+451     CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+452 
+453 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}\label{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}} 
+\index{Hello\+World@{Hello\+World}!on\+Key\+Pressed@{on\+Key\+Pressed}}
+\index{on\+Key\+Pressed@{on\+Key\+Pressed}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Key\+Pressed()}{onKeyPressed()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code}}]{key\+Code,  }\item[{cocos2d\+::\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 394 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+394                                                                                      \{
+395     \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->forceend&&!\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->isEnd())\{
+396         \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_LEFT\_ARROW)\{
+397             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+398             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(\textcolor{stringliteral}{"res/bgms/click.mp3"});
+399             \}
+400             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ac0d40a0936505754131099034b4271fa}{currentusermoveleft}();
+401             
+402         \}
+403         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_RIGHT\_ARROW)\{
+404             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+405             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(\textcolor{stringliteral}{"res/bgms/click.mp3"});
+406             \}
+407             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a1d2859507cbc9bf9789753228cdedc1f}{currentusermoveright}();
+408         \}
+409         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_DOWN\_ARROW)\{
+410             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+411             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(\textcolor{stringliteral}{"res/bgms/click.mp3"});
+412             \}
+413             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a035e352a85db58a05322156af606f0fa}{forcedropdownOnce}();
+414         \}
+415     \}
+416 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_af2d5a509259a5d0fce7770a38df371d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}\label{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}} 
+\index{Hello\+World@{Hello\+World}!on\+Key\+Released@{on\+Key\+Released}}
+\index{on\+Key\+Released@{on\+Key\+Released}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Key\+Released()}{onKeyReleased()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Key\+Released (\begin{DoxyParamCaption}\item[{\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code}}]{key\+Code,  }\item[{cocos2d\+::\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 426 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+426                                                                                       \{
+427     \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_ESCAPE)\{
+428         this->\hyperlink{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}{menuVisibleToggle}(\textcolor{keyword}{true});
+429     \}
+430     \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->forceend&&\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->isOngoing())\{
+431         \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_SPACE)\{
+432         \textcolor{comment}{//cout<<"will call currentblockrotate"<<endl;}
+433             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}-> currentblockrotate();
+434        \textcolor{comment}{// cout<<"called currentblockrotate"<<endl;}
+435         \}
+436         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_ENTER)\{
+437             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+438             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(\textcolor{stringliteral}{"res/bgms/teleportmove.wav"},\textcolor{keyword}{false},
+      10);
+439             \}
+440             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a8d5b65ec7638519a39b4ba8a71e67fff}{fastdropdown}();
+441         \}
+442         
+443         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(keyCode==KeyCode::KEY\_SHIFT||keyCode==KeyCode::KEY\_LEFT\_SHIFT||keyCode==
+      KeyCode::KEY\_RIGHT\_SHIFT)\{
+444             \textcolor{comment}{//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/changeblkbgm.mp3");}
+445             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ad203991dc134e2ea36c9c40326da55c1}{switchBlock}();
+446         \}
+447     \}
+448 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_acb7b8934f4697e752182a650a1dc7c3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_af72bece97d2fe997936df92723636298}\label{class_hello_world_af72bece97d2fe997936df92723636298}} 
+\index{Hello\+World@{Hello\+World}!pause@{pause}}
+\index{pause@{pause}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Hello\+World\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+게임을 일시정시하는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 378 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+378                       \{
+379     CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+380     \textcolor{comment}{//removeKListenerForMainGame();}
+381     \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc} -> \hyperlink{class_hello_world_af72bece97d2fe997936df92723636298}{pause}();
+382 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}\label{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}} 
+\index{Hello\+World@{Hello\+World}!play@{play}}
+\index{play@{play}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Hello\+World\+::play (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 365 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+365                              \{
+366     cout<<\textcolor{stringliteral}{"call HelloWorld::play()"}<<endl;
+367     \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_aef406397d4719c9edd49774d0343ce05}{justinit}();
+368     \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_a47681985e6fbf14411a70be08f85bf99}{setGameStatusToOngoing}();
+369     \hyperlink{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}{HelloWorld::mainloopfuncschedule} =schedule\_selector(
+      \hyperlink{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}{HelloWorld::stateloop});
+370     CCDirector::sharedDirector()->getScheduler()->scheduleSelector(
+      \hyperlink{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}{mainloopfuncschedule},\textcolor{keyword}{this},1.0f/(24+1),\textcolor{keyword}{false});
+371     
+372    \textcolor{comment}{// this->schedule(schedule\_selector(HelloWorld::gameloop), 1);}
+373     
+374 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}\label{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}} 
+\index{Hello\+World@{Hello\+World}!read\+Sound\+Enable@{read\+Sound\+Enable}}
+\index{read\+Sound\+Enable@{read\+Sound\+Enable}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{read\+Sound\+Enable()}{readSoundEnable()}}
+{\footnotesize\ttfamily bool Hello\+World\+::read\+Sound\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+사용자 설정에 의해 자체 소리가 켜져있는지 유무 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 639 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+639                                 \{
+640     \textcolor{keywordflow}{return} DBManager::getInstance()->readAppSettingAsBool(DBManager::getSoundEnablerKey());
+641 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}\label{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}} 
+\index{Hello\+World@{Hello\+World}!register\+K\+Listener\+For\+Main\+Game@{register\+K\+Listener\+For\+Main\+Game}}
+\index{register\+K\+Listener\+For\+Main\+Game@{register\+K\+Listener\+For\+Main\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{register\+K\+Listener\+For\+Main\+Game()}{registerKListenerForMainGame()}}
+{\footnotesize\ttfamily void Hello\+World\+::register\+K\+Listener\+For\+Main\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 705 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+705                                              \{
+706     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\_listener}==NULL)\{
+707         this->\hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\_listener} = this->\hyperlink{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}{createNewKListener}();
+708         Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(this->
+      \hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\_listener}, 1);
+709     \}\textcolor{keywordflow}{else}\{
+710         \hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{removeKListenerForMainGame}();
+711         this->\hyperlink{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}{registerKListenerForMainGame}();
+712     \}
+713 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}\label{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}} 
+\index{Hello\+World@{Hello\+World}!remove\+K\+Listener\+For\+Main\+Game@{remove\+K\+Listener\+For\+Main\+Game}}
+\index{remove\+K\+Listener\+For\+Main\+Game@{remove\+K\+Listener\+For\+Main\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{remove\+K\+Listener\+For\+Main\+Game()}{removeKListenerForMainGame()}}
+{\footnotesize\ttfamily void Hello\+World\+::remove\+K\+Listener\+For\+Main\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 699 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+699                                            \{
+700     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\_listener}!=NULL)\{
+701         Director::getInstance()->getEventDispatcher()->removeEventListener(this->
+      \hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\_listener});
+702         this->\hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\_listener} = NULL;
+703     \}
+704 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}\label{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}} 
+\index{Hello\+World@{Hello\+World}!resume@{resume}}
+\index{resume@{resume}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void Hello\+World\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+게임을 이어서 하게하도록 하는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 386 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+386                        \{
+387     \textcolor{comment}{//registerKListenerForMainGame();}
+388     \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+389     CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+390     \}
+391     \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->\hyperlink{class_tetris_1_1_game_controller_ab9ff093ea91e3d248a8a287289e758b0}{resume}();
+392     
+393 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d9/d98/class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_aa4c36099096e160e3726819a2308dd04}\label{class_hello_world_aa4c36099096e160e3726819a2308dd04}} 
+\index{Hello\+World@{Hello\+World}!start\+Game@{start\+Game}}
+\index{start\+Game@{start\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{start\+Game()}{startGame()}}
+{\footnotesize\ttfamily void Hello\+World\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 93 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+93                           \{
+94     
+95     CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule\_selector(
+      \hyperlink{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}{HelloWorld::play}),\textcolor{keyword}{this},0,0,0.0f,\textcolor{keyword}{false});
+96     cout<<\textcolor{stringliteral}{"call HelloWorld::startGame()"}<<endl;
+97 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_aa4c36099096e160e3726819a2308dd04_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d9/d98/class_hello_world_aa4c36099096e160e3726819a2308dd04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}\label{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}} 
+\index{Hello\+World@{Hello\+World}!stateloop@{stateloop}}
+\index{stateloop@{stateloop}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{stateloop()}{stateloop()}}
+{\footnotesize\ttfamily void Hello\+World\+::stateloop (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+멀티쓰레딩으로 게임을 돌리는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 101 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+101                                   \{
+102     \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{isInExtGame})\{
+103         \textcolor{comment}{//cout<<"in ext game "<<endl;}
+104         this->\hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{removeKListenerForMainGame}();
+105         \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->forceend&&\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->isOngoing())\{
+106             this->\hyperlink{class_hello_world_af72bece97d2fe997936df92723636298}{pause}();
+107         \}
+108         \textcolor{keyword}{auto} delegate = \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{ExtGame2048Delegate::getInstance}();
+109         \textcolor{keyword}{auto} score = delegate->getInnerGameScore();
+110         \textcolor{keyword}{auto} maingamescore = \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ad88f3362af23d87282ee8ed39394054d}{getLocalScore}();
+111         \textcolor{keyword}{auto} goal = delegate->getGoal();
+112         \textcolor{comment}{//cout<<"clear? "<<(delegate->isSufficingGameGoal())<<" give up? "<<(delegate->isGivenUp())<<endl;}
+113         \textcolor{keywordflow}{if}(delegate->isSufficingGameGoal())\{
+114             \textcolor{keywordtype}{float} compensationRatio = 0.5f;
+115             \textcolor{keywordflow}{switch}(goal)\{
+116                 \textcolor{keywordflow}{case} 64:\{
+117                     compensationRatio= 0.17f;
+118                     \textcolor{keywordflow}{break};
+119                 \}
+120                 \textcolor{keywordflow}{case} 128:
+121                 \textcolor{keywordflow}{case} 256:\{
+122                    compensationRatio= 0.2f;
+123                     \textcolor{keywordflow}{break};
+124                 \}
+125                 \textcolor{keywordflow}{case} 512:\{
+126                     compensationRatio= 0.3f;
+127                     \textcolor{keywordflow}{break};
+128                 \}
+129                 \textcolor{keywordflow}{case} 1024:\{
+130                     compensationRatio= 0.5f;
+131                     \textcolor{keywordflow}{break};
+132                 \}
+133                 \textcolor{keywordflow}{case} 2048:\{
+134                     compensationRatio= 0.6f;
+135                     \textcolor{keywordflow}{break};
+136                 \}
+137                 \textcolor{keywordflow}{case} 4096:\{
+138                     compensationRatio= 0.75f;
+139                     \textcolor{keywordflow}{break};
+140                 \}
+141                 \textcolor{keywordflow}{case} 8192:\{
+142                     compensationRatio= 0.94f;
+143                     \textcolor{keywordflow}{break};
+144                 \}
+145                 \textcolor{keywordflow}{case} 16384:\{
+146                     compensationRatio= 3.94f;
+147                     \textcolor{keywordflow}{break};
+148                 \}
+149                 \textcolor{keywordflow}{default}:\{
+150                     compensationRatio = 0.15f;
+151                 \textcolor{keywordflow}{break};\}
+152             \}
+153             
+154             \textcolor{keywordtype}{float} totalscore = ((float)score*1.5f)+ (delegate->getGoal()*2) +( (\textcolor{keywordtype}{float})maingamescore*
+      compensationRatio);
+155             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_a5808d26769ba24d9e6435e40d3feb7af}{accumulateCurrentGameScore}(
+      totalscore);
+156             cout<<\textcolor{stringliteral}{"bonus score(with 2048): "}<<totalscore<<endl;
+157             this->\hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{isInExtGame} = \textcolor{keyword}{false};
+158             \hyperlink{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}{addOrRemove2048GameView}(\textcolor{keyword}{true});
+159             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a18e513f45750361e14af091704e9f1d4}{isPaused}())\{
+160                 \hyperlink{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}{resume}();
+161             \}
+162         \}
+163         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(delegate->isGivenUp())\{
+164             
+165             \textcolor{keywordtype}{double} minnus = pow(10,(\textcolor{keywordtype}{double})((\textcolor{keywordtype}{int}) log10(maingamescore)));
+166             
+167             \textcolor{keywordtype}{float} totalscore =(((float)score*3)+(maingamescore*0.05f)+minnus);
+168             \textcolor{keywordflow}{if}((\textcolor{keywordtype}{float})maingamescore<=totalscore)\{
+169                 this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ab0fafbfd1d87713f4f9233ccc547ffb8}{forceSettingScore}(0);
+170                 \textcolor{comment}{//this->gc->getLocalUser()->setCurrentGameScore(0);}
+171             \}
+172             \textcolor{keywordflow}{else}\{
+173                 this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ab0fafbfd1d87713f4f9233ccc547ffb8}{forceSettingScore}(maingamescore-(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long})totalscore
+      );
+174 
+175                 \textcolor{comment}{//this->gc->getLocalUser()->setCurrentGameScore(maingamescore-(unsigned long
+       long)totalscore);}
+176             \}
+177             this->\hyperlink{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}{pscorelbl}->setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->
+      \hyperlink{class_tetris_1_1_game_controller_a84270bd9c52aae8ba1434d96a96b6c3c}{getScoreWithFormatForLocalUser}(\textcolor{keyword}{true}));
+178             cout<<\textcolor{stringliteral}{"bonus score(with giveup): "}<<(-1*totalscore)<<endl;
+179             this->\hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{isInExtGame} = \textcolor{keyword}{false};
+180             \hyperlink{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}{addOrRemove2048GameView}(\textcolor{keyword}{true});
+181             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a18e513f45750361e14af091704e9f1d4}{isPaused}())\{
+182                 \hyperlink{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}{resume}();
+183             \}
+184         \}
+185         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(delegate->getFailGameState())\{
+186             
+187             this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_aa37f3ed5891a4efecc09f92188b8a9cd}{setCurrentGameScore}(((\textcolor{keywordtype}{float})
+      \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_a93bde8123ee0dc9333d62a44b904023c}{getCurrentGameScore}()+ score/0.2f));
+188             cout<<\textcolor{stringliteral}{"bonus score(with fail): "}<<(score)<<endl;
+189             this->isInExtGame = \textcolor{keyword}{false};
+190             \hyperlink{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}{addOrRemove2048GameView}(\textcolor{keyword}{true});
+191             \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a18e513f45750361e14af091704e9f1d4}{isPaused}())\{
+192                 \hyperlink{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}{resume}();
+193             \}
+194         \}
+195         \textcolor{keywordflow}{return};
+196     \}
+197     
+198     \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->forceend&&!\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{HelloWorld::gc}->isEnd())\{
+199         
+200         \hyperlink{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}{HelloWorld::gameloop}(dt);
+201         
+202         \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a6c0d944a3e90caede9a216cb3537db44}{haveTimeDelta}())\{
+203             this->\hyperlink{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}{ptimelbl}->setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a71765a7d8b76400832c98002a113ed26}{getPlayTimeWithFormat}(\textcolor{keyword}{true}));
+204         \}
+205         \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a1fcdadbf63bb0d908e1033496d6f9d16}{checkRmCntDisplayRefresh}())\{
+206             this->\hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl}-> setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->
+      \hyperlink{class_tetris_1_1_game_controller_acd543d841613ed6c3645659d34e0b723}{getRemovedLinesCountWithFormat}(\textcolor{keyword}{true}));
+207         \}
+208         \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_a626e0107413258a25179813653066776}{checkScoreDisplayRefresh}())\{
+209             this->\hyperlink{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}{pscorelbl}->setString(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->
+      \hyperlink{class_tetris_1_1_game_controller_a84270bd9c52aae8ba1434d96a96b6c3c}{getScoreWithFormatForLocalUser}(\textcolor{keyword}{true}));
+210         \}
+211         \textcolor{keywordflow}{if}(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_abc67d4b309ce2886b43a3b4e0af22abc}{getLocalUser}()->\hyperlink{class_tetris_1_1_users_1_1_game_user_a93e385fd100ac5ec2f6f6b9f0fab2950}{canLevelUp}())\{
+212             \hyperlink{class_hello_world_af1590254503ba391a084d767df2dd858}{levelup}(dt);
+213             \textcolor{comment}{/*unsigned long long uplv = this->gc->getLocalUser()->getDeltaLv();}
+214 \textcolor{comment}{            cout<<"can level up!"<<endl;}
+215 \textcolor{comment}{            for(int i=0;i<uplv;i++)\{}
+216 \textcolor{comment}{               
+       CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule\_selector(HelloWorld::levelup),this,0,0,0.25f,false);}
+217 \textcolor{comment}{            \}*/}
+218         \}
+219         cout<<\textcolor{stringliteral}{"checkers work and score is "}<<(this->\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ad88f3362af23d87282ee8ed39394054d}{getLocalScore}())<<endl;
+220         \textcolor{keywordtype}{int} extgamechecker = (int)(log10(\hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc}->\hyperlink{class_tetris_1_1_game_controller_ad88f3362af23d87282ee8ed39394054d}{getLocalScore}())/log10(2));
+221         \textcolor{comment}{//cout<<"ext g checker: "<<extgamechecker<<"  bns\_g\_lv: "<<bonus\_game\_lv<<endl;}
+222         \textcolor{keywordflow}{if}(\hyperlink{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}{bonus\_game\_lv}<extgamechecker)\{
+223             \hyperlink{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}{bonus\_game\_lv}=extgamechecker;
+224             \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{ExtGame2048Delegate::getInstance}()->
+      \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a07cb2b429428f54e4291c4c8dc63b4ac}{resetAllVar}();
+225             \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_a332a574da455fb687b5d283399a6976c}{ExtGame2048Delegate::getInstance}()->
+      \hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_af6805111081144b68d039d8f71d1ed0b}{setGoal}(\hyperlink{classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate_abb107cf268a50b3ebd9bd545c88a9a35}{ExtGame2048Delegate::getRandomGoal}());
+226             \hyperlink{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}{addOrRemove2048GameView}(\textcolor{keyword}{false});
+227             this->isInExtGame = \textcolor{keyword}{true};
+228         \}
+229     \}
+230     \textcolor{keywordflow}{else}\{
+231         this->getChildByTag(1024)->setVisible(\textcolor{keyword}{true});
+232         CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+233         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+234                                                                               \textcolor{stringliteral}{"res/bgms/endgamebgm.mp3"}, \textcolor{keyword}{
+      true});
+235         \textcolor{keywordflow}{if}(!\hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{readSoundEnable}())\{
+236             CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+237             
+238         \}
+239         CCDirector::sharedDirector()->getScheduler()->unscheduleSelector(
+      \hyperlink{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}{HelloWorld::mainloopfuncschedule}, \textcolor{keyword}{this});
+240         cout<<\textcolor{stringliteral}{"game end in scene"}<<endl;
+241     \}
+242 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a4ab71b15b7e362af143d2a539e39a538_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d98/class_hello_world_a4ab71b15b7e362af143d2a539e39a538_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}\label{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}} 
+\index{Hello\+World@{Hello\+World}!bonus\+\_\+game\+\_\+lv@{bonus\+\_\+game\+\_\+lv}}
+\index{bonus\+\_\+game\+\_\+lv@{bonus\+\_\+game\+\_\+lv}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{bonus\+\_\+game\+\_\+lv}{bonus\_game\_lv}}
+{\footnotesize\ttfamily unsigned short Hello\+World\+::bonus\+\_\+game\+\_\+lv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+보너스 게임이 나타날 최소조건의 점수가 2의 승수 이상임을 체크하는 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a165832200ec4d9ee283167ac727eeade}\label{class_hello_world_a165832200ec4d9ee283167ac727eeade}} 
+\index{Hello\+World@{Hello\+World}!effect\+\_\+ext\+\_\+2048gm@{effect\+\_\+ext\+\_\+2048gm}}
+\index{effect\+\_\+ext\+\_\+2048gm@{effect\+\_\+ext\+\_\+2048gm}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{effect\+\_\+ext\+\_\+2048gm}{effect\_ext\_2048gm}}
+{\footnotesize\ttfamily unsigned int Hello\+World\+::effect\+\_\+ext\+\_\+2048gm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+보너스게임의 bgm을 관리하는 id 
+
+
+
+Hello\+World\+Scene.\+h 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_aeb27a8750393a2d4982809b64454a045}\label{class_hello_world_aeb27a8750393a2d4982809b64454a045}} 
+\index{Hello\+World@{Hello\+World}!gameoptionmenu@{gameoptionmenu}}
+\index{gameoptionmenu@{gameoptionmenu}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameoptionmenu}{gameoptionmenu}}
+{\footnotesize\ttfamily cocos2d\+::\+Menu$\ast$ Hello\+World\+::gameoptionmenu = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a547cb213126911d9a7151f8259dc7102}\label{class_hello_world_a547cb213126911d9a7151f8259dc7102}} 
+\index{Hello\+World@{Hello\+World}!gc@{gc}}
+\index{gc@{gc}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gc}{gc}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_game_controller}{Tetris\+::\+Game\+Controller}$\ast$ Hello\+World\+::gc = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+게임 관리 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a6dcd196f83b5eba681717366944fcddf}\label{class_hello_world_a6dcd196f83b5eba681717366944fcddf}} 
+\index{Hello\+World@{Hello\+World}!is\+In\+Ext\+Game@{is\+In\+Ext\+Game}}
+\index{is\+In\+Ext\+Game@{is\+In\+Ext\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{is\+In\+Ext\+Game}{isInExtGame}}
+{\footnotesize\ttfamily bool Hello\+World\+::is\+In\+Ext\+Game = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+보너스게임의 실행 여부 
+
+
+
+Hello\+World\+Scene.\+h 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}\label{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}} 
+\index{Hello\+World@{Hello\+World}!k\+\_\+listener@{k\+\_\+listener}}
+\index{k\+\_\+listener@{k\+\_\+listener}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{k\+\_\+listener}{k\_listener}}
+{\footnotesize\ttfamily cocos2d\+::\+Event\+Listener\+Keyboard$\ast$ Hello\+World\+::k\+\_\+listener = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}\label{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}} 
+\index{Hello\+World@{Hello\+World}!mainloopfuncschedule@{mainloopfuncschedule}}
+\index{mainloopfuncschedule@{mainloopfuncschedule}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{mainloopfuncschedule}{mainloopfuncschedule}}
+{\footnotesize\ttfamily cocos2d\+::\+S\+E\+L\+\_\+\+S\+C\+H\+E\+D\+U\+LE Hello\+World\+::mainloopfuncschedule = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a1e1896c9d67df38903e55eb6782978d8}\label{class_hello_world_a1e1896c9d67df38903e55eb6782978d8}} 
+\index{Hello\+World@{Hello\+World}!menuviewadded@{menuviewadded}}
+\index{menuviewadded@{menuviewadded}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menuviewadded}{menuviewadded}}
+{\footnotesize\ttfamily bool Hello\+World\+::menuviewadded = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 63 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}\label{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}} 
+\index{Hello\+World@{Hello\+World}!nxtblkrenderingarea@{nxtblkrenderingarea}}
+\index{nxtblkrenderingarea@{nxtblkrenderingarea}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{nxtblkrenderingarea}{nxtblkrenderingarea}}
+{\footnotesize\ttfamily cocos2d\+::\+Layer$\ast$ Hello\+World\+::nxtblkrenderingarea = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+플레이시간을 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 57 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}\label{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}} 
+\index{Hello\+World@{Hello\+World}!nxtblkrv@{nxtblkrv}}
+\index{nxtblkrv@{nxtblkrv}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{nxtblkrv}{nxtblkrv}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior}{Views\+::\+Next\+Block\+Render\+Behavior}$\ast$ Hello\+World\+::nxtblkrv = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 62 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_acc967707dff45c20f68321f07c86a21b}\label{class_hello_world_acc967707dff45c20f68321f07c86a21b}} 
+\index{Hello\+World@{Hello\+World}!overlayblockboard@{overlayblockboard}}
+\index{overlayblockboard@{overlayblockboard}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{overlayblockboard}{overlayblockboard}}
+{\footnotesize\ttfamily cocos2d\+::\+Layer$\ast$ Hello\+World\+::overlayblockboard =N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}\label{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}} 
+\index{Hello\+World@{Hello\+World}!pscorelbl@{pscorelbl}}
+\index{pscorelbl@{pscorelbl}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{pscorelbl}{pscorelbl}}
+{\footnotesize\ttfamily cocos2d\+::\+Label$\ast$ Hello\+World\+::pscorelbl = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+점수를 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 55 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}\label{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}} 
+\index{Hello\+World@{Hello\+World}!ptimelbl@{ptimelbl}}
+\index{ptimelbl@{ptimelbl}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{ptimelbl}{ptimelbl}}
+{\footnotesize\ttfamily cocos2d\+::\+Label$\ast$ Hello\+World\+::ptimelbl = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+플레이시간을 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 54 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}\label{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}} 
+\index{Hello\+World@{Hello\+World}!rmlnscntlbl@{rmlnscntlbl}}
+\index{rmlnscntlbl@{rmlnscntlbl}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{rmlnscntlbl}{rmlnscntlbl}}
+{\footnotesize\ttfamily cocos2d\+::\+Label$\ast$ Hello\+World\+::rmlnscntlbl = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+지운 줄 수를 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}\label{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}} 
+\index{Hello\+World@{Hello\+World}!sounditem@{sounditem}}
+\index{sounditem@{sounditem}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{sounditem}{sounditem}}
+{\footnotesize\ttfamily Menu\+Item\+Label$\ast$ Hello\+World\+::sounditem = N\+U\+LL}
+
+
+
+Hello\+World\+Scene.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/\hyperlink{_hello_world_scene_8h}{Hello\+World\+Scene.\+h}\item 
+Classes/\hyperlink{_hello_world_scene_8cpp}{Hello\+World\+Scene.\+cpp}\end{DoxyCompactItemize}

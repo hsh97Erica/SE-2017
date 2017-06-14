@@ -1,0 +1,5 @@
+<map id="Tetris::Users::GameUser::setCurrentX" name="Tetris::Users::GameUser::setCurrentX">
+<area shape="rect" id="node2" href="$db/dd2/class_tetris_1_1_game_controller.html#ac0d40a0936505754131099034b4271fa" title="Tetris::GameController\l::currentusermoveleft" alt="" coords="221,5,376,43"/>
+<area shape="rect" id="node3" href="$db/dd2/class_tetris_1_1_game_controller.html#a1d2859507cbc9bf9789753228cdedc1f" title="Tetris::GameController\l::currentusermoveright" alt="" coords="221,67,376,106"/>
+<area shape="rect" id="node4" href="$db/dd2/class_tetris_1_1_game_controller.html#a3c63a9754e4cbeae4f66a5760bb4055d" title="Tetris::GameController\l::saveBlockAndCheck" alt="" coords="221,130,376,169"/>
+</map>

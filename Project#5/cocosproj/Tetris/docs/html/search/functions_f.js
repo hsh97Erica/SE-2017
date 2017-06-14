@@ -1,4 +1,22 @@
 var searchData=
 [
-  ['usercheck',['usercheck',['../class_tetris_1_1_game_controller.html#ab96e22daad51119b35cbee8cfb7385ef',1,'Tetris::GameController::usercheck()'],['../class_tetris_1_1_game_controller.html#ab96e22daad51119b35cbee8cfb7385ef',1,'Tetris::GameController::usercheck()']]]
+  ['one_5finput_5fline',['one_input_line',['../d6/d4f/shell_8c.html#acda6c882963376e11ebad6d9804614ca',1,'shell.c']]],
+  ['onenter',['onEnter',['../d9/d98/class_hello_world.html#a0e47c5b1692f5ba74b776be85422dc75',1,'HelloWorld::onEnter()'],['../dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a63cfd0adc032b868536a89b103c44fc5',1,'Tetris::Cocos2dScenes::MainMenuScene::onEnter()'],['../dc/dc7/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene.html#a667d5d9ca7709281c7b67814e5495a26',1,'Tetris::Cocos2dScenes::ScoreBoardScene::onEnter()']]],
+  ['onexit',['onExit',['../d9/d98/class_hello_world.html#a348da8e1c3061248666676878e692572',1,'HelloWorld::onExit()'],['../dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a021af73aac74c3e90113812882b3e0bb',1,'Tetris::Cocos2dScenes::MainMenuScene::onExit()'],['../dc/dc7/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene.html#ade9d785bcda22a7d410c316909377ff8',1,'Tetris::Cocos2dScenes::ScoreBoardScene::onExit()']]],
+  ['onkeypressed',['onKeyPressed',['../d9/d98/class_hello_world.html#af2d5a509259a5d0fce7770a38df371d3',1,'HelloWorld']]],
+  ['onkeyreleased',['onKeyReleased',['../d9/d98/class_hello_world.html#acb7b8934f4697e752182a650a1dc7c3a',1,'HelloWorld']]],
+  ['ontouchbegan',['onTouchBegan',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#a0cc62fe1173f141d60833be4804f97d9',1,'allenlsy::game2048::HelloWorld']]],
+  ['ontouchended',['onTouchEnded',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#a99042e68bb9365cdb764cc9c3d9e6197',1,'allenlsy::game2048::HelloWorld']]],
+  ['open',['open',['../da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a8bf7e756a9cca7e57fef00076fb62f36',1,'Tetris::DBManagement::DBManager']]],
+  ['open_5fdb',['open_db',['../d6/d4f/shell_8c.html#addd9d96dc61d55020cbbd8eaff73fdc2',1,'shell.c']]],
+  ['optionmatch',['optionMatch',['../d6/d4f/shell_8c.html#a327e6349e2f8f454ebf3e87bdc09cf91',1,'shell.c']]],
+  ['output_5fc_5fstring',['output_c_string',['../d6/d4f/shell_8c.html#a0066403d43d9c458e2875f1c49eecafe',1,'shell.c']]],
+  ['output_5fcsv',['output_csv',['../d6/d4f/shell_8c.html#a4db413f63a5632af9c92b150cf4b5c4a',1,'shell.c']]],
+  ['output_5ffile_5fclose',['output_file_close',['../d6/d4f/shell_8c.html#a98b86e91ed3a90f2e133bb4f1ca1dc48',1,'shell.c']]],
+  ['output_5ffile_5fopen',['output_file_open',['../d6/d4f/shell_8c.html#a397662c43d2e45853aba489c210b2036',1,'shell.c']]],
+  ['output_5fhex_5fblob',['output_hex_blob',['../d6/d4f/shell_8c.html#a7a515ef4910c67b925e05eaf715055bf',1,'shell.c']]],
+  ['output_5fhtml_5fstring',['output_html_string',['../d6/d4f/shell_8c.html#a80e241f59dd2151638cf12a0e02cfad3',1,'shell.c']]],
+  ['output_5fquoted_5fescaped_5fstring',['output_quoted_escaped_string',['../d6/d4f/shell_8c.html#a67850984b8c824154c650456effe6660',1,'shell.c']]],
+  ['output_5fquoted_5fstring',['output_quoted_string',['../d6/d4f/shell_8c.html#a6efc1022affd9c40de83685309745420',1,'shell.c']]],
+  ['output_5freset',['output_reset',['../d6/d4f/shell_8c.html#ae30c22d2f1a44510b7f92acdf6af3787',1,'shell.c']]]
 ];

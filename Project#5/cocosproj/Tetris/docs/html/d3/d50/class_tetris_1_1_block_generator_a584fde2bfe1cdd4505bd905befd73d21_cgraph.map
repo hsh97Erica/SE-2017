@@ -1,0 +1,4 @@
+<map id="Tetris::BlockGenerator::generateBlock" name="Tetris::BlockGenerator::generateBlock">
+<area shape="rect" id="node2" href="$db/d37/class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061" title="TetrisUtil::randInt" alt="" coords="215,5,337,30"/>
+<area shape="rect" id="node3" href="$df/d05/class_tetris_1_1_block.html#a0d1eb57e6da91832ad983f7a4fa9ca04" title="Tetris::Block::rotate" alt="" coords="209,54,343,79"/>
+</map>

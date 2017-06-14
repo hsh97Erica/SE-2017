@@ -1,0 +1,8 @@
+<map id="Tetris::GameController::getCombinedBoard" name="Tetris::GameController::getCombinedBoard">
+<area shape="rect" id="node2" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#af5bd7ff0b575af1b42b093488cff97e2" title="Tetris::Users::GameUser\l::getCurrentY" alt="" coords="219,5,386,43"/>
+<area shape="rect" id="node3" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#ad25eace96bd27ae6df4a0c0d506be730" title="Tetris::Users::GameUser\l::getCurrentX" alt="" coords="219,67,386,106"/>
+<area shape="rect" id="node4" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#a3d4bcc74d518c28356012f8a42b85896" title="Tetris::Users::GameUser\l::getCurrentBlock" alt="" coords="219,130,386,169"/>
+<area shape="rect" id="node5" href="$df/d05/class_tetris_1_1_block.html#a5301977e32c03aaf122fa289fcba77ba" title="Tetris::Block::getBlockSpace\lHeight" alt="" coords="208,193,397,231"/>
+<area shape="rect" id="node6" href="$df/d05/class_tetris_1_1_block.html#ac390e14de476582300d815d9054ed9bd" title="Tetris::Block::getBlockSpace\lWidth" alt="" coords="208,255,397,294"/>
+<area shape="rect" id="node7" href="$df/d05/class_tetris_1_1_block.html#a9bd2c3d6ccacff9a5f56f72336ba324f" title="Tetris::Block::getBlockData" alt="" coords="213,318,393,343"/>
+</map>

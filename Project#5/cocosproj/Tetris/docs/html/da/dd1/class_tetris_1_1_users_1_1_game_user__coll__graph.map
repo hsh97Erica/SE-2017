@@ -1,0 +1,6 @@
+<map id="Tetris::Users::GameUser" name="Tetris::Users::GameUser">
+<area shape="rect" id="node2" href="$df/d05/class_tetris_1_1_block.html" title="테트리스 블럭데이터를 저장하고 불러오는 객체 " alt="" coords="21,449,219,751"/>
+<area shape="rect" id="node3" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html" title="블럭의 색상을 관리하고 불러오는 클래스 " alt="" coords="5,6,235,386"/>
+<area shape="rect" id="node4" href="$d3/d50/class_tetris_1_1_block_generator.html" title="블럭을 연속된 번호내에서 생성하거나 랜덤 생성 " alt="" coords="243,543,420,657"/>
+<area shape="rect" id="node5" href="$d5/d03/class_tetris_1_1_users_1_1_user_data.html" title="{Tetris::Users::UserData\n||+ saveAllData()\l+ reloadAllDataFromDB()\l+ saveData()\l}" alt="" coords="445,550,616,650"/>
+</map>

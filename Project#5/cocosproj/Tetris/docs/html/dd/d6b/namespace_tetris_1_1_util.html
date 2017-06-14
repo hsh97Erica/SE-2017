@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>테트리스: Tetris::Util 네임스페이스 참조</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">테트리스
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">테트리스 도큐멘트 by doxygen</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d2/de2/namespace_tetris.html">Tetris</a></li><li class="navelem"><a class="el" href="../../dd/d6b/namespace_tetris_1_1_util.html">Util</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">함수</a>  </div>
+  <div class="headertitle">
+<div class="title">Tetris::Util 네임스페이스 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:aa590e9fd847ac6e0c9bc6bf464b5a74b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6b/namespace_tetris_1_1_util.html#aa590e9fd847ac6e0c9bc6bf464b5a74b">randInt</a> (int st, int ed)</td></tr>
+<tr class="separator:aa590e9fd847ac6e0c9bc6bf464b5a74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">함수 문서화</h2>
+<a id="aa590e9fd847ac6e0c9bc6bf464b5a74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa590e9fd847ac6e0c9bc6bf464b5a74b">&#9670;&nbsp;</a></span>randInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Tetris::Util::randInt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>st</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../db/d35/_util_8cpp_source.html">Util.cpp</a> 파일의 <a class="el" href="../../db/d35/_util_8cpp_source.html#l00007">7</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                                   {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            <span class="keywordflow">if</span>(st&gt;ed)<span class="keywordflow">return</span> <a class="code" href="../../dd/d6b/namespace_tetris_1_1_util.html#aa590e9fd847ac6e0c9bc6bf464b5a74b">randInt</a>(ed,st);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            srand(time(NULL));</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keywordflow">return</span> ((rand())%(ed-st))+st;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        }</div><div class="ttc" id="namespace_tetris_1_1_util_html_aa590e9fd847ac6e0c9bc6bf464b5a74b"><div class="ttname"><a href="../../dd/d6b/namespace_tetris_1_1_util.html#aa590e9fd847ac6e0c9bc6bf464b5a74b">Tetris::Util::randInt</a></div><div class="ttdeci">int randInt(int st, int ed)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d35/_util_8cpp_source.html#l00007">Util.cpp:7</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d6b/namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b_icgraph.png" border="0" usemap="#dd/d6b/namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b_icgraph" alt=""/></div>
+<map name="dd/d6b/namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b_icgraph" id="dd/d6b/namespace_tetris_1_1_util_aa590e9fd847ac6e0c9bc6bf464b5a74b_icgraph">
+<area shape="rect" id="node2" href="../../df/d05/class_tetris_1_1_block.html#a4bae85cab786853cb3ff76aa7fe72edc" title="Tetris::Block::genRandom\lColor" alt="" coords="184,5,357,43"/>
+<area shape="rect" id="node3" href="../../d3/d50/class_tetris_1_1_block_generator.html#a10dfe1467d40437ad41c5ae76437ad78" title="Tetris::BlockGenerator\l::generateRandomBlock" alt="" coords="188,67,353,106"/>
+<area shape="rect" id="node4" href="../../d3/d50/class_tetris_1_1_block_generator.html#a581b22cebe170d3fe8b51130c01e7a22" title="Tetris::BlockGenerator\l::generateBlock" alt="" coords="194,130,347,169"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

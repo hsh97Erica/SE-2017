@@ -1,0 +1,288 @@
+\hypertarget{class_app_delegate}{}\section{App\+Delegate 클래스 참조}
+\label{class_app_delegate}\index{App\+Delegate@{App\+Delegate}}
+
+
+The cocos2d Application.  
+
+
+
+
+{\ttfamily \#include $<$App\+Delegate.\+h$>$}
+
+
+
+App\+Delegate에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{d0/d1d/class_app_delegate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+App\+Delegate에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{d3/db4/class_app_delegate__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_app_delegate_a7d26ade6fbc9d35ecc9185792303f82d}{App\+Delegate} ()
+\item 
+virtual \hyperlink{class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1}{$\sim$\+App\+Delegate} ()
+\item 
+virtual void \hyperlink{class_app_delegate_a2de4e8ab7d04bde311684e1d4ceb2c0f}{init\+G\+L\+Context\+Attrs} ()
+\item 
+virtual bool \hyperlink{class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3}{application\+Did\+Finish\+Launching} ()
+\begin{DoxyCompactList}\small\item\em Implement Director and Scene init code here. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_app_delegate_a17cb09777419781698324e0415bffd3a}{application\+Did\+Enter\+Background} ()
+\begin{DoxyCompactList}\small\item\em Called when the application moves to the background \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_app_delegate_ac4d653e3f74a91efef5f2def58fe3108}{application\+Will\+Enter\+Foreground} ()
+\begin{DoxyCompactList}\small\item\em Called when the application reenters the foreground \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+The cocos2d Application. 
+
+Private inheritance here hides part of interface from Director. 
+
+App\+Delegate.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_app_delegate_a7d26ade6fbc9d35ecc9185792303f82d}\label{class_app_delegate_a7d26ade6fbc9d35ecc9185792303f82d}} 
+\index{App\+Delegate@{App\+Delegate}!App\+Delegate@{App\+Delegate}}
+\index{App\+Delegate@{App\+Delegate}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{App\+Delegate()}{AppDelegate()}}
+{\footnotesize\ttfamily App\+Delegate\+::\+App\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+App\+Delegate.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+35 \{
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1}\label{class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1}} 
+\index{App\+Delegate@{App\+Delegate}!````~App\+Delegate@{$\sim$\+App\+Delegate}}
+\index{````~App\+Delegate@{$\sim$\+App\+Delegate}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{$\sim$\+App\+Delegate()}{~AppDelegate()}}
+{\footnotesize\ttfamily App\+Delegate\+::$\sim$\+App\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+App\+Delegate.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+39 \{
+40     \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a9cb81505055490211a9b5c79c3c22c18}{Tetris::DBManagement::DBManager::getInstance}()->
+      \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8390e6ddf3fa06e90fa5c2ab4997e5c1}{close}();
+41 \textcolor{preprocessor}{#if USE\_AUDIO\_ENGINE}
+42     AudioEngine::end();
+43 \textcolor{preprocessor}{#elif USE\_SIMPLE\_AUDIO\_ENGINE}
+44     SimpleAudioEngine::end();
+45 \textcolor{preprocessor}{#endif}
+46 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d5d/class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_app_delegate_a17cb09777419781698324e0415bffd3a}\label{class_app_delegate_a17cb09777419781698324e0415bffd3a}} 
+\index{App\+Delegate@{App\+Delegate}!application\+Did\+Enter\+Background@{application\+Did\+Enter\+Background}}
+\index{application\+Did\+Enter\+Background@{application\+Did\+Enter\+Background}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{application\+Did\+Enter\+Background()}{applicationDidEnterBackground()}}
+{\footnotesize\ttfamily void App\+Delegate\+::application\+Did\+Enter\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the application moves to the background 
+
+
+\begin{DoxyParams}{매개변수}
+{\em the} & pointer of the application \\
+\hline
+\end{DoxyParams}
+
+
+App\+Delegate.\+cpp 파일의 120 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+120                                                 \{
+121     Director::getInstance()->stopAnimation();
+122 
+123 \textcolor{preprocessor}{#if USE\_AUDIO\_ENGINE}
+124     AudioEngine::pauseAll();
+125 \textcolor{preprocessor}{#elif USE\_SIMPLE\_AUDIO\_ENGINE}
+126     SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+127     SimpleAudioEngine::getInstance()->pauseAllEffects();
+128 \textcolor{preprocessor}{#endif}
+129 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3}\label{class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3}} 
+\index{App\+Delegate@{App\+Delegate}!application\+Did\+Finish\+Launching@{application\+Did\+Finish\+Launching}}
+\index{application\+Did\+Finish\+Launching@{application\+Did\+Finish\+Launching}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{application\+Did\+Finish\+Launching()}{applicationDidFinishLaunching()}}
+{\footnotesize\ttfamily bool App\+Delegate\+::application\+Did\+Finish\+Launching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implement Director and Scene init code here. 
+
+\begin{DoxyReturn}{반환값}
+true Initialize success, app continue. 
+
+false Initialize failed, app terminate. 
+\end{DoxyReturn}
+
+
+App\+Delegate.\+cpp 파일의 65 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+65                                                 \{
+66     \textcolor{comment}{// initialize director}
+67     \textcolor{keyword}{auto} director = Director::getInstance();
+68     \textcolor{keyword}{auto} glview = director->getOpenGLView();
+69     \textcolor{keywordflow}{if}(!glview) \{
+70 \textcolor{preprocessor}{#if (CC\_TARGET\_PLATFORM == CC\_PLATFORM\_WIN32) || (CC\_TARGET\_PLATFORM == CC\_PLATFORM\_MAC) ||
+       (CC\_TARGET\_PLATFORM == CC\_PLATFORM\_LINUX)}
+71         glview = GLViewImpl::createWithRect(\textcolor{stringliteral}{"Tetris"}, cocos2d::Rect(0, 0, 
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.width, \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.height));
+72 \textcolor{preprocessor}{#else}
+73         glview = GLViewImpl::create(\textcolor{stringliteral}{"Tetris"});
+74 \textcolor{preprocessor}{#endif}
+75         director->setOpenGLView(glview);
+76     \}
+77 
+78     \textcolor{comment}{// turn on display FPS}
+79     director->setDisplayStats(\textcolor{keyword}{false});
+80 
+81     \textcolor{comment}{// set FPS. the default value is 1.0/60 if you don't call this}
+82     director->setAnimationInterval(1.0f / 60);
+83 
+84     \textcolor{comment}{// Set the design resolution}
+85     glview->setDesignResolutionSize(\hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.width, 
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.height, ResolutionPolicy::NO\_BORDER);
+86     \textcolor{keyword}{auto} frameSize = glview->getFrameSize();
+87     \textcolor{comment}{// if the frame's height is larger than the height of medium size.}
+88     \textcolor{keywordflow}{if} (frameSize.height > \hyperlink{_app_delegate_8cpp_a50eb9194b9f3d6f1b94424ff16c13686}{mediumResolutionSize}.height)
+89     \{        
+90         director->setContentScaleFactor(MIN(\hyperlink{_app_delegate_8cpp_a2c26c0769aed4c8c6caa56bdaee25055}{largeResolutionSize}.height/
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.height, \hyperlink{_app_delegate_8cpp_a2c26c0769aed4c8c6caa56bdaee25055}{largeResolutionSize}.width/
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.width));
+91     \}
+92     \textcolor{comment}{// if the frame's height is larger than the height of small size.}
+93     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (frameSize.height > \hyperlink{_app_delegate_8cpp_ac337c8e30d901706e0cbdd32256b7d47}{smallResolutionSize}.height)
+94     \{        
+95         director->setContentScaleFactor(MIN(\hyperlink{_app_delegate_8cpp_a50eb9194b9f3d6f1b94424ff16c13686}{mediumResolutionSize}.height/
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.height, \hyperlink{_app_delegate_8cpp_a50eb9194b9f3d6f1b94424ff16c13686}{mediumResolutionSize}.width/
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.width));
+96     \}
+97     \textcolor{comment}{// if the frame's height is smaller than the height of medium size.}
+98     \textcolor{keywordflow}{else}
+99     \{        
+100         director->setContentScaleFactor(MIN(\hyperlink{_app_delegate_8cpp_ac337c8e30d901706e0cbdd32256b7d47}{smallResolutionSize}.height/
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.height, \hyperlink{_app_delegate_8cpp_ac337c8e30d901706e0cbdd32256b7d47}{smallResolutionSize}.width/
+      \hyperlink{_app_delegate_8cpp_a14515fff3914933cbc185cea12f1c54c}{designResolutionSize}.width));
+101     \}
+102 
+103     \hyperlink{_app_delegate_8cpp_a2fe80cfe6b9fd0570db7bb3c69376873}{register\_all\_packages}();
+104     \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_scene_management}{SceneManagement}* scmgr = SceneManagement::getInstance();
+105     \textcolor{keyword}{auto} scene= \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_scene_instance_manager_a7dad1373db969d5c882e2cdc46f7933a}{Tetris::Cocos2dScenes::SceneInstanceManager::createMainMenuScene}
+      ();
+106     \textcolor{comment}{//auto scene= Tetris::Cocos2dScenes::SceneInstanceManager::createGame2048Scene();}
+107     \textcolor{comment}{// create a scene. it's an autorelease object}
+108     \textcolor{comment}{//auto scene = HelloWorld::createScene();}
+109     \textcolor{comment}{//auto scene = Tetris::Cocos2dScenes::MainMenuScene::createScene();}
+110     \textcolor{comment}{//auto scene = CodeLadyJJY::game2048::GameScene::createScene();}
+111     \textcolor{comment}{//TmpCls::print();}
+112     \textcolor{comment}{//auto scene = MainGame::createScene();}
+113     \textcolor{comment}{// run}
+114     director->runWithScene(scene);
+115     \textcolor{comment}{//cout<<"scene loaded"<<endl;}
+116     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+117 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d5d/class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_app_delegate_ac4d653e3f74a91efef5f2def58fe3108}\label{class_app_delegate_ac4d653e3f74a91efef5f2def58fe3108}} 
+\index{App\+Delegate@{App\+Delegate}!application\+Will\+Enter\+Foreground@{application\+Will\+Enter\+Foreground}}
+\index{application\+Will\+Enter\+Foreground@{application\+Will\+Enter\+Foreground}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{application\+Will\+Enter\+Foreground()}{applicationWillEnterForeground()}}
+{\footnotesize\ttfamily void App\+Delegate\+::application\+Will\+Enter\+Foreground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the application reenters the foreground 
+
+
+\begin{DoxyParams}{매개변수}
+{\em the} & pointer of the application \\
+\hline
+\end{DoxyParams}
+
+
+App\+Delegate.\+cpp 파일의 132 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+132                                                  \{
+133     Director::getInstance()->startAnimation();
+134 
+135 \textcolor{preprocessor}{#if USE\_AUDIO\_ENGINE}
+136     AudioEngine::resumeAll();
+137 \textcolor{preprocessor}{#elif USE\_SIMPLE\_AUDIO\_ENGINE}
+138     SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+139     SimpleAudioEngine::getInstance()->resumeAllEffects();
+140 \textcolor{preprocessor}{#endif}
+141 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_app_delegate_a2de4e8ab7d04bde311684e1d4ceb2c0f}\label{class_app_delegate_a2de4e8ab7d04bde311684e1d4ceb2c0f}} 
+\index{App\+Delegate@{App\+Delegate}!init\+G\+L\+Context\+Attrs@{init\+G\+L\+Context\+Attrs}}
+\index{init\+G\+L\+Context\+Attrs@{init\+G\+L\+Context\+Attrs}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{init\+G\+L\+Context\+Attrs()}{initGLContextAttrs()}}
+{\footnotesize\ttfamily void App\+Delegate\+::init\+G\+L\+Context\+Attrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+App\+Delegate.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+51 \{
+52     \textcolor{comment}{// set OpenGL context attributes: red,green,blue,alpha,depth,stencil}
+53     GLContextAttrs glContextAttrs = \{8, 8, 8, 8, 24, 8\};
+54 
+55     GLView::setGLContextAttrs(glContextAttrs);
+56 \}
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/\hyperlink{_app_delegate_8h}{App\+Delegate.\+h}\item 
+Classes/\hyperlink{_app_delegate_8cpp}{App\+Delegate.\+cpp}\end{DoxyCompactItemize}

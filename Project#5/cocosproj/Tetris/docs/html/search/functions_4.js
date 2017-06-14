@@ -1,11 +1,21 @@
 var searchData=
 [
-  ['fastdropdown',['fastdropdown',['../class_tetris_1_1_game_controller.html#a8d5b65ec7638519a39b4ba8a71e67fff',1,'Tetris::GameController::fastdropdown()'],['../class_tetris_1_1_game_controller.html#a8d5b65ec7638519a39b4ba8a71e67fff',1,'Tetris::GameController::fastdropdown()']]],
-  ['findandremovelines',['findAndRemoveLines',['../class_tetris_1_1_game_controller.html#ab19e8563acc9e724e130de60f87600b7',1,'Tetris::GameController::findAndRemoveLines()'],['../class_tetris_1_1_game_controller.html#ab19e8563acc9e724e130de60f87600b7',1,'Tetris::GameController::findAndRemoveLines()']]],
-  ['forceapplycolor',['forceApplyColor',['../class_tetris_1_1_block_sub_modules_1_1_block_color.html#a260b5dd85cdf3145be7564dc2c0ee53d',1,'Tetris::BlockSubModules::BlockColor']]],
-  ['forcechangecolor',['forceChangeColor',['../class_tetris_1_1_block_sub_modules_1_1_block_color.html#ae6d640629b11d880ca994923657adbe1',1,'Tetris::BlockSubModules::BlockColor']]],
-  ['forcedropdownonce',['forcedropdownOnce',['../class_tetris_1_1_game_controller.html#a035e352a85db58a05322156af606f0fa',1,'Tetris::GameController']]],
-  ['forcesettingscore',['forceSettingScore',['../class_tetris_1_1_game_controller.html#ab0fafbfd1d87713f4f9233ccc547ffb8',1,'Tetris::GameController']]],
-  ['freeblockspace',['freeblockspace',['../class_tetris_1_1_block.html#aea78e0a1b229842f541a8e897e2e9340',1,'Tetris::Block::freeblockspace(bool ***spc)'],['../class_tetris_1_1_block.html#aea78e0a1b229842f541a8e897e2e9340',1,'Tetris::Block::freeblockspace(bool ***spc)']]],
-  ['freerelativeconnectionwhendeleting',['freeRelativeConnectionWhenDeleting',['../class_hello_world.html#ab2e9dbd1b003e6d26a10a76495efcc2a',1,'HelloWorld']]]
+  ['db_5fint',['db_int',['../d6/d4f/shell_8c.html#ad3fbf85511218afc74acae1264462ff1',1,'shell.c']]],
+  ['dbmanager',['DBManager',['../da/d79/class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a8271c37f255a2e2bc85a3e1896a32c43',1,'Tetris::DBManagement::DBManager']]],
+  ['dbmanager2',['DBManager2',['../db/d78/class_tetris_1_1_d_b_management_1_1_d_b_manager2.html#a4f78fec881471a80eb86b55696af208a',1,'Tetris::DBManagement::DBManager2']]],
+  ['disable_5fdebug_5ftrace_5fmodes',['disable_debug_trace_modes',['../d6/d4f/shell_8c.html#aed86831a3fc8c34aab0c9727f8394f62',1,'shell.c']]],
+  ['disassemblecolordata',['disassembleColorData',['../de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a216ddc10773f9d0dc44eca5b8b3d8336',1,'Tetris::BlockSubModules::BlockColor']]],
+  ['disassemblecolordataandapply',['disassembleColorDataAndApply',['../de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#afc3bb979353c91cf992101ed2dde610f',1,'Tetris::BlockSubModules::BlockColor']]],
+  ['display_5fscanstats',['display_scanstats',['../d6/d4f/shell_8c.html#a3249bf38864ddd9a6b526fc1f4a500b1',1,'shell.c']]],
+  ['display_5fstats',['display_stats',['../d6/d4f/shell_8c.html#ad7455b80c3c1fc9bfaf60817a5ec04c3',1,'shell.c']]],
+  ['displaystatline',['displayStatLine',['../d6/d4f/shell_8c.html#a7e304a7c24d9001c7c3507cc694c0803',1,'shell.c']]],
+  ['do_5fmeta_5fcommand',['do_meta_command',['../d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1',1,'shell.c']]],
+  ['docheckgameover',['doCheckGameOver',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#a4f9c99959e2c14cd349470d305909fca',1,'allenlsy::game2048::HelloWorld']]],
+  ['dodown',['doDown',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#ad16dcf9910ecb3abdb12d87765032106',1,'allenlsy::game2048::HelloWorld']]],
+  ['doleft',['doLeft',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#a1c43b15b314d8d7efaae6f51bef14c56',1,'allenlsy::game2048::HelloWorld']]],
+  ['doright',['doRight',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#a7538c936591be5b39d45ca66ecf83726',1,'allenlsy::game2048::HelloWorld']]],
+  ['doublenum',['doubleNum',['../d6/d12/class_code_lady_j_j_y_1_1game2048_1_1_card.html#ad4cae75359815f3d80db488df3fd3dfd',1,'CodeLadyJJY::game2048::Card']]],
+  ['doup',['doUp',['../d5/d2b/classallenlsy_1_1game2048_1_1_hello_world.html#aae4ae74d9bc2be114ec52610f3ef3fcc',1,'allenlsy::game2048::HelloWorld']]],
+  ['drawboardingui',['drawboardingui',['../d9/d98/class_hello_world.html#a0456ce3ab8880643c5e8739634156d93',1,'HelloWorld']]],
+  ['dump_5fcallback',['dump_callback',['../d6/d4f/shell_8c.html#a57a4b1600ae8c8582a996ee3e4299494',1,'shell.c']]]
 ];

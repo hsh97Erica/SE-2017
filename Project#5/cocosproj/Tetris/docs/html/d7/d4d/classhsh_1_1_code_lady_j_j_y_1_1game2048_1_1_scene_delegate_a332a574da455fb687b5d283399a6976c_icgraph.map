@@ -1,0 +1,10 @@
+<map id="hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance" name="hsh::CodeLadyJJY::game2048::SceneDelegate::getInstance">
+<area shape="rect" id="node2" href="$d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene.html#ad08ac2bf0b55768bfbb825dea8d6e6b3" title="CodeLadyJJY::game2048\l::GameScene::calcScore" alt="" coords="278,5,452,43"/>
+<area shape="rect" id="node3" href="$d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene.html#a555636f47220602c6b2b25f6594b9dd0" title="CodeLadyJJY::game2048\l::GameScene::giveupgame" alt="" coords="274,67,457,106"/>
+<area shape="rect" id="node4" href="$d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene.html#a85a543aab574d4d4c883da63e57ab47f" title="CodeLadyJJY::game2048\l::GameScene::setFailGameState" alt="" coords="257,130,474,169"/>
+<area shape="rect" id="node5" href="$d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene.html#ab0ccbc102ba9ceca94daddc2e8f253ba" title="CodeLadyJJY::game2048\l::GameScene::init" alt="" coords="278,193,452,231"/>
+<area shape="rect" id="node6" href="$d9/d98/class_hello_world.html#a4ab71b15b7e362af143d2a539e39a538" title="HelloWorld::stateloop" alt="" coords="291,255,439,281"/>
+<area shape="rect" id="node7" href="$d9/d98/class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944" title="HelloWorld::play" alt="" coords="524,255,642,281"/>
+<area shape="rect" id="node8" href="$d9/d98/class_hello_world.html#aa4c36099096e160e3726819a2308dd04" title="HelloWorld::startGame" alt="" coords="691,255,847,281"/>
+<area shape="rect" id="node9" href="$d9/d98/class_hello_world.html#a65e2b1525051f3690e5a39ca56608a97" title="HelloWorld::init" alt="" coords="897,255,1007,281"/>
+</map>

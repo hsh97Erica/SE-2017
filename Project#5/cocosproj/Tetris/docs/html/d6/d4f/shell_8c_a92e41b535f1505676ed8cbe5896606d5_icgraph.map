@@ -1,0 +1,7 @@
+<map id="pclose" name="pclose">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#ae30c22d2f1a44510b7f92acdf6af3787" title="output_reset" alt="" coords="115,55,210,81"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1" title="do_meta_command" alt="" coords="258,5,398,30"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#a28ee64282e3608a01508cc72b184cdb2" title="process_input" alt="" coords="445,30,550,55"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#ac931daf5abf20567dcdd053c22142b95" title="main" alt="" coords="763,30,813,55"/>
+<area shape="rect" id="node5" href="$d6/d4f/shell_8c.html#a121d06853a2e10f82487dd74adcb8525" title="process_sqliterc" alt="" coords="597,30,715,55"/>
+</map>

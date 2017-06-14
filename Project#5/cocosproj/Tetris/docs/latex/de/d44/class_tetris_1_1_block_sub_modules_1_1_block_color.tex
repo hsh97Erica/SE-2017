@@ -1,0 +1,760 @@
+\hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color}{}\section{Tetris\+:\+:Block\+Sub\+Modules\+:\+:Block\+Color 클래스 참조}
+\label{class_tetris_1_1_block_sub_modules_1_1_block_color}\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+
+
+블럭의 색상을 관리하고 불러오는 클래스  
+
+
+
+
+{\ttfamily \#include $<$Block\+Color.\+hpp$>$}
+
+
+
+Tetris\+:\+:Block\+Sub\+Modules\+:\+:Block\+Color에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{d8/d90/class_tetris_1_1_block_sub_modules_1_1_block_color__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_abb929df07c6b378e31d76b7298eb9e12}{Block\+Color} (unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha}, unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red}, unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green}, unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue})
+\item 
+\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_aba62c9da4cb4b43caa871452a34790a9}{Block\+Color} (unsigned int combineddt)
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1}{force\+Change\+Color} (const unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha}, const unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red}, const unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green}, const unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue})
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a260b5dd85cdf3145be7564dc2c0ee53d}{force\+Apply\+Color} (const unsigned int dt)
+\item 
+unsigned char $\ast$ \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac626961ee3894d89a7fc961e9f40c92f}{get\+Color\+As\+Array} ()
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a65e9230325a2f44aa433f39c199aabcd}{get\+Green\+As\+Raw} ()
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac0ad44a8b001f3824447d137357f5145}{get\+Blue\+As\+Raw} ()
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a1795cf70c847d261645a9690afff7e9c}{get\+Red\+As\+Raw} ()
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_acb1c9b34ee534857741025bd2824201a}{get\+Alpha\+As\+Raw} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a}{pack\+Raw\+Color\+Data} ()
+\item 
+string \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a79cc837f207645628542876997c9e919}{get\+Block\+Color\+As\+Hex\+String} ()
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a74374a6d24cd77c7f4fe03e19111bab7}{gen\+Random\+Color} ()
+\item 
+static unsigned int \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a624fe688c2889c345cb8dff757f06ef9}{gen\+Sample\+Color} (const unsigned char samplenum)
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_aeea8ab6d5f36d35fd4f28818349661ab}{set\+Green} (unsigned char grn)
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac624156bd1f77a20d6e1d4c8cbff36d3}{set\+Blue} (unsigned char blu)
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a5fdd2d1a53d92ec0bcc1c25748b890e0}{set\+Alpha} (unsigned char aph)
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a9541e6b5b809214ae2691a99af06ac3f}{set\+Red} (unsigned char rd)
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green}
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue}
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red}
+\item 
+unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a216ddc10773f9d0dc44eca5b8b3d8336}{disassemble\+Color\+Data} (unsigned int dt)
+\item 
+void \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f}{disassemble\+Color\+Data\+And\+Apply} (unsigned int dt)
+\end{DoxyCompactItemize}
+\subsection*{정적 Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{gen\+Color} (unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red}, unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green}, unsigned char \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue})
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+블럭의 색상을 관리하고 불러오는 클래스 
+
+Block\+Color.\+hpp 파일의 18 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_abb929df07c6b378e31d76b7298eb9e12}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_abb929df07c6b378e31d76b7298eb9e12}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!Block\+Color@{Block\+Color}}
+\index{Block\+Color@{Block\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{Block\+Color()}{BlockColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::\+Block\+Color (\begin{DoxyParamCaption}\item[{unsigned char}]{alpha,  }\item[{unsigned char}]{red,  }\item[{unsigned char}]{green,  }\item[{unsigned char}]{blue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block\+Color.\+hpp 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+20                                                                                                            
+         \{
+21                     this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1}{forceChangeColor}(\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha},\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red},
+      \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green},\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue});
+22                 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_abb929df07c6b378e31d76b7298eb9e12_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_aba62c9da4cb4b43caa871452a34790a9}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_aba62c9da4cb4b43caa871452a34790a9}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!Block\+Color@{Block\+Color}}
+\index{Block\+Color@{Block\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{Block\+Color()}{BlockColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::\+Block\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{combineddt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block\+Color.\+hpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+23                                                \{
+24                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f}{disassembleColorDataAndApply}(combineddt);
+25             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_aba62c9da4cb4b43caa871452a34790a9_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a216ddc10773f9d0dc44eca5b8b3d8336}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a216ddc10773f9d0dc44eca5b8b3d8336}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!disassemble\+Color\+Data@{disassemble\+Color\+Data}}
+\index{disassemble\+Color\+Data@{disassemble\+Color\+Data}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{disassemble\+Color\+Data()}{disassembleColorData()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::disassemble\+Color\+Data (\begin{DoxyParamCaption}\item[{unsigned int}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\begin{DoxyReturn}{반환값}
+4바이트 변수에서 rgba를 분해해 배열로 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 142 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+142                                                                     \{
+143                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* rst = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}[4];
+144                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<4;i++)\{
+145                         rst[3-i]=(((~((~(\textcolor{keywordtype}{unsigned} int)0)<<(8)))<<(8*i))&dt)>>(8*i);
+146                     \}
+147                     \textcolor{keywordflow}{return} rst;
+148                 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a216ddc10773f9d0dc44eca5b8b3d8336_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!disassemble\+Color\+Data\+And\+Apply@{disassemble\+Color\+Data\+And\+Apply}}
+\index{disassemble\+Color\+Data\+And\+Apply@{disassemble\+Color\+Data\+And\+Apply}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{disassemble\+Color\+Data\+And\+Apply()}{disassembleColorDataAndApply()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::disassemble\+Color\+Data\+And\+Apply (\begin{DoxyParamCaption}\item[{unsigned int}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\begin{DoxyReturn}{반환값}
+disassemble\+Color\+Data를 가져와 즉시적용 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 152 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+152                                                               \{
+153                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* disasmb= this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a216ddc10773f9d0dc44eca5b8b3d8336}{disassembleColorData}(dt);
+154                 \textcolor{keywordflow}{if}(disasmb!=NULL)\{
+155                     this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1}{forceChangeColor}(disasmb[0],disasmb[1],disasmb[2],disasmb[3]);
+156                     \textcolor{keyword}{delete} [] disasmb;
+157                 \}
+158             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a260b5dd85cdf3145be7564dc2c0ee53d}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a260b5dd85cdf3145be7564dc2c0ee53d}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!force\+Apply\+Color@{force\+Apply\+Color}}
+\index{force\+Apply\+Color@{force\+Apply\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{force\+Apply\+Color()}{forceApplyColor()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::force\+Apply\+Color (\begin{DoxyParamCaption}\item[{const unsigned int}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block\+Color.\+hpp 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+32                                                        \{
+33                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_afc3bb979353c91cf992101ed2dde610f}{disassembleColorDataAndApply}(dt);
+34             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a260b5dd85cdf3145be7564dc2c0ee53d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!force\+Change\+Color@{force\+Change\+Color}}
+\index{force\+Change\+Color@{force\+Change\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{force\+Change\+Color()}{forceChangeColor()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::force\+Change\+Color (\begin{DoxyParamCaption}\item[{const unsigned char}]{alpha,  }\item[{const unsigned char}]{red,  }\item[{const unsigned char}]{green,  }\item[{const unsigned char}]{blue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block\+Color.\+hpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+26                                                                                                            
+                                   \{
+27                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a5fdd2d1a53d92ec0bcc1c25748b890e0}{setAlpha}(\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha});
+28                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a9541e6b5b809214ae2691a99af06ac3f}{setRed}(\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red});
+29                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_aeea8ab6d5f36d35fd4f28818349661ab}{setGreen}(\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green});
+30                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac624156bd1f77a20d6e1d4c8cbff36d3}{setBlue}(\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue});
+31             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_ae6d640629b11d880ca994923657adbe1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!gen\+Color@{gen\+Color}}
+\index{gen\+Color@{gen\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{gen\+Color()}{genColor()}}
+{\footnotesize\ttfamily static unsigned int Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::gen\+Color (\begin{DoxyParamCaption}\item[{unsigned char}]{red,  }\item[{unsigned char}]{green,  }\item[{unsigned char}]{blue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\begin{DoxyReturn}{반환값}
+색상 데이터를 4바이트 변수로 묶어 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 162 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+162                                                                                                    \{
+163                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rst = (\textcolor{keywordtype}{unsigned} int)\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue};
+164                 rst|=((~(\textcolor{keywordtype}{unsigned} int)0)<<(8*3));
+165                 rst|=((\textcolor{keywordtype}{unsigned} int)\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red}<<(8*2));
+166                 rst|=((\textcolor{keywordtype}{unsigned} int)\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green}<<(8*1));
+167                 \textcolor{keywordflow}{return} rst;
+168             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a74374a6d24cd77c7f4fe03e19111bab7}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a74374a6d24cd77c7f4fe03e19111bab7}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!gen\+Random\+Color@{gen\+Random\+Color}}
+\index{gen\+Random\+Color@{gen\+Random\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{gen\+Random\+Color()}{genRandomColor()}}
+{\footnotesize\ttfamily static unsigned int Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::gen\+Random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Block\+Color.\+hpp 파일의 35 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+35                                                 \{
+36                 \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a624fe688c2889c345cb8dff757f06ef9}{BlockColor::genSampleColor}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})
+      \hyperlink{class_tetris_util_a0a60e809425ddb416a500bcc03cf7061}{TetrisUtil::randInt}(1,7));
+37             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a74374a6d24cd77c7f4fe03e19111bab7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a624fe688c2889c345cb8dff757f06ef9}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a624fe688c2889c345cb8dff757f06ef9}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!gen\+Sample\+Color@{gen\+Sample\+Color}}
+\index{gen\+Sample\+Color@{gen\+Sample\+Color}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{gen\+Sample\+Color()}{genSampleColor()}}
+{\footnotesize\ttfamily static unsigned int Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::gen\+Sample\+Color (\begin{DoxyParamCaption}\item[{const unsigned char}]{samplenum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{반환값}
+미리 지정된 색상을 4바이트 변수 데이터로 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+41                                                                              \{
+42                 \textcolor{keywordflow}{switch}(samplenum)\{
+43                     \textcolor{keywordflow}{case} 2:\{\textcolor{comment}{//pink600}
+44                         \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0xd8,0x1b,0x60);
+45                     \}
+46                     \textcolor{keywordflow}{case} 3:\{\textcolor{comment}{//purple700}
+47                         \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0x7b,0x1f,0xa2);
+48                     \}
+49                     \textcolor{keywordflow}{case} 4:\{\textcolor{comment}{//deeppurpleA400}
+50                         \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0x65,0x1f,0xff);
+51                     \}
+52                     \textcolor{keywordflow}{case} 5:\{\textcolor{comment}{//teal600}
+53                         \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0x00,0x89,0x7b);
+54                     \}
+55                     \textcolor{keywordflow}{case} 6:\{\textcolor{comment}{//red500}
+56                         \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0xf4,0x43,0x36);
+57                     \}
+58                     \textcolor{keywordflow}{case} 7:\{\textcolor{comment}{//red900}
+59                         \textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0xb7,0xc1,0xc1);
+60                     \}
+61                     \textcolor{keywordflow}{case} 1:
+62                     \textcolor{keywordflow}{default}:\textcolor{keywordflow}{return} \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a479cf23117afea6237a4fd69bc4652ba}{BlockColor::genColor}(0x30,0x3f,0x9f);
+63                 \}
+64                 
+65             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a624fe688c2889c345cb8dff757f06ef9_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a624fe688c2889c345cb8dff757f06ef9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_acb1c9b34ee534857741025bd2824201a}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_acb1c9b34ee534857741025bd2824201a}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!get\+Alpha\+As\+Raw@{get\+Alpha\+As\+Raw}}
+\index{get\+Alpha\+As\+Raw@{get\+Alpha\+As\+Raw}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{get\+Alpha\+As\+Raw()}{getAlphaAsRaw()}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::get\+Alpha\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+색상데이터중 투명도 데이터를 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 98 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+98                                          \{
+99                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha};
+100             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_acb1c9b34ee534857741025bd2824201a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a79cc837f207645628542876997c9e919}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a79cc837f207645628542876997c9e919}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}}
+\index{get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Hex\+String()}{getBlockColorAsHexString()}}
+{\footnotesize\ttfamily string Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::get\+Block\+Color\+As\+Hex\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+색상 데이터를 rgba hex 형식으로 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 110 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+110                                              \{
+111                 \textcolor{comment}{//string rst = "";}
+112                 stringstream ss;
+113                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} clr = this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a}{packRawColorData}();
+114                 ss.fill(\textcolor{charliteral}{'0'});
+115                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=4-2;i>=0;i--)\{
+116                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} inters = (~((~(\textcolor{keywordtype}{unsigned} int)0)<<8))<<(8*i);
+117                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} extract = (clr&inters)>>(8*i);
+118                     ss.width(2);
+119                     ss<<hex<<extract;
+120                 \}
+121                 \textcolor{comment}{//rst<<}
+122                 \textcolor{keywordflow}{return} ss.str();
+123             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a79cc837f207645628542876997c9e919_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_ac0ad44a8b001f3824447d137357f5145}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_ac0ad44a8b001f3824447d137357f5145}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!get\+Blue\+As\+Raw@{get\+Blue\+As\+Raw}}
+\index{get\+Blue\+As\+Raw@{get\+Blue\+As\+Raw}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{get\+Blue\+As\+Raw()}{getBlueAsRaw()}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::get\+Blue\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+색상데이터중 파랑 데이터를 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 86 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+86                                         \{
+87                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue};
+88             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_ac0ad44a8b001f3824447d137357f5145_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_ac626961ee3894d89a7fc961e9f40c92f}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_ac626961ee3894d89a7fc961e9f40c92f}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!get\+Color\+As\+Array@{get\+Color\+As\+Array}}
+\index{get\+Color\+As\+Array@{get\+Color\+As\+Array}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{get\+Color\+As\+Array()}{getColorAsArray()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::get\+Color\+As\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+색상데이터를 배열형식으로 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+69                                             \{
+70                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* rst = \textcolor{keyword}{new} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}[4];
+71                 rst[0]=this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_acb1c9b34ee534857741025bd2824201a}{getAlphaAsRaw}();
+72                 rst[1] = this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a1795cf70c847d261645a9690afff7e9c}{getRedAsRaw}();
+73                 rst[2] = this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a65e9230325a2f44aa433f39c199aabcd}{getGreenAsRaw}();
+74                 rst[3] = this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac0ad44a8b001f3824447d137357f5145}{getBlueAsRaw}();
+75                 \textcolor{keywordflow}{return} rst;
+76             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_ac626961ee3894d89a7fc961e9f40c92f_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_ac626961ee3894d89a7fc961e9f40c92f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a65e9230325a2f44aa433f39c199aabcd}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a65e9230325a2f44aa433f39c199aabcd}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!get\+Green\+As\+Raw@{get\+Green\+As\+Raw}}
+\index{get\+Green\+As\+Raw@{get\+Green\+As\+Raw}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{get\+Green\+As\+Raw()}{getGreenAsRaw()}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::get\+Green\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+색상데이터중 녹색 데이터를 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 80 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+80                                          \{
+81                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green};
+82             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a65e9230325a2f44aa433f39c199aabcd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a1795cf70c847d261645a9690afff7e9c}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a1795cf70c847d261645a9690afff7e9c}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!get\+Red\+As\+Raw@{get\+Red\+As\+Raw}}
+\index{get\+Red\+As\+Raw@{get\+Red\+As\+Raw}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{get\+Red\+As\+Raw()}{getRedAsRaw()}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::get\+Red\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+색상데이터중 삘깅 데이터를 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 92 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+92                                        \{
+93                 \textcolor{keywordflow}{return} this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red};
+94             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a1795cf70c847d261645a9690afff7e9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!pack\+Raw\+Color\+Data@{pack\+Raw\+Color\+Data}}
+\index{pack\+Raw\+Color\+Data@{pack\+Raw\+Color\+Data}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{pack\+Raw\+Color\+Data()}{packRawColorData()}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::pack\+Raw\+Color\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+현재 설정된 색상 데이터를 4바이트 변수로 묶어 리턴 
+\end{DoxyReturn}
+
+
+Block\+Color.\+hpp 파일의 104 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+104                                            \{
+105                 \textcolor{keywordflow}{return} (((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_acb1c9b34ee534857741025bd2824201a}{getAlphaAsRaw}())<<(8*3))|(((\textcolor{keywordtype}{unsigned} int)this->
+      \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a1795cf70c847d261645a9690afff7e9c}{getRedAsRaw}())<<(8*2))|(((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a65e9230325a2f44aa433f39c199aabcd}{getGreenAsRaw}())<<(8*1))|this->
+      \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_ac0ad44a8b001f3824447d137357f5145}{getBlueAsRaw}();
+106             \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a849ebbb0e900c5efdcb99784767e7a7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a5fdd2d1a53d92ec0bcc1c25748b890e0}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a5fdd2d1a53d92ec0bcc1c25748b890e0}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!set\+Alpha@{set\+Alpha}}
+\index{set\+Alpha@{set\+Alpha}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{set\+Alpha()}{setAlpha()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::set\+Alpha (\begin{DoxyParamCaption}\item[{unsigned char}]{aph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 132 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+132                                             \{
+133                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}{alpha} = aph;
+134             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a5fdd2d1a53d92ec0bcc1c25748b890e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_ac624156bd1f77a20d6e1d4c8cbff36d3}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_ac624156bd1f77a20d6e1d4c8cbff36d3}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!set\+Blue@{set\+Blue}}
+\index{set\+Blue@{set\+Blue}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{set\+Blue()}{setBlue()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::set\+Blue (\begin{DoxyParamCaption}\item[{unsigned char}]{blu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 129 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+129                                            \{
+130                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}{blue} = blu;
+131             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_ac624156bd1f77a20d6e1d4c8cbff36d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_aeea8ab6d5f36d35fd4f28818349661ab}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_aeea8ab6d5f36d35fd4f28818349661ab}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!set\+Green@{set\+Green}}
+\index{set\+Green@{set\+Green}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{set\+Green()}{setGreen()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::set\+Green (\begin{DoxyParamCaption}\item[{unsigned char}]{grn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 126 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+126                                             \{
+127                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}{green} = grn;
+128             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_aeea8ab6d5f36d35fd4f28818349661ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a9541e6b5b809214ae2691a99af06ac3f}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a9541e6b5b809214ae2691a99af06ac3f}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!set\+Red@{set\+Red}}
+\index{set\+Red@{set\+Red}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{set\+Red()}{setRed()}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::set\+Red (\begin{DoxyParamCaption}\item[{unsigned char}]{rd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 135 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+135                                          \{
+136                 this->\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}{red} = rd;
+137             \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color_a9541e6b5b809214ae2691a99af06ac3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_af0983ea684f33617a0b482cfea1d3c2b}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!alpha@{alpha}}
+\index{alpha@{alpha}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::alpha\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 125 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_af04e78b9a1c2f7625863c289c4a741e3}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!blue@{blue}}
+\index{blue@{blue}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{blue}{blue}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::blue\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 125 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_a4b28885bfd8bf53793c6b3daedd974eb}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!green@{green}}
+\index{green@{green}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{green}{green}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::green\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 125 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}\label{class_tetris_1_1_block_sub_modules_1_1_block_color_af8a0dc372e7dbab300290eadada8ef49}} 
+\index{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}!red@{red}}
+\index{red@{red}!Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color@{Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color}}
+\subsubsection{\texorpdfstring{red}{red}}
+{\footnotesize\ttfamily unsigned char Tetris\+::\+Block\+Sub\+Modules\+::\+Block\+Color\+::red\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Block\+Color.\+hpp 파일의 125 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/tet2/\hyperlink{_block_color_8hpp}{Block\+Color.\+hpp}\end{DoxyCompactItemize}

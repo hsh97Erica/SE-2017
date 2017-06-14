@@ -1,0 +1,5 @@
+<map id="HelloWorld::menuCloseCallback" name="HelloWorld::menuCloseCallback">
+<area shape="rect" id="node2" href="$d9/d98/class_hello_world.html#a65e2b1525051f3690e5a39ca56608a97" title="HelloWorld::init" alt="" coords="321,5,431,30"/>
+<area shape="rect" id="node3" href="$d9/d98/class_hello_world.html#a24162678657656105f59887233f9c841" title="HelloWorld::generateOptionMenu" alt="" coords="267,54,485,79"/>
+<area shape="rect" id="node4" href="$d9/d98/class_hello_world.html#a7b22f04ccc721e47e59c4f5470768790" title="HelloWorld::generateGame\lOverMenu" alt="" coords="285,103,467,142"/>
+</map>

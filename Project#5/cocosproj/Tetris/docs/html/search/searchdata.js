@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghijklmnoprstuvwxz~",
+  0: "_abcdefghijklmnopqrstuvwxz~",
   1: "abcdfghimnstu",
   2: "acht",
   3: "abcdghmnstu",
-  4: "abcdfghijlmoprsuw~",
+  4: "_abcdefghijklmnopqrstuw~",
   5: "abcdefghiklmnoprstuvwxz",
   6: "efiksu",
   7: "eg",
@@ -29,7 +29,7 @@ var indexSectionNames =
 var indexSectionLabels =
 {
   0: "모두",
-  1: "클래스",
+  1: "데이터 구조",
   2: "네임스페이스들",
   3: "파일들",
   4: "함수",

@@ -1,0 +1,9 @@
+<map id="exec_prepared_stmt" name="exec_prepared_stmt">
+<area shape="rect" id="node2" href="$de/dd3/sqlite3_8h.html#ac1e491ce36b7471eb28387f7d3c74334" title="sqlite3_step" alt="" coords="227,5,320,30"/>
+<area shape="rect" id="node3" href="$de/dd3/sqlite3_8h.html#a326cbde878820fd108f5961d5318f585" title="sqlite3_column_count" alt="" coords="198,54,348,79"/>
+<area shape="rect" id="node4" href="$de/dd3/sqlite3_8h.html#a12b7ee85e539ea28c130c5c75b96a82a" title="sqlite3_malloc64" alt="" coords="213,103,334,129"/>
+<area shape="rect" id="node5" href="$de/dd3/sqlite3_8h.html#a01def208cc0075b490ec34c00e7b4294" title="sqlite3_column_name" alt="" coords="198,153,349,178"/>
+<area shape="rect" id="node6" href="$de/dd3/sqlite3_8h.html#a384086b220821bc71e9a3f900773a25d" title="sqlite3_column_type" alt="" coords="202,202,345,227"/>
+<area shape="rect" id="node7" href="$de/dd3/sqlite3_8h.html#a2f04c4c4fcf17f6e866236cce8c0d426" title="sqlite3_column_text" alt="" coords="204,251,343,277"/>
+<area shape="rect" id="node8" href="$de/dd3/sqlite3_8h.html#a6552349e36a8a691af5487999ab09519" title="sqlite3_free" alt="" coords="228,301,318,326"/>
+</map>

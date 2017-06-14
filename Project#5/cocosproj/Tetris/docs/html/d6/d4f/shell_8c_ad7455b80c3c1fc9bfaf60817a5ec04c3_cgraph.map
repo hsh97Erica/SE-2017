@@ -1,0 +1,7 @@
+<map id="display_stats" name="display_stats">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#a7e304a7c24d9001c7c3507cc694c0803" title="displayStatLine" alt="" coords="164,29,276,54"/>
+<area shape="rect" id="node5" href="$de/dd3/sqlite3_8h.html#ab64e8333313ee2e44116842711818940" title="sqlite3_db_status" alt="" coords="157,78,283,103"/>
+<area shape="rect" id="node6" href="$de/dd3/sqlite3_8h.html#a86d220828ff29420097add1507fc8832" title="sqlite3_stmt_status" alt="" coords="152,127,288,153"/>
+<area shape="rect" id="node3" href="$de/dd3/sqlite3_8h.html#a29974a4a0bea29c473288ef1e5d80f80" title="sqlite3_status64" alt="" coords="336,5,454,30"/>
+<area shape="rect" id="node4" href="$de/dd3/sqlite3_8h.html#af4558fab7cb8fb1e61fd642d3e017ef7" title="sqlite3_snprintf" alt="" coords="339,54,450,79"/>
+</map>

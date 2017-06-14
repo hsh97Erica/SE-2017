@@ -1,0 +1,5 @@
+<map id="AppDelegate::applicationDidFinishLaunching" name="AppDelegate::applicationDidFinishLaunching">
+<area shape="rect" id="node2" href="$d2/d6c/_app_delegate_8cpp.html#a2fe80cfe6b9fd0570db7bb3c69376873" title="register_all_packages" alt="" coords="234,5,385,30"/>
+<area shape="rect" id="node3" href="$d1/d6f/class_tetris_1_1_cocos2d_scenes_1_1_scene_instance_manager.html#a7dad1373db969d5c882e2cdc46f7933a" title="Tetris::Cocos2dScenes\l::SceneInstanceManager\l::createMainMenuScene" alt="" coords="225,54,394,106"/>
+<area shape="rect" id="node4" href="$dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a46eb7e1d9999c6ed8e9acf49cfcd21cf" title="Tetris::Cocos2dScenes\l::MainMenuScene::createScene" alt="" coords="442,61,654,99"/>
+</map>

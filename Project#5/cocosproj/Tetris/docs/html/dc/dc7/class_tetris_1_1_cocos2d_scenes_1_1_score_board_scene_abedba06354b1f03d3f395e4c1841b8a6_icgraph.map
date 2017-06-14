@@ -1,0 +1,4 @@
+<map id="Tetris::Cocos2dScenes::ScoreBoardScene::createScene" name="Tetris::Cocos2dScenes::ScoreBoardScene::createScene">
+<area shape="rect" id="node2" href="$dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a2fdee3d586584f0186569ccd13d2d7fc" title="Tetris::Cocos2dScenes\l::MainMenuScene::menuSCBRDBtn\lCallback" alt="" coords="273,5,509,57"/>
+<area shape="rect" id="node3" href="$d1/d6f/class_tetris_1_1_cocos2d_scenes_1_1_scene_instance_manager.html#a159ac191291a7cc3575d6f5790df6646" title="Tetris::Cocos2dScenes\l::SceneInstanceManager\l::createScoreBoardScene" alt="" coords="304,81,478,133"/>
+</map>

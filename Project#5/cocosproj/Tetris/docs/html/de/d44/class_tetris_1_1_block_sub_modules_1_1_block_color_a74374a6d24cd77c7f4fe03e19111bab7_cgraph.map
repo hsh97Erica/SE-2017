@@ -1,0 +1,5 @@
+<map id="Tetris::BlockSubModules::BlockColor::genRandomColor" name="Tetris::BlockSubModules::BlockColor::genRandomColor">
+<area shape="rect" id="node2" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a624fe688c2889c345cb8dff757f06ef9" title="Tetris::BlockSubModules\l::BlockColor::genSampleColor" alt="" coords="259,5,459,43"/>
+<area shape="rect" id="node4" href="$db/d37/class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061" title="TetrisUtil::randInt" alt="" coords="298,67,419,93"/>
+<area shape="rect" id="node3" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a479cf23117afea6237a4fd69bc4652ba" title="Tetris::BlockSubModules\l::BlockColor::genColor" alt="" coords="507,5,674,43"/>
+</map>

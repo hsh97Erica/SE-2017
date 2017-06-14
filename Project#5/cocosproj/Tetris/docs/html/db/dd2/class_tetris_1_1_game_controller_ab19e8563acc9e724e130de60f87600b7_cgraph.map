@@ -1,0 +1,4 @@
+<map id="Tetris::GameController::findAndRemoveLines" name="Tetris::GameController::findAndRemoveLines">
+<area shape="rect" id="node2" href="$d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a561c580924ee6a13e6453b2d94764548" title="Tetris::Audio::AudioSource\lManager::getInstance" alt="" coords="241,5,420,43"/>
+<area shape="rect" id="node3" href="$d2/d6a/class_tetris_1_1_audio_1_1_audio_source_manager.html#a44c761f0200291a2c8f282d8d52aa081" title="Tetris::Audio::AudioSource\lManager::playRemovingBlocksEffect" alt="" coords="211,67,450,106"/>
+</map>

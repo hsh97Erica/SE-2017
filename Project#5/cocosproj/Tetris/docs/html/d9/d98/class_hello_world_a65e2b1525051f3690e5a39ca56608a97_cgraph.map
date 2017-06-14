@@ -1,0 +1,30 @@
+<map id="HelloWorld::init" name="HelloWorld::init">
+<area shape="rect" id="node2" href="$db/dd2/class_tetris_1_1_game_controller.html#aef406397d4719c9edd49774d0343ce05" title="Tetris::GameController\l::justinit" alt="" coords="611,242,765,281"/>
+<area shape="rect" id="node3" href="$d9/d98/class_hello_world.html#aa4c36099096e160e3726819a2308dd04" title="HelloWorld::startGame" alt="" coords="194,305,350,330"/>
+<area shape="rect" id="node28" href="$d9/d98/class_hello_world.html#ac4ab2f5e922e659d4f137591c0f6a9b0" title="HelloWorld::menuCloseCallback" alt="" coords="166,354,378,379"/>
+<area shape="rect" id="node29" href="$d9/d98/class_hello_world.html#a1609fd202ff4b899571aeb34b3cdaed4" title="HelloWorld::menuDrawerClick\lCallback" alt="" coords="173,403,371,442"/>
+<area shape="rect" id="node4" href="$d9/d98/class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944" title="HelloWorld::play" alt="" coords="428,310,546,335"/>
+<area shape="rect" id="node5" href="$db/dd2/class_tetris_1_1_game_controller.html#a47681985e6fbf14411a70be08f85bf99" title="Tetris::GameController\l::setGameStatusToOngoing" alt="" coords="595,305,781,343"/>
+<area shape="rect" id="node6" href="$d9/d98/class_hello_world.html#a4ab71b15b7e362af143d2a539e39a538" title="HelloWorld::stateloop" alt="" coords="614,367,762,393"/>
+<area shape="rect" id="node7" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a332a574da455fb687b5d283399a6976c" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getInstance" alt="" coords="840,221,1043,259"/>
+<area shape="rect" id="node8" href="$d9/d98/class_hello_world.html#af59f38fb445c1302e5d2f7e18d0ab0e5" title="HelloWorld::gameloop" alt="" coords="865,283,1017,309"/>
+<area shape="rect" id="node22" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a07cb2b429428f54e4291c4c8dc63b4ac" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::resetAllVar" alt="" coords="840,361,1043,399"/>
+<area shape="rect" id="node24" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#af6805111081144b68d039d8f71d1ed0b" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::setGoal" alt="" coords="840,423,1043,462"/>
+<area shape="rect" id="node25" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#abb107cf268a50b3ebd9bd545c88a9a35" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getRandomGoal" alt="" coords="829,514,1054,553"/>
+<area shape="rect" id="node9" href="$db/dd2/class_tetris_1_1_game_controller.html#a9dd5159934835ef54cb3c0b24cbc1fd6" title="Tetris::GameController\l::innergameloop" alt="" coords="1125,39,1280,78"/>
+<area shape="rect" id="node12" href="$db/dd2/class_tetris_1_1_game_controller.html#abc67d4b309ce2886b43a3b4e0af22abc" title="Tetris::GameController\l::getLocalUser" alt="" coords="1125,102,1280,141"/>
+<area shape="rect" id="node13" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#a3d4bcc74d518c28356012f8a42b85896" title="Tetris::Users::GameUser\l::getCurrentBlock" alt="" coords="1119,165,1286,203"/>
+<area shape="rect" id="node14" href="$df/d05/class_tetris_1_1_block.html#ad61aea379870fbb3668d49e4c3c748ed" title="Tetris::Block::getBlockColor" alt="" coords="1111,227,1294,253"/>
+<area shape="rect" id="node15" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac626961ee3894d89a7fc961e9f40c92f" title="Tetris::BlockSubModules\l::BlockColor::getColorAsArray" alt="" coords="1103,277,1302,315"/>
+<area shape="rect" id="node20" href="$d9/d98/class_hello_world.html#a0456ce3ab8880643c5e8739634156d93" title="HelloWorld::drawboardingui" alt="" coords="1110,339,1295,365"/>
+<area shape="rect" id="node21" href="$db/dd2/class_tetris_1_1_game_controller.html#a10163479e02572450b886ff0654078b4" title="Tetris::GameController\l::getGameHeight" alt="" coords="1125,389,1280,427"/>
+<area shape="rect" id="node10" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#aeedbe521004c22018b73a509e99f7d81" title="Tetris::Users::GameUser\l::setCurrentY" alt="" coords="1368,5,1536,43"/>
+<area shape="rect" id="node11" href="$d8/d9a/class_tetris_1_1_users_1_1_game_user.html#af5bd7ff0b575af1b42b093488cff97e2" title="Tetris::Users::GameUser\l::getCurrentY" alt="" coords="1368,67,1536,106"/>
+<area shape="rect" id="node16" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#acb1c9b34ee534857741025bd2824201a" title="Tetris::BlockSubModules\l::BlockColor::getAlphaAsRaw" alt="" coords="1354,158,1550,197"/>
+<area shape="rect" id="node17" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a1795cf70c847d261645a9690afff7e9c" title="Tetris::BlockSubModules\l::BlockColor::getRedAsRaw" alt="" coords="1359,221,1545,259"/>
+<area shape="rect" id="node18" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a65e9230325a2f44aa433f39c199aabcd" title="Tetris::BlockSubModules\l::BlockColor::getGreenAsRaw" alt="" coords="1353,283,1551,322"/>
+<area shape="rect" id="node19" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac0ad44a8b001f3824447d137357f5145" title="Tetris::BlockSubModules\l::BlockColor::getBlueAsRaw" alt="" coords="1358,346,1546,385"/>
+<area shape="rect" id="node23" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#ab5504cff24fa2c916c0c6139aff67a4e" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::initCls" alt="" coords="1101,451,1304,490"/>
+<area shape="rect" id="node26" href="$d7/d4d/classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a5766c3d3f2f5ee3a4c7664198f362e8f" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getGoal" alt="" coords="1101,514,1304,553"/>
+<area shape="rect" id="node27" href="$db/d37/class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061" title="TetrisUtil::randInt" alt="" coords="1142,577,1263,602"/>
+</map>

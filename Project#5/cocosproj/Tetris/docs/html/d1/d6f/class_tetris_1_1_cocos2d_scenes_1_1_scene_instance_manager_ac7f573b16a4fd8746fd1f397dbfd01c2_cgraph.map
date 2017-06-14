@@ -1,0 +1,4 @@
+<map id="Tetris::Cocos2dScenes::SceneInstanceManager::getStoredMainMenuScene" name="Tetris::Cocos2dScenes::SceneInstanceManager::getStoredMainMenuScene">
+<area shape="rect" id="node2" href="$d1/d6f/class_tetris_1_1_cocos2d_scenes_1_1_scene_instance_manager.html#a7dad1373db969d5c882e2cdc46f7933a" title="Tetris::Cocos2dScenes\l::SceneInstanceManager\l::createMainMenuScene" alt="" coords="241,5,410,57"/>
+<area shape="rect" id="node3" href="$dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a46eb7e1d9999c6ed8e9acf49cfcd21cf" title="Tetris::Cocos2dScenes\l::MainMenuScene::createScene" alt="" coords="458,11,670,50"/>
+</map>

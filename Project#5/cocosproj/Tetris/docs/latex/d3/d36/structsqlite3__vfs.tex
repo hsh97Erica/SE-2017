@@ -1,0 +1,298 @@
+\hypertarget{structsqlite3__vfs}{}\section{sqlite3\+\_\+vfs 구조체 참조}
+\label{structsqlite3__vfs}\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}
+
+
+
+sqlite3\+\_\+vfs에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d9/dff/structsqlite3__vfs__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{데이터 필드}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structsqlite3__vfs_a694dd264949bd163545fe174510ed019}{i\+Version}
+\item 
+int \hyperlink{structsqlite3__vfs_a549399081342d61134b6398562a0a997}{sz\+Os\+File}
+\item 
+int \hyperlink{structsqlite3__vfs_adb2d82c74891b00b5529fb94e7710135}{mx\+Pathname}
+\item 
+\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$ \hyperlink{structsqlite3__vfs_ae795a4417697ecd35163f6cdf0069073}{p\+Next}
+\item 
+const char $\ast$ \hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}
+\item 
+void $\ast$ \hyperlink{structsqlite3__vfs_a1ba832cf207fe59c1fc8eb436524bc35}{p\+App\+Data}
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_ab106b445eb5d372266a1108fc982a9aa}{x\+Open} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, \hyperlink{structsqlite3__file}{sqlite3\+\_\+file} $\ast$, int flags, int $\ast$p\+Out\+Flags)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_a9a84baca80b7ab2da9fb147cb40c73d2}{x\+Delete} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, int sync\+Dir)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_a3a5cc43f1b8a88747eb77db730ce4f69}{x\+Access} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, int flags, int $\ast$p\+Res\+Out)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_ae6573ffda4c4f014960b0ec3a1522dfa}{x\+Full\+Pathname} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, int n\+Out, char $\ast$z\+Out)
+\item 
+void $\ast$($\ast$ \hyperlink{structsqlite3__vfs_a4de0324cd74c8ec98e4605d432f16e0a}{x\+Dl\+Open} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$z\+Filename)
+\item 
+void($\ast$ \hyperlink{structsqlite3__vfs_ace296f3efa5d1a490c892069891f37c0}{x\+Dl\+Error} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int n\+Byte, char $\ast$z\+Err\+Msg)
+\item 
+void($\ast$($\ast$ \hyperlink{structsqlite3__vfs_a847ba7d9a80164138031aacef1d01507}{x\+Dl\+Sym} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, void $\ast$, const char $\ast$z\+Symbol))(void)
+\item 
+void($\ast$ \hyperlink{structsqlite3__vfs_a0cbdab1584e0e2a80b32b2c335f17f99}{x\+Dl\+Close} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, void $\ast$)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_ac74c20a91cbd440ed72b11de4c4333ea}{x\+Randomness} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int n\+Byte, char $\ast$z\+Out)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_abd36ce64a27bd6c1b57a6f2c7031ff65}{x\+Sleep} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int microseconds)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_a925aa81bcf67f2daf50ad59de850ef41}{x\+Current\+Time} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, double $\ast$)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_ae90895f142cc41801f515ae5e339a3d7}{x\+Get\+Last\+Error} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int, char $\ast$)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_a2a344dbc5e4625343d992546fbff5421}{x\+Current\+Time\+Int64} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, \hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64} $\ast$)
+\item 
+int($\ast$ \hyperlink{structsqlite3__vfs_a444cd80f79ea4994f72551bb9f403866}{x\+Set\+System\+Call} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, \hyperlink{sqlite3_8h_a99a6393e96d7095fa024de9c1257aa6f}{sqlite3\+\_\+syscall\+\_\+ptr})
+\item 
+\hyperlink{sqlite3_8h_a99a6393e96d7095fa024de9c1257aa6f}{sqlite3\+\_\+syscall\+\_\+ptr}($\ast$ \hyperlink{structsqlite3__vfs_a1bf78a1603ab605cd92d146e3f810727}{x\+Get\+System\+Call} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name})
+\item 
+const char $\ast$($\ast$ \hyperlink{structsqlite3__vfs_afbd158883d9bb7954fa7ecd595fe3c2b}{x\+Next\+System\+Call} )(\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name})
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+sqlite3.\+h 파일의 1234 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{structsqlite3__vfs_a694dd264949bd163545fe174510ed019}\label{structsqlite3__vfs_a694dd264949bd163545fe174510ed019}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!i\+Version@{i\+Version}}
+\index{i\+Version@{i\+Version}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{i\+Version}{iVersion}}
+{\footnotesize\ttfamily int sqlite3\+\_\+vfs\+::i\+Version}
+
+
+
+sqlite3.\+h 파일의 1235 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_adb2d82c74891b00b5529fb94e7710135}\label{structsqlite3__vfs_adb2d82c74891b00b5529fb94e7710135}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!mx\+Pathname@{mx\+Pathname}}
+\index{mx\+Pathname@{mx\+Pathname}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{mx\+Pathname}{mxPathname}}
+{\footnotesize\ttfamily int sqlite3\+\_\+vfs\+::mx\+Pathname}
+
+
+
+sqlite3.\+h 파일의 1237 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a1ba832cf207fe59c1fc8eb436524bc35}\label{structsqlite3__vfs_a1ba832cf207fe59c1fc8eb436524bc35}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!p\+App\+Data@{p\+App\+Data}}
+\index{p\+App\+Data@{p\+App\+Data}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{p\+App\+Data}{pAppData}}
+{\footnotesize\ttfamily void$\ast$ sqlite3\+\_\+vfs\+::p\+App\+Data}
+
+
+
+sqlite3.\+h 파일의 1240 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_ae795a4417697ecd35163f6cdf0069073}\label{structsqlite3__vfs_ae795a4417697ecd35163f6cdf0069073}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!p\+Next@{p\+Next}}
+\index{p\+Next@{p\+Next}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{p\+Next}{pNext}}
+{\footnotesize\ttfamily \hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs}$\ast$ sqlite3\+\_\+vfs\+::p\+Next}
+
+
+
+sqlite3.\+h 파일의 1238 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a549399081342d61134b6398562a0a997}\label{structsqlite3__vfs_a549399081342d61134b6398562a0a997}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!sz\+Os\+File@{sz\+Os\+File}}
+\index{sz\+Os\+File@{sz\+Os\+File}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{sz\+Os\+File}{szOsFile}}
+{\footnotesize\ttfamily int sqlite3\+\_\+vfs\+::sz\+Os\+File}
+
+
+
+sqlite3.\+h 파일의 1236 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a3a5cc43f1b8a88747eb77db730ce4f69}\label{structsqlite3__vfs_a3a5cc43f1b8a88747eb77db730ce4f69}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Access@{x\+Access}}
+\index{x\+Access@{x\+Access}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Access}{xAccess}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Access) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, int flags, int $\ast$p\+Res\+Out)}
+
+
+
+sqlite3.\+h 파일의 1244 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a925aa81bcf67f2daf50ad59de850ef41}\label{structsqlite3__vfs_a925aa81bcf67f2daf50ad59de850ef41}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Current\+Time@{x\+Current\+Time}}
+\index{x\+Current\+Time@{x\+Current\+Time}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Current\+Time}{xCurrentTime}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Current\+Time) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, double $\ast$)}
+
+
+
+sqlite3.\+h 파일의 1252 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a2a344dbc5e4625343d992546fbff5421}\label{structsqlite3__vfs_a2a344dbc5e4625343d992546fbff5421}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Current\+Time\+Int64@{x\+Current\+Time\+Int64}}
+\index{x\+Current\+Time\+Int64@{x\+Current\+Time\+Int64}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Current\+Time\+Int64}{xCurrentTimeInt64}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Current\+Time\+Int64) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, \hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64} $\ast$)}
+
+
+
+sqlite3.\+h 파일의 1258 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a9a84baca80b7ab2da9fb147cb40c73d2}\label{structsqlite3__vfs_a9a84baca80b7ab2da9fb147cb40c73d2}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Delete@{x\+Delete}}
+\index{x\+Delete@{x\+Delete}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Delete}{xDelete}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Delete) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, int sync\+Dir)}
+
+
+
+sqlite3.\+h 파일의 1243 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a0cbdab1584e0e2a80b32b2c335f17f99}\label{structsqlite3__vfs_a0cbdab1584e0e2a80b32b2c335f17f99}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Dl\+Close@{x\+Dl\+Close}}
+\index{x\+Dl\+Close@{x\+Dl\+Close}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Dl\+Close}{xDlClose}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+vfs\+::x\+Dl\+Close) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, void $\ast$)}
+
+
+
+sqlite3.\+h 파일의 1249 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_ace296f3efa5d1a490c892069891f37c0}\label{structsqlite3__vfs_ace296f3efa5d1a490c892069891f37c0}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Dl\+Error@{x\+Dl\+Error}}
+\index{x\+Dl\+Error@{x\+Dl\+Error}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Dl\+Error}{xDlError}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+vfs\+::x\+Dl\+Error) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int n\+Byte, char $\ast$z\+Err\+Msg)}
+
+
+
+sqlite3.\+h 파일의 1247 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a4de0324cd74c8ec98e4605d432f16e0a}\label{structsqlite3__vfs_a4de0324cd74c8ec98e4605d432f16e0a}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Dl\+Open@{x\+Dl\+Open}}
+\index{x\+Dl\+Open@{x\+Dl\+Open}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Dl\+Open}{xDlOpen}}
+{\footnotesize\ttfamily void$\ast$($\ast$ sqlite3\+\_\+vfs\+::x\+Dl\+Open) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$z\+Filename)}
+
+
+
+sqlite3.\+h 파일의 1246 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a847ba7d9a80164138031aacef1d01507}\label{structsqlite3__vfs_a847ba7d9a80164138031aacef1d01507}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Dl\+Sym@{x\+Dl\+Sym}}
+\index{x\+Dl\+Sym@{x\+Dl\+Sym}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Dl\+Sym}{xDlSym}}
+{\footnotesize\ttfamily void($\ast$($\ast$ sqlite3\+\_\+vfs\+::x\+Dl\+Sym) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, void $\ast$, const char $\ast$z\+Symbol))(void)}
+
+
+
+sqlite3.\+h 파일의 1248 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_ae6573ffda4c4f014960b0ec3a1522dfa}\label{structsqlite3__vfs_ae6573ffda4c4f014960b0ec3a1522dfa}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Full\+Pathname@{x\+Full\+Pathname}}
+\index{x\+Full\+Pathname@{x\+Full\+Pathname}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Full\+Pathname}{xFullPathname}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Full\+Pathname) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, int n\+Out, char $\ast$z\+Out)}
+
+
+
+sqlite3.\+h 파일의 1245 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_ae90895f142cc41801f515ae5e339a3d7}\label{structsqlite3__vfs_ae90895f142cc41801f515ae5e339a3d7}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Get\+Last\+Error@{x\+Get\+Last\+Error}}
+\index{x\+Get\+Last\+Error@{x\+Get\+Last\+Error}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Get\+Last\+Error}{xGetLastError}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Get\+Last\+Error) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int, char $\ast$)}
+
+
+
+sqlite3.\+h 파일의 1253 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a1bf78a1603ab605cd92d146e3f810727}\label{structsqlite3__vfs_a1bf78a1603ab605cd92d146e3f810727}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Get\+System\+Call@{x\+Get\+System\+Call}}
+\index{x\+Get\+System\+Call@{x\+Get\+System\+Call}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Get\+System\+Call}{xGetSystemCall}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_a99a6393e96d7095fa024de9c1257aa6f}{sqlite3\+\_\+syscall\+\_\+ptr}($\ast$ sqlite3\+\_\+vfs\+::x\+Get\+System\+Call) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name})}
+
+
+
+sqlite3.\+h 파일의 1264 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_afbd158883d9bb7954fa7ecd595fe3c2b}\label{structsqlite3__vfs_afbd158883d9bb7954fa7ecd595fe3c2b}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Next\+System\+Call@{x\+Next\+System\+Call}}
+\index{x\+Next\+System\+Call@{x\+Next\+System\+Call}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Next\+System\+Call}{xNextSystemCall}}
+{\footnotesize\ttfamily const char$\ast$($\ast$ sqlite3\+\_\+vfs\+::x\+Next\+System\+Call) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name})}
+
+
+
+sqlite3.\+h 파일의 1265 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_ab106b445eb5d372266a1108fc982a9aa}\label{structsqlite3__vfs_ab106b445eb5d372266a1108fc982a9aa}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Open@{x\+Open}}
+\index{x\+Open@{x\+Open}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Open}{xOpen}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Open) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, \hyperlink{structsqlite3__file}{sqlite3\+\_\+file} $\ast$, int flags, int $\ast$p\+Out\+Flags)}
+
+
+
+sqlite3.\+h 파일의 1241 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_ac74c20a91cbd440ed72b11de4c4333ea}\label{structsqlite3__vfs_ac74c20a91cbd440ed72b11de4c4333ea}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Randomness@{x\+Randomness}}
+\index{x\+Randomness@{x\+Randomness}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Randomness}{xRandomness}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Randomness) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int n\+Byte, char $\ast$z\+Out)}
+
+
+
+sqlite3.\+h 파일의 1250 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a444cd80f79ea4994f72551bb9f403866}\label{structsqlite3__vfs_a444cd80f79ea4994f72551bb9f403866}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Set\+System\+Call@{x\+Set\+System\+Call}}
+\index{x\+Set\+System\+Call@{x\+Set\+System\+Call}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Set\+System\+Call}{xSetSystemCall}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Set\+System\+Call) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, const char $\ast$\hyperlink{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}{z\+Name}, \hyperlink{sqlite3_8h_a99a6393e96d7095fa024de9c1257aa6f}{sqlite3\+\_\+syscall\+\_\+ptr})}
+
+
+
+sqlite3.\+h 파일의 1263 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_abd36ce64a27bd6c1b57a6f2c7031ff65}\label{structsqlite3__vfs_abd36ce64a27bd6c1b57a6f2c7031ff65}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!x\+Sleep@{x\+Sleep}}
+\index{x\+Sleep@{x\+Sleep}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{x\+Sleep}{xSleep}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+vfs\+::x\+Sleep) (\hyperlink{structsqlite3__vfs}{sqlite3\+\_\+vfs} $\ast$, int microseconds)}
+
+
+
+sqlite3.\+h 파일의 1251 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}\label{structsqlite3__vfs_a0f06a27ac2201ea04c0623ef19e5d73e}} 
+\index{sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}!z\+Name@{z\+Name}}
+\index{z\+Name@{z\+Name}!sqlite3\+\_\+vfs@{sqlite3\+\_\+vfs}}
+\subsubsection{\texorpdfstring{z\+Name}{zName}}
+{\footnotesize\ttfamily const char$\ast$ sqlite3\+\_\+vfs\+::z\+Name}
+
+
+
+sqlite3.\+h 파일의 1239 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/db/sqlitelib/\hyperlink{sqlite3_8h}{sqlite3.\+h}\end{DoxyCompactItemize}

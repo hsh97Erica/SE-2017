@@ -1,0 +1,630 @@
+\hypertarget{classallenlsy_1_1game2048_1_1_hello_world}{}\section{allenlsy\+:\+:game2048\+:\+:Hello\+World 클래스 참조}
+\label{classallenlsy_1_1game2048_1_1_hello_world}\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+
+
+{\ttfamily \#include $<$Hello\+World\+Scene.\+hpp$>$}
+
+
+
+allenlsy\+:\+:game2048\+:\+:Hello\+World에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{df/d57/classallenlsy_1_1game2048_1_1_hello_world__inherit__graph}
+\end{center}
+\end{figure}
+
+
+allenlsy\+:\+:game2048\+:\+:Hello\+World에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/d46/classallenlsy_1_1game2048_1_1_hello_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a129b861a8239d9cf2030b1b59e204a46}{init} ()
+\item 
+\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_ae76e0150b5abb173d5506283b731a9c7}{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world}{Hello\+World})
+\item 
+virtual bool \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a0cc62fe1173f141d60833be4804f97d9}{on\+Touch\+Began} (cocos2d\+::\+Touch $\ast$touch, cocos2d\+::\+Event $\ast$unused\+\_\+event)
+\item 
+virtual void \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a99042e68bb9365cdb764cc9c3d9e6197}{on\+Touch\+Ended} (cocos2d\+::\+Touch $\ast$touch, cocos2d\+::\+Event $\ast$unused\+\_\+event)
+\item 
+bool \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_aae4ae74d9bc2be114ec52610f3ef3fcc}{do\+Up} ()
+\item 
+bool \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_ad16dcf9910ecb3abdb12d87765032106}{do\+Down} ()
+\item 
+bool \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1c43b15b314d8d7efaae6f51bef14c56}{do\+Left} ()
+\item 
+bool \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a7538c936591be5b39d45ca66ecf83726}{do\+Right} ()
+\item 
+void \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af1c795b6d174c1d6d6472e0fe703e648}{auto\+Create\+Card\+Number} ()
+\item 
+void \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_ad55dd12c9e76eba2e7c79dafbd103e54}{create\+Card\+Sprite} (cocos2d\+::\+Size size)
+\item 
+void \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a4f9c99959e2c14cd349470d305909fca}{do\+Check\+Game\+Over} ()
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static cocos2d\+::\+Scene $\ast$ \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a86ca8a563151e5e5d308f98ff6c36f95}{create\+Scene} ()
+\end{DoxyCompactItemize}
+\subsection*{데이터 필드}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score}
+\item 
+cocos2d\+::\+Label\+T\+TF $\ast$ \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{label\+T\+T\+F\+Card\+Number} = N\+U\+LL
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acba62073618cde47da3b85a856832e69}{firstX}
+\item 
+int \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a077f4900c33ee54cd90fa6112ce720bb}{firstY}
+\item 
+int \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acc494c0862f1af7a4d4bd684fd89a439}{endX}
+\item 
+int \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a8227878cbc4805dc2afcfba9707705f7}{endY}
+\item 
+\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite}{Card\+Sprite} $\ast$ \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Hello\+World\+Scene.\+hpp 파일의 10 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_af1c795b6d174c1d6d6472e0fe703e648}\label{classallenlsy_1_1game2048_1_1_hello_world_af1c795b6d174c1d6d6472e0fe703e648}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!auto\+Create\+Card\+Number@{auto\+Create\+Card\+Number}}
+\index{auto\+Create\+Card\+Number@{auto\+Create\+Card\+Number}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{auto\+Create\+Card\+Number()}{autoCreateCardNumber()}}
+{\footnotesize\ttfamily void allenlsy\+::game2048\+::\+Hello\+World\+::auto\+Create\+Card\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 232 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+232                                \{
+233         
+234         \textcolor{keywordtype}{int} i, j;
+235         
+236         \textcolor{comment}{//判断是否这个位置已存在卡片}
+237         \textcolor{keywordflow}{do} \{
+238             i = CCRANDOM\_0\_1()*4;
+239             j = CCRANDOM\_0\_1()*4;
+240         \}
+241         \textcolor{keywordflow}{while} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[i][j]->getNumber() > 0);
+242         
+243         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[i][j]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(CCRANDOM\_0\_1()*10 < 1 ? 2: 4);
+244         log(\textcolor{stringliteral}{"(%d,%d): %d"}, i, j, \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[i][j]->getNumber());
+245         
+246     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_ae76e0150b5abb173d5506283b731a9c7}\label{classallenlsy_1_1game2048_1_1_hello_world_ae76e0150b5abb173d5506283b731a9c7}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}}
+\index{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+N\+C()}{CREATE\_FUNC()}}
+{\footnotesize\ttfamily allenlsy\+::game2048\+::\+Hello\+World\+::\+C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{\hyperlink{classallenlsy_1_1game2048_1_1_hello_world}{Hello\+World}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_ad55dd12c9e76eba2e7c79dafbd103e54}\label{classallenlsy_1_1game2048_1_1_hello_world_ad55dd12c9e76eba2e7c79dafbd103e54}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!create\+Card\+Sprite@{create\+Card\+Sprite}}
+\index{create\+Card\+Sprite@{create\+Card\+Sprite}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{create\+Card\+Sprite()}{createCardSprite()}}
+{\footnotesize\ttfamily void allenlsy\+::game2048\+::\+Hello\+World\+::create\+Card\+Sprite (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Size}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 248 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+248                                            \{
+249         \textcolor{comment}{//求出单元格的宽度和高度}
+250         \textcolor{keywordtype}{int} unitSize = (size.height-100)/4;
+251         
+252         \textcolor{comment}{//4*4的单元格}
+253         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<4; i++)
+254         \{
+255             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<4; j++)
+256             \{
+257                 \hyperlink{classallenlsy_1_1game2048_1_1_card_sprite}{CardSprite}* card = \hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a3a14745470040dfb933397ccb83344d7}{CardSprite::createCardSprite}(0, 
+      unitSize, unitSize, unitSize*i+140, unitSize*j+20);
+258                 \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[i][j] = card;
+259                 addChild(card);
+260             \}
+261         \}
+262     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d2b/classallenlsy_1_1game2048_1_1_hello_world_ad55dd12c9e76eba2e7c79dafbd103e54_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a86ca8a563151e5e5d308f98ff6c36f95}\label{classallenlsy_1_1game2048_1_1_hello_world_a86ca8a563151e5e5d308f98ff6c36f95}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily static cocos2d\+::\+Scene$\ast$ allenlsy\+::game2048\+::\+Hello\+World\+::create\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 14 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+14                                       \{
+15         \textcolor{comment}{// 'scene' is an autorelease object}
+16         \textcolor{keyword}{auto} scene = Scene::create();
+17         
+18         \textcolor{comment}{// 'layer' is an autorelease object}
+19         \textcolor{keyword}{auto} layer = HelloWorld::create();
+20         
+21         \textcolor{comment}{// add layer as a child to scene}
+22         scene->addChild(layer);
+23         
+24         \textcolor{comment}{// return the scene}
+25         \textcolor{keywordflow}{return} scene;
+26     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d2b/classallenlsy_1_1game2048_1_1_hello_world_a86ca8a563151e5e5d308f98ff6c36f95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a4f9c99959e2c14cd349470d305909fca}\label{classallenlsy_1_1game2048_1_1_hello_world_a4f9c99959e2c14cd349470d305909fca}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!do\+Check\+Game\+Over@{do\+Check\+Game\+Over}}
+\index{do\+Check\+Game\+Over@{do\+Check\+Game\+Over}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{do\+Check\+Game\+Over()}{doCheckGameOver()}}
+{\footnotesize\ttfamily void allenlsy\+::game2048\+::\+Hello\+World\+::do\+Check\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 263 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+263                           \{
+264         \textcolor{keywordtype}{bool} isGameOver = \textcolor{keyword}{true};
+265         
+266         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < 4; y++) \{
+267             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < 4; x++) \{
+268                 \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == 0||
+269                     (x>0&&(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x-1][y]->getNumber()))||
+270                     (x<3&&(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x+1][y]->getNumber()))||
+271                     (y>0&&(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y-1]->getNumber()))||
+272                     (y<3&&(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y+1]->getNumber()))) \{
+273                     isGameOver = \textcolor{keyword}{false};
+274                 \}
+275             \}
+276         \}
+277         
+278         \textcolor{keywordflow}{if} (isGameOver) \{
+279             \textcolor{comment}{//游戏结束，重新开始游戏}
+280             log(\textcolor{stringliteral}{"游戏结束"});
+281             Director::getInstance()->replaceScene(TransitionFade::create(1, 
+      \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a86ca8a563151e5e5d308f98ff6c36f95}{HelloWorld::createScene}()));
+282         \} \textcolor{keywordflow}{else} \{
+283             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af1c795b6d174c1d6d6472e0fe703e648}{autoCreateCardNumber}();
+284         \}
+285     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d2b/classallenlsy_1_1game2048_1_1_hello_world_a4f9c99959e2c14cd349470d305909fca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_ad16dcf9910ecb3abdb12d87765032106}\label{classallenlsy_1_1game2048_1_1_hello_world_ad16dcf9910ecb3abdb12d87765032106}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!do\+Down@{do\+Down}}
+\index{do\+Down@{do\+Down}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{do\+Down()}{doDown()}}
+{\footnotesize\ttfamily bool allenlsy\+::game2048\+::\+Hello\+World\+::do\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 138 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+138                  \{
+139         log(\textcolor{stringliteral}{"doDown"});
+140         \textcolor{keywordtype}{bool} isdo = \textcolor{keyword}{false};
+141         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < 4; x++) \{
+142             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < 4; y++) \{
+143                 
+144                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y1 = y + 1; y1 < 4; y1++) \{
+145                     \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->getNumber() > 0) \{
+146                         \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() <= 0) \{
+147                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->getNumber());
+148                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+149                             
+150                             y--;
+151                             isdo = \textcolor{keyword}{true};
+152                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->getNumber())\{
+153                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber()*2);
+154                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+155                             
+156                             \textcolor{comment}{//改变分数}
+157                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score} += \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_ac483e81f56c1c7d08a83175061c8edb5}{getNumber}();
+158                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber}->setString(String::createWithFormat(\textcolor{stringliteral}{"%i"},
+      \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score})->getCString());
+159                             isdo = \textcolor{keyword}{true};
+160                         \}
+161                         \textcolor{keywordflow}{break};
+162                     \}
+163                 \}
+164                 
+165             \}
+166         \}
+167         \textcolor{keywordflow}{return} isdo;
+168     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a1c43b15b314d8d7efaae6f51bef14c56}\label{classallenlsy_1_1game2048_1_1_hello_world_a1c43b15b314d8d7efaae6f51bef14c56}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!do\+Left@{do\+Left}}
+\index{do\+Left@{do\+Left}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{do\+Left()}{doLeft()}}
+{\footnotesize\ttfamily bool allenlsy\+::game2048\+::\+Hello\+World\+::do\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 169 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+169                  \{
+170         log(\textcolor{stringliteral}{"doLeft"});
+171         
+172         \textcolor{keywordtype}{bool} isDo = \textcolor{keyword}{false};
+173         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < 4; y++) \{
+174             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < 4; x++) \{
+175                 \textcolor{comment}{// 如果右边的数等于左边的数，那么左边的数乘以2，然后把右边的数设置为0，也就变为了空。}
+176                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x1 = x + 1; x1 < 4; x1++) \{
+177                     \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->getNumber() > 0) \{
+178                         \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() <= 0) \{
+179                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->getNumber());
+180                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+181                             
+182                             x--;
+183                             isDo = \textcolor{keyword}{true};
+184                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->getNumber())\{
+185                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber()*2);
+186                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+187                             
+188                             \textcolor{comment}{//改变分数}
+189                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score} += \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_ac483e81f56c1c7d08a83175061c8edb5}{getNumber}();
+190                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber}->setString(String::createWithFormat(\textcolor{stringliteral}{"%i"},
+      \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score})->getCString());
+191                             isDo = \textcolor{keyword}{true};
+192                         \}
+193                         \textcolor{keywordflow}{break};
+194                     \}
+195                 \}
+196             \}
+197         \}
+198         \textcolor{keywordflow}{return} isDo;
+199     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a7538c936591be5b39d45ca66ecf83726}\label{classallenlsy_1_1game2048_1_1_hello_world_a7538c936591be5b39d45ca66ecf83726}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!do\+Right@{do\+Right}}
+\index{do\+Right@{do\+Right}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{do\+Right()}{doRight()}}
+{\footnotesize\ttfamily bool allenlsy\+::game2048\+::\+Hello\+World\+::do\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 200 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+200                   \{
+201         log(\textcolor{stringliteral}{"doRight"});
+202         \textcolor{keywordtype}{bool} isdo = \textcolor{keyword}{false};
+203         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < 4; y++) \{
+204             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 3; x >= 0; x--) \{
+205                 
+206                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x1 = x - 1; x1 >= 0; x1--) \{
+207                     \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->getNumber() > 0) \{
+208                         \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() <= 0) \{
+209                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->getNumber());
+210                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+211                             
+212                             x++;
+213                             isdo = \textcolor{keyword}{true};
+214                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->getNumber())\{
+215                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber()*2);
+216                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x1][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+217                             
+218                             \textcolor{comment}{//改变分数}
+219                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score} += \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_ac483e81f56c1c7d08a83175061c8edb5}{getNumber}();
+220                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber}->setString(String::createWithFormat(\textcolor{stringliteral}{"%i"},
+      \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score})->getCString());
+221                             isdo = \textcolor{keyword}{true};
+222                         \}
+223                         \textcolor{keywordflow}{break};
+224                     \}
+225                 \}
+226                 
+227             \}
+228         \}
+229         \textcolor{keywordflow}{return} isdo;
+230     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_aae4ae74d9bc2be114ec52610f3ef3fcc}\label{classallenlsy_1_1game2048_1_1_hello_world_aae4ae74d9bc2be114ec52610f3ef3fcc}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!do\+Up@{do\+Up}}
+\index{do\+Up@{do\+Up}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{do\+Up()}{doUp()}}
+{\footnotesize\ttfamily bool allenlsy\+::game2048\+::\+Hello\+World\+::do\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 107 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+107                \{
+108         log(\textcolor{stringliteral}{"doUp"});
+109         \textcolor{keywordtype}{bool} isdo = \textcolor{keyword}{false};
+110         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < 4; x++) \{
+111             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 3; y >= 0; y--) \{
+112                 
+113                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y1 = y - 1; y1 >= 0; y1--) \{
+114                     \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->getNumber() > 0) \{
+115                         \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() <= 0) \{
+116                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->getNumber());
+117                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+118                             
+119                             y++;
+120                             isdo = \textcolor{keyword}{true};
+121                         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber() == \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->getNumber())\{
+122                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->getNumber()*2);
+123                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y1]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_a7f560bb8253477188273aac709aae087}{setNumber}(0);
+124                             
+125                             \textcolor{comment}{//改变分数}
+126                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score} += \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}{cards}[x][y]->\hyperlink{classallenlsy_1_1game2048_1_1_card_sprite_ac483e81f56c1c7d08a83175061c8edb5}{getNumber}();
+127                             \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber}->setString(String::createWithFormat(\textcolor{stringliteral}{"%i"},
+      \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}{score})->getCString());
+128                             isdo = \textcolor{keyword}{true};
+129                         \}
+130                         \textcolor{keywordflow}{break};
+131                     \}
+132                 \}
+133                 
+134             \}
+135         \}
+136         \textcolor{keywordflow}{return} isdo;
+137     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a129b861a8239d9cf2030b1b59e204a46}\label{classallenlsy_1_1game2048_1_1_hello_world_a129b861a8239d9cf2030b1b59e204a46}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!init@{init}}
+\index{init@{init}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool allenlsy\+::game2048\+::\+Hello\+World\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+29                        \{
+31         \textcolor{comment}{// 1. super init first}
+32         \textcolor{keywordflow}{if} (!Layer::init()) \{
+33             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+34         \}
+35         
+36         Size visibleSize = Director::getInstance()->getVisibleSize();
+37         \textcolor{comment}{//    Vec2 origin = Director::getInstance()->getVisibleOrigin();}
+38         
+39         \textcolor{keyword}{auto} touchListener = EventListenerTouchOneByOne::create();
+40         touchListener->onTouchBegan = CC\_CALLBACK\_2(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a0cc62fe1173f141d60833be4804f97d9}{HelloWorld::onTouchBegan}, \textcolor{keyword}{this})
+      ; \textcolor{comment}{// MYNOTE: CC\_CALLBACK\_2: #define CC\_CALLBACK\_2    (       \_\_selector\_\_, \_\_target\_\_, ... )}
+41         touchListener->onTouchEnded = CC\_CALLBACK\_2(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a99042e68bb9365cdb764cc9c3d9e6197}{HelloWorld::onTouchEnded}, \textcolor{keyword}{this})
+      ;
+42         \_eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener,\textcolor{keyword}{this});
+43         
+44         \textcolor{comment}{//加入游戏的背景颜色}
+45         \textcolor{keyword}{auto} layerColorBG = cocos2d::LayerColor::create(cocos2d::Color4B(180,170,160,255));
+46         this->addChild(layerColorBG);
+47         
+48         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_ad55dd12c9e76eba2e7c79dafbd103e54}{createCardSprite}(visibleSize);
+49         
+50         \textcolor{comment}{//创建2张自动生成卡片}
+51         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af1c795b6d174c1d6d6472e0fe703e648}{autoCreateCardNumber}();
+52         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_af1c795b6d174c1d6d6472e0fe703e648}{autoCreateCardNumber}();
+53         
+54         \textcolor{comment}{//在上方加入游戏的分数}
+55         \textcolor{keywordtype}{string} fontloc = \textcolor{stringliteral}{"fonts/arial.ttf"};
+56         \textcolor{comment}{//加入“分数”label}
+57         \textcolor{keyword}{auto} labelTTFCardNumberName = LabelTTF::create(\textcolor{stringliteral}{"SCORE"},fontloc,40);
+58         labelTTFCardNumberName->setPosition(Point(visibleSize.width/3,visibleSize.height-40));
+59         addChild(labelTTFCardNumberName);
+60         
+61         \textcolor{comment}{//加入具体的分数}
+62         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber} = LabelTTF::create(\textcolor{stringliteral}{"0"},fontloc,40);
+63         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber}->setPosition(Point(visibleSize.width-400,visibleSize.height-50
+      ));
+64         addChild(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}{labelTTFCardNumber});
+65         
+66         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+67 
+68     \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d2b/classallenlsy_1_1game2048_1_1_hello_world_a129b861a8239d9cf2030b1b59e204a46_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a0cc62fe1173f141d60833be4804f97d9}\label{classallenlsy_1_1game2048_1_1_hello_world_a0cc62fe1173f141d60833be4804f97d9}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!on\+Touch\+Began@{on\+Touch\+Began}}
+\index{on\+Touch\+Began@{on\+Touch\+Began}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Touch\+Began()}{onTouchBegan()}}
+{\footnotesize\ttfamily virtual bool allenlsy\+::game2048\+::\+Hello\+World\+::on\+Touch\+Began (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Touch $\ast$}]{touch,  }\item[{cocos2d\+::\+Event $\ast$}]{unused\+\_\+event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 74 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+74                                                                               \{
+75         Vec2 touchPoint = touch->getLocation(); \textcolor{comment}{//获取OpenGL坐标（即cocos2d-x坐标，原点在左下角）}
+76         touch->getLocationInView(); \textcolor{comment}{// MYNOTE: getLocationInView()}
+77         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acba62073618cde47da3b85a856832e69}{firstX} = (int) touchPoint.x;
+78         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a077f4900c33ee54cd90fa6112ce720bb}{firstY} = (\textcolor{keywordtype}{int}) touchPoint.y;
+79         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+80     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d2b/classallenlsy_1_1game2048_1_1_hello_world_a0cc62fe1173f141d60833be4804f97d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a99042e68bb9365cdb764cc9c3d9e6197}\label{classallenlsy_1_1game2048_1_1_hello_world_a99042e68bb9365cdb764cc9c3d9e6197}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!on\+Touch\+Ended@{on\+Touch\+Ended}}
+\index{on\+Touch\+Ended@{on\+Touch\+Ended}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Touch\+Ended()}{onTouchEnded()}}
+{\footnotesize\ttfamily virtual void allenlsy\+::game2048\+::\+Hello\+World\+::on\+Touch\+Ended (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Touch $\ast$}]{touch,  }\item[{cocos2d\+::\+Event $\ast$}]{unused\+\_\+event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 82 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+82                                                                               \{
+83         Vec2 touchPoint = touch->getLocation();
+84         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acc494c0862f1af7a4d4bd684fd89a439}{endX} = \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acba62073618cde47da3b85a856832e69}{firstX} - touchPoint.x;
+85         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a8227878cbc4805dc2afcfba9707705f7}{endY} = \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a077f4900c33ee54cd90fa6112ce720bb}{firstY} - touchPoint.y;
+86         
+87         \textcolor{keywordflow}{if} (abs(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acc494c0862f1af7a4d4bd684fd89a439}{endX}) > abs(\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a8227878cbc4805dc2afcfba9707705f7}{endY})) \{
+88             \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_acc494c0862f1af7a4d4bd684fd89a439}{endX} + 5 > 0) \{
+89                 \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a1c43b15b314d8d7efaae6f51bef14c56}{doLeft}();
+90             \}
+91             \textcolor{keywordflow}{else}
+92             \{
+93                 \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a7538c936591be5b39d45ca66ecf83726}{doRight}();
+94             \}
+95         \} \textcolor{keywordflow}{else} \{
+96             \textcolor{keywordflow}{if} (\hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a8227878cbc4805dc2afcfba9707705f7}{endY} +5 > 0) \{
+97                 \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_ad16dcf9910ecb3abdb12d87765032106}{doDown}();
+98             \}    \textcolor{keywordflow}{else} \{
+99                 \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_aae4ae74d9bc2be114ec52610f3ef3fcc}{doUp}();
+100             \}
+101         \}
+102         
+103         \hyperlink{classallenlsy_1_1game2048_1_1_hello_world_a4f9c99959e2c14cd349470d305909fca}{doCheckGameOver}();
+104         \textcolor{comment}{//    autoCreateCardNumber();}
+105     \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d2b/classallenlsy_1_1game2048_1_1_hello_world_a99042e68bb9365cdb764cc9c3d9e6197_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{필드 문서화}
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}\label{classallenlsy_1_1game2048_1_1_hello_world_a1208d2de4b949d0b0f370b26f09fdf74}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!cards@{cards}}
+\index{cards@{cards}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{cards}{cards}}
+{\footnotesize\ttfamily \hyperlink{classallenlsy_1_1game2048_1_1_card_sprite}{Card\+Sprite}$\ast$ allenlsy\+::game2048\+::\+Hello\+World\+::cards\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 295 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_acc494c0862f1af7a4d4bd684fd89a439}\label{classallenlsy_1_1game2048_1_1_hello_world_acc494c0862f1af7a4d4bd684fd89a439}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!endX@{endX}}
+\index{endX@{endX}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{endX}{endX}}
+{\footnotesize\ttfamily int allenlsy\+::game2048\+::\+Hello\+World\+::endX\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 294 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a8227878cbc4805dc2afcfba9707705f7}\label{classallenlsy_1_1game2048_1_1_hello_world_a8227878cbc4805dc2afcfba9707705f7}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!endY@{endY}}
+\index{endY@{endY}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{endY}{endY}}
+{\footnotesize\ttfamily int allenlsy\+::game2048\+::\+Hello\+World\+::endY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 294 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_acba62073618cde47da3b85a856832e69}\label{classallenlsy_1_1game2048_1_1_hello_world_acba62073618cde47da3b85a856832e69}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!firstX@{firstX}}
+\index{firstX@{firstX}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{firstX}{firstX}}
+{\footnotesize\ttfamily int allenlsy\+::game2048\+::\+Hello\+World\+::firstX\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 294 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a077f4900c33ee54cd90fa6112ce720bb}\label{classallenlsy_1_1game2048_1_1_hello_world_a077f4900c33ee54cd90fa6112ce720bb}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!firstY@{firstY}}
+\index{firstY@{firstY}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{firstY}{firstY}}
+{\footnotesize\ttfamily int allenlsy\+::game2048\+::\+Hello\+World\+::firstY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 294 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}\label{classallenlsy_1_1game2048_1_1_hello_world_a08dbd0e2c7f6c6ac01f47e157d3b3911}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!label\+T\+T\+F\+Card\+Number@{label\+T\+T\+F\+Card\+Number}}
+\index{label\+T\+T\+F\+Card\+Number@{label\+T\+T\+F\+Card\+Number}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{label\+T\+T\+F\+Card\+Number}{labelTTFCardNumber}}
+{\footnotesize\ttfamily cocos2d\+::\+Label\+T\+TF$\ast$ allenlsy\+::game2048\+::\+Hello\+World\+::label\+T\+T\+F\+Card\+Number = N\+U\+LL}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 291 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}\label{classallenlsy_1_1game2048_1_1_hello_world_af5e35e78792c3fe4a2d4ab6266e9c6e1}} 
+\index{allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}!score@{score}}
+\index{score@{score}!allenlsy\+::game2048\+::\+Hello\+World@{allenlsy\+::game2048\+::\+Hello\+World}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int allenlsy\+::game2048\+::\+Hello\+World\+::score}
+
+
+
+Hello\+World\+Scene.\+hpp 파일의 288 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/externalgames/allenlsy/2048-\/cocos2dx/\+Classes/\hyperlink{_hello_world_scene_8hpp}{Hello\+World\+Scene.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,18 @@
+<map id="sqlite3_malloc64" name="sqlite3_malloc64">
+<area shape="rect" id="node2" href="$d6/d4f/shell_8c.html#af89d15c485bf460944d13d9e0984c327" title="save_err_msg" alt="" coords="192,146,298,171"/>
+<area shape="rect" id="node6" href="$d6/d4f/shell_8c.html#afa163532116cd4bc3cc15aa8e451c2a1" title="do_meta_command" alt="" coords="912,246,1051,271"/>
+<area shape="rect" id="node9" href="$d6/d4f/shell_8c.html#ac931daf5abf20567dcdd053c22142b95" title="main" alt="" coords="1416,170,1466,195"/>
+<area shape="rect" id="node11" href="$d6/d4f/shell_8c.html#a2780e60a0b9aff90b6af5419613c6b8b" title="exec_prepared_stmt" alt="" coords="174,195,317,221"/>
+<area shape="rect" id="node12" href="$d6/d4f/shell_8c.html#a8964d295ec8deb7f396168e5ee4cf4a4" title="readFile" alt="" coords="211,322,280,347"/>
+<area shape="rect" id="node16" href="$d6/d4f/shell_8c.html#a14c803cf051a75019368656e18875163" title="tryToCloneData" alt="" coords="366,246,479,271"/>
+<area shape="rect" id="node3" href="$d6/d4f/shell_8c.html#ae291a1d4b6ba24a214969111e187d9ef" title="shell_exec" alt="" coords="380,146,465,171"/>
+<area shape="rect" id="node4" href="$d6/d4f/shell_8c.html#a57a4b1600ae8c8582a996ee3e4299494" title="dump_callback" alt="" coords="529,195,639,221"/>
+<area shape="rect" id="node10" href="$d6/d4f/shell_8c.html#ad8935106a498f906f5667d205623dfa3" title="runOneSqlLine" alt="" coords="721,94,831,119"/>
+<area shape="rect" id="node5" href="$d6/d4f/shell_8c.html#ad779d0d1b64b032187a57c9106ca82fb" title="run_schema_dump_query" alt="" coords="688,195,864,221"/>
+<area shape="rect" id="node7" href="$d6/d4f/shell_8c.html#a28ee64282e3608a01508cc72b184cdb2" title="process_input" alt="" coords="1098,195,1203,221"/>
+<area shape="rect" id="node8" href="$d6/d4f/shell_8c.html#a121d06853a2e10f82487dd74adcb8525" title="process_sqliterc" alt="" coords="1250,195,1368,221"/>
+<area shape="rect" id="node13" href="$d6/d4f/shell_8c.html#a55e9c691f5db117b63ac1f8912663eaa" title="readfileFunc" alt="" coords="375,322,470,347"/>
+<area shape="rect" id="node14" href="$d6/d4f/shell_8c.html#addd9d96dc61d55020cbbd8eaff73fdc2" title="open_db" alt="" coords="547,322,621,347"/>
+<area shape="rect" id="node15" href="$d6/d4f/shell_8c.html#ae14540c85a0c98d51e624a74a054cd50" title="shell_dbinfo_command" alt="" coords="697,347,855,373"/>
+<area shape="rect" id="node17" href="$d6/d4f/shell_8c.html#a8cb297124b954d24bbe8b9d476670477" title="tryToClone" alt="" coords="541,246,627,271"/>
+</map>

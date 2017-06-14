@@ -1,0 +1,5 @@
+<map id="Tetris::Users::GameUser::canSwitchBlock" name="Tetris::Users::GameUser::canSwitchBlock">
+<area shape="rect" id="node2" href="$df/d05/class_tetris_1_1_block.html#a5301977e32c03aaf122fa289fcba77ba" title="Tetris::Block::getBlockSpace\lHeight" alt="" coords="221,5,411,43"/>
+<area shape="rect" id="node3" href="$df/d05/class_tetris_1_1_block.html#ac390e14de476582300d815d9054ed9bd" title="Tetris::Block::getBlockSpace\lWidth" alt="" coords="221,67,411,106"/>
+<area shape="rect" id="node4" href="$df/d05/class_tetris_1_1_block.html#a9bd2c3d6ccacff9a5f56f72336ba324f" title="Tetris::Block::getBlockData" alt="" coords="226,130,406,155"/>
+</map>

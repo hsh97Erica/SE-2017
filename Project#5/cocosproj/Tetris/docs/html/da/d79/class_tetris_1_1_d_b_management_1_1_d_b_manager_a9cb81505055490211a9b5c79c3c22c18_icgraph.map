@@ -1,0 +1,10 @@
+<map id="Tetris::DBManagement::DBManager::getInstance" name="Tetris::DBManagement::DBManager::getInstance">
+<area shape="rect" id="node2" href="$d5/d5d/class_app_delegate.html#a9f89424b5e296e3668deaa0265fc5ac1" title="AppDelegate::~AppDelegate" alt="" coords="230,5,421,30"/>
+<area shape="rect" id="node3" href="$dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a63cfd0adc032b868536a89b103c44fc5" title="Tetris::Cocos2dScenes\l::MainMenuScene::onEnter" alt="" coords="234,54,417,93"/>
+<area shape="rect" id="node4" href="$dc/d34/class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#ae4d89ddd3650f5f24e86ea631092ecb9" title="Tetris::Cocos2dScenes\l::MainMenuScene::init" alt="" coords="246,117,404,155"/>
+<area shape="rect" id="node5" href="$dc/dc7/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene.html#a348c50d4213a4fee3888c216c16712ef" title="Tetris::Cocos2dScenes\l::ScoreBoardScene::init" alt="" coords="245,179,406,218"/>
+<area shape="rect" id="node6" href="$db/dd2/class_tetris_1_1_game_controller.html#a968c9a79fca8a5a39e0c51edca0e5abb" title="Tetris::GameController\l::GameController" alt="" coords="248,242,403,281"/>
+<area shape="rect" id="node7" href="$db/dd2/class_tetris_1_1_game_controller.html#a8c9011047ce96d89e4d913feb9a88eed" title="Tetris::GameController\l::~GameController" alt="" coords="248,305,403,343"/>
+<area shape="rect" id="node8" href="$db/dd2/class_tetris_1_1_game_controller.html#a3c5e6034b2e2faf70371a13eb5f9c5bb" title="Tetris::GameController\l::setGameStatusToEnd" alt="" coords="246,367,405,406"/>
+<area shape="rect" id="node9" href="$db/dd2/class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a" title="Tetris::GameController\l::checkEnd" alt="" coords="248,430,403,469"/>
+</map>

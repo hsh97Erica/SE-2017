@@ -1,0 +1,8 @@
+<map id="Tetris::BlockSubModules::BlockColor::disassembleColorDataAndApply" name="Tetris::BlockSubModules::BlockColor::disassembleColorDataAndApply">
+<area shape="rect" id="node2" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a216ddc10773f9d0dc44eca5b8b3d8336" title="Tetris::BlockSubModules\l::BlockColor::disassembleColorData" alt="" coords="261,37,496,75"/>
+<area shape="rect" id="node3" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#ae6d640629b11d880ca994923657adbe1" title="Tetris::BlockSubModules\l::BlockColor::forceChangeColor" alt="" coords="274,99,483,138"/>
+<area shape="rect" id="node4" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a5fdd2d1a53d92ec0bcc1c25748b890e0" title="Tetris::BlockSubModules\l::BlockColor::setAlpha" alt="" coords="544,5,712,43"/>
+<area shape="rect" id="node5" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#a9541e6b5b809214ae2691a99af06ac3f" title="Tetris::BlockSubModules\l::BlockColor::setRed" alt="" coords="544,67,712,106"/>
+<area shape="rect" id="node6" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#aeea8ab6d5f36d35fd4f28818349661ab" title="Tetris::BlockSubModules\l::BlockColor::setGreen" alt="" coords="544,130,712,169"/>
+<area shape="rect" id="node7" href="$de/d44/class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac624156bd1f77a20d6e1d4c8cbff36d3" title="Tetris::BlockSubModules\l::BlockColor::setBlue" alt="" coords="544,193,712,231"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CodeLadyJJY::game2048::GameScene::createScene" name="CodeLadyJJY::game2048::GameScene::createScene">
+<area shape="rect" id="node2" href="$d1/d76/class_code_lady_j_j_y_1_1game2048_1_1_game_scene.html#ac748b7487b72bc4722b7bbdb181e7267" title="CodeLadyJJY::game2048\l::GameScene::menuCallBack" alt="" coords="241,5,437,43"/>
+<area shape="rect" id="node3" href="$d1/d6f/class_tetris_1_1_cocos2d_scenes_1_1_scene_instance_manager.html#a271e373f7a835b2e8dcec0a69be4f849" title="Tetris::Cocos2dScenes\l::SceneInstanceManager\l::createGame2048Scene" alt="" coords="254,67,423,119"/>
+</map>

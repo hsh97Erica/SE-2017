@@ -1,0 +1,8 @@
+<map id="toggleSelectOrder" name="toggleSelectOrder">
+<area shape="rect" id="node2" href="$de/dd3/sqlite3_8h.html#a85d4203bb54c984c5325c2f5b3664985" title="sqlite3_prepare_v2" alt="" coords="185,5,319,30"/>
+<area shape="rect" id="node3" href="$de/dd3/sqlite3_8h.html#ac1e491ce36b7471eb28387f7d3c74334" title="sqlite3_step" alt="" coords="206,54,298,79"/>
+<area shape="rect" id="node4" href="$de/dd3/sqlite3_8h.html#a6bd16f5b3266f473e37e8e3d4ebb4290" title="sqlite3_column_int" alt="" coords="186,103,318,129"/>
+<area shape="rect" id="node5" href="$de/dd3/sqlite3_8h.html#a801195c0f771d40bb4be1e40f3b88945" title="sqlite3_finalize" alt="" coords="198,153,306,178"/>
+<area shape="rect" id="node6" href="$de/dd3/sqlite3_8h.html#af4558fab7cb8fb1e61fd642d3e017ef7" title="sqlite3_snprintf" alt="" coords="196,202,308,227"/>
+<area shape="rect" id="node7" href="$de/dd3/sqlite3_8h.html#a97487ec8150e0bcc8fa392ab8f0e24db" title="sqlite3_exec" alt="" coords="204,251,300,277"/>
+</map>

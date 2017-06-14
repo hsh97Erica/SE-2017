@@ -1,0 +1,351 @@
+\hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene}{}\section{Tetris\+:\+:Cocos2d\+Scenes\+:\+:Score\+Board\+Scene 클래스 참조}
+\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene}\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+
+
+이전에 플레이한 테트리스의 기록을 보여주는 창의 클래스  
+
+
+
+
+{\ttfamily \#include $<$Score\+Board\+Scene.\+hpp$>$}
+
+
+
+Tetris\+:\+:Cocos2d\+Scenes\+:\+:Score\+Board\+Scene에 대한 상속 다이어그램 \+: 
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{d1/d05/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Tetris\+:\+:Cocos2d\+Scenes\+:\+:Score\+Board\+Scene에 대한 협력 다이어그램\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{d3/dc2/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a667d5d9ca7709281c7b67814e5495a26}{on\+Enter} ()
+\item 
+virtual void \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ade9d785bcda22a7d410c316909377ff8}{on\+Exit} ()
+\item 
+virtual bool \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a348c50d4213a4fee3888c216c16712ef}{init} ()
+\item 
+void \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ad17f53b26718969718fed03b2b38ff61}{menu\+Close\+Callback} (Ref $\ast$p\+Sender)
+\item 
+\hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_afe728259a0507c6fdec598ef5334a3a5}{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC} (\hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene}{Score\+Board\+Scene})
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static cocos2d\+::\+Scene $\ast$ \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_abedba06354b1f03d3f395e4c1841b8a6}{create\+Scene} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a451d25787dec38631575bc240b86c897}{read\+Sound\+Enable} ()
+\item 
+Widget $\ast$ \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a1fa0140e51fbae6cffb210487073b549}{get\+Content\+Text} (struct \hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes}{Score\+Board\+Attributes} $\ast$attrs, int rank)
+\item 
+Widget $\ast$ \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a89a944c51155ffa16474e406a1103753}{get\+Header\+Text} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+이전에 플레이한 테트리스의 기록을 보여주는 창의 클래스 
+
+Score\+Board\+Scene.\+hpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_afe728259a0507c6fdec598ef5334a3a5}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_afe728259a0507c6fdec598ef5334a3a5}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}}
+\index{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+N\+C()}{CREATE\_FUNC()}}
+{\footnotesize\ttfamily Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::\+C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{\hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene}{Score\+Board\+Scene}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_abedba06354b1f03d3f395e4c1841b8a6}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_abedba06354b1f03d3f395e4c1841b8a6}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily static cocos2d\+::\+Scene$\ast$ Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::create\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Score\+Board\+Scene.\+hpp 파일의 28 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+28                                                   \{
+29                     ScoreBoardScene* scene = ScoreBoardScene::create();
+30                     \textcolor{keywordflow}{return} scene;
+31                 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dc7/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_abedba06354b1f03d3f395e4c1841b8a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a1fa0140e51fbae6cffb210487073b549}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a1fa0140e51fbae6cffb210487073b549}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!get\+Content\+Text@{get\+Content\+Text}}
+\index{get\+Content\+Text@{get\+Content\+Text}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{get\+Content\+Text()}{getContentText()}}
+{\footnotesize\ttfamily Widget$\ast$ Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::get\+Content\+Text (\begin{DoxyParamCaption}\item[{struct \hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes}{Score\+Board\+Attributes} $\ast$}]{attrs,  }\item[{int}]{rank }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+내부 기록을 레이아웃 객체로 감싸 리턴 
+\end{DoxyReturn}
+
+
+Score\+Board\+Scene.\+hpp 파일의 139 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+139                                                                                \{
+140                 \textcolor{keyword}{struct }\hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes}{ScoreBoardAttributes} attr = *attrs;
+141                 \textcolor{keyword}{auto} wid1 = Widget::create();
+142                 stringstream ss;
+143                 ss.fill(\textcolor{charliteral}{' '});
+144                 ss.width(2);
+145                 ss<<rank<<\textcolor{stringliteral}{"  "};
+146                 ss.width(10);
+147                 
+148                 ss<<(attr.\hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes_acca4d00875cd210845e3ed2532ed276a}{score})<<\textcolor{stringliteral}{"  "};
+149                 ss.width(6);
+150                 ss<<(attr.\hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes_a1534fca0e7a2795c055de645cba2ea18}{playtimesec})<<\textcolor{stringliteral}{"s  "};
+151                 ss.width(15);
+152                 ss<<(ctime(&(attr.\hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes_a79b3c0fb31de1f4fd878b90695480b75}{ts})));
+153                 \textcolor{keyword}{auto} lbl = Label::createWithTTF((\textcolor{keywordtype}{string})ss.str(), \textcolor{stringliteral}{"fonts/DXSeNB-KSCpc-EUC-H.ttf"}, 20);
+154                 lbl->setPosition(Vec2(lbl->getContentSize().width/2,lbl->cocos2d::Node::getContentSize().
+      height/2));
+155                 \textcolor{comment}{//lbl->setAnchorPoint(Vec2(0, 0.5f));}
+156                 wid1->addChild(lbl);
+157                 wid1->setContentSize(Size(lbl->getContentSize().width*0.9f,lbl->getContentSize().height));
+158                 \textcolor{keywordflow}{return} wid1;
+159             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a89a944c51155ffa16474e406a1103753}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a89a944c51155ffa16474e406a1103753}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!get\+Header\+Text@{get\+Header\+Text}}
+\index{get\+Header\+Text@{get\+Header\+Text}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{get\+Header\+Text()}{getHeaderText()}}
+{\footnotesize\ttfamily Widget$\ast$ Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::get\+Header\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+내부 기록의 헤더를 레이아웃 객체로 감싸 리턴 
+\end{DoxyReturn}
+
+
+Score\+Board\+Scene.\+hpp 파일의 163 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+163                                    \{
+164                 \textcolor{keyword}{auto} wid1 = Widget::create();
+165                
+166                 \textcolor{keyword}{auto} lbl = Label::createWithTTF(\textcolor{stringliteral}{"순위   점수      플레이시간   기록날짜"}, \textcolor{stringliteral}{"fonts/DXSeNB-KSCpc-EUC-H.ttf"}
+      , 40);
+167                 lbl->setPosition(Vec2(lbl->getContentSize().width/2,lbl->cocos2d::Node::getContentSize().
+      height/2));
+168                 \textcolor{comment}{//lbl->setAnchorPoint(Vec2(0, 0.5f));}
+169                  wid1->addChild(lbl);
+170                 wid1->setContentSize(Size(lbl->getContentSize().width*0.9f,lbl->getContentSize().height));
+171                 \textcolor{keywordflow}{return} wid1;
+172             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a348c50d4213a4fee3888c216c16712ef}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a348c50d4213a4fee3888c216c16712ef}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!init@{init}}
+\index{init@{init}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual bool Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Score\+Board\+Scene.\+hpp 파일의 45 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+45                                    \{
+46                     \textcolor{keywordflow}{if} ( !Scene::init() )\{
+47                         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+48                     \}
+49                     
+50                     \textcolor{keywordflow}{if}(!\hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a9cb81505055490211a9b5c79c3c22c18}{ScoreDBManager::getInstance}()->isOpened())\{
+51                         \textcolor{keywordtype}{char}* fileptr =(\textcolor{keywordtype}{char}*) (
+      \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae50cfd222e276a5ca27e17c886aa5dd5}{ScoreDBManager::getDBLocationForTetrisGame}()) .c\_str();
+52                         \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a9cb81505055490211a9b5c79c3c22c18}{ScoreDBManager::getInstance}()->
+      \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8bf7e756a9cca7e57fef00076fb62f36}{open}(fileptr);
+53                     \}
+54                     \textcolor{keyword}{auto} visibleSize = Director::getInstance()->getVisibleSize();
+55                     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+56                     
+58                     \textcolor{comment}{// 2. add a menu item with "X" image, which is clicked to quit the program}
+59                     \textcolor{comment}{//    you may modify it.}
+60                     
+61                     \textcolor{comment}{// add a "close" icon to exit the progress. it's an autorelease object}
+62                     \textcolor{keyword}{auto} closeItem = MenuItemImage::create(
+63                                                            \textcolor{stringliteral}{"CloseNormal.png"},
+64                                                            \textcolor{stringliteral}{"CloseSelected.png"},
+65                                                            CC\_CALLBACK\_1(
+      \hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ad17f53b26718969718fed03b2b38ff61}{ScoreBoardScene::menuCloseCallback}, \textcolor{keyword}{this}));
+66                     
+67                     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().
+      width/2 ,
+68                                                 origin.y + closeItem->getContentSize().height/2));
+69                     
+70                     \textcolor{comment}{// create menu, it's an autorelease object}
+71                     \textcolor{keyword}{auto} menu = Menu::create(closeItem, NULL);
+72                     menu->setPosition(Vec2::ZERO);
+73                     this->addChild(menu, 1);
+74 
+75                     queue<struct ScoreBoardAttributes> q = DBManager::getInstance()->getScoreBoard();
+76                     cout<<\textcolor{stringliteral}{"score record count: "}<<((int)q.size())<<endl;
+77                     
+78                     \textcolor{keyword}{auto} img = Sprite::create(\textcolor{stringliteral}{"res/backgrounds/mainbg.jpg"});
+79                     addChild(img);
+80                     \textcolor{keyword}{auto} img2 = Sprite::create(\textcolor{stringliteral}{"res/images/honor.png"});
+81                     
+82                     addChild(img2);
+83                     img2->setScale(visibleSize.width/img2->getContentSize().width, visibleSize.height/img2
+      ->getContentSize().height);
+84                     img2->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2));
+85                      \textcolor{keyword}{auto} listView = ListView::create();
+86                     listView->setBackGroundColor(Color3B::BLACK);
+87                     listView->setBackGroundColorOpacity(0.6);
+88                     listView->setDirection(ui::ScrollView::Direction::BOTH);
+89                     listView->setTouchEnabled(\textcolor{keyword}{true});
+90                     listView->setBounceEnabled(\textcolor{keyword}{true});
+91                     listView->setSize(Size(getContentSize().width,getContentSize().height)); \textcolor{comment}{//
+      winSize.width, winSize.height/3));}
+92                     listView->setPosition(Vec2(getContentSize().width/2,getContentSize().height/2));
+93                     listView->setClippingEnabled(\textcolor{keyword}{true});
+94                     listView->setAnchorPoint(Vec2::ZERO);
+95                     listView->setPosition(Vec2::ZERO);
+96                     listView->setSwallowTouches(\textcolor{keyword}{false});
+97                     listView->pushBackCustomItem(\hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a89a944c51155ffa16474e406a1103753}{getHeaderText}());
+98                     \textcolor{comment}{/*auto wid1 = Widget::create();}
+99 \textcolor{comment}{                    wid1->setContentSize(spr1->getContentSize());}
+100 \textcolor{comment}{                    wid1->addChild(spr1);}
+101 \textcolor{comment}{                    */}
+102                    
+103                     \textcolor{comment}{//listView->pushBackCustomItem(wid1);}
+104                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rank = 0;
+105                     \textcolor{keywordflow}{while}(q.size())\{
+106                         \textcolor{keyword}{struct }\hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes}{ScoreBoardAttributes} s = q.front();
+107                         q.pop();
+108                         listView->pushBackCustomItem(\hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a1fa0140e51fbae6cffb210487073b549}{getContentText}(&s,++rank));
+109                     \}
+110                     addChild(listView);
+111                     \textcolor{keyword}{auto} btn = Button::create();
+112                     \textcolor{comment}{//btn->addClickEventListener(<#const ccWidgetClickCallback &callback#>)}
+113                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+114                     
+115                 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dc7/class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a348c50d4213a4fee3888c216c16712ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ad17f53b26718969718fed03b2b38ff61}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ad17f53b26718969718fed03b2b38ff61}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!menu\+Close\+Callback@{menu\+Close\+Callback}}
+\index{menu\+Close\+Callback@{menu\+Close\+Callback}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{menu\+Close\+Callback()}{menuCloseCallback()}}
+{\footnotesize\ttfamily void Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::menu\+Close\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Score\+Board\+Scene.\+hpp 파일의 116 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+117             \{
+118                 Director::getInstance()->popScene();
+119                 \textcolor{comment}{//Close the cocos2d-x game scene and quit the application}
+120              
+121                 \textcolor{comment}{/*To navigate back to native iOS screen(if present) without quitting the application  ,do
+       not use Director::getInstance()->end() and exit(0) as given above,instead trigger a custom event created in
+       RootViewController.mm as below*/}
+122                 
+123                 \textcolor{comment}{//EventCustom customEndEvent("game\_scene\_close\_event");}
+124                 \textcolor{comment}{//\_eventDispatcher->dispatchEvent(&customEndEvent);}
+125                 
+126                 
+127             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a667d5d9ca7709281c7b67814e5495a26}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a667d5d9ca7709281c7b67814e5495a26}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!on\+Enter@{on\+Enter}}
+\index{on\+Enter@{on\+Enter}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{on\+Enter()}{onEnter()}}
+{\footnotesize\ttfamily virtual void Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::on\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Score\+Board\+Scene.\+hpp 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+32                                   \{
+33                 Scene::onEnter();
+34                 CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+35                 CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(\textcolor{stringliteral}{"
+      res/bgms/scorerecordbgm.mp3"}, \textcolor{keyword}{true});
+36                 \textcolor{keywordflow}{if}(!\hyperlink{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a451d25787dec38631575bc240b86c897}{readSoundEnable}())\{
+37                     CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+38                 \}
+39             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ade9d785bcda22a7d410c316909377ff8}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_ade9d785bcda22a7d410c316909377ff8}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!on\+Exit@{on\+Exit}}
+\index{on\+Exit@{on\+Exit}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{on\+Exit()}{onExit()}}
+{\footnotesize\ttfamily virtual void Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Score\+Board\+Scene.\+hpp 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+40                                  \{
+41                 Scene::onExit();
+42                 CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+43             \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a451d25787dec38631575bc240b86c897}\label{class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene_a451d25787dec38631575bc240b86c897}} 
+\index{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}!read\+Sound\+Enable@{read\+Sound\+Enable}}
+\index{read\+Sound\+Enable@{read\+Sound\+Enable}!Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene@{Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene}}
+\subsubsection{\texorpdfstring{read\+Sound\+Enable()}{readSoundEnable()}}
+{\footnotesize\ttfamily bool Tetris\+::\+Cocos2d\+Scenes\+::\+Score\+Board\+Scene\+::read\+Sound\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+사용자 프로그램 설정에서 소리가 켜져있는지 유무를 리턴 
+\end{DoxyReturn}
+
+
+Score\+Board\+Scene.\+hpp 파일의 133 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+133                                   \{
+134                 \textcolor{keywordflow}{return} DBManager::getInstance()->readAppSettingAsBool(DBManager::getSoundEnablerKey());
+135             \}
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/myscenes/\hyperlink{_score_board_scene_8hpp}{Score\+Board\+Scene.\+hpp}\end{DoxyCompactItemize}
