@@ -1,0 +1,6 @@
+<map id="Tetris::GameController::switchBlock" name="Tetris::GameController::switchBlock">
+<area shape="rect" id="node2" href="$class_tetris_1_1_users_1_1_game_user.html#a8a777ef1ffbbc53ebae4172830863eb4" title="Tetris::Users::GameUser\l::canSwitchBlock" alt="" coords="208,5,376,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_users_1_1_game_user.html#ad25eace96bd27ae6df4a0c0d506be730" title="Tetris::Users::GameUser\l::getCurrentX" alt="" coords="208,67,376,106"/>
+<area shape="rect" id="node4" href="$class_tetris_1_1_users_1_1_game_user.html#af5bd7ff0b575af1b42b093488cff97e2" title="Tetris::Users::GameUser\l::getCurrentY" alt="" coords="208,130,376,169"/>
+<area shape="rect" id="node5" href="$class_tetris_1_1_users_1_1_game_user.html#a1d1efa857420c82248fd12da9c08ef77" title="Tetris::Users::GameUser\l::switchBlock" alt="" coords="208,193,376,231"/>
+</map>

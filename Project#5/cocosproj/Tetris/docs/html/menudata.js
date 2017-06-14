@@ -9,7 +9,7 @@ var menudata={children:[
 {text:"클래스",url:"annotated.html",children:[
 {text:"클래스 목록",url:"annotated.html"},
 {text:"클래스 색인",url:"classes.html"},
-{text:"클래스 계통도",url:"hierarchy.html"},
+{text:"클래스 계통도",url:"inherits.html"},
 {text:"클래스 멤버",url:"functions.html",children:[
 {text:"모두",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},

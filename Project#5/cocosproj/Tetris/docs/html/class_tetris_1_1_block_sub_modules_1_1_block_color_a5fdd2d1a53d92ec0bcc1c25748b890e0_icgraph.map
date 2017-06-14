@@ -1,0 +1,5 @@
+<map id="Tetris::BlockSubModules::BlockColor::setAlpha" name="Tetris::BlockSubModules::BlockColor::setAlpha">
+<area shape="rect" id="node2" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#ae6d640629b11d880ca994923657adbe1" title="Tetris::BlockSubModules\l::BlockColor::forceChangeColor" alt="" coords="222,67,431,106"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#abb929df07c6b378e31d76b7298eb9e12" title="Tetris::BlockSubModules\l::BlockColor::BlockColor" alt="" coords="480,5,648,43"/>
+<area shape="rect" id="node4" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a9541e6b5b809214ae2691a99af06ac3f" title="Tetris::BlockSubModules\l::BlockColor::setRed" alt="" coords="480,67,648,106"/>
+</map>

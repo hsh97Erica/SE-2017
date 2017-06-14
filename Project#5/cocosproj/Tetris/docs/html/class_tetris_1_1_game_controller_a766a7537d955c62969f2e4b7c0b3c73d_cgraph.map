@@ -1,0 +1,4 @@
+<map id="Tetris::GameController::play" name="Tetris::GameController::play">
+<area shape="rect" id="node2" href="$class_tetris_1_1_users_1_1_game_user.html#aeedbe521004c22018b73a509e99f7d81" title="Tetris::Users::GameUser\l::setCurrentY" alt="" coords="208,5,376,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_users_1_1_game_user.html#af5bd7ff0b575af1b42b093488cff97e2" title="Tetris::Users::GameUser\l::getCurrentY" alt="" coords="208,67,376,106"/>
+</map>

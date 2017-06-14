@@ -1,0 +1,6 @@
+<map id="HelloWorld::gameloop" name="HelloWorld::gameloop">
+<area shape="rect" id="node2" href="$class_hello_world.html#a4ab71b15b7e362af143d2a539e39a538" title="HelloWorld::stateloop" alt="" coords="206,5,354,30"/>
+<area shape="rect" id="node3" href="$class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944" title="HelloWorld::play" alt="" coords="404,5,522,30"/>
+<area shape="rect" id="node4" href="$class_hello_world.html#aa4c36099096e160e3726819a2308dd04" title="HelloWorld::startGame" alt="" coords="571,5,727,30"/>
+<area shape="rect" id="node5" href="$class_hello_world.html#a65e2b1525051f3690e5a39ca56608a97" title="HelloWorld::init" alt="" coords="777,5,887,30"/>
+</map>

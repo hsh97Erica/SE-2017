@@ -1,0 +1,7 @@
+<map id="Tetris::BlockSubModules::BlockColor::getBlockColorAsHexString" name="Tetris::BlockSubModules::BlockColor::getBlockColorAsHexString">
+<area shape="rect" id="node2" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a849ebbb0e900c5efdcb99784767e7a7a" title="Tetris::BlockSubModules\l::BlockColor::packRawColorData" alt="" coords="254,99,469,138"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#acb1c9b34ee534857741025bd2824201a" title="Tetris::BlockSubModules\l::BlockColor::getAlphaAsRaw" alt="" coords="520,5,715,43"/>
+<area shape="rect" id="node4" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a1795cf70c847d261645a9690afff7e9c" title="Tetris::BlockSubModules\l::BlockColor::getRedAsRaw" alt="" coords="524,67,710,106"/>
+<area shape="rect" id="node5" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a65e9230325a2f44aa433f39c199aabcd" title="Tetris::BlockSubModules\l::BlockColor::getGreenAsRaw" alt="" coords="518,130,717,169"/>
+<area shape="rect" id="node6" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac0ad44a8b001f3824447d137357f5145" title="Tetris::BlockSubModules\l::BlockColor::getBlueAsRaw" alt="" coords="523,193,711,231"/>
+</map>

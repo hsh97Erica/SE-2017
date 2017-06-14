@@ -1,0 +1,4 @@
+<map id="Tetris::GameController::currentusermoveright" name="Tetris::GameController::currentusermoveright">
+<area shape="rect" id="node2" href="$class_tetris_1_1_users_1_1_game_user.html#a2957358b1a6298f06c6c2e10cb89f623" title="Tetris::Users::GameUser\l::setCurrentX" alt="" coords="208,5,376,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_users_1_1_game_user.html#ad25eace96bd27ae6df4a0c0d506be730" title="Tetris::Users::GameUser\l::getCurrentX" alt="" coords="208,67,376,106"/>
+</map>

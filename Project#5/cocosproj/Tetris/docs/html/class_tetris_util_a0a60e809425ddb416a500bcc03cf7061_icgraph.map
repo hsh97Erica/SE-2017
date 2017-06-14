@@ -1,0 +1,14 @@
+<map id="TetrisUtil::randInt" name="TetrisUtil::randInt">
+<area shape="rect" id="node2" href="$classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#abb107cf268a50b3ebd9bd545c88a9a35" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getRandomGoal" alt="" coords="177,5,402,43"/>
+<area shape="rect" id="node7" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a74374a6d24cd77c7f4fe03e19111bab7" title="Tetris::BlockSubModules\l::BlockColor::genRandomColor" alt="" coords="187,67,392,106"/>
+<area shape="rect" id="node8" href="$class_tetris_1_1_block_generator.html#a434df5baf3944a534492b63763b532a6" title="Tetris::BlockGenerator\l::generateRandomBlock" alt="" coords="207,130,372,169"/>
+<area shape="rect" id="node9" href="$class_tetris_1_1_block_generator.html#a584fde2bfe1cdd4505bd905befd73d21" title="Tetris::BlockGenerator\l::generateBlock" alt="" coords="213,193,366,231"/>
+<area shape="rect" id="node10" href="$class_tetris_1_1_score_manage_1_1_score_management.html#a66b6a1d3fdc8fb9f91f1d7bfc7854579" title="Tetris::ScoreManage\l::ScoreManagement::getAdditional\lComboScore" alt="" coords="176,255,402,307"/>
+<area shape="rect" id="node12" href="$class_tetris_1_1_score_manage_1_1_score_management.html#a2991c1eb0595da71788aba706e0b27b7" title="Tetris::ScoreManage\l::ScoreManagement::getScore\lGapWhenRemovingOneLine" alt="" coords="188,331,390,383"/>
+<area shape="rect" id="node13" href="$class_tetris_1_1_score_manage_1_1_score_management.html#a275253fb7c1bb1820ddba3b666b9db09" title="Tetris::ScoreManage\l::ScoreManagement::getScore\lWhenPuttingFallenDownBlock" alt="" coords="188,407,390,459"/>
+<area shape="rect" id="node3" href="$class_hello_world.html#a4ab71b15b7e362af143d2a539e39a538" title="HelloWorld::stateloop" alt="" coords="482,11,630,37"/>
+<area shape="rect" id="node4" href="$class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944" title="HelloWorld::play" alt="" coords="710,11,828,37"/>
+<area shape="rect" id="node5" href="$class_hello_world.html#aa4c36099096e160e3726819a2308dd04" title="HelloWorld::startGame" alt="" coords="878,11,1034,37"/>
+<area shape="rect" id="node6" href="$class_hello_world.html#a65e2b1525051f3690e5a39ca56608a97" title="HelloWorld::init" alt="" coords="1083,11,1194,37"/>
+<area shape="rect" id="node11" href="$class_tetris_1_1_score_manage_1_1_score_management.html#a89203c0689645e7e4ad75d8fd634aa11" title="Tetris::ScoreManage\l::ScoreManagement::getCombo\lScore" alt="" coords="451,255,661,307"/>
+</map>

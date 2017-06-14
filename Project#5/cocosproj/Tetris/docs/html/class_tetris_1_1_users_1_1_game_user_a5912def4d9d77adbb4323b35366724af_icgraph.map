@@ -1,0 +1,4 @@
+<map id="Tetris::Users::GameUser::getRemovedLinesCount" name="Tetris::Users::GameUser::getRemovedLinesCount">
+<area shape="rect" id="node2" href="$class_tetris_1_1_game_controller.html#ac16414d257ffec350d6eaf47ce3ad490" title="Tetris::GameController\l::getRemovedLinesCountWithFormat\lForSomeone" alt="" coords="228,5,468,57"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_game_controller.html#a2e7275bdb8f29ce4f1dfec790c22705d" title="Tetris::GameController\l::getRemovedLinesCountWithFormat\lForSomeUser" alt="" coords="228,81,468,133"/>
+</map>

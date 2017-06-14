@@ -1,0 +1,11 @@
+<map id="Tetris::BlockSubModules::BlockColor::getAlphaAsRaw" name="Tetris::BlockSubModules::BlockColor::getAlphaAsRaw">
+<area shape="rect" id="node2" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#ac626961ee3894d89a7fc961e9f40c92f" title="Tetris::BlockSubModules\l::BlockColor::getColorAsArray" alt="" coords="259,54,458,93"/>
+<area shape="rect" id="node9" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a849ebbb0e900c5efdcb99784767e7a7a" title="Tetris::BlockSubModules\l::BlockColor::packRawColorData" alt="" coords="251,119,466,158"/>
+<area shape="rect" id="node3" href="$class_hello_world.html#af59f38fb445c1302e5d2f7e18d0ab0e5" title="HelloWorld::gameloop" alt="" coords="551,5,703,30"/>
+<area shape="rect" id="node8" href="$class_tetris_1_1_views_1_1_next_block_render_behavior.html#aa9240528e0603ca129d7877f9e71b27d" title="Tetris::Views::NextBlock\lRenderBehavior::renderNextBlock" alt="" coords="515,54,738,93"/>
+<area shape="rect" id="node4" href="$class_hello_world.html#a4ab71b15b7e362af143d2a539e39a538" title="HelloWorld::stateloop" alt="" coords="787,5,935,30"/>
+<area shape="rect" id="node5" href="$class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944" title="HelloWorld::play" alt="" coords="985,5,1103,30"/>
+<area shape="rect" id="node6" href="$class_hello_world.html#aa4c36099096e160e3726819a2308dd04" title="HelloWorld::startGame" alt="" coords="1153,5,1309,30"/>
+<area shape="rect" id="node7" href="$class_hello_world.html#a65e2b1525051f3690e5a39ca56608a97" title="HelloWorld::init" alt="" coords="1358,5,1469,30"/>
+<area shape="rect" id="node10" href="$class_tetris_1_1_block_sub_modules_1_1_block_color.html#a79cc837f207645628542876997c9e919" title="Tetris::BlockSubModules\l::BlockColor::getBlockColorAs\lHexString" alt="" coords="527,117,726,169"/>
+</map>

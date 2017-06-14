@@ -1,0 +1,3 @@
+<map id="Tetris::ScoreManage::ScoreManagement::getScoreWhenPuttingFallenDownBlock" name="Tetris::ScoreManage::ScoreManagement::getScoreWhenPuttingFallenDownBlock">
+<area shape="rect" id="node2" href="$class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061" title="TetrisUtil::randInt" alt="" coords="257,18,378,43"/>
+</map>

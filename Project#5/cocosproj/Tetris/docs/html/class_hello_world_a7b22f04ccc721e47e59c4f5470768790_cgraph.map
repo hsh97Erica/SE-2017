@@ -1,0 +1,5 @@
+<map id="HelloWorld::generateGameOverMenu" name="HelloWorld::generateGameOverMenu">
+<area shape="rect" id="node2" href="$class_hello_world.html#a73ad0d041144a1e610534fe5df41d556" title="HelloWorld::gameRestartGame\lCallback" alt="" coords="241,5,447,43"/>
+<area shape="rect" id="node4" href="$class_hello_world.html#ac4ab2f5e922e659d4f137591c0f6a9b0" title="HelloWorld::menuCloseCallback" alt="" coords="238,67,450,93"/>
+<area shape="rect" id="node3" href="$class_hello_world.html#a1b700f5f9de04271533d3fa099d7b014" title="HelloWorld::createScene" alt="" coords="498,11,667,37"/>
+</map>

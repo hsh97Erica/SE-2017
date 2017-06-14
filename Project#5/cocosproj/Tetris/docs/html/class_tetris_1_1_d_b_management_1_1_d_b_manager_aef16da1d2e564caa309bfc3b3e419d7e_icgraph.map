@@ -1,0 +1,4 @@
+<map id="Tetris::DBManagement::DBManager::saveScore" name="Tetris::DBManagement::DBManager::saveScore">
+<area shape="rect" id="node2" href="$class_tetris_1_1_game_controller.html#a3c5e6034b2e2faf70371a13eb5f9c5bb" title="Tetris::GameController\l::setGameStatusToEnd" alt="" coords="225,5,383,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a" title="Tetris::GameController\l::checkEnd" alt="" coords="227,67,381,106"/>
+</map>

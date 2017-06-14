@@ -1,0 +1,4 @@
+<map id="Tetris::Block::rotate" name="Tetris::Block::rotate">
+<area shape="rect" id="node2" href="$class_tetris_1_1_block_generator.html#a581b22cebe170d3fe8b51130c01e7a22" title="Tetris::BlockGenerator\l::generateBlock" alt="" coords="190,5,343,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_game_controller.html#a5d93facb945f87ba33fb8be74df023fa" title="Tetris::GameController\l::currentblockrotate" alt="" coords="189,67,344,106"/>
+</map>

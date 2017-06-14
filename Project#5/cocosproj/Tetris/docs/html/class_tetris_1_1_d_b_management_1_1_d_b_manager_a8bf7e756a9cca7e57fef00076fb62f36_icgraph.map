@@ -1,0 +1,6 @@
+<map id="Tetris::DBManagement::DBManager::open" name="Tetris::DBManagement::DBManager::open">
+<area shape="rect" id="node2" href="$class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#a63cfd0adc032b868536a89b103c44fc5" title="Tetris::Cocos2dScenes\l::MainMenuScene::onEnter" alt="" coords="211,5,394,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_cocos2d_scenes_1_1_main_menu_scene.html#ae4d89ddd3650f5f24e86ea631092ecb9" title="Tetris::Cocos2dScenes\l::MainMenuScene::init" alt="" coords="224,67,382,106"/>
+<area shape="rect" id="node4" href="$class_tetris_1_1_cocos2d_scenes_1_1_score_board_scene.html#a348c50d4213a4fee3888c216c16712ef" title="Tetris::Cocos2dScenes\l::ScoreBoardScene::init" alt="" coords="222,130,383,169"/>
+<area shape="rect" id="node5" href="$class_tetris_1_1_game_controller.html#a968c9a79fca8a5a39e0c51edca0e5abb" title="Tetris::GameController\l::GameController" alt="" coords="225,193,380,231"/>
+</map>

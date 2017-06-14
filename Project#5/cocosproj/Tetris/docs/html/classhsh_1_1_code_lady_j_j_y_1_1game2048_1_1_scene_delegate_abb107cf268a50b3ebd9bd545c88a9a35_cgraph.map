@@ -1,0 +1,4 @@
+<map id="hsh::CodeLadyJJY::game2048::SceneDelegate::getRandomGoal" name="hsh::CodeLadyJJY::game2048::SceneDelegate::getRandomGoal">
+<area shape="rect" id="node2" href="$classhsh_1_1_code_lady_j_j_y_1_1game2048_1_1_scene_delegate.html#a5766c3d3f2f5ee3a4c7664198f362e8f" title="hsh::CodeLadyJJY::game2048\l::SceneDelegate::getGoal" alt="" coords="277,5,480,43"/>
+<area shape="rect" id="node3" href="$class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061" title="TetrisUtil::randInt" alt="" coords="318,67,439,93"/>
+</map>

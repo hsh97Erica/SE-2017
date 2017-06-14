@@ -1,0 +1,7 @@
+<map id="sqlite3_exec" name="sqlite3_exec">
+<area shape="rect" id="node2" href="$class_tetris_1_1_d_b_management_1_1_d_b_manager.html#aef16da1d2e564caa309bfc3b3e419d7e" title="Tetris::DBManagement\l::DBManager::saveScore" alt="" coords="182,35,352,74"/>
+<area shape="rect" id="node5" href="$class_tetris_1_1_d_b_management_1_1_d_b_manager.html#aead8bb3f2a64fdf6ac59c69bfd21a01e" title="Tetris::DBManagement\l::DBManager::changeIntSetting" alt="" coords="163,98,370,137"/>
+<area shape="rect" id="node6" href="$class_tetris_1_1_d_b_management_1_1_d_b_manager.html#ae8c98091466565c4c70971e6b7a42ce6" title="Tetris::DBManagement\l::DBManager::getSoundEnablerKey" alt="" coords="150,161,383,199"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_game_controller.html#a3c5e6034b2e2faf70371a13eb5f9c5bb" title="Tetris::GameController\l::setGameStatusToEnd" alt="" coords="433,5,591,43"/>
+<area shape="rect" id="node4" href="$class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a" title="Tetris::GameController\l::checkEnd" alt="" coords="435,67,589,106"/>
+</map>

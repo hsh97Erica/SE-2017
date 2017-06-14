@@ -1,0 +1,5 @@
+<map id="Tetris::GameController::justinit" name="Tetris::GameController::justinit">
+<area shape="rect" id="node2" href="$class_hello_world.html#ac1aee383de0a7c30e84f7efc0da8d944" title="HelloWorld::play" alt="" coords="209,5,327,30"/>
+<area shape="rect" id="node4" href="$class_hello_world.html#a65e2b1525051f3690e5a39ca56608a97" title="HelloWorld::init" alt="" coords="582,30,693,55"/>
+<area shape="rect" id="node3" href="$class_hello_world.html#aa4c36099096e160e3726819a2308dd04" title="HelloWorld::startGame" alt="" coords="377,5,533,30"/>
+</map>

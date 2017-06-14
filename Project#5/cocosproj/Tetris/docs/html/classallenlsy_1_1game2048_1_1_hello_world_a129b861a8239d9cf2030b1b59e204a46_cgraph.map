@@ -1,0 +1,4 @@
+<map id="allenlsy::game2048::HelloWorld::init" name="allenlsy::game2048::HelloWorld::init">
+<area shape="rect" id="node2" href="$classallenlsy_1_1game2048_1_1_hello_world.html#a0cc62fe1173f141d60833be4804f97d9" title="allenlsy::game2048\l::HelloWorld::onTouchBegan" alt="" coords="190,5,380,43"/>
+<area shape="rect" id="node3" href="$classallenlsy_1_1game2048_1_1_hello_world.html#a99042e68bb9365cdb764cc9c3d9e6197" title="allenlsy::game2048\l::HelloWorld::onTouchEnded" alt="" coords="190,67,380,106"/>
+</map>

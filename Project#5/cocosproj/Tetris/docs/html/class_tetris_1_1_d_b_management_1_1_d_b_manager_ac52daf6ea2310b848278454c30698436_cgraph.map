@@ -1,0 +1,7 @@
+<map id="Tetris::DBManagement::DBManager::readAppSettingAsInt" name="Tetris::DBManagement::DBManager::readAppSettingAsInt">
+<area shape="rect" id="node2" href="$sqlite3_8h.html#a85d4203bb54c984c5325c2f5b3664985" title="sqlite3_prepare_v2" alt="" coords="262,5,397,30"/>
+<area shape="rect" id="node3" href="$sqlite3_8h.html#a326cbde878820fd108f5961d5318f585" title="sqlite3_column_count" alt="" coords="254,54,404,79"/>
+<area shape="rect" id="node4" href="$sqlite3_8h.html#ac1e491ce36b7471eb28387f7d3c74334" title="sqlite3_step" alt="" coords="283,103,376,129"/>
+<area shape="rect" id="node5" href="$sqlite3_8h.html#a6bd16f5b3266f473e37e8e3d4ebb4290" title="sqlite3_column_int" alt="" coords="263,153,395,178"/>
+<area shape="rect" id="node6" href="$sqlite3_8h.html#a801195c0f771d40bb4be1e40f3b88945" title="sqlite3_finalize" alt="" coords="275,202,384,227"/>
+</map>

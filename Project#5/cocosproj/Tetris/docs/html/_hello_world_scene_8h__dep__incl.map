@@ -1,0 +1,8 @@
+<map id="Classes/HelloWorldScene.h" name="Classes/HelloWorldScene.h">
+<area shape="rect" id="node2" href="$_app_delegate_8cpp.html" title="Classes/AppDelegate.cpp" alt="" coords="5,257,179,282"/>
+<area shape="rect" id="node3" href="$_game_controller_8hpp.html" title="Classes/tet2/GameController.hpp" alt="" coords="386,87,603,113"/>
+<area shape="rect" id="node5" href="$_hello_world_scene_8cpp.html" title="Classes/HelloWorldScene.cpp" alt="" coords="273,257,473,282"/>
+<area shape="rect" id="node6" href="$_main_menu_scene_8hpp.html" title="Classes/myscenes/MainMenu\lScene.hpp" alt="" coords="113,81,311,119"/>
+<area shape="rect" id="node7" href="$_scene_management_8hpp.html" title="Classes/myscenes/SceneManagement.hpp" alt="" coords="33,175,311,201"/>
+<area shape="rect" id="node4" href="$_next_block_render_view_8hpp.html" title="Classes/views/NextBlockRender\lView.hpp" alt="" coords="436,169,648,207"/>
+</map>

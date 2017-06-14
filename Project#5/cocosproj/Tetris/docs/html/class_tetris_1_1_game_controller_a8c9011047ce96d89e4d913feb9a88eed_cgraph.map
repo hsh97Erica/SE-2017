@@ -1,0 +1,5 @@
+<map id="Tetris::GameController::~GameController" name="Tetris::GameController::~GameController">
+<area shape="rect" id="node2" href="$class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a9cb81505055490211a9b5c79c3c22c18" title="Tetris::DBManagement\l::DBManager::getInstance" alt="" coords="208,5,384,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_d_b_management_1_1_d_b_manager.html#a8390e6ddf3fa06e90fa5c2ab4997e5c1" title="Tetris::DBManagement\l::DBManager::close" alt="" coords="218,67,374,106"/>
+<area shape="rect" id="node4" href="$sqlite3_8h.html#ac43c9032fc6ef3b2a231dc3a9fa44b2d" title="sqlite3_close" alt="" coords="432,74,531,99"/>
+</map>

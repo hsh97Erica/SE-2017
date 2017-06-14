@@ -1,0 +1,12 @@
+<map id="Tetris::Block::getBlockSpaceWidth" name="Tetris::Block::getBlockSpaceWidth">
+<area shape="rect" id="node2" href="$class_tetris_1_1_game_controller.html#a3c63a9754e4cbeae4f66a5760bb4055d" title="Tetris::GameController\l::saveBlockAndCheck" alt="" coords="277,5,432,43"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a" title="Tetris::GameController\l::checkEnd" alt="" coords="277,67,432,106"/>
+<area shape="rect" id="node4" href="$class_tetris_1_1_game_controller.html#a78b39bdb39707e119d6e708bdb2aca17" title="Tetris::GameController\l::getVisualizedBoard" alt="" coords="277,130,432,169"/>
+<area shape="rect" id="node5" href="$class_tetris_1_1_game_controller.html#ae541cf926ccdce47a185c94a0c80b642" title="Tetris::GameController\l::canmoveleft" alt="" coords="277,193,432,231"/>
+<area shape="rect" id="node6" href="$class_tetris_1_1_game_controller.html#a6c8189bb893502049396a7de1a73a88c" title="Tetris::GameController\l::canmoveright" alt="" coords="277,255,432,294"/>
+<area shape="rect" id="node7" href="$class_tetris_1_1_game_controller.html#ac4993d5ad8640ac617fec341fdb301ee" title="Tetris::GameController\l::candropdown" alt="" coords="277,318,432,357"/>
+<area shape="rect" id="node8" href="$class_tetris_1_1_game_controller.html#adc067380df0f0da4ea4a358d00d6a123" title="Tetris::GameController\l::saveBlockAt" alt="" coords="277,381,432,419"/>
+<area shape="rect" id="node9" href="$class_tetris_1_1_game_controller.html#a6c22f25017881f6150428b62e4607310" title="Tetris::GameController\l::getCombinedBoard" alt="" coords="277,443,432,482"/>
+<area shape="rect" id="node10" href="$class_tetris_1_1_users_1_1_game_user.html#a1962ed051506010440645f7f3b50760d" title="Tetris::Users::GameUser\l::canSwitchBlock" alt="" coords="271,506,438,545"/>
+<area shape="rect" id="node11" href="$class_tetris_1_1_views_1_1_next_block_render_behavior.html#aa9240528e0603ca129d7877f9e71b27d" title="Tetris::Views::NextBlock\lRenderBehavior::renderNextBlock" alt="" coords="243,569,466,607"/>
+</map>

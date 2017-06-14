@@ -1,0 +1,4 @@
+<map id="Tetris::Cocos2dScenes::SceneInstanceManager::getStoredMainTetrisScene" name="Tetris::Cocos2dScenes::SceneInstanceManager::getStoredMainTetrisScene">
+<area shape="rect" id="node2" href="$class_tetris_1_1_cocos2d_scenes_1_1_scene_instance_manager.html#a536188c1cdb7cb46ebd2edc8ebf1f17a" title="Tetris::Cocos2dScenes\l::SceneInstanceManager\l::createMainTetrisScene" alt="" coords="241,5,410,57"/>
+<area shape="rect" id="node3" href="$class_hello_world.html#a1b700f5f9de04271533d3fa099d7b014" title="HelloWorld::createScene" alt="" coords="458,18,627,43"/>
+</map>

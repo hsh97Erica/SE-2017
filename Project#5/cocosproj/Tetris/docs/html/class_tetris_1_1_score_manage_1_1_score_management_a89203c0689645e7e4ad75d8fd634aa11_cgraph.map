@@ -1,0 +1,5 @@
+<map id="Tetris::ScoreManage::ScoreManagement::getComboScore" name="Tetris::ScoreManage::ScoreManagement::getComboScore">
+<area shape="rect" id="node2" href="$class_tetris_1_1_score_manage_1_1_score_management.html#a41c245dcf773c6c677c2e31f6ac17944" title="Tetris::ScoreManage\l::ScoreManagement::getScore\lComboRule" alt="" coords="276,5,478,57"/>
+<area shape="rect" id="node3" href="$class_tetris_1_1_score_manage_1_1_score_management.html#a66b6a1d3fdc8fb9f91f1d7bfc7854579" title="Tetris::ScoreManage\l::ScoreManagement::getAdditional\lComboScore" alt="" coords="264,81,490,133"/>
+<area shape="rect" id="node4" href="$class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061" title="TetrisUtil::randInt" alt="" coords="539,94,661,119"/>
+</map>
