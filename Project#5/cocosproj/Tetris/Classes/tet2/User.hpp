@@ -157,15 +157,47 @@ namespace Tetris{
             bool getGameResumeState(){
                 return this->isGameResume;
             }
+            bool canLevelUp(){
+                unsigned long long dlv = (current_game_score/100);
+                
+                if(dlv>getRawLevel()){
+                    cout<<"****can level up!****"<<endl;
+                    return true;
+                }
+                return false;
+            }
+            unsigned long long getDeltaLv(){
+                unsigned long long dlv = (current_game_score/100);
+                if(dlv>getRawLevel()){
+                    return dlv-getRawLevel();
+                }else{
+                    return 0;
+                }
+            }
+            void setLevel(unsigned long long val){
+                lv = val;
+            }
+            void levelupOnce(){
+                lvup();
+            }
+            void levelup(unsigned long long uplv){
+                lvup_v2(uplv);
+            }
+            unsigned long long getLevel(){
+                return getRawLevel()+1;
+            }
         protected:
             virtual void loadUserDataFromExistLocation(){
                 
+            }
+            unsigned long long getRawLevel(){
+                return lv;
             }
             virtual void initCls(){
                 this->initGameScore();
                 this->setRemovedLinesCount(0);
                 this->continous_rmlines_cnt_as_combo = 0;
-                
+                this->lv = 0;
                 this->lastest_combo_time = 0;
                 this->currentXpos=0;
                 this->currentYpos=0;
@@ -186,6 +218,13 @@ namespace Tetris{
             void resetLastestComboTime(){
                 this->lastest_combo_time = time(NULL);
             }
+            void lvup_v2(unsigned long long uplv){
+                cout<<"uplv= "<<uplv<<"  "<<"lv= "<<lv<<endl;
+                lv+=uplv;
+            }
+            void lvup(){
+                lv++;
+            }
             private:
             bool isGameResume = false;
                 unsigned short currentXpos=0;
@@ -198,6 +237,7 @@ namespace Tetris{
                 unsigned long long rmLinesCnt = 0;
                 time_t lastest_combo_time = 0;
                 long long continous_rmlines_cnt_as_combo = 0;
+                unsigned long long lv =0;
         };
     }
 };

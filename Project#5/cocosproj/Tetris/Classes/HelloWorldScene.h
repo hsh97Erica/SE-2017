@@ -36,6 +36,7 @@ public:
         void resume();
         void stateloop(float dt);
         void gameloop(float dt);
+        void levelup(float dt);
         void menuVisibleToggle(bool autopauseorpause);
     void freeRelativeConnectionWhenDeleting();
         virtual void onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);

@@ -183,6 +183,11 @@ namespace Tetris{
             }
             return rst;
         }
+        void forceSettingScore(unsigned long long sc){
+            this->getLocalUser()->setCurrentGameScore(sc);
+            this->scorechecker = sc;
+            
+        }
         string getRemovedLinesCountWithFormat(bool withCategoryFormat){
             return getRemovedLinesCountWithFormatForSomeone(getLocalUser(),withCategoryFormat);
         }

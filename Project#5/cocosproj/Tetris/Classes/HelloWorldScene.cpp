@@ -152,13 +152,17 @@ void HelloWorld::stateloop(float dt){
             
             double minnus = pow(10,(double)((int) log10(maingamescore)));
             
-            float totalscore =(((float)score*3)+(maingamescore*0.15f)+minnus);
+            float totalscore =(((float)score*3)+(maingamescore*0.05f)+minnus);
             if((float)maingamescore<=totalscore){
-                this->gc->getLocalUser()->setCurrentGameScore(0);
+                this->gc->forceSettingScore(0);
+                //this->gc->getLocalUser()->setCurrentGameScore(0);
             }
             else{
-                this->gc->getLocalUser()->setCurrentGameScore(maingamescore-(unsigned long long)totalscore);
+                this->gc->forceSettingScore(maingamescore-(unsigned long long)totalscore);
+
+                //this->gc->getLocalUser()->setCurrentGameScore(maingamescore-(unsigned long long)totalscore);
             }
+            this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));
             cout<<"bonus score(with giveup): "<<(-1*totalscore)<<endl;
             this->isInExtGame = false;
             addOrRemove2048GameView(true);
@@ -192,6 +196,15 @@ void HelloWorld::stateloop(float dt){
         if(this->gc->checkScoreDisplayRefresh()){
             this->pscorelbl->setString(gc->getScoreWithFormatForLocalUser(true));
         }
+        if(this->gc->getLocalUser()->canLevelUp()){
+            levelup(dt);
+            /*unsigned long long uplv = this->gc->getLocalUser()->getDeltaLv();
+            cout<<"can level up!"<<endl;
+            for(int i=0;i<uplv;i++){
+                CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::levelup),this,0,0,0.25f,false);
+            }*/
+        }
+        cout<<"checkers work and score is "<<(this->gc->getLocalScore())<<endl;
         int extgamechecker = (int)(log10(gc->getLocalScore())/log10(2));
         //cout<<"ext g checker: "<<extgamechecker<<"  bns_g_lv: "<<bonus_game_lv<<endl;
         if(bonus_game_lv<extgamechecker){
@@ -300,6 +313,7 @@ void HelloWorld::gameloop(float dt){
     HelloWorld::drawboardingui(board,blkclr);
     this->nxtblkrv->renderNextBlock();
     if(board!=NULL){
+        
         for(int i=0;i<HelloWorld::gc->getGameHeight();i++){
             delete [] board[i];
         }
@@ -308,12 +322,30 @@ void HelloWorld::gameloop(float dt){
     if(blkclr!=NULL)
     delete [] blkclr;
 }
+void HelloWorld::levelup(float dt){
+    cout<<"call levelup"<<endl;
+    if(this->gc!=NULL){
+        cout<<"dlv= "<<(this->gc->getLocalUser()->getDeltaLv())<<endl;
+        this->gc->getLocalUser()->levelup(this->gc->getLocalUser()->getDeltaLv());
+        if(readSoundEnable()){
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("res/bgms/lvup.mp3");
+        }
+        if(this->getChildByTag(700)->getChildByTag(707)!=NULL){
+            ((Label*)this->getChildByTag(700)->getChildByTag(707))->setString(StringUtils::format("%llu",this->gc->getLocalUser()->getLevel()));
+        }
+        else{
+            cout<<"this->getChildByTag(707) is null"<<endl;
+        }
+    //CocosDenshion::SimpleAudioEngine::sharedEngine()->play
+    }
+}
 void HelloWorld::play(float dt){
     cout<<"call HelloWorld::play()"<<endl;
     HelloWorld::gc->justinit();
     HelloWorld::gc->setGameStatusToOngoing();
     HelloWorld::mainloopfuncschedule =schedule_selector(HelloWorld::stateloop);
     CCDirector::sharedDirector()->getScheduler()->scheduleSelector(mainloopfuncschedule,this,1.0f/(24+1),false);
+    
    // this->schedule(schedule_selector(HelloWorld::gameloop), 1);
     
 }
@@ -412,7 +444,7 @@ bool HelloWorld::init()
         return false;
     }
     HelloWorld::overlayblockboard=NULL;
-    bonus_game_lv = 4;
+    bonus_game_lv = 7;
     if(HelloWorld::gc==NULL){
         HelloWorld::gc = GameController::getInstance();
         //cout<<(int)gc->getGameHeight()<<endl;
@@ -495,6 +527,17 @@ bool HelloWorld::init()
     infoboardlyr->addChild(this->rmlnscntlbl);
     this->ptimelbl = label2;
     this->ptimelbl->setString(gc->getPlayTimeWithFormat(true));
+    auto lvlblheader = Label::createWithTTF("=LEVEL=", "fonts/arial.ttf", fontsz);
+    lvlblheader->setTextColor(Color4B::WHITE);
+    lvlblheader->setPosition(Vec2(infoboardlyr->getContentSize().width/2-lvlblheader->getContentSize().width/2,rmlnscntlbl->getPosition().y-lvlblheader->getContentSize().height*2));
+    auto lvlbl = Label::createWithTTF("1", "fonts/arial.ttf", fontsz);
+    lvlbl->setTextColor(Color4B::WHITE);
+    lvlbl->setString(StringUtils::format("%llu",this->gc->getLocalUser()->getLevel()));
+    lvlbl->setPosition(Vec2(infoboardlyr->getContentSize().width/2-lvlbl->getContentSize().width/2,lvlblheader->getPosition().y-lvlbl->getContentSize().height*2));
+    lvlbl->setTag(707);
+    infoboardlyr->addChild(lvlblheader);
+    infoboardlyr->addChild(lvlbl);
+    infoboardlyr->setTag(700);
     //this->ptimelbl = label2;
     this->addChild(infoboardlyr);
     // position the label on the center of the screen
