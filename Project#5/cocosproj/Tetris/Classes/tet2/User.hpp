@@ -1,4 +1,7 @@
+/**
+ @file User.hpp
 
+ */
 #ifndef __TETUSR_H_INC_
 #define __TETUSR_H_INC_
 
@@ -20,6 +23,10 @@ namespace Tetris{
             void saveData(long long datasecnum);
             
         };
+        /**
+         @class GameUser
+         @brief 플레이하는 주체를 객체로서 관리
+         */
         class GameUser{
             public:
                 GameUser(){
@@ -30,19 +37,33 @@ namespace Tetris{
                     initCls();
                     this->ud = mud;
                 }
-            
+                /**
+                 @return 현재 떨어지는 블럭의 x좌표를 리턴
+                 */
                 unsigned short getCurrentX(){
                     return this->currentXpos;
                 }
+            /**
+             @return 현재 떨어지는 블럭의 y좌표를 리턴
+             */
                 unsigned short getCurrentY(){
                     return this->currentYpos;
                 }
+            /**
+             @return 현재 떨어지는 블럭의 x좌표를 설정
+             */
                 void setCurrentX(unsigned short x){
                     this->currentXpos = x;
                 }
+            /**
+             @return 현재 떨어지는 블럭의 x좌표를 설정
+             */
                 void setCurrentY(unsigned short y){
                     this->currentYpos = y;
                 }
+            /**
+             @return 다음에 떨어질 블럭 데이터 객체를 리턴
+             */
                 Block* getNextBlock(){
                     if(this->nextBlock==NULL){
                         
@@ -50,13 +71,18 @@ namespace Tetris{
                     }
                     return this->nextBlock;
                 }
+            /**
+             @return 현재 떨어질 블럭 데이터 객체를 리턴
+             */
                 Block* getCurrentBlock(){
                      if(this->currentBlock==NULL){
                         this->currentBlock = this->bg.generateRandomBlock();
                     }
                     return this->currentBlock;
                 }
-
+            /**
+             @return 다음블럭을 새로 로딩하고 현재블럭이였던 블럭을 리턴
+             */
                 Block* cycleBlock(){
                      Block* rst = this->getCurrentBlock();
                     this->setCurrentBlock(this->getNextBlock());
@@ -69,12 +95,18 @@ namespace Tetris{
                 void setCurrentBlock(Block* blk){
                     this->currentBlock=blk;
                 }
+            /**
+             @return 현재블럭과 다음블럭을 바꿈
+             */
                 void switchBlock(){
                     Block* curblk=this->getCurrentBlock();
                     Block* nxtblk=this->getNextBlock();
                     this->setCurrentBlock(nxtblk);
                     this->setNextBlock(curblk);
                 }
+            /**
+             @return 현재블럭과 다음블럭의 순서를 서로 바꿔칠수 있는지 여부
+             */
                 bool canSwitchBlock(vector<bool*> mapdata,const int gameHeight,const int gameWidth ,unsigned char curX,unsigned char curY){
                     Block* nxtBlk = this->getNextBlock();
                     const int blkhei = nxtBlk->getBlockSpaceHeight();
@@ -94,6 +126,9 @@ namespace Tetris{
                 this->current_game_score=0;
                 
             }
+            /**
+             @return 현재 얻은 점수를 리턴
+             */
             unsigned long long getCurrentGameScore(){
                 checkRequireComboReset(true);
                 return this->current_game_score;
@@ -102,6 +137,9 @@ namespace Tetris{
                 
                 this->current_game_score =newscore;
             }
+            /**
+             @return 점수를 추가하고 추가된 총 점수를 리턴
+             */
             unsigned long long accumulateCurrentGameScore(const unsigned long long addscore){
                 this->current_game_score +=addscore;
                 return this->current_game_score;
@@ -111,6 +149,9 @@ namespace Tetris{
                 resetLastestComboTime();
                 cout<<endl<<"%%%%%%reset combo%%%%%%"<<endl<<endl;
             }
+            /**
+             @return  콤보를 쌓을수 있는 시간이 지나 콤보 숫자를 리셋이 필요한지의 유무
+             */
             bool checkRequireComboReset(bool autoresetifsucceed){
                 time_t curtime = time(NULL);
                 if(this->getGameResumeState()){
@@ -154,9 +195,15 @@ namespace Tetris{
             void setGameResumeState(bool isResume){
                 this->isGameResume = isResume;
             }
+            /**
+             @return GameController객체에서 가져온 게임 일시정지 상태값
+             */
             bool getGameResumeState(){
                 return this->isGameResume;
             }
+            /**
+             @return 레벨업이 가능한지 유무
+             */
             bool canLevelUp(){
                 unsigned long long dlv = (current_game_score/100);
                 
@@ -166,6 +213,9 @@ namespace Tetris{
                 }
                 return false;
             }
+            /**
+             @return 계산된 레벨과 현재 설정된 레벨의 차이값
+             */
             unsigned long long getDeltaLv(){
                 unsigned long long dlv = (current_game_score/100);
                 if(dlv>getRawLevel()){
@@ -183,6 +233,9 @@ namespace Tetris{
             void levelup(unsigned long long uplv){
                 lvup_v2(uplv);
             }
+            /**
+             @return gui에 보여질 레벨
+             */
             unsigned long long getLevel(){
                 return getRawLevel()+1;
             }
@@ -190,6 +243,9 @@ namespace Tetris{
             virtual void loadUserDataFromExistLocation(){
                 
             }
+            /**
+             @return 내부 클래스에서 관리하고 인식할 실제 레벨값
+             */
             unsigned long long getRawLevel(){
                 return lv;
             }

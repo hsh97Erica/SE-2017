@@ -1,3 +1,7 @@
+/**
+  @file MainGameScene.h
+  @brief 안씀
+ */
 #ifndef __MAINGAME_SCENE_H__
 #define __MAINGAME_SCENE_H__
 

@@ -1,3 +1,6 @@
+/**
+ @file HelloWorldScene.cpp
+ */
 #include <iostream>
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
@@ -25,6 +28,9 @@ Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
 }
+/**
+ @return 테트리스가 가능한 영역을 나타내는 함수
+ */
 void HelloWorld::makeField(){
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     if(this->nxtblkrenderingarea==NULL){
@@ -75,6 +81,9 @@ void HelloWorld::makeField(){
     }
     this->addChild(lyr);
 }
+/**
+ @return 키보드 값을 받는 이벤트 객체
+ */
 EventListenerKeyboard* HelloWorld::createNewKListener(){
     auto rst = EventListenerKeyboard::create();
     rst->onKeyPressed = CC_CALLBACK_2(HelloWorld::onKeyPressed, this);
@@ -86,6 +95,9 @@ void HelloWorld::startGame(){
     CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(HelloWorld::play),this,0,0,0.0f,false);
     cout<<"call HelloWorld::startGame()"<<endl;
 }
+/**
+ @return 멀티쓰레딩으로 게임을 돌리는 함수
+ */
 void HelloWorld::stateloop(float dt){
     if(this->isInExtGame){
         //cout<<"in ext game "<<endl;
@@ -228,6 +240,9 @@ void HelloWorld::stateloop(float dt){
         cout<<"game end in scene"<<endl;
     }
 }
+/**
+ @return 보너스게임을 실행하거나 종료할때 보너스게임을 보여주거나 사라지게하는 함수
+ */
 void HelloWorld::addOrRemove2048GameView(bool remove){
     if(remove){
         auto nd = this->getChildByTag(2048);
@@ -254,7 +269,9 @@ void HelloWorld::addOrRemove2048GameView(bool remove){
         
     }
 }
-
+/**
+ @return 떨어지는 블럭이나 저장된 블럭의 위치의 블럭을 그려주는 함수
+ */
 void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
     if(board==NULL){
         return;
@@ -306,6 +323,9 @@ void HelloWorld::drawboardingui(char** board,unsigned char* blk_clr){
     HelloWorld::overlayblockboard = newlyr;
     this->addChild(HelloWorld::overlayblockboard);
 }
+/**
+ @return GameController에서 진행되는 게임 상황을 gui에 그려주는 함수
+ */
 void HelloWorld::gameloop(float dt){
     //cout<<"call HelloWorld::gameloop()"<<endl;
     char** board = HelloWorld::gc->innergameloop();
@@ -322,6 +342,9 @@ void HelloWorld::gameloop(float dt){
     if(blkclr!=NULL)
     delete [] blkclr;
 }
+/**
+  @return 레벨업을 시켜주는 함수
+ */
 void HelloWorld::levelup(float dt){
     cout<<"call levelup"<<endl;
     if(this->gc!=NULL){
@@ -349,11 +372,17 @@ void HelloWorld::play(float dt){
    // this->schedule(schedule_selector(HelloWorld::gameloop), 1);
     
 }
+/**
+ @return 게임을 일시정시하는 함수
+ */
 void HelloWorld::pause(){
     CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
     //removeKListenerForMainGame();
     HelloWorld::gc -> pause();
 }
+/**
+ @return 게임을 이어서 하게하도록 하는 함수
+ */
 void HelloWorld::resume(){
     //registerKListenerForMainGame();
     if(readSoundEnable()){
@@ -595,12 +624,18 @@ void HelloWorld::menuVisibleToggle(bool autopauseorresume){
         this->gameoptionmenu = NULL;
     }
 }
+/**
+ @return 소리 키고 끄는 메뉴의 텍스트
+ */
 string HelloWorld::getMenuTextSoundEnabler(bool enable){
     string result = "Sound: ";
     result.append(enable?"On":"Off");
     return result;
 }
 
+/**
+ @return 사용자 설정에 의해 자체 소리가 켜져있는지 유무
+ */
 bool HelloWorld::readSoundEnable(){
     return DBManager::getInstance()->readAppSettingAsBool(DBManager::getSoundEnablerKey());
 }
@@ -624,6 +659,9 @@ void HelloWorld::menuSoundEnableCallback(cocos2d::Ref* pSender){
     }*/
     //((Label*)mitem->getLabel())->setString(getMenuTextSoundEnabler(changedstate));
 }
+/**
+ @return 메뉴 탭을 누르면 나타나는 메뉴객체
+ */
 Menu* HelloWorld::generateOptionMenu(){
     
     auto item_1 = MenuItemFont::create("Exit", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
@@ -633,6 +671,9 @@ Menu* HelloWorld::generateOptionMenu(){
     menu->alignItemsVertically();
     return menu;
 }
+/**
+ @return 게임종료시 더할건지 나갈건지 물어보는 메뉴객체
+ */
 Menu* HelloWorld::generateGameOverMenu(){
     auto item_1 = MenuItemFont::create("재시작", CC_CALLBACK_1(HelloWorld::gameRestartGameCallback, this));
     auto item_3 = MenuItemFont::create("종료", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));

@@ -1,3 +1,7 @@
+/**
+  @file AudioSourceManager.hpp
+  @brief 실패해서 안씀
+ */
 #ifndef _AudioSRC_MGR_H_INC_
 #define _AudioSRC_MGR_H_INC_
 

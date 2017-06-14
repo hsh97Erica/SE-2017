@@ -1,3 +1,7 @@
+/**
+ @file NextBlockRenderView.hpp
+ @brief
+ */
 #ifndef __NXTBLK_RENDERVIEW_H__INC__
 #define __NXTBLK_RENDERVIEW_H__INC__
 
@@ -11,9 +15,16 @@ using namespace std;
 #define BOARD_MAX_PIXEL_SIZE 4
 namespace Tetris{
     namespace Views{
+        /**
+         @class NextBlockRenderBehavior
+         @brief 블럭 미리 보여주기
+         */
         class NextBlockRenderBehavior:public Layer{
         public:
             CREATE_FUNC(NextBlockRenderBehavior);
+            /**
+             @return bool렌더링성공시 true 그외 false
+             */
             bool renderNextBlock(){
                 if(this->gmctl!=NULL){
                     this->removeAllChildren();
@@ -106,6 +117,10 @@ namespace Tetris{
             }
         protected:
             Label* prevlbl = NULL;
+            /**
+              @return 없음
+              @warning 이름 초기화
+             */
             void initInstanceLabel(){
                 if(this->prevlbl!=NULL){
                     this->removeChild(prevlbl);
@@ -129,10 +144,13 @@ namespace Tetris{
             }
             bool initLabelAtLeastOnce = false;
         private:
+            /**
+             @return unsigned long long 타입의 작은 값을 리턴
+             */
             unsigned long long minUll(unsigned long long x,unsigned long long y){
                 return x<y?x:y;
             }
-            GameController* gmctl=NULL;
+            GameController* gmctl=NULL; ///< 컨트롤러에서 다음 블럭 객체를 가져오기 위함
             Size* lblsz = NULL;
         };
     }

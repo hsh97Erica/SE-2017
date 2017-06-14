@@ -1,3 +1,6 @@
+/**
+ @file BlockColor.hpp
+ */
 #ifndef __BLK_COLR_H__INC___
 #define __BLK_COLR_H__INC___
 #include <iostream>
@@ -8,6 +11,10 @@ using std::stringstream;
 using std::hex;
 namespace Tetris{
     namespace BlockSubModules{
+        /**
+         @class BlockColor
+         @brief 블럭의 색상을 관리하고 불러오는 클래스
+         */
         class BlockColor{
             public:
                 BlockColor( unsigned char alpha, unsigned char red,  unsigned char green, unsigned char blue ){
@@ -28,6 +35,9 @@ namespace Tetris{
             static unsigned int genRandomColor(){
                 return BlockColor::genSampleColor((unsigned char)TetrisUtil::randInt(1,7));
             }
+            /**
+             @return 미리 지정된 색상을 4바이트 변수 데이터로 리턴
+             */
             static unsigned int genSampleColor(const unsigned char samplenum){
                 switch(samplenum){
                     case 2:{//pink600
@@ -53,6 +63,9 @@ namespace Tetris{
                 }
                 
             }
+            /**
+             @return 색상데이터를 배열형식으로 리턴
+             */
             unsigned char* getColorAsArray(){
                 unsigned char* rst = new unsigned char[4];
                 rst[0]=this->getAlphaAsRaw();
@@ -61,21 +74,39 @@ namespace Tetris{
                 rst[3] = this->getBlueAsRaw();
                 return rst;
             }
+            /**
+             @return 색상데이터중 녹색 데이터를 리턴
+             */
             unsigned char getGreenAsRaw(){
                 return this->green;
             }
+            /**
+             @return 색상데이터중 파랑 데이터를 리턴
+             */
             unsigned char getBlueAsRaw(){
                 return this->blue;
             }
+            /**
+             @return 색상데이터중 삘깅 데이터를 리턴
+             */
             unsigned char getRedAsRaw(){
                 return this->red;
             }
+            /**
+             @return 색상데이터중 투명도 데이터를 리턴
+             */
             unsigned char getAlphaAsRaw(){
                 return this->alpha;
             }
+            /**
+             @return 현재 설정된 색상 데이터를 4바이트 변수로 묶어 리턴
+             */
             unsigned int packRawColorData(){
                 return (((unsigned int)this->getAlphaAsRaw())<<(8*3))|(((unsigned int)this->getRedAsRaw())<<(8*2))|(((unsigned int)this->getGreenAsRaw())<<(8*1))|this->getBlueAsRaw();
             }
+            /**
+             @return 색상 데이터를 rgba hex 형식으로 리턴
+             */
             string getBlockColorAsHexString(){
                 //string rst = "";
                 stringstream ss;
@@ -105,6 +136,9 @@ namespace Tetris{
                 this->red = rd;
             }
             private:
+            /**
+             @return 4바이트 변수에서 rgba를 분해해 배열로 리턴
+             */
                 unsigned char* disassembleColorData(unsigned int dt){
                     unsigned char* rst = new unsigned char[4];
                     for(int i=0;i<4;i++){
@@ -112,6 +146,9 @@ namespace Tetris{
                     }
                     return rst;
                 }
+            /**
+             @return disassembleColorData를 가져와 즉시적용
+             */
             void disassembleColorDataAndApply(unsigned int dt){
                 unsigned char* disasmb= this->disassembleColorData(dt);
                 if(disasmb!=NULL){
@@ -119,6 +156,9 @@ namespace Tetris{
                     delete [] disasmb;
                 }
             }
+            /**
+             @return 색상 데이터를 4바이트 변수로 묶어 리턴
+             */
             static unsigned int genColor(unsigned char red,unsigned char green,unsigned char blue ){
                 unsigned int rst = (unsigned int)blue;
                 rst|=((~(unsigned int)0)<<(8*3));

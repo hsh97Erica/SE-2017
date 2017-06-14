@@ -1,3 +1,7 @@
+/**
+ @file HelloWorldScene.h
+ @brief 메인 게임 창 헤더
+ */
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 
@@ -8,6 +12,10 @@
 using namespace std;
 using namespace Tetris;
 //using namespace Tetris::Views;
+/**
+ @class HelloWorld
+ @brief 메인 게임창 클래스
+ */
 class HelloWorld : public cocos2d::Scene
 {
 public:
@@ -30,7 +38,7 @@ public:
     CREATE_FUNC(HelloWorld);
     protected:
         void makeField();
-        Tetris::GameController* gc = NULL;
+        Tetris::GameController* gc = NULL; ///< 게임 관리 객체 변수
         void play(float dt);
         void pause();
         void resume();
@@ -43,10 +51,10 @@ public:
         virtual void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event);
         cocos2d::Layer* overlayblockboard=NULL;
         cocos2d::SEL_SCHEDULE mainloopfuncschedule = NULL;
-        cocos2d::Label* ptimelbl = NULL;
-        cocos2d::Label* pscorelbl = NULL;
-        cocos2d::Label* rmlnscntlbl = NULL;
-        cocos2d::Layer* nxtblkrenderingarea = NULL;
+        cocos2d::Label* ptimelbl = NULL; ///< 플레이시간을 보여주는 뷰의 객체 변수
+        cocos2d::Label* pscorelbl = NULL; ///< 점수를 보여주는 뷰의 객체 변수
+        cocos2d::Label* rmlnscntlbl = NULL; ///< 지운 줄 수를 보여주는 뷰의 객체 변수
+        cocos2d::Layer* nxtblkrenderingarea = NULL; ///< 플레이시간을 보여주는 뷰의 객체 변수
         cocos2d::Menu* gameoptionmenu = NULL;
         cocos2d::Menu* generateOptionMenu();
         cocos2d::Menu* generateGameOverMenu();
@@ -58,9 +66,9 @@ public:
         cocos2d::EventListenerKeyboard* createNewKListener();
         void removeKListenerForMainGame();
     void registerKListenerForMainGame();
-        unsigned short bonus_game_lv;
-        bool isInExtGame = false;
-    unsigned int effect_ext_2048gm;
+        unsigned short bonus_game_lv; ///< 보너스 게임이 나타날 최소조건의 점수가 2의 승수 이상임을 체크하는 변수
+        bool isInExtGame = false; ///< 보너스게임의 실행 여부
+    unsigned int effect_ext_2048gm; ///< 보너스게임의 bgm을 관리하는 id
     bool readSoundEnable();
     
     string getMenuTextSoundEnabler(bool enable);

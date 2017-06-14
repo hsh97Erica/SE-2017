@@ -1,3 +1,7 @@
+/**
+ @file DBManagement.hpp
+ @brief
+ */
 #ifndef __DB_MGRMNT_H_INC_
 #define __DB_MGRMNT_H_INC_
 
@@ -12,7 +16,10 @@
 using namespace std;
 namespace Tetris{
     namespace DBManagement{
-        
+        /**
+         @class DBManager
+         @brief sqlite3를 통한 db통신
+         */
         class DBManager{
         public:
             static DBManager* getInstance(){
@@ -43,6 +50,9 @@ namespace Tetris{
                 err = 0;
                 conn = NULL;
             }
+            /**
+             @return 일관된 db폴터리턴
+             */
             static string getDBLocationForTetrisGame(){
                 string toprootfolder = FileUtils::getInstance()->getWritablePath();
                 string workfolder = toprootfolder;
@@ -55,15 +65,24 @@ namespace Tetris{
                 cout<<"db file path: "<<dbfile<<endl;
                 return dbfile;
             }
+            /**
+             @return db가 제대로 연결됬는지  확인
+             */
             bool isOpened(){
                 return conn!=NULL;
             }
+            /**
+             @return 기본적인 db파일리턴
+             */
             static char* getDBFileName(){
                 return DB_FILE_NAME;
             }
             bool isConnected(){
                 return isOpened();
             }
+            /**
+             @return 리턴은 없고 db에 점수저장
+             */
             void saveScore(unsigned long long score,unsigned long long playtime){
                 cout<<"call saveScore ain DBMGR"<<endl;
                 const time_t ts = time(NULL);
@@ -81,6 +100,9 @@ namespace Tetris{
                 sqlite3_exec(conn,sql,NULL,NULL,&errmsg);
                 cout<<"score saved:: "<<(errmsg!=NULL?errmsg:"")<<endl;
             }
+            /**
+             @return db에 저장된 기록들을 정렬해 순차적으로 불러와 리턴
+             */
             queue<struct ScoreBoardAttributes> getScoreBoard(){
                 queue<struct ScoreBoardAttributes> q;
                 if(!conn){
@@ -113,6 +135,9 @@ namespace Tetris{
                 //sqlite3_prepare(conn,sql,strlen(sql),&res,NULL);
                 return q;
             }
+            /**
+             @return 해당 키가 db에 있는지 유무
+             */
             bool isExistAppSetting(string key){
                 sqlite3_stmt* res2 = NULL;
                 string tmpsql = "";
@@ -139,9 +164,15 @@ namespace Tetris{
                 }
                 return true;
             }
+            /**
+             @return 해당 키값을 가진 값리턴
+             */
             bool readAppSettingAsBool(string key){
                 return readAppSettingAsInt(key)==0?false:true;
             }
+            /**
+             @return 해당 키값을 가진 값리턴
+             */
             int readAppSettingAsInt(string key){
                 if((!conn)||(conn&&!isExistAppSetting(key))){
                     return 0;
@@ -200,6 +231,9 @@ namespace Tetris{
                 sqlite3_finalize(res2);
                 return result;
             }*/
+            /**
+             @return 해당 키값을 가진 값리턴
+             */
             string readAppSettingAsText(string key){
                 string result ="";
                 if((!conn)||(conn&&!isExistAppSetting(key))){
@@ -229,6 +263,9 @@ namespace Tetris{
                 sqlite3_finalize(res2);
                 return result;
             }
+            /**
+             @return 해당 키값을 가진 값이 변경 완료되면 변경성공유무
+             */
             bool changeIntSetting(string key,int value){
                 if((!conn)||(conn&&!isExistAppSetting(key))){
                     return false;
@@ -260,7 +297,7 @@ namespace Tetris{
             }
         private:
             
-            sqlite3* conn = NULL;
+            sqlite3* conn = NULL; ///< sqlite통신객체
             sqlite3_stmt* res = NULL;
             int err = 0;
             void initVal(){

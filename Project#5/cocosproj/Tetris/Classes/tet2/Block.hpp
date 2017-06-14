@@ -1,4 +1,7 @@
-
+/**
+ @file Block.hpp
+ @brief
+ */
 #ifndef _BLK_H_INC_
 #define _BLK_H_INC_
 
@@ -25,14 +28,25 @@ using namespace Tetris::BlockSubModules;
 #define TETBLK_TYPE_T 50
 
 namespace Tetris{
+    /**
+     @class Block
+     @brief 테트리스 블럭데이터를 저장하고 불러오는 객체
+     */
     class Block{
         public:
+            /**
+             @return constructor
+             @warning type이 연속된 번호범위를 벗어나면 기본값으로 생성된다
+             */
             Block(int type){
                
                 this->spanshape(type);
                 this->setBlockColor(this->genRandomColor());
             }
-            
+            /**
+             @return 모름
+             @warning 메모리 터지지 않도록 메모리 수동삭제
+             */
             ~Block(){
                 if(this->blkspc!=NULL){
                     for(int i=0;i<this->blkary_height;i++){
@@ -44,10 +58,17 @@ namespace Tetris{
                     delete this->blkcolr;
                 }
             }
+        /**
+         @return constructor
+         @warning 연속된 숫자의 범위를 벗어나면 기본값으로 생성
+         */
             Block(int type,unsigned int color){
                 this->spanshape(type);
                 this->setBlockColor(color);
             }
+        /**
+         @return 리턴은 없지만 블럭 색상 설정
+         */
             void setBlockColor(unsigned int clr){
                 if(this->blkcolr==NULL){
                     this->blkcolr = new BlockColor(clr);
@@ -56,6 +77,9 @@ namespace Tetris{
                 }
                // this->blk_color=clr;
             }
+        /**
+         @return 설정된 블럭 색상을 4바이트 연속된 데이터로 리턴
+         */
             unsigned int getBlockColorAsRaw(){
                 if(this->blkcolr==NULL){
                     return 0;
@@ -64,68 +88,55 @@ namespace Tetris{
                 }
                 //return this->blk_color;
             }
+        /**
+        @return 블럭 색상 객체를 리턴
+         */
         BlockColor* getBlockColor(){
             return this->blkcolr;
         }
+        /**
+         @return 지정된 색상 안에서 랜덤으로 색상을 리턴
+         */
             unsigned int genRandomColor(){
                 return BlockColor::genRandomColor(); //genSampleColor((unsigned char)TetrisUtil::randInt(1,7));
             }
-            /*unsigned int genSampleColor(const unsigned char samplenum){
-                switch(samplenum){
-                    case 2:{//pink600
-                        return this->genColor(0xd8,0x1b,0x60);
-                    }
-                    case 3:{//purple700
-                        return this->genColor(0x7b,0x1f,0xa2);
-                    }
-                    case 4:{//deeppurpleA400
-                        return this->genColor(0x65,0x1f,0xff);
-                    }
-                    case 5:{//teal600
-                        return this->genColor(0x00,0x89,0x7b);
-                    }
-                    case 6:{//red500
-                        return this->genColor(0xf4,0x43,0x36);
-                    }
-                    case 7:{//red900
-                        return this->genColor(0xb7,0xc1,0xc1);
-                    }
-                    case 1:
-                    default:return this->genColor(0x30,0x3f,0x9f);
-                }
-
-            }*/
-
+        /**
+         @return 블럭색상을 rgba hex로 리턴
+         */
             string getBlockColorAsHexString(){
                 //string rst = "";
                 if(this->blkcolr==NULL){
                     return NULL;
                 }
                 return this->blkcolr->getBlockColorAsHexString();
-               /* stringstream ss;
-                unsigned int clr = this->blk_color;
-                ss.fill('0');
-                for(int i=4-2;i>=0;i--){
-                    unsigned int inters = (~((~(unsigned int)0)<<8))<<(8*i);
-                    unsigned int extract = (clr&inters)>>(8*i);
-                    ss.width(2);
-                    ss<<hex<<extract;
-                }
-                //rst<<
-                return ss.str();*/
             }
+        /**
+         @return 블럭 모양의 공간 크기를 리턴
+         */
             int getBlockSpaceSize(){
                 return this->getBlockSpaceHeight()*this->getBlockSpaceWidth();
             }
+        /**
+         @return 블럭 모양의 높이를 리턴
+         */
             int getBlockSpaceHeight(){
                 return this->blkary_height;
             }
+        /**
+         @return 블럭 모양의 너비를 리턴
+         */
             int getBlockSpaceWidth(){
                 return this->blkary_width;
             }
+        /**
+         @return 블럭 모양 메트릭스
+         */
             bool** getBlockData(){
                 return this->blkspc;
             }
+        /**
+         @return 블럭 모양 인식 번호
+         */
             int getBlockType(){
                 return this->blktype;
             }
@@ -136,6 +147,9 @@ namespace Tetris{
                 }
                 delete [] blockspace;
             }
+        /**
+         @return 반시계 방향으로 90도 회전된 블록 데이터를 리턴
+         */
             bool** getRotatedSpaceData(){
                 if(this->blktype==-1||this->blkspc==NULL||(this->blkspc!=NULL&&this->blkspc[0]==NULL)||blktype==TETBLK_TYPE_M){
                     return NULL;
@@ -148,6 +162,9 @@ namespace Tetris{
                 }
                 return tmpblksp;
             }
+        /**
+         @return 게임 맵에서 현재 좌표에서 회전이 가능한지 유무
+         */
             bool canRotate(const vector<bool*> mapdata,const unsigned char boardwidth, unsigned char cury,unsigned char curx ){//,GameUser* guser){
                 bool** rotated_space = this->getRotatedSpaceData();
                 //unsigned char curx = guser->getCurrentX();
@@ -184,6 +201,9 @@ namespace Tetris{
                 }
                 return true;
             }
+        /**
+         @return 회전 성공 유무
+         */
             bool rotate(){
                 cout<<"call rotatefunc in block"<<endl;
                 if(this->blktype==-1||this->blkspc==NULL||(this->blkspc!=NULL&&this->blkspc[0]==NULL)){
@@ -205,7 +225,9 @@ namespace Tetris{
             bool roatespec(){
                 return false;
             }
-            
+            /**
+             @return 콘솔에서 모양 디버깅시 확인 함수
+             */
             void printspace(){
                 if(this->blktype==-1||this->blkspc==NULL){
                     cout<<"we can't show space info"<<endl;
@@ -231,6 +253,9 @@ namespace Tetris{
                 rst|=((unsigned int)green<<(8*1));
                 return rst;
             }*/
+            /**
+             @return 지정된 블럭 인식번호에 의해서 함수내에서 모양 직접 설정
+             */
             void spanshape(int type){
                 switch(type){
                     case TETBLK_TYPE_I:{

@@ -1,3 +1,7 @@
+/**
+ @file GameUserClsDelegate.hpp
+ @brief 실패 클래스
+ */
 #ifndef __GUDELGT_H__INC
 #define __GUDELGT_H__INC
 #include "User.hpp"

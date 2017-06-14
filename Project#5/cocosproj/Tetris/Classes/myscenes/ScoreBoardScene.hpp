@@ -1,3 +1,7 @@
+/**
+ @file ScoreBoardScene.hpp
+ @brief
+ */
 #ifndef _SCR_BRD_SCENE_H_INC_
 #define _SCR_BRD_SCENE_H_INC_
 
@@ -15,6 +19,10 @@ using namespace Tetris::DBManagement;
 using namespace std;
 namespace Tetris{
     namespace Cocos2dScenes{
+        /**
+         @class ScoreBoardScene
+         @brief 이전에 플레이한 테트리스의 기록을 보여주는 창의 클래스
+         */
         class ScoreBoardScene : public cocos2d::Scene{
             public:
                 static cocos2d::Scene* createScene(){
@@ -119,9 +127,15 @@ namespace Tetris{
             }
                 CREATE_FUNC(ScoreBoardScene);
         protected:
+            /**
+             @return 사용자 프로그램 설정에서 소리가 켜져있는지 유무를 리턴
+             */
             bool readSoundEnable(){
                 return DBManager::getInstance()->readAppSettingAsBool(DBManager::getSoundEnablerKey());
             }
+            /**
+             @return 내부 기록을 레이아웃 객체로 감싸 리턴
+             */
             Widget* getContentText(struct ScoreBoardAttributes* attrs,int rank){
                 struct ScoreBoardAttributes attr = *attrs;
                 auto wid1 = Widget::create();
@@ -143,6 +157,9 @@ namespace Tetris{
                 wid1->setContentSize(Size(lbl->getContentSize().width*0.9f,lbl->getContentSize().height));
                 return wid1;
             }
+            /**
+             @return 내부 기록의 헤더를 레이아웃 객체로 감싸 리턴
+             */
             Widget* getHeaderText(){
                 auto wid1 = Widget::create();
                

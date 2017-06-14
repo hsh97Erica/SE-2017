@@ -1,3 +1,6 @@
+/**
+ @file BlockGenerator.hpp
+ */
 #ifndef _BLKGEN_H_INC_
 #define _BLKGEN_H_INC_
 
@@ -9,6 +12,10 @@
 using namespace std;
 using namespace Tetris;
 namespace Tetris{
+    /**
+     @class BlockGenerator
+     @brief 블럭을 연속된 번호내에서 생성하거나 랜덤 생성
+     */
     class BlockGenerator{
         public:
             Block* generateRandomBlock(){

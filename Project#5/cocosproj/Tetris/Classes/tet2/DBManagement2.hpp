@@ -1,3 +1,8 @@
+/**
+ @file DBManagement2.hpp
+ @brief 실패한 클래스
+ */
+
 #ifndef _DB_MGRMNT_H_INC_
 #define _DB_MGRMNT_H_INC_
 

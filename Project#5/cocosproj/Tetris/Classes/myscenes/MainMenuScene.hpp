@@ -1,3 +1,7 @@
+/**
+ @file MainMenuScene.hpp
+ @brief
+ */
 #ifndef __MAINMENU_SCENE_H__
 #define __MAINMENU_SCENE_H__
 
@@ -20,6 +24,10 @@ using namespace CocosDenshion;
 //using namespace Tetris::Views;
 namespace Tetris{
     namespace Cocos2dScenes{
+        /**
+         @class MainMenuScene
+         @brief 프로그램 실행시 맨처음 뜨는창
+         */
 class MainMenuScene : public cocos2d::Scene
 {
 public:
@@ -69,21 +77,33 @@ public:
         return true;
     }
     // a selector callback
+    /**
+     @return 리턴은 없지만 프로그램 종료하는 함수
+     */
     void menuCloseCallback(cocos2d::Ref* pSender){
         Director::getInstance()->end();
         #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
             exit(0);
         #endif
     }
+    /**
+     @return 리턴은 없지만 새 테트리스 게임을 시작하는  함수
+     */
     void menuPlayBtnCallback(cocos2d::Ref* pSender){
         auto scene =  HelloWorld::createScene();
         Director::getInstance()->pushScene(scene);
         //Director::getInstance()->replaceScene(scene);
     }
+    /**
+        @return 리턴은 없지만 기록창띄우는 함수
+     */
     void menuSCBRDBtnCallback(cocos2d::Ref* pSender){
         auto scene = Tetris::Cocos2dScenes::ScoreBoardScene::createScene();
         Director::getInstance()->pushScene(scene);
     }
+    /**
+     @return 리턴은 없지만 메인메뉴창에서 소리옵션을 변경하는 함수
+     */
     void menuSoundEnableCallback(cocos2d::Ref* pSender){
         const bool changedstate = !readSoundEnable();
         DBManager::getInstance()->changeBoolSetting(DBManager::getSoundEnablerKey(),changedstate);
@@ -101,15 +121,24 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(MainMenuScene);
     protected:
+    /**
+     @return 메뉴창에 뜨는 소리 옵션의 문자를 부울값으로 변경해 재사용성을 높이고 문자를 리턴
+     */
     string getMenuTextSoundEnabler(bool enable){
         string result = "Sound: ";
         result.append(enable?"On":"Off");
         return result;
     }
-    MenuItemLabel* sounditem = NULL;
+    MenuItemLabel* sounditem = NULL; ///< 내부 객체에서 손자 객체까지 찿기가 귀찮아서 그냥 전역변수처리함
+    /**
+     @return 사용자 프로그램 설정에서 소리가 켜져있는지 유무를 리턴
+     */
     bool readSoundEnable(){
         return DBManager::getInstance()->readAppSettingAsBool(DBManager::getSoundEnablerKey());
     }
+    /**
+     @return 메인 메뉴창을 클래스객체로 묶어 리턴
+     */
         cocos2d::Menu* generateOptionMenu(){
             auto item_1 = MenuItemFont::create("New Game", CC_CALLBACK_1(MainMenuScene::menuPlayBtnCallback, this));
             auto item_2 = MenuItemFont::create("Score Board", CC_CALLBACK_1(MainMenuScene::menuSCBRDBtnCallback, this));

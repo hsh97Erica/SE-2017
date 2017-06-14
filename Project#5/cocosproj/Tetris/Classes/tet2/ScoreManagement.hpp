@@ -1,3 +1,6 @@
+/**
+ @file ScoreMangement.hpp
+ */
 #ifndef __SCORMGRMNT_H_INC__
 #define __SCORMGRMNT_H_INC__
 
@@ -6,6 +9,10 @@
 #include "Util.hpp"
 namespace Tetris{
     namespace ScoreManage{
+        /**
+         @class ScoreManagement
+         @brief 점수 정책을 관리(ScorePolicyManagement가 정확하지만 최초 목적은 점수를 관라하는 것이였음)
+         */
         class ScoreManagement{
             public:
                 static float getScoreComboRule(float curcombo){

@@ -1,4 +1,8 @@
 
+/**
+ @file GameController.hpp
+ 
+ */
 
 #ifndef _GAMECTL_H_INC_
 #define _GAMECTL_H_INC_
@@ -26,16 +30,22 @@ using namespace Tetris::ScoreManage;
 using ScoreDBManager = Tetris::DBManagement::DBManager;
 namespace Tetris{
     class InitGameInfo;
-
+    /**
+     @class GameController
+     @brief 테트리스게임을 실질적으로 관리하는 클래스
+     */
     class GameController{
         public:
         //static GameController* mInstance;
+        /**
+         @return 싱글톤형식의 GameController 객체
+         */
             static GameController* getInstance(){
                 static GameController ins;
                 return &ins;
                 //if(Tetris::GameController::mInstance==NULL){Tetris::GameController::mInstance = new GameController();}return Tetris::GameController::mInstance;
             }
-            enum class GameStatus{UNKNOWN,ONGOING,END,PAUSE};
+            enum class GameStatus{UNKNOWN,ONGOING,END,PAUSE}; ///< 게임의 진행상태
             GameController(){
                 if(!ScoreDBManager::getInstance()->isOpened()){
                     char* fileptr =(char*) (ScoreDBManager::getDBLocationForTetrisGame()) .c_str();
@@ -54,6 +64,9 @@ namespace Tetris{
             void setGameStatus(GameStatus mGs){
                 this->gs = mGs;
             }
+        /**
+         @return 현재 게임의 상태
+         */
             GameStatus getGameStatus(){
                 return this->gs;
             }
@@ -102,13 +115,20 @@ namespace Tetris{
                     }
                 getLocalUser()->setRemovedLinesCount(0);
             }
+        /**
+         @return y번째 라인을 지울수 있는지 여부
+         */
             bool canRemoveLine(int y){
                 for(int i =0;i<this->gameWidth;i++)if(!this->board[y][i])return false;
                 return true;
             }
+        /**
+         @return 게임상태가 진행중인지 여부
+         */
             bool isOngoing(){
                 return this->getGameStatus()==GameStatus::ONGOING;
             }
+        
             void setGameStatusToOngoing(){
                 this->setGameStatus(GameStatus::ONGOING);
             }
@@ -128,6 +148,9 @@ namespace Tetris{
                    // CocosDenshion::Sim
                 }
             }
+        /**
+         @return  게임 진행 시간이 1초이상 지났는지 여부
+         */
             bool haveTimeDelta(){
                 bool rst = this->occurtimedelta;
                 if(rst){
@@ -163,12 +186,18 @@ namespace Tetris{
                     this->justinit();
                 }
             }
+        /**
+         @return 현재 블럭과 다음 블럭이 바뀌였는지 성공여부
+         */
         bool switchBlock(){
             GameUser* guser = getLocalUser();
             if(guser->canSwitchBlock(board,gameHeight,gameWidth, guser->getCurrentX(),guser->getCurrentY())){
                 guser->switchBlock();
             }
         }
+        /**
+         @return  gui에 띄울 '지운 라인수'항목이 새로고침이 필요한지 여부
+         */
         bool checkRmCntDisplayRefresh(){
             const bool rst = this->rmLinesCntDeltaChecker<getLocalUser()->getRemovedLinesCount();
             if(rst){
@@ -176,6 +205,9 @@ namespace Tetris{
             }
             return rst;
         }
+        /**
+         @return  gui에 띄울 '점수'항목이 새로고침이 필요한지 여부
+         */
         bool checkScoreDisplayRefresh(){
             const bool rst = this->scorechecker<getLocalUser()->getCurrentGameScore();
             if(rst){
@@ -188,6 +220,9 @@ namespace Tetris{
             this->scorechecker = sc;
             
         }
+        /**
+         @return 지운 라인수를 표현해줄 텍스트
+         */
         string getRemovedLinesCountWithFormat(bool withCategoryFormat){
             return getRemovedLinesCountWithFormatForSomeone(getLocalUser(),withCategoryFormat);
         }
@@ -200,6 +235,9 @@ namespace Tetris{
             ss<<(guser->getRemovedLinesCount());
             return ss.str();
         }
+        /**
+         @return 게임 로직을 진행시키고 최종적으로 진행1번 한뒤의 떨어지는 블럭과 저장된 블럭의 위치를 담은 메트릭스 데이터 배열
+         */
         char** innergameloop(){
             char** rst = NULL;
             if(!this->usercheck())return NULL;
@@ -276,7 +314,7 @@ namespace Tetris{
                     guser->setCurrentX(guser->getCurrentX()-1);
                 }
             }
-            bool forceend = false;
+            bool forceend = false; ///< 외부에서 게임을 강제로 종료시킬경우에 사용하는 변수
             void currentusermoveright(){
                 if(!this->usercheck())return;
                 Users::GameUser* guser = this->gusers[0];
@@ -299,6 +337,9 @@ namespace Tetris{
             void printposinfo(){
                 cout<<"y: "<<this->gusers[0]->getCurrentY()<<"  x: "<<this->gusers[0]->getCurrentX()<<endl;
             }
+        /**
+         @return 점수텍스트
+         */
         string getPlayTimeWithFormat(bool hasPrefixFormat){
             stringstream ss;
             if(hasPrefixFormat){
@@ -333,6 +374,9 @@ namespace Tetris{
         string getRemovedLinesCountWithFormatForLocalUser(bool hasPrefixFormat){
             return getRemovedLinesCountWithFormatForSomeUser(this->getLocalUser(),hasPrefixFormat);
         }
+        /**
+         @return 라인수 텍스트
+         */
         string getRemovedLinesCountWithFormatForSomeUser(GameUser* guser,bool hasPrefixFormat){
             stringstream ss;
             if(hasPrefixFormat){
@@ -341,10 +385,14 @@ namespace Tetris{
             ss<<(guser->getRemovedLinesCount());
             return ss.str();
         }
+        /**
+         @return  플레이한 시간을 초단위로 리턴
+         */
         unsigned long long getPlayTimeAsRaw(){
             return this->gplaytime;
         }
-            void play(){
+            void play()
+        { // 콘솔 플레이용 함수
                 this->gs=GameStatus::ONGOING;
                 while(!this->forceend&&!this->isEnd()){
                     while(!this->forceend&&this->gs==GameStatus::ONGOING){
@@ -380,15 +428,25 @@ namespace Tetris{
             void pause(){
                 this->gs = GameStatus::PAUSE;
             }
+        /**
+         @return 게임 진행 상태가 일시정지인지유무
+         */
+         
             bool isPaused(){
                 return this->gs==GameStatus::PAUSE;
             }
+        /**
+         @return 게임 진행 상태가 게임종료인지유무
+         */
             bool isEnd(){
                 return this->gs==GameStatus::END;
             }
             void resume(){
                 this->gs = GameStatus::ONGOING;
             }
+        /**
+         @return 게임이 종료되어야하는 상황인지 아닌지
+         */
             bool checkEnd(){
                 if(!this->usercheck())return true;
                 Users::GameUser* guser = this->gusers[0];
@@ -410,6 +468,9 @@ namespace Tetris{
                 }
                 return false;
             }
+        /**
+         @return 게임 플레이 주체를 담은 배열
+         */
         vector<Users::GameUser*> getUsers(){
             return this->gusers;
         }
@@ -424,7 +485,9 @@ namespace Tetris{
         unsigned long long getLocalScore(){
             return getLocalUser()->getCurrentGameScore();
         }
-        
+        /**
+         @return 저장된 블럭의 위치와 떨어지는 블럭의 위치를 하나의 메트릭스안에 포함한 2차원 배열
+         */
         char** getCombinedBoard(){
             if(this->board.size()){
                 char** printboard = new char*[this->gameHeight];
@@ -456,6 +519,9 @@ namespace Tetris{
                 return NULL;
             }
         }
+        /**
+         @return 콘솔용 통합 메트릭스
+         */
             char** getVisualizedBoard(){
                 if(this->board.size()){
                     char** printboard = new char*[this->gameHeight];
@@ -505,6 +571,9 @@ namespace Tetris{
                     cout<<"board is null"<<endl<<endl;
                 }
             }
+        /**
+         @return 블럭이 왼쪽으로 이동할 수있는지 여부
+         */
             bool canmoveleft(){
                  if(!this->usercheck())return false;
                 Users::GameUser* guser = this->gusers[0];
@@ -528,7 +597,9 @@ namespace Tetris{
                 }
                 return true;
             }
-            
+        /**
+         @return 블럭이 오른쪽으로 이동할 수있는지 여부
+         */
             bool canmoveright(){
                 if(!this->usercheck())return false;
                 Users::GameUser* guser = this->gusers[0];
@@ -552,6 +623,9 @@ namespace Tetris{
                 }
                 return true;
             }
+        /**
+          @return 블럭이 순식간에 떨어졌는지 유무
+         */
             bool fastdropdown(){
                 Users::GameUser* guser = this->gusers[0];
                 unsigned short cury = guser->getCurrentY();
@@ -567,6 +641,9 @@ namespace Tetris{
                 }
                 return opt;
             }
+        /**
+         @return 떨어지는 블럭이 1칸 강제로 더 떨어졌는지 유무
+         */
         bool forcedropdownOnce(){
             if(candropdown()){
                  Users::GameUser* guser = this->gusers[0];
@@ -575,6 +652,10 @@ namespace Tetris{
             }
             return false;
         }
+        /**
+         @return 블럭이 강제로 1칸 더 떨어질 수 있는지 유뮤
+         */
+         
             bool candropdown(){
                 if(!this->usercheck())return false;
                 Users::GameUser* guser = this->gusers[0];
@@ -607,13 +688,18 @@ namespace Tetris{
             unsigned char usercount;
             vector<Users::GameUser*> gusers;
             vector<bool*> board;
-        
+            /**
+             @return 게임 주체가 1명 이상인지 유무
+             */
             bool usercheck(){
                 if(usercount==0||!this->gusers.size()||(this->gusers.size()&&this->gusers[0]==NULL)){
                     return false;
                 }
                 return true;
             }
+        /**
+         @return 떨어지는 블럭이 해당 좌표에 저장하는 명령을 수행하고 그 저장이 성공했는지유무
+         */
             bool saveBlockAt(Block* blk, unsigned short cury,unsigned short curx ){
                 if(!this->board.size()){
                     return false;
@@ -646,10 +732,10 @@ namespace Tetris{
         
        // static GameController* mInstance;
         
-        time_t timedeltachecker=time(NULL);
+        time_t timedeltachecker=time(NULL); ///< 게임 경과시간의 차이를 계산하기위한 변수
         bool occurtimedelta = false;
-        unsigned long long rmLinesCntDeltaChecker = 0;
-        unsigned long long scorechecker = 0;
+        unsigned long long rmLinesCntDeltaChecker = 0; ///< 지운 줄의 수의 차이를 계산하기위한 변수
+        unsigned long long scorechecker = 0; ///< 점수의 차이를 계산하기위한 변수
     };
     class InitGameInfo{
         public:
