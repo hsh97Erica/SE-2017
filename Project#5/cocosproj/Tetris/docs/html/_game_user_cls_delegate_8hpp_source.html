@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Classes/tet2/GameUserClsDelegate.hpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0c68614ac8d8401edbf4146ded722294.html">Classes</a></li><li class="navelem"><a class="el" href="dir_54493dbe7f0584fff142973b7e211605.html">tet2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameUserClsDelegate.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_user_cls_delegate_8hpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef __GUDELGT_H__INC</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define __GUDELGT_H__INC</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_user_8hpp.html">User.hpp</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespace_tetris_1_1_users.html">Tetris::Users</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">namespace </span><a class="code" href="namespace_tetris.html">Tetris</a>{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">namespace </span>Delegates{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <span class="keyword">class </span>GameUserClsDelegate{</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                <span class="keyword">public</span>:</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#a0b4ced1872f2e51b74a3960f3a290899">   13</a></span>&#160;                    <a class="code" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#a0b4ced1872f2e51b74a3960f3a290899">GameUserClsDelegate</a>(<a class="code" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a>* gusr){</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                        this-&gt;setGameUserClass(gusr);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                    }</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#ab521a388ac26f96859d65a30787732fd">   16</a></span>&#160;                    <a class="code" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#ab521a388ac26f96859d65a30787732fd">~GameUserClsDelegate</a>(){</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                        this-&gt;gu = NULL;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    }</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#aeaab0cab245cb8aca26258f1460498c4">   19</a></span>&#160;                    <span class="keywordtype">void</span> <a class="code" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#aeaab0cab245cb8aca26258f1460498c4">setGameUserClass</a>(<a class="code" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a>* gusr){</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        this-&gt;gu = gusr;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    }</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#aabfee2bf7c1db3686109f31a5db9f5b4">   22</a></span>&#160;                    <a class="code" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a>* <a class="code" href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#aabfee2bf7c1db3686109f31a5db9f5b4">getGameUserClass</a>(){</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        <span class="keywordflow">return</span> this-&gt;gu;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keyword">protected</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    <a class="code" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a>* gu = NULL;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            };</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_tetris_1_1_delegates_1_1_game_user_cls_delegate_html_ab521a388ac26f96859d65a30787732fd"><div class="ttname"><a href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#ab521a388ac26f96859d65a30787732fd">Tetris::Delegates::GameUserClsDelegate::~GameUserClsDelegate</a></div><div class="ttdeci">~GameUserClsDelegate()</div><div class="ttdef"><b>Definition:</b> <a href="_game_user_cls_delegate_8hpp_source.html#l00016">GameUserClsDelegate.hpp:16</a></div></div>
+<div class="ttc" id="class_tetris_1_1_delegates_1_1_game_user_cls_delegate_html_aeaab0cab245cb8aca26258f1460498c4"><div class="ttname"><a href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#aeaab0cab245cb8aca26258f1460498c4">Tetris::Delegates::GameUserClsDelegate::setGameUserClass</a></div><div class="ttdeci">void setGameUserClass(GameUser *gusr)</div><div class="ttdef"><b>Definition:</b> <a href="_game_user_cls_delegate_8hpp_source.html#l00019">GameUserClsDelegate.hpp:19</a></div></div>
+<div class="ttc" id="_user_8hpp_html"><div class="ttname"><a href="_user_8hpp.html">User.hpp</a></div></div>
+<div class="ttc" id="class_tetris_1_1_delegates_1_1_game_user_cls_delegate_html_aabfee2bf7c1db3686109f31a5db9f5b4"><div class="ttname"><a href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#aabfee2bf7c1db3686109f31a5db9f5b4">Tetris::Delegates::GameUserClsDelegate::getGameUserClass</a></div><div class="ttdeci">GameUser * getGameUserClass()</div><div class="ttdef"><b>Definition:</b> <a href="_game_user_cls_delegate_8hpp_source.html#l00022">GameUserClsDelegate.hpp:22</a></div></div>
+<div class="ttc" id="namespace_tetris_1_1_users_html"><div class="ttname"><a href="namespace_tetris_1_1_users.html">Tetris::Users</a></div><div class="ttdef"><b>Definition:</b> <a href="_user_8cpp_source.html#l00009">User.cpp:9</a></div></div>
+<div class="ttc" id="namespace_tetris_html"><div class="ttname"><a href="namespace_tetris.html">Tetris</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_source_manager_8hpp_source.html#l00019">AudioSourceManager.hpp:19</a></div></div>
+<div class="ttc" id="class_tetris_1_1_delegates_1_1_game_user_cls_delegate_html_a0b4ced1872f2e51b74a3960f3a290899"><div class="ttname"><a href="class_tetris_1_1_delegates_1_1_game_user_cls_delegate.html#a0b4ced1872f2e51b74a3960f3a290899">Tetris::Delegates::GameUserClsDelegate::GameUserClsDelegate</a></div><div class="ttdeci">GameUserClsDelegate(GameUser *gusr)</div><div class="ttdef"><b>Definition:</b> <a href="_game_user_cls_delegate_8hpp_source.html#l00013">GameUserClsDelegate.hpp:13</a></div></div>
+<div class="ttc" id="class_tetris_1_1_users_1_1_game_user_html"><div class="ttname"><a href="class_tetris_1_1_users_1_1_game_user.html">Tetris::Users::GameUser</a></div><div class="ttdoc">플레이하는 주체를 객체로서 관리 </div><div class="ttdef"><b>Definition:</b> <a href="_user_8h_source.html#l00015">User.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

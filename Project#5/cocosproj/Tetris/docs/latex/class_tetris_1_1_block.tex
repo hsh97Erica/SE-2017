@@ -1,0 +1,550 @@
+\hypertarget{class_tetris_1_1_block}{}\section{Tetris\+:\+:Block 클래스 참조}
+\label{class_tetris_1_1_block}\index{Tetris\+::\+Block@{Tetris\+::\+Block}}
+
+
+테트리스 블럭데이터를 저장하고 불러오는 객체  
+
+
+
+
+{\ttfamily \#include $<$Block.\+h$>$}
+
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}{Block} (int type)
+\item 
+\hyperlink{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}{$\sim$\+Block} ()
+\item 
+\hyperlink{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}{Block} (int type, unsigned int color)
+\item 
+void \hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{set\+Block\+Color} (unsigned int clr)
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}{get\+Block\+Color\+As\+Raw} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}{gen\+Random\+Color} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}{gen\+Sample\+Color} (const unsigned char samplenum)
+\item 
+string \hyperlink{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}{get\+Block\+Color\+As\+Hex\+String} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}{get\+Block\+Space\+Size} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}{get\+Block\+Space\+Height} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}{get\+Block\+Space\+Width} ()
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f}{get\+Block\+Data} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}{get\+Block\+Type} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}{freeblockspace} (bool $\ast$$\ast$$\ast$spc)
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}{get\+Rotated\+Space\+Data} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}{can\+Rotate} (const vector$<$ bool $\ast$$>$ mapdata, const unsigned char boardwidth, unsigned char cury, unsigned char curx)
+\item 
+bool \hyperlink{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}{rotate} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}{roatespec} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}{printspace} ()
+\item 
+\hyperlink{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}{Block} (int type)
+\item 
+\hyperlink{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}{$\sim$\+Block} ()
+\item 
+\hyperlink{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}{Block} (int type, unsigned int color)
+\item 
+void \hyperlink{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}{set\+Block\+Color} (unsigned int clr)
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}{get\+Block\+Color\+As\+Raw} ()
+\item 
+\hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{Block\+Color} $\ast$ \hyperlink{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}{get\+Block\+Color} ()
+\item 
+unsigned int \hyperlink{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}{gen\+Random\+Color} ()
+\item 
+string \hyperlink{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}{get\+Block\+Color\+As\+Hex\+String} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}{get\+Block\+Space\+Size} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}{get\+Block\+Space\+Height} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}{get\+Block\+Space\+Width} ()
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_a2e17230774c905e35aa9868986c49b09}{get\+Block\+Data} ()
+\item 
+int \hyperlink{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}{get\+Block\+Type} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}{freeblockspace} (bool $\ast$$\ast$$\ast$spc)
+\item 
+bool $\ast$$\ast$ \hyperlink{class_tetris_1_1_block_ada769278572785b24e8a91f620b97b81}{get\+Rotated\+Space\+Data} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}{can\+Rotate} (const vector$<$ bool $\ast$$>$ mapdata, const unsigned char boardwidth, unsigned char cury, unsigned char curx)
+\item 
+bool \hyperlink{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}{rotate} ()
+\item 
+bool \hyperlink{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}{roatespec} ()
+\item 
+void \hyperlink{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}{printspace} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+테트리스 블럭데이터를 저장하고 불러오는 객체 
+
+Block.\+h 파일의 28 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}\label{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}\label{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!````~Block@{$\sim$\+Block}}
+\index{````~Block@{$\sim$\+Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Block()}{~Block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::$\sim$\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}\label{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{unsigned int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}\label{class_tetris_1_1_block_a1fd0aaff1f4b622c9c7027929c5d4534}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+constructor 
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+type이 연속된 번호범위를 벗어나면 기본값으로 생성된다 
+\end{DoxyWarning}
+
+
+Block.\+hpp 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}\label{class_tetris_1_1_block_a20012167d55a996d56825d99082419c6}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!````~Block@{$\sim$\+Block}}
+\index{````~Block@{$\sim$\+Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{$\sim$\+Block()}{~Block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::$\sim$\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+모름 
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+메모리 터지지 않도록 메모리 수동삭제 
+\end{DoxyWarning}
+
+
+Block.\+hpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}\label{class_tetris_1_1_block_a82c3ff96d106bd1da7b32f2addd7db7f}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Tetris\+::\+Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{unsigned int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+constructor 
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+연속된 숫자의 범위를 벗어나면 기본값으로 생성 
+\end{DoxyWarning}
+
+
+Block.\+hpp 파일의 65 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}\label{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!can\+Rotate@{can\+Rotate}}
+\index{can\+Rotate@{can\+Rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{can\+Rotate()}{canRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::can\+Rotate (\begin{DoxyParamCaption}\item[{const vector$<$ bool $\ast$$>$}]{mapdata,  }\item[{const unsigned char}]{boardwidth,  }\item[{unsigned char}]{cury,  }\item[{unsigned char}]{curx }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 116 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}\label{class_tetris_1_1_block_a56d194d0a5d56d2d1220ec32774cea38}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!can\+Rotate@{can\+Rotate}}
+\index{can\+Rotate@{can\+Rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{can\+Rotate()}{canRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::can\+Rotate (\begin{DoxyParamCaption}\item[{const vector$<$ bool $\ast$$>$}]{mapdata,  }\item[{const unsigned char}]{boardwidth,  }\item[{unsigned char}]{cury,  }\item[{unsigned char}]{curx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+게임 맵에서 현재 좌표에서 회전이 가능한지 유무 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 168 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}\label{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!freeblockspace@{freeblockspace}}
+\index{freeblockspace@{freeblockspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{freeblockspace()}{freeblockspace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::freeblockspace (\begin{DoxyParamCaption}\item[{bool $\ast$$\ast$$\ast$}]{spc }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 97 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}\label{class_tetris_1_1_block_aea78e0a1b229842f541a8e897e2e9340}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!freeblockspace@{freeblockspace}}
+\index{freeblockspace@{freeblockspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{freeblockspace()}{freeblockspace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::freeblockspace (\begin{DoxyParamCaption}\item[{bool $\ast$$\ast$$\ast$}]{spc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+hpp 파일의 143 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}\label{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Random\+Color@{gen\+Random\+Color}}
+\index{gen\+Random\+Color@{gen\+Random\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Random\+Color()}{genRandomColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}\label{class_tetris_1_1_block_a4bae85cab786853cb3ff76aa7fe72edc}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Random\+Color@{gen\+Random\+Color}}
+\index{gen\+Random\+Color@{gen\+Random\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Random\+Color()}{genRandomColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Random\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+지정된 색상 안에서 랜덤으로 색상을 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 100 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}\label{class_tetris_1_1_block_a9cac65704d2c788488ecf65d5b0467bd}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!gen\+Sample\+Color@{gen\+Sample\+Color}}
+\index{gen\+Sample\+Color@{gen\+Sample\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{gen\+Sample\+Color()}{genSampleColor()}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::gen\+Sample\+Color (\begin{DoxyParamCaption}\item[{const unsigned char}]{samplenum }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}\label{class_tetris_1_1_block_ad61aea379870fbb3668d49e4c3c748ed}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color@{get\+Block\+Color}}
+\index{get\+Block\+Color@{get\+Block\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color()}{getBlockColor()}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_block_sub_modules_1_1_block_color}{Block\+Color}$\ast$ Tetris\+::\+Block\+::get\+Block\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 색상 객체를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 94 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}\label{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}}
+\index{get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Hex\+String()}{getBlockColorAsHexString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Tetris\+::\+Block\+::get\+Block\+Color\+As\+Hex\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}\label{class_tetris_1_1_block_a0adf3e3fbe9899115703913f18aaae6d}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}}
+\index{get\+Block\+Color\+As\+Hex\+String@{get\+Block\+Color\+As\+Hex\+String}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Hex\+String()}{getBlockColorAsHexString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Tetris\+::\+Block\+::get\+Block\+Color\+As\+Hex\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭색상을 rgba hex로 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 106 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}\label{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}}
+\index{get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Raw()}{getBlockColorAsRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::get\+Block\+Color\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 36 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}\label{class_tetris_1_1_block_a8f6bd5020dcfdae501f74b42827344f3}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}}
+\index{get\+Block\+Color\+As\+Raw@{get\+Block\+Color\+As\+Raw}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Color\+As\+Raw()}{getBlockColorAsRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned int Tetris\+::\+Block\+::get\+Block\+Color\+As\+Raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+설정된 블럭 색상을 4바이트 연속된 데이터로 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 83 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f}\label{class_tetris_1_1_block_a9bd2c3d6ccacff9a5f56f72336ba324f}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Data@{get\+Block\+Data}}
+\index{get\+Block\+Data@{get\+Block\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Data()}{getBlockData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool $\ast$$\ast$ Tetris\+::\+Block\+::get\+Block\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 91 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a2e17230774c905e35aa9868986c49b09}\label{class_tetris_1_1_block_a2e17230774c905e35aa9868986c49b09}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Data@{get\+Block\+Data}}
+\index{get\+Block\+Data@{get\+Block\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Data()}{getBlockData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool$\ast$$\ast$ Tetris\+::\+Block\+::get\+Block\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양 메트릭스 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 134 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}\label{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Height@{get\+Block\+Space\+Height}}
+\index{get\+Block\+Space\+Height@{get\+Block\+Space\+Height}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Height()}{getBlockSpaceHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 85 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}\label{class_tetris_1_1_block_a5301977e32c03aaf122fa289fcba77ba}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Height@{get\+Block\+Space\+Height}}
+\index{get\+Block\+Space\+Height@{get\+Block\+Space\+Height}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Height()}{getBlockSpaceHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양의 높이를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 122 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}\label{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Size@{get\+Block\+Space\+Size}}
+\index{get\+Block\+Space\+Size@{get\+Block\+Space\+Size}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Size()}{getBlockSpaceSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}\label{class_tetris_1_1_block_a356cba210ff93bbd80c10d4d00c81cc2}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Size@{get\+Block\+Space\+Size}}
+\index{get\+Block\+Space\+Size@{get\+Block\+Space\+Size}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Size()}{getBlockSpaceSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양의 공간 크기를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 116 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}\label{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Width@{get\+Block\+Space\+Width}}
+\index{get\+Block\+Space\+Width@{get\+Block\+Space\+Width}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Width()}{getBlockSpaceWidth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 88 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}\label{class_tetris_1_1_block_ac390e14de476582300d815d9054ed9bd}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Space\+Width@{get\+Block\+Space\+Width}}
+\index{get\+Block\+Space\+Width@{get\+Block\+Space\+Width}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Space\+Width()}{getBlockSpaceWidth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Space\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양의 너비를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 128 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}\label{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Type@{get\+Block\+Type}}
+\index{get\+Block\+Type@{get\+Block\+Type}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Type()}{getBlockType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 94 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}\label{class_tetris_1_1_block_a8780b7c5d836c3bb6bae3de5cdcba5e1}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Block\+Type@{get\+Block\+Type}}
+\index{get\+Block\+Type@{get\+Block\+Type}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Block\+Type()}{getBlockType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Tetris\+::\+Block\+::get\+Block\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+블럭 모양 인식 번호 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 140 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}\label{class_tetris_1_1_block_a464ed776185993ad827f316a08969960}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}}
+\index{get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Rotated\+Space\+Data()}{getRotatedSpaceData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool $\ast$$\ast$ Tetris\+::\+Block\+::get\+Rotated\+Space\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 104 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ada769278572785b24e8a91f620b97b81}\label{class_tetris_1_1_block_ada769278572785b24e8a91f620b97b81}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}}
+\index{get\+Rotated\+Space\+Data@{get\+Rotated\+Space\+Data}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{get\+Rotated\+Space\+Data()}{getRotatedSpaceData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool$\ast$$\ast$ Tetris\+::\+Block\+::get\+Rotated\+Space\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+반시계 방향으로 90도 회전된 블록 데이터를 리턴 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 153 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}\label{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!printspace@{printspace}}
+\index{printspace@{printspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{printspace()}{printspace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::printspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 173 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}\label{class_tetris_1_1_block_ae7aadeec449fec232e9635d839593028}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!printspace@{printspace}}
+\index{printspace@{printspace}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{printspace()}{printspace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::printspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+콘솔에서 모양 디버깅시 확인 함수 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 231 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}\label{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!roatespec@{roatespec}}
+\index{roatespec@{roatespec}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{roatespec()}{roatespec()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::roatespec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 169 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}\label{class_tetris_1_1_block_a787424e5e9ec2807989121e8dcee1a7a}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!roatespec@{roatespec}}
+\index{roatespec@{roatespec}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{roatespec()}{roatespec()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::roatespec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Block.\+hpp 파일의 225 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}\label{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!rotate@{rotate}}
+\index{rotate@{rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 152 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}\label{class_tetris_1_1_block_a0d1eb57e6da91832ad983f7a4fa9ca04}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!rotate@{rotate}}
+\index{rotate@{rotate}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Tetris\+::\+Block\+::rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+회전 성공 유무 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 207 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}\label{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!set\+Block\+Color@{set\+Block\+Color}}
+\index{set\+Block\+Color@{set\+Block\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Block\+Color()}{setBlockColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::set\+Block\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{clr }\end{DoxyParamCaption})}
+
+
+
+Block.\+cpp 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}\label{class_tetris_1_1_block_a1a3fab9e7eabe64a4ba588ed5091d3a9}} 
+\index{Tetris\+::\+Block@{Tetris\+::\+Block}!set\+Block\+Color@{set\+Block\+Color}}
+\index{set\+Block\+Color@{set\+Block\+Color}!Tetris\+::\+Block@{Tetris\+::\+Block}}
+\subsubsection{\texorpdfstring{set\+Block\+Color()}{setBlockColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tetris\+::\+Block\+::set\+Block\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{clr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+리턴은 없지만 블럭 색상 설정 
+\end{DoxyReturn}
+
+
+Block.\+hpp 파일의 72 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/tet/\hyperlink{_block_8h}{Block.\+h}\item 
+Classes/tet2/\hyperlink{_block_8hpp}{Block.\+hpp}\item 
+Classes/tet/\hyperlink{_block_8cpp}{Block.\+cpp}\end{DoxyCompactItemize}

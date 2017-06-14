@@ -1,0 +1,416 @@
+\hypertarget{struct_shell_state}{}\section{Shell\+State 구조체 참조}
+\label{struct_shell_state}\index{Shell\+State@{Shell\+State}}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sqlite3_8h_a0ef6f2646262c8a9b24368d8ac140f69}{sqlite3} $\ast$ \hyperlink{struct_shell_state_aff5184c68cc62f6db1876cc28ffaf7e0}{db}
+\item 
+int \hyperlink{struct_shell_state_a1ce80144b7c10d594fcd1cbba9b4a874}{auto\+Explain}
+\item 
+int \hyperlink{struct_shell_state_ab3a2de04a6ec0c08da36f5b2a8870df0}{auto\+E\+QP}
+\item 
+int \hyperlink{struct_shell_state_a07631569595d0bac838efef39e6e147d}{stats\+On}
+\item 
+int \hyperlink{struct_shell_state_aac5055c5404f54e65f52dfdab67cc49d}{scanstats\+On}
+\item 
+int \hyperlink{struct_shell_state_aa3830a7924f73f6ff4eb27fd11ef4a14}{out\+Count}
+\item 
+int \hyperlink{struct_shell_state_a2ff4d941ad9ef12844aa5281e98ef7c1}{cnt}
+\item 
+F\+I\+LE $\ast$ \hyperlink{struct_shell_state_afe68611d577c5398d24a790bac1b5e56}{out}
+\item 
+F\+I\+LE $\ast$ \hyperlink{struct_shell_state_a308c221cb2f11f68231232a18466c94f}{trace\+Out}
+\item 
+int \hyperlink{struct_shell_state_a014f654813021513e6bf6091926b3877}{n\+Err}
+\item 
+int \hyperlink{struct_shell_state_a555e4be1ff388f8fb4e71765e4b08ab2}{mode}
+\item 
+int \hyperlink{struct_shell_state_a85f31fbf107e9127829e4bbbd1a9b675}{c\+Mode}
+\item 
+int \hyperlink{struct_shell_state_abf9cf08c0a0cd37b43931ed3e6b28e82}{normal\+Mode}
+\item 
+int \hyperlink{struct_shell_state_a7b6ccf04e4f4174830faf39116ed74f6}{writable\+Schema}
+\item 
+int \hyperlink{struct_shell_state_adf90aea39543d0b710b7bb6a4d0236e3}{show\+Header}
+\item 
+int \hyperlink{struct_shell_state_a0afb65c2cd8e373535a1323770db0040}{n\+Check}
+\item 
+unsigned \hyperlink{struct_shell_state_a970dc91433f4d8d1c6776d2eb9753c6f}{shell\+Flgs}
+\item 
+char $\ast$ \hyperlink{struct_shell_state_a1019f63cae8d412dc13a06bb80562247}{z\+Dest\+Table}
+\item 
+char \hyperlink{struct_shell_state_a8c9b32aa186f1b581fc57f324cad108e}{z\+Testcase} \mbox{[}30\mbox{]}
+\item 
+char \hyperlink{struct_shell_state_ae9d5cc638c180de0798aeee4f17b416b}{col\+Separator} \mbox{[}20\mbox{]}
+\item 
+char \hyperlink{struct_shell_state_a576a4b6fd62786683bafb6c7631eae6f}{row\+Separator} \mbox{[}20\mbox{]}
+\item 
+int \hyperlink{struct_shell_state_adf07d77efc02d83f1c42500ef6a4c433}{col\+Width} \mbox{[}100\mbox{]}
+\item 
+int \hyperlink{struct_shell_state_ae5e87296fedf861b6013c48f20888c2b}{actual\+Width} \mbox{[}100\mbox{]}
+\item 
+char \hyperlink{struct_shell_state_a6ae47309eca991773424ffd6b6dd3170}{null\+Value} \mbox{[}20\mbox{]}
+\item 
+char \hyperlink{struct_shell_state_ab1901d796d12c9fe4859f954fba74235}{outfile} \mbox{[}F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX\mbox{]}
+\item 
+const char $\ast$ \hyperlink{struct_shell_state_a8b887b0d2047997012969639cec7aec1}{z\+Db\+Filename}
+\item 
+char $\ast$ \hyperlink{struct_shell_state_acd5673a65d8d4aa5a5a674e4ad8a374b}{z\+Free\+On\+Close}
+\item 
+const char $\ast$ \hyperlink{struct_shell_state_a7a17ec105e801f6d466f3dd8e29521e6}{z\+Vfs}
+\item 
+\hyperlink{sqlite3_8h_af2a033da1327cdd77f0a174a09aedd0c}{sqlite3\+\_\+stmt} $\ast$ \hyperlink{struct_shell_state_a443b930c7001c9b669728b917c2f5587}{p\+Stmt}
+\item 
+F\+I\+LE $\ast$ \hyperlink{struct_shell_state_a9ca42a0d7bf19e576de8ea13ba40b61c}{p\+Log}
+\item 
+int $\ast$ \hyperlink{struct_shell_state_a0481fdd4a0c88fb17f1a66ba87939ce9}{ai\+Indent}
+\item 
+int \hyperlink{struct_shell_state_a73e3fe627474f4de6c0e04837ee0b0bd}{n\+Indent}
+\item 
+int \hyperlink{struct_shell_state_a08d5d59ae0d44497aca79e89a5b8f0fe}{i\+Indent}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+shell.\+c 파일의 1396 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_shell_state_ae5e87296fedf861b6013c48f20888c2b}\label{struct_shell_state_ae5e87296fedf861b6013c48f20888c2b}} 
+\index{Shell\+State@{Shell\+State}!actual\+Width@{actual\+Width}}
+\index{actual\+Width@{actual\+Width}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{actual\+Width}{actualWidth}}
+{\footnotesize\ttfamily int Shell\+State\+::actual\+Width\mbox{[}100\mbox{]}}
+
+
+
+shell.\+c 파일의 1419 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a0481fdd4a0c88fb17f1a66ba87939ce9}\label{struct_shell_state_a0481fdd4a0c88fb17f1a66ba87939ce9}} 
+\index{Shell\+State@{Shell\+State}!ai\+Indent@{ai\+Indent}}
+\index{ai\+Indent@{ai\+Indent}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{ai\+Indent}{aiIndent}}
+{\footnotesize\ttfamily int$\ast$ Shell\+State\+::ai\+Indent}
+
+
+
+shell.\+c 파일의 1428 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_ab3a2de04a6ec0c08da36f5b2a8870df0}\label{struct_shell_state_ab3a2de04a6ec0c08da36f5b2a8870df0}} 
+\index{Shell\+State@{Shell\+State}!auto\+E\+QP@{auto\+E\+QP}}
+\index{auto\+E\+QP@{auto\+E\+QP}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{auto\+E\+QP}{autoEQP}}
+{\footnotesize\ttfamily int Shell\+State\+::auto\+E\+QP}
+
+
+
+shell.\+c 파일의 1399 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a1ce80144b7c10d594fcd1cbba9b4a874}\label{struct_shell_state_a1ce80144b7c10d594fcd1cbba9b4a874}} 
+\index{Shell\+State@{Shell\+State}!auto\+Explain@{auto\+Explain}}
+\index{auto\+Explain@{auto\+Explain}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{auto\+Explain}{autoExplain}}
+{\footnotesize\ttfamily int Shell\+State\+::auto\+Explain}
+
+
+
+shell.\+c 파일의 1398 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a85f31fbf107e9127829e4bbbd1a9b675}\label{struct_shell_state_a85f31fbf107e9127829e4bbbd1a9b675}} 
+\index{Shell\+State@{Shell\+State}!c\+Mode@{c\+Mode}}
+\index{c\+Mode@{c\+Mode}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{c\+Mode}{cMode}}
+{\footnotesize\ttfamily int Shell\+State\+::c\+Mode}
+
+
+
+shell.\+c 파일의 1408 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a2ff4d941ad9ef12844aa5281e98ef7c1}\label{struct_shell_state_a2ff4d941ad9ef12844aa5281e98ef7c1}} 
+\index{Shell\+State@{Shell\+State}!cnt@{cnt}}
+\index{cnt@{cnt}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{cnt}{cnt}}
+{\footnotesize\ttfamily int Shell\+State\+::cnt}
+
+
+
+shell.\+c 파일의 1403 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_ae9d5cc638c180de0798aeee4f17b416b}\label{struct_shell_state_ae9d5cc638c180de0798aeee4f17b416b}} 
+\index{Shell\+State@{Shell\+State}!col\+Separator@{col\+Separator}}
+\index{col\+Separator@{col\+Separator}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{col\+Separator}{colSeparator}}
+{\footnotesize\ttfamily char Shell\+State\+::col\+Separator\mbox{[}20\mbox{]}}
+
+
+
+shell.\+c 파일의 1416 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_adf07d77efc02d83f1c42500ef6a4c433}\label{struct_shell_state_adf07d77efc02d83f1c42500ef6a4c433}} 
+\index{Shell\+State@{Shell\+State}!col\+Width@{col\+Width}}
+\index{col\+Width@{col\+Width}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{col\+Width}{colWidth}}
+{\footnotesize\ttfamily int Shell\+State\+::col\+Width\mbox{[}100\mbox{]}}
+
+
+
+shell.\+c 파일의 1418 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_aff5184c68cc62f6db1876cc28ffaf7e0}\label{struct_shell_state_aff5184c68cc62f6db1876cc28ffaf7e0}} 
+\index{Shell\+State@{Shell\+State}!db@{db}}
+\index{db@{db}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_a0ef6f2646262c8a9b24368d8ac140f69}{sqlite3}$\ast$ Shell\+State\+::db}
+
+
+
+shell.\+c 파일의 1397 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a08d5d59ae0d44497aca79e89a5b8f0fe}\label{struct_shell_state_a08d5d59ae0d44497aca79e89a5b8f0fe}} 
+\index{Shell\+State@{Shell\+State}!i\+Indent@{i\+Indent}}
+\index{i\+Indent@{i\+Indent}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{i\+Indent}{iIndent}}
+{\footnotesize\ttfamily int Shell\+State\+::i\+Indent}
+
+
+
+shell.\+c 파일의 1430 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a555e4be1ff388f8fb4e71765e4b08ab2}\label{struct_shell_state_a555e4be1ff388f8fb4e71765e4b08ab2}} 
+\index{Shell\+State@{Shell\+State}!mode@{mode}}
+\index{mode@{mode}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily int Shell\+State\+::mode}
+
+
+
+shell.\+c 파일의 1407 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a0afb65c2cd8e373535a1323770db0040}\label{struct_shell_state_a0afb65c2cd8e373535a1323770db0040}} 
+\index{Shell\+State@{Shell\+State}!n\+Check@{n\+Check}}
+\index{n\+Check@{n\+Check}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{n\+Check}{nCheck}}
+{\footnotesize\ttfamily int Shell\+State\+::n\+Check}
+
+
+
+shell.\+c 파일의 1412 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a014f654813021513e6bf6091926b3877}\label{struct_shell_state_a014f654813021513e6bf6091926b3877}} 
+\index{Shell\+State@{Shell\+State}!n\+Err@{n\+Err}}
+\index{n\+Err@{n\+Err}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{n\+Err}{nErr}}
+{\footnotesize\ttfamily int Shell\+State\+::n\+Err}
+
+
+
+shell.\+c 파일의 1406 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a73e3fe627474f4de6c0e04837ee0b0bd}\label{struct_shell_state_a73e3fe627474f4de6c0e04837ee0b0bd}} 
+\index{Shell\+State@{Shell\+State}!n\+Indent@{n\+Indent}}
+\index{n\+Indent@{n\+Indent}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{n\+Indent}{nIndent}}
+{\footnotesize\ttfamily int Shell\+State\+::n\+Indent}
+
+
+
+shell.\+c 파일의 1429 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_abf9cf08c0a0cd37b43931ed3e6b28e82}\label{struct_shell_state_abf9cf08c0a0cd37b43931ed3e6b28e82}} 
+\index{Shell\+State@{Shell\+State}!normal\+Mode@{normal\+Mode}}
+\index{normal\+Mode@{normal\+Mode}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{normal\+Mode}{normalMode}}
+{\footnotesize\ttfamily int Shell\+State\+::normal\+Mode}
+
+
+
+shell.\+c 파일의 1409 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a6ae47309eca991773424ffd6b6dd3170}\label{struct_shell_state_a6ae47309eca991773424ffd6b6dd3170}} 
+\index{Shell\+State@{Shell\+State}!null\+Value@{null\+Value}}
+\index{null\+Value@{null\+Value}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{null\+Value}{nullValue}}
+{\footnotesize\ttfamily char Shell\+State\+::null\+Value\mbox{[}20\mbox{]}}
+
+
+
+shell.\+c 파일의 1420 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_afe68611d577c5398d24a790bac1b5e56}\label{struct_shell_state_afe68611d577c5398d24a790bac1b5e56}} 
+\index{Shell\+State@{Shell\+State}!out@{out}}
+\index{out@{out}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Shell\+State\+::out}
+
+
+
+shell.\+c 파일의 1404 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_aa3830a7924f73f6ff4eb27fd11ef4a14}\label{struct_shell_state_aa3830a7924f73f6ff4eb27fd11ef4a14}} 
+\index{Shell\+State@{Shell\+State}!out\+Count@{out\+Count}}
+\index{out\+Count@{out\+Count}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{out\+Count}{outCount}}
+{\footnotesize\ttfamily int Shell\+State\+::out\+Count}
+
+
+
+shell.\+c 파일의 1402 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_ab1901d796d12c9fe4859f954fba74235}\label{struct_shell_state_ab1901d796d12c9fe4859f954fba74235}} 
+\index{Shell\+State@{Shell\+State}!outfile@{outfile}}
+\index{outfile@{outfile}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{outfile}{outfile}}
+{\footnotesize\ttfamily char Shell\+State\+::outfile\mbox{[}F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX\mbox{]}}
+
+
+
+shell.\+c 파일의 1422 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a9ca42a0d7bf19e576de8ea13ba40b61c}\label{struct_shell_state_a9ca42a0d7bf19e576de8ea13ba40b61c}} 
+\index{Shell\+State@{Shell\+State}!p\+Log@{p\+Log}}
+\index{p\+Log@{p\+Log}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{p\+Log}{pLog}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Shell\+State\+::p\+Log}
+
+
+
+shell.\+c 파일의 1427 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a443b930c7001c9b669728b917c2f5587}\label{struct_shell_state_a443b930c7001c9b669728b917c2f5587}} 
+\index{Shell\+State@{Shell\+State}!p\+Stmt@{p\+Stmt}}
+\index{p\+Stmt@{p\+Stmt}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{p\+Stmt}{pStmt}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_af2a033da1327cdd77f0a174a09aedd0c}{sqlite3\+\_\+stmt}$\ast$ Shell\+State\+::p\+Stmt}
+
+
+
+shell.\+c 파일의 1426 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a576a4b6fd62786683bafb6c7631eae6f}\label{struct_shell_state_a576a4b6fd62786683bafb6c7631eae6f}} 
+\index{Shell\+State@{Shell\+State}!row\+Separator@{row\+Separator}}
+\index{row\+Separator@{row\+Separator}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{row\+Separator}{rowSeparator}}
+{\footnotesize\ttfamily char Shell\+State\+::row\+Separator\mbox{[}20\mbox{]}}
+
+
+
+shell.\+c 파일의 1417 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_aac5055c5404f54e65f52dfdab67cc49d}\label{struct_shell_state_aac5055c5404f54e65f52dfdab67cc49d}} 
+\index{Shell\+State@{Shell\+State}!scanstats\+On@{scanstats\+On}}
+\index{scanstats\+On@{scanstats\+On}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{scanstats\+On}{scanstatsOn}}
+{\footnotesize\ttfamily int Shell\+State\+::scanstats\+On}
+
+
+
+shell.\+c 파일의 1401 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a970dc91433f4d8d1c6776d2eb9753c6f}\label{struct_shell_state_a970dc91433f4d8d1c6776d2eb9753c6f}} 
+\index{Shell\+State@{Shell\+State}!shell\+Flgs@{shell\+Flgs}}
+\index{shell\+Flgs@{shell\+Flgs}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{shell\+Flgs}{shellFlgs}}
+{\footnotesize\ttfamily unsigned Shell\+State\+::shell\+Flgs}
+
+
+
+shell.\+c 파일의 1413 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_adf90aea39543d0b710b7bb6a4d0236e3}\label{struct_shell_state_adf90aea39543d0b710b7bb6a4d0236e3}} 
+\index{Shell\+State@{Shell\+State}!show\+Header@{show\+Header}}
+\index{show\+Header@{show\+Header}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{show\+Header}{showHeader}}
+{\footnotesize\ttfamily int Shell\+State\+::show\+Header}
+
+
+
+shell.\+c 파일의 1411 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a07631569595d0bac838efef39e6e147d}\label{struct_shell_state_a07631569595d0bac838efef39e6e147d}} 
+\index{Shell\+State@{Shell\+State}!stats\+On@{stats\+On}}
+\index{stats\+On@{stats\+On}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{stats\+On}{statsOn}}
+{\footnotesize\ttfamily int Shell\+State\+::stats\+On}
+
+
+
+shell.\+c 파일의 1400 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a308c221cb2f11f68231232a18466c94f}\label{struct_shell_state_a308c221cb2f11f68231232a18466c94f}} 
+\index{Shell\+State@{Shell\+State}!trace\+Out@{trace\+Out}}
+\index{trace\+Out@{trace\+Out}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{trace\+Out}{traceOut}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Shell\+State\+::trace\+Out}
+
+
+
+shell.\+c 파일의 1405 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a7b6ccf04e4f4174830faf39116ed74f6}\label{struct_shell_state_a7b6ccf04e4f4174830faf39116ed74f6}} 
+\index{Shell\+State@{Shell\+State}!writable\+Schema@{writable\+Schema}}
+\index{writable\+Schema@{writable\+Schema}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{writable\+Schema}{writableSchema}}
+{\footnotesize\ttfamily int Shell\+State\+::writable\+Schema}
+
+
+
+shell.\+c 파일의 1410 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a8b887b0d2047997012969639cec7aec1}\label{struct_shell_state_a8b887b0d2047997012969639cec7aec1}} 
+\index{Shell\+State@{Shell\+State}!z\+Db\+Filename@{z\+Db\+Filename}}
+\index{z\+Db\+Filename@{z\+Db\+Filename}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{z\+Db\+Filename}{zDbFilename}}
+{\footnotesize\ttfamily const char$\ast$ Shell\+State\+::z\+Db\+Filename}
+
+
+
+shell.\+c 파일의 1423 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a1019f63cae8d412dc13a06bb80562247}\label{struct_shell_state_a1019f63cae8d412dc13a06bb80562247}} 
+\index{Shell\+State@{Shell\+State}!z\+Dest\+Table@{z\+Dest\+Table}}
+\index{z\+Dest\+Table@{z\+Dest\+Table}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{z\+Dest\+Table}{zDestTable}}
+{\footnotesize\ttfamily char$\ast$ Shell\+State\+::z\+Dest\+Table}
+
+
+
+shell.\+c 파일의 1414 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_acd5673a65d8d4aa5a5a674e4ad8a374b}\label{struct_shell_state_acd5673a65d8d4aa5a5a674e4ad8a374b}} 
+\index{Shell\+State@{Shell\+State}!z\+Free\+On\+Close@{z\+Free\+On\+Close}}
+\index{z\+Free\+On\+Close@{z\+Free\+On\+Close}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{z\+Free\+On\+Close}{zFreeOnClose}}
+{\footnotesize\ttfamily char$\ast$ Shell\+State\+::z\+Free\+On\+Close}
+
+
+
+shell.\+c 파일의 1424 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a8c9b32aa186f1b581fc57f324cad108e}\label{struct_shell_state_a8c9b32aa186f1b581fc57f324cad108e}} 
+\index{Shell\+State@{Shell\+State}!z\+Testcase@{z\+Testcase}}
+\index{z\+Testcase@{z\+Testcase}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{z\+Testcase}{zTestcase}}
+{\footnotesize\ttfamily char Shell\+State\+::z\+Testcase\mbox{[}30\mbox{]}}
+
+
+
+shell.\+c 파일의 1415 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_shell_state_a7a17ec105e801f6d466f3dd8e29521e6}\label{struct_shell_state_a7a17ec105e801f6d466f3dd8e29521e6}} 
+\index{Shell\+State@{Shell\+State}!z\+Vfs@{z\+Vfs}}
+\index{z\+Vfs@{z\+Vfs}!Shell\+State@{Shell\+State}}
+\subsubsection{\texorpdfstring{z\+Vfs}{zVfs}}
+{\footnotesize\ttfamily const char$\ast$ Shell\+State\+::z\+Vfs}
+
+
+
+shell.\+c 파일의 1425 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/db/sqlitelib/\hyperlink{shell_8c}{shell.\+c}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{structsqlite3__pcache__methods}{}\section{sqlite3\+\_\+pcache\+\_\+methods 구조체 참조}
+\label{structsqlite3__pcache__methods}\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}
+
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{structsqlite3__pcache__methods_ac71a23fce5a94ac9bc6babdbbaf1b5b4}{p\+Arg}
+\item 
+int($\ast$ \hyperlink{structsqlite3__pcache__methods_ac75d3dbf840e6f05ea08d35ad0457fb2}{x\+Init} )(void $\ast$)
+\item 
+void($\ast$ \hyperlink{structsqlite3__pcache__methods_aa2835c25fac454b7ee7cfd9e625700d7}{x\+Shutdown} )(void $\ast$)
+\item 
+\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$($\ast$ \hyperlink{structsqlite3__pcache__methods_ac903d0438a7a1554c818b4c17585e790}{x\+Create} )(int sz\+Page, int b\+Purgeable)
+\item 
+void($\ast$ \hyperlink{structsqlite3__pcache__methods_ac9ccbed1bea2a902906bfeaa6a330b40}{x\+Cachesize} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, int n\+Cachesize)
+\item 
+int($\ast$ \hyperlink{structsqlite3__pcache__methods_a1e0895008a701c1843336f0e0dcd3f46}{x\+Pagecount} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$)
+\item 
+void $\ast$($\ast$ \hyperlink{structsqlite3__pcache__methods_ae09b8ed29c2dd77157f26a69255fd482}{x\+Fetch} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, unsigned key, int create\+Flag)
+\item 
+void($\ast$ \hyperlink{structsqlite3__pcache__methods_a2aa1aefc301a0fe4998ed8397b028630}{x\+Unpin} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, void $\ast$, int discard)
+\item 
+void($\ast$ \hyperlink{structsqlite3__pcache__methods_a0d8a7a980e22e908429a181f8fc7733e}{x\+Rekey} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, void $\ast$, unsigned old\+Key, unsigned new\+Key)
+\item 
+void($\ast$ \hyperlink{structsqlite3__pcache__methods_adc097defb1e83c6442fc0d47ac79cec9}{x\+Truncate} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, unsigned i\+Limit)
+\item 
+void($\ast$ \hyperlink{structsqlite3__pcache__methods_ac775533f86db1d15bf7e4ded0e037eaf}{x\+Destroy} )(\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+sqlite3.\+h 파일의 7356 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{structsqlite3__pcache__methods_ac71a23fce5a94ac9bc6babdbbaf1b5b4}\label{structsqlite3__pcache__methods_ac71a23fce5a94ac9bc6babdbbaf1b5b4}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!p\+Arg@{p\+Arg}}
+\index{p\+Arg@{p\+Arg}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{p\+Arg}{pArg}}
+{\footnotesize\ttfamily void$\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::p\+Arg}
+
+
+
+sqlite3.\+h 파일의 7357 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_ac9ccbed1bea2a902906bfeaa6a330b40}\label{structsqlite3__pcache__methods_ac9ccbed1bea2a902906bfeaa6a330b40}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Cachesize@{x\+Cachesize}}
+\index{x\+Cachesize@{x\+Cachesize}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Cachesize}{xCachesize}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Cachesize) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, int n\+Cachesize)}
+
+
+
+sqlite3.\+h 파일의 7361 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_ac903d0438a7a1554c818b4c17585e790}\label{structsqlite3__pcache__methods_ac903d0438a7a1554c818b4c17585e790}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Create@{x\+Create}}
+\index{x\+Create@{x\+Create}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Create}{xCreate}}
+{\footnotesize\ttfamily \hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache}$\ast$($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Create) (int sz\+Page, int b\+Purgeable)}
+
+
+
+sqlite3.\+h 파일의 7360 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_ac775533f86db1d15bf7e4ded0e037eaf}\label{structsqlite3__pcache__methods_ac775533f86db1d15bf7e4ded0e037eaf}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Destroy@{x\+Destroy}}
+\index{x\+Destroy@{x\+Destroy}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Destroy}{xDestroy}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Destroy) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$)}
+
+
+
+sqlite3.\+h 파일의 7367 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_ae09b8ed29c2dd77157f26a69255fd482}\label{structsqlite3__pcache__methods_ae09b8ed29c2dd77157f26a69255fd482}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Fetch@{x\+Fetch}}
+\index{x\+Fetch@{x\+Fetch}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Fetch}{xFetch}}
+{\footnotesize\ttfamily void$\ast$($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Fetch) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, unsigned key, int create\+Flag)}
+
+
+
+sqlite3.\+h 파일의 7363 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_ac75d3dbf840e6f05ea08d35ad0457fb2}\label{structsqlite3__pcache__methods_ac75d3dbf840e6f05ea08d35ad0457fb2}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Init@{x\+Init}}
+\index{x\+Init@{x\+Init}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Init}{xInit}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Init) (void $\ast$)}
+
+
+
+sqlite3.\+h 파일의 7358 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_a1e0895008a701c1843336f0e0dcd3f46}\label{structsqlite3__pcache__methods_a1e0895008a701c1843336f0e0dcd3f46}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Pagecount@{x\+Pagecount}}
+\index{x\+Pagecount@{x\+Pagecount}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Pagecount}{xPagecount}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Pagecount) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$)}
+
+
+
+sqlite3.\+h 파일의 7362 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_a0d8a7a980e22e908429a181f8fc7733e}\label{structsqlite3__pcache__methods_a0d8a7a980e22e908429a181f8fc7733e}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Rekey@{x\+Rekey}}
+\index{x\+Rekey@{x\+Rekey}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Rekey}{xRekey}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Rekey) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, void $\ast$, unsigned old\+Key, unsigned new\+Key)}
+
+
+
+sqlite3.\+h 파일의 7365 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_aa2835c25fac454b7ee7cfd9e625700d7}\label{structsqlite3__pcache__methods_aa2835c25fac454b7ee7cfd9e625700d7}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Shutdown@{x\+Shutdown}}
+\index{x\+Shutdown@{x\+Shutdown}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Shutdown}{xShutdown}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Shutdown) (void $\ast$)}
+
+
+
+sqlite3.\+h 파일의 7359 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_adc097defb1e83c6442fc0d47ac79cec9}\label{structsqlite3__pcache__methods_adc097defb1e83c6442fc0d47ac79cec9}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Truncate@{x\+Truncate}}
+\index{x\+Truncate@{x\+Truncate}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Truncate}{xTruncate}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Truncate) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, unsigned i\+Limit)}
+
+
+
+sqlite3.\+h 파일의 7366 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structsqlite3__pcache__methods_a2aa1aefc301a0fe4998ed8397b028630}\label{structsqlite3__pcache__methods_a2aa1aefc301a0fe4998ed8397b028630}} 
+\index{sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}!x\+Unpin@{x\+Unpin}}
+\index{x\+Unpin@{x\+Unpin}!sqlite3\+\_\+pcache\+\_\+methods@{sqlite3\+\_\+pcache\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Unpin}{xUnpin}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+pcache\+\_\+methods\+::x\+Unpin) (\hyperlink{sqlite3_8h_a096c453d937d51f7926d7d31c8e0bd2f}{sqlite3\+\_\+pcache} $\ast$, void $\ast$, int discard)}
+
+
+
+sqlite3.\+h 파일의 7364 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/db/sqlitelib/\hyperlink{sqlite3_8h}{sqlite3.\+h}\end{DoxyCompactItemize}

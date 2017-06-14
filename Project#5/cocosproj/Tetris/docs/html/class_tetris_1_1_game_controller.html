@@ -1,0 +1,3119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Tetris::GameController 클래스 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespace_tetris.html">Tetris</a></li><li class="navelem"><a class="el" href="class_tetris_1_1_game_controller.html">GameController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
+<a href="#pub-static-methods">정적 Public 멤버 함수</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#pro-methods">Protected 멤버 함수</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
+<a href="class_tetris_1_1_game_controller-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">Tetris::GameController 클래스 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>테트리스게임을 실질적으로 관리하는 클래스  
+ <a href="class_tetris_1_1_game_controller.html#details">더 자세히 ...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_game_controller_8h_source.html">GameController.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 타입</h2></td></tr>
+<tr class="memitem:a96a963b56385f3b3a122ff0ca2beb770"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a> { <br />
+&#160;&#160;<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3">GameStatus::UNKNOWN</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3">GameStatus::ONGOING</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905">GameStatus::END</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891">GameStatus::PAUSE</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3">GameStatus::UNKNOWN</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3">GameStatus::ONGOING</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905">GameStatus::END</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891">GameStatus::PAUSE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a96a963b56385f3b3a122ff0ca2beb770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a963b56385f3b3a122ff0ca2beb770"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a> { <br />
+&#160;&#160;<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3">GameStatus::UNKNOWN</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3">GameStatus::ONGOING</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905">GameStatus::END</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891">GameStatus::PAUSE</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3">GameStatus::UNKNOWN</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3">GameStatus::ONGOING</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905">GameStatus::END</a>, 
+<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891">GameStatus::PAUSE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a96a963b56385f3b3a122ff0ca2beb770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a968c9a79fca8a5a39e0c51edca0e5abb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a968c9a79fca8a5a39e0c51edca0e5abb">GameController</a> ()</td></tr>
+<tr class="separator:a968c9a79fca8a5a39e0c51edca0e5abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd9a021a0a87bed079bc1ad309e4039"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a5dd9a021a0a87bed079bc1ad309e4039">GameController</a> (<a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *igi)</td></tr>
+<tr class="separator:a5dd9a021a0a87bed079bc1ad309e4039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013cef75ba09bdb7d95ae1df8497b8f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a013cef75ba09bdb7d95ae1df8497b8f5">setGameStatus</a> (<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameController::GameStatus</a> mGs)</td></tr>
+<tr class="separator:a013cef75ba09bdb7d95ae1df8497b8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b95b1b7a3a18c27402100f70c1ac1ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a3b95b1b7a3a18c27402100f70c1ac1ab">getGameStatus</a> ()</td></tr>
+<tr class="separator:a3b95b1b7a3a18c27402100f70c1ac1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10163479e02572450b886ff0654078b4"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a10163479e02572450b886ff0654078b4">getGameHeight</a> ()</td></tr>
+<tr class="separator:a10163479e02572450b886ff0654078b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256cff75224efe165e1c5409c69b0503"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a256cff75224efe165e1c5409c69b0503">getGameWidth</a> ()</td></tr>
+<tr class="separator:a256cff75224efe165e1c5409c69b0503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef406397d4719c9edd49774d0343ce05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aef406397d4719c9edd49774d0343ce05">justinit</a> ()</td></tr>
+<tr class="separator:aef406397d4719c9edd49774d0343ce05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912bb473994e869a610ab356086cb0ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a912bb473994e869a610ab356086cb0ad">canRemoveLine</a> (int y)</td></tr>
+<tr class="separator:a912bb473994e869a610ab356086cb0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd04e471f7819a8b3f80e0dda748bdc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aecd04e471f7819a8b3f80e0dda748bdc">isOngoing</a> ()</td></tr>
+<tr class="separator:aecd04e471f7819a8b3f80e0dda748bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47681985e6fbf14411a70be08f85bf99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a47681985e6fbf14411a70be08f85bf99">setGameStatusToOngoing</a> ()</td></tr>
+<tr class="separator:a47681985e6fbf14411a70be08f85bf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5e6034b2e2faf70371a13eb5f9c5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a3c5e6034b2e2faf70371a13eb5f9c5bb">setGameStatusToEnd</a> ()</td></tr>
+<tr class="separator:a3c5e6034b2e2faf70371a13eb5f9c5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19e8563acc9e724e130de60f87600b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab19e8563acc9e724e130de60f87600b7">findAndRemoveLines</a> ()</td></tr>
+<tr class="separator:ab19e8563acc9e724e130de60f87600b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95d44d0084ac5537f1c753796df4565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aa95d44d0084ac5537f1c753796df4565">removeLines</a> (stack&lt; int &gt; s)</td></tr>
+<tr class="separator:aa95d44d0084ac5537f1c753796df4565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0f88f11b8b75063e63bcbc621dc0be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a9c0f88f11b8b75063e63bcbc621dc0be">init</a> (<a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *igi)</td></tr>
+<tr class="separator:a9c0f88f11b8b75063e63bcbc621dc0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd5159934835ef54cb3c0b24cbc1fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a9dd5159934835ef54cb3c0b24cbc1fd6">innergameloop</a> ()</td></tr>
+<tr class="separator:a9dd5159934835ef54cb3c0b24cbc1fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49446695e3ba0ff829f20beaeecac6da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a49446695e3ba0ff829f20beaeecac6da">run</a> ()</td></tr>
+<tr class="separator:a49446695e3ba0ff829f20beaeecac6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d835f535b48529ca536115dd8123099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a0d835f535b48529ca536115dd8123099">setInitGameInfo</a> (<a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *igi, bool withDelPrevMem)</td></tr>
+<tr class="separator:a0d835f535b48529ca536115dd8123099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d93facb945f87ba33fb8be74df023fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a5d93facb945f87ba33fb8be74df023fa">currentblockrotate</a> ()</td></tr>
+<tr class="separator:a5d93facb945f87ba33fb8be74df023fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d40a0936505754131099034b4271fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac0d40a0936505754131099034b4271fa">currentusermoveleft</a> ()</td></tr>
+<tr class="separator:ac0d40a0936505754131099034b4271fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2859507cbc9bf9789753228cdedc1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a1d2859507cbc9bf9789753228cdedc1f">currentusermoveright</a> ()</td></tr>
+<tr class="separator:a1d2859507cbc9bf9789753228cdedc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c63a9754e4cbeae4f66a5760bb4055d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a3c63a9754e4cbeae4f66a5760bb4055d">saveBlockAndCheck</a> (<a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> *guser)</td></tr>
+<tr class="separator:a3c63a9754e4cbeae4f66a5760bb4055d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269da7d33475ae2f327ee9a51f02ef52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a269da7d33475ae2f327ee9a51f02ef52">printposinfo</a> ()</td></tr>
+<tr class="separator:a269da7d33475ae2f327ee9a51f02ef52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766a7537d955c62969f2e4b7c0b3c73d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a766a7537d955c62969f2e4b7c0b3c73d">play</a> ()</td></tr>
+<tr class="separator:a766a7537d955c62969f2e4b7c0b3c73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f55b577248e34b4e0902ce114610edd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a1f55b577248e34b4e0902ce114610edd">pause</a> ()</td></tr>
+<tr class="separator:a1f55b577248e34b4e0902ce114610edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e513f45750361e14af091704e9f1d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a18e513f45750361e14af091704e9f1d4">isPaused</a> ()</td></tr>
+<tr class="separator:a18e513f45750361e14af091704e9f1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa9ec1dd636ecc916cd4460e14781c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a0fa9ec1dd636ecc916cd4460e14781c4">isEnd</a> ()</td></tr>
+<tr class="separator:a0fa9ec1dd636ecc916cd4460e14781c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ff093ea91e3d248a8a287289e758b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab9ff093ea91e3d248a8a287289e758b0">resume</a> ()</td></tr>
+<tr class="separator:ab9ff093ea91e3d248a8a287289e758b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8058c827eaa393194dcfb83c6964f8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a">checkEnd</a> ()</td></tr>
+<tr class="separator:ac8058c827eaa393194dcfb83c6964f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b39bdb39707e119d6e708bdb2aca17"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a78b39bdb39707e119d6e708bdb2aca17">getVisualizedBoard</a> ()</td></tr>
+<tr class="separator:a78b39bdb39707e119d6e708bdb2aca17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5553ac767c6065148b7c332f59251e76"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a5553ac767c6065148b7c332f59251e76">printcurrentboard</a> ()</td></tr>
+<tr class="separator:a5553ac767c6065148b7c332f59251e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae541cf926ccdce47a185c94a0c80b642"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ae541cf926ccdce47a185c94a0c80b642">canmoveleft</a> ()</td></tr>
+<tr class="separator:ae541cf926ccdce47a185c94a0c80b642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8189bb893502049396a7de1a73a88c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a6c8189bb893502049396a7de1a73a88c">canmoveright</a> ()</td></tr>
+<tr class="separator:a6c8189bb893502049396a7de1a73a88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5b65ec7638519a39b4ba8a71e67fff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a8d5b65ec7638519a39b4ba8a71e67fff">fastdropdown</a> ()</td></tr>
+<tr class="separator:a8d5b65ec7638519a39b4ba8a71e67fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4993d5ad8640ac617fec341fdb301ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac4993d5ad8640ac617fec341fdb301ee">candropdown</a> ()</td></tr>
+<tr class="separator:ac4993d5ad8640ac617fec341fdb301ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968c9a79fca8a5a39e0c51edca0e5abb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a968c9a79fca8a5a39e0c51edca0e5abb">GameController</a> ()</td></tr>
+<tr class="separator:a968c9a79fca8a5a39e0c51edca0e5abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9011047ce96d89e4d913feb9a88eed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a8c9011047ce96d89e4d913feb9a88eed">~GameController</a> ()</td></tr>
+<tr class="separator:a8c9011047ce96d89e4d913feb9a88eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd9a021a0a87bed079bc1ad309e4039"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a5dd9a021a0a87bed079bc1ad309e4039">GameController</a> (<a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *igi)</td></tr>
+<tr class="separator:a5dd9a021a0a87bed079bc1ad309e4039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56eaf2e16714ef0e043c050b1aa0833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ae56eaf2e16714ef0e043c050b1aa0833">setGameStatus</a> (<a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a> mGs)</td></tr>
+<tr class="separator:ae56eaf2e16714ef0e043c050b1aa0833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b95b1b7a3a18c27402100f70c1ac1ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a3b95b1b7a3a18c27402100f70c1ac1ab">getGameStatus</a> ()</td></tr>
+<tr class="separator:a3b95b1b7a3a18c27402100f70c1ac1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10163479e02572450b886ff0654078b4"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a10163479e02572450b886ff0654078b4">getGameHeight</a> ()</td></tr>
+<tr class="separator:a10163479e02572450b886ff0654078b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256cff75224efe165e1c5409c69b0503"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a256cff75224efe165e1c5409c69b0503">getGameWidth</a> ()</td></tr>
+<tr class="separator:a256cff75224efe165e1c5409c69b0503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef406397d4719c9edd49774d0343ce05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aef406397d4719c9edd49774d0343ce05">justinit</a> ()</td></tr>
+<tr class="separator:aef406397d4719c9edd49774d0343ce05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912bb473994e869a610ab356086cb0ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a912bb473994e869a610ab356086cb0ad">canRemoveLine</a> (int y)</td></tr>
+<tr class="separator:a912bb473994e869a610ab356086cb0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecd04e471f7819a8b3f80e0dda748bdc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aecd04e471f7819a8b3f80e0dda748bdc">isOngoing</a> ()</td></tr>
+<tr class="separator:aecd04e471f7819a8b3f80e0dda748bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47681985e6fbf14411a70be08f85bf99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a47681985e6fbf14411a70be08f85bf99">setGameStatusToOngoing</a> ()</td></tr>
+<tr class="separator:a47681985e6fbf14411a70be08f85bf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5e6034b2e2faf70371a13eb5f9c5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a3c5e6034b2e2faf70371a13eb5f9c5bb">setGameStatusToEnd</a> ()</td></tr>
+<tr class="separator:a3c5e6034b2e2faf70371a13eb5f9c5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19e8563acc9e724e130de60f87600b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab19e8563acc9e724e130de60f87600b7">findAndRemoveLines</a> ()</td></tr>
+<tr class="separator:ab19e8563acc9e724e130de60f87600b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0d944a3e90caede9a216cb3537db44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a6c0d944a3e90caede9a216cb3537db44">haveTimeDelta</a> ()</td></tr>
+<tr class="separator:a6c0d944a3e90caede9a216cb3537db44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8776e7b7cd905db831c7135961df453"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ad8776e7b7cd905db831c7135961df453">requireRemovedLinesCountRefresh</a> ()</td></tr>
+<tr class="separator:ad8776e7b7cd905db831c7135961df453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa95d44d0084ac5537f1c753796df4565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aa95d44d0084ac5537f1c753796df4565">removeLines</a> (stack&lt; int &gt; s)</td></tr>
+<tr class="separator:aa95d44d0084ac5537f1c753796df4565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c0f88f11b8b75063e63bcbc621dc0be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a9c0f88f11b8b75063e63bcbc621dc0be">init</a> (<a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *igi)</td></tr>
+<tr class="separator:a9c0f88f11b8b75063e63bcbc621dc0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad203991dc134e2ea36c9c40326da55c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ad203991dc134e2ea36c9c40326da55c1">switchBlock</a> ()</td></tr>
+<tr class="separator:ad203991dc134e2ea36c9c40326da55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fcdadbf63bb0d908e1033496d6f9d16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a1fcdadbf63bb0d908e1033496d6f9d16">checkRmCntDisplayRefresh</a> ()</td></tr>
+<tr class="separator:a1fcdadbf63bb0d908e1033496d6f9d16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626e0107413258a25179813653066776"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a626e0107413258a25179813653066776">checkScoreDisplayRefresh</a> ()</td></tr>
+<tr class="separator:a626e0107413258a25179813653066776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fafbfd1d87713f4f9233ccc547ffb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab0fafbfd1d87713f4f9233ccc547ffb8">forceSettingScore</a> (unsigned long long sc)</td></tr>
+<tr class="separator:ab0fafbfd1d87713f4f9233ccc547ffb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd543d841613ed6c3645659d34e0b723"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#acd543d841613ed6c3645659d34e0b723">getRemovedLinesCountWithFormat</a> (bool withCategoryFormat)</td></tr>
+<tr class="separator:acd543d841613ed6c3645659d34e0b723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16414d257ffec350d6eaf47ce3ad490"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac16414d257ffec350d6eaf47ce3ad490">getRemovedLinesCountWithFormatForSomeone</a> (<a class="el" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a> *guser, bool withCategoryFormat)</td></tr>
+<tr class="separator:ac16414d257ffec350d6eaf47ce3ad490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028a1a0270750bcae1e2e2cbbbe7609a"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a028a1a0270750bcae1e2e2cbbbe7609a">innergameloop</a> ()</td></tr>
+<tr class="separator:a028a1a0270750bcae1e2e2cbbbe7609a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49446695e3ba0ff829f20beaeecac6da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a49446695e3ba0ff829f20beaeecac6da">run</a> ()</td></tr>
+<tr class="separator:a49446695e3ba0ff829f20beaeecac6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d835f535b48529ca536115dd8123099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a0d835f535b48529ca536115dd8123099">setInitGameInfo</a> (<a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *igi, bool withDelPrevMem)</td></tr>
+<tr class="separator:a0d835f535b48529ca536115dd8123099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d93facb945f87ba33fb8be74df023fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a5d93facb945f87ba33fb8be74df023fa">currentblockrotate</a> ()</td></tr>
+<tr class="separator:a5d93facb945f87ba33fb8be74df023fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0d40a0936505754131099034b4271fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac0d40a0936505754131099034b4271fa">currentusermoveleft</a> ()</td></tr>
+<tr class="separator:ac0d40a0936505754131099034b4271fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2859507cbc9bf9789753228cdedc1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a1d2859507cbc9bf9789753228cdedc1f">currentusermoveright</a> ()</td></tr>
+<tr class="separator:a1d2859507cbc9bf9789753228cdedc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c63a9754e4cbeae4f66a5760bb4055d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a3c63a9754e4cbeae4f66a5760bb4055d">saveBlockAndCheck</a> (<a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> *guser)</td></tr>
+<tr class="separator:a3c63a9754e4cbeae4f66a5760bb4055d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269da7d33475ae2f327ee9a51f02ef52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a269da7d33475ae2f327ee9a51f02ef52">printposinfo</a> ()</td></tr>
+<tr class="separator:a269da7d33475ae2f327ee9a51f02ef52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71765a7d8b76400832c98002a113ed26"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a71765a7d8b76400832c98002a113ed26">getPlayTimeWithFormat</a> (bool hasPrefixFormat)</td></tr>
+<tr class="separator:a71765a7d8b76400832c98002a113ed26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84270bd9c52aae8ba1434d96a96b6c3c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a84270bd9c52aae8ba1434d96a96b6c3c">getScoreWithFormatForLocalUser</a> (bool hasPrefixFormat)</td></tr>
+<tr class="separator:a84270bd9c52aae8ba1434d96a96b6c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ee25a033698516dd98c254ab8f8f1b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab9ee25a033698516dd98c254ab8f8f1b">getScoreWithFormatForSomeUser</a> (<a class="el" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a> *guser, bool hasPrefixFormat)</td></tr>
+<tr class="separator:ab9ee25a033698516dd98c254ab8f8f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdc5288a92d09283a6250d684d69876"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a9fdc5288a92d09283a6250d684d69876">getRemovedLinesCountWithFormatForLocalUser</a> (bool hasPrefixFormat)</td></tr>
+<tr class="separator:a9fdc5288a92d09283a6250d684d69876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7275bdb8f29ce4f1dfec790c22705d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a2e7275bdb8f29ce4f1dfec790c22705d">getRemovedLinesCountWithFormatForSomeUser</a> (<a class="el" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a> *guser, bool hasPrefixFormat)</td></tr>
+<tr class="separator:a2e7275bdb8f29ce4f1dfec790c22705d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce7f1fc500acedd99636b837f9bccf4"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#afce7f1fc500acedd99636b837f9bccf4">getPlayTimeAsRaw</a> ()</td></tr>
+<tr class="separator:afce7f1fc500acedd99636b837f9bccf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766a7537d955c62969f2e4b7c0b3c73d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a766a7537d955c62969f2e4b7c0b3c73d">play</a> ()</td></tr>
+<tr class="separator:a766a7537d955c62969f2e4b7c0b3c73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f55b577248e34b4e0902ce114610edd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a1f55b577248e34b4e0902ce114610edd">pause</a> ()</td></tr>
+<tr class="separator:a1f55b577248e34b4e0902ce114610edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e513f45750361e14af091704e9f1d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a18e513f45750361e14af091704e9f1d4">isPaused</a> ()</td></tr>
+<tr class="separator:a18e513f45750361e14af091704e9f1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa9ec1dd636ecc916cd4460e14781c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a0fa9ec1dd636ecc916cd4460e14781c4">isEnd</a> ()</td></tr>
+<tr class="separator:a0fa9ec1dd636ecc916cd4460e14781c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ff093ea91e3d248a8a287289e758b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab9ff093ea91e3d248a8a287289e758b0">resume</a> ()</td></tr>
+<tr class="separator:ab9ff093ea91e3d248a8a287289e758b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8058c827eaa393194dcfb83c6964f8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac8058c827eaa393194dcfb83c6964f8a">checkEnd</a> ()</td></tr>
+<tr class="separator:ac8058c827eaa393194dcfb83c6964f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c2d1f1b5539576116833526478355a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aa3c2d1f1b5539576116833526478355a">getUsers</a> ()</td></tr>
+<tr class="separator:aa3c2d1f1b5539576116833526478355a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc67d4b309ce2886b43a3b4e0af22abc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#abc67d4b309ce2886b43a3b4e0af22abc">getLocalUser</a> ()</td></tr>
+<tr class="separator:abc67d4b309ce2886b43a3b4e0af22abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88f3362af23d87282ee8ed39394054d"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ad88f3362af23d87282ee8ed39394054d">getLocalScore</a> ()</td></tr>
+<tr class="separator:ad88f3362af23d87282ee8ed39394054d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c22f25017881f6150428b62e4607310"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a6c22f25017881f6150428b62e4607310">getCombinedBoard</a> ()</td></tr>
+<tr class="separator:a6c22f25017881f6150428b62e4607310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d81626f41c784dc256069293719e5f"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aa0d81626f41c784dc256069293719e5f">getVisualizedBoard</a> ()</td></tr>
+<tr class="separator:aa0d81626f41c784dc256069293719e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5553ac767c6065148b7c332f59251e76"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a5553ac767c6065148b7c332f59251e76">printcurrentboard</a> ()</td></tr>
+<tr class="separator:a5553ac767c6065148b7c332f59251e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae541cf926ccdce47a185c94a0c80b642"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ae541cf926ccdce47a185c94a0c80b642">canmoveleft</a> ()</td></tr>
+<tr class="separator:ae541cf926ccdce47a185c94a0c80b642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c8189bb893502049396a7de1a73a88c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a6c8189bb893502049396a7de1a73a88c">canmoveright</a> ()</td></tr>
+<tr class="separator:a6c8189bb893502049396a7de1a73a88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5b65ec7638519a39b4ba8a71e67fff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a8d5b65ec7638519a39b4ba8a71e67fff">fastdropdown</a> ()</td></tr>
+<tr class="separator:a8d5b65ec7638519a39b4ba8a71e67fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035e352a85db58a05322156af606f0fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a035e352a85db58a05322156af606f0fa">forcedropdownOnce</a> ()</td></tr>
+<tr class="separator:a035e352a85db58a05322156af606f0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4993d5ad8640ac617fec341fdb301ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ac4993d5ad8640ac617fec341fdb301ee">candropdown</a> ()</td></tr>
+<tr class="separator:ac4993d5ad8640ac617fec341fdb301ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+정적 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:af996b3264a1ed606a89be9e72310e569"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_tetris_1_1_game_controller.html">GameController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#af996b3264a1ed606a89be9e72310e569">getInstance</a> ()</td></tr>
+<tr class="separator:af996b3264a1ed606a89be9e72310e569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af996b3264a1ed606a89be9e72310e569"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_tetris_1_1_game_controller.html">GameController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#af996b3264a1ed606a89be9e72310e569">getInstance</a> ()</td></tr>
+<tr class="separator:af996b3264a1ed606a89be9e72310e569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:a015411333b232483387d89f3ba0617e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a015411333b232483387d89f3ba0617e0">forceend</a> = false</td></tr>
+<tr class="memdesc:a015411333b232483387d89f3ba0617e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">외부에서 게임을 강제로 종료시킬경우에 사용하는 변수  <a href="#a015411333b232483387d89f3ba0617e0">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a015411333b232483387d89f3ba0617e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 멤버 함수</h2></td></tr>
+<tr class="memitem:ab96e22daad51119b35cbee8cfb7385ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab96e22daad51119b35cbee8cfb7385ef">usercheck</a> ()</td></tr>
+<tr class="separator:ab96e22daad51119b35cbee8cfb7385ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc067380df0f0da4ea4a358d00d6a123"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#adc067380df0f0da4ea4a358d00d6a123">saveBlockAt</a> (<a class="el" href="class_tetris_1_1_block.html">Block</a> *blk, unsigned short cury, unsigned short curx)</td></tr>
+<tr class="separator:adc067380df0f0da4ea4a358d00d6a123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96e22daad51119b35cbee8cfb7385ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ab96e22daad51119b35cbee8cfb7385ef">usercheck</a> ()</td></tr>
+<tr class="separator:ab96e22daad51119b35cbee8cfb7385ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc067380df0f0da4ea4a358d00d6a123"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#adc067380df0f0da4ea4a358d00d6a123">saveBlockAt</a> (<a class="el" href="class_tetris_1_1_block.html">Block</a> *blk, unsigned short cury, unsigned short curx)</td></tr>
+<tr class="separator:adc067380df0f0da4ea4a358d00d6a123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:a8e3adc647ed382de0ff541417bea9b33"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a8e3adc647ed382de0ff541417bea9b33">gameHeight</a> =0</td></tr>
+<tr class="separator:a8e3adc647ed382de0ff541417bea9b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a439f215918db4127fcb44cf9d501ed63"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a439f215918db4127fcb44cf9d501ed63">gameWidth</a> =0</td></tr>
+<tr class="separator:a439f215918db4127fcb44cf9d501ed63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562adcade20e362160535cd7248a2cce"><td class="memItemLeft" align="right" valign="top">unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a562adcade20e362160535cd7248a2cce">gplaytime</a> =0</td></tr>
+<tr class="separator:a562adcade20e362160535cd7248a2cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c894005a82404c73a5a9a6efb208dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#ae4c894005a82404c73a5a9a6efb208dc">gs</a> = <a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3">GameController::GameStatus::UNKNOWN</a></td></tr>
+<tr class="separator:ae4c894005a82404c73a5a9a6efb208dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaefa9bbdd0d73ec58173dce327373ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#adaefa9bbdd0d73ec58173dce327373ca">initginfo</a></td></tr>
+<tr class="separator:adaefa9bbdd0d73ec58173dce327373ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb18b3b4fe5621bfb60fc42b1e8da09"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#aafb18b3b4fe5621bfb60fc42b1e8da09">usercount</a></td></tr>
+<tr class="separator:aafb18b3b4fe5621bfb60fc42b1e8da09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a31d3a933daad6d95e20458eea2900e"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a1a31d3a933daad6d95e20458eea2900e">gusers</a></td></tr>
+<tr class="separator:a1a31d3a933daad6d95e20458eea2900e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7725b6cec9459a6bffaa3e29dd1c5196"><td class="memItemLeft" align="right" valign="top">vector&lt; bool * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris_1_1_game_controller.html#a7725b6cec9459a6bffaa3e29dd1c5196">board</a></td></tr>
+<tr class="separator:a7725b6cec9459a6bffaa3e29dd1c5196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock"><p>테트리스게임을 실질적으로 관리하는 클래스 </p>
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a96a963b56385f3b3a122ff0ca2beb770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a963b56385f3b3a122ff0ca2beb770">&#9670;&nbsp;</a></span>GameStatus <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">Tetris::GameController::GameStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3"></a>ONGOING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891"></a>PAUSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3"></a>ONGOING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891"></a>PAUSE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a96a963b56385f3b3a122ff0ca2beb770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a963b56385f3b3a122ff0ca2beb770">&#9670;&nbsp;</a></span>GameStatus <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">Tetris::GameController::GameStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3"></a>ONGOING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891"></a>PAUSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770acff9d04a8a29792d319be9177afb8ba3"></a>ONGOING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770ab1a326c06d88bf042f73d70f50197905"></a>END&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a96a963b56385f3b3a122ff0ca2beb770a291554596c183e837f0a6bec3767c891"></a>PAUSE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a968c9a79fca8a5a39e0c51edca0e5abb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968c9a79fca8a5a39e0c51edca0e5abb">&#9670;&nbsp;</a></span>GameController() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tetris::GameController::GameController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5dd9a021a0a87bed079bc1ad309e4039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd9a021a0a87bed079bc1ad309e4039">&#9670;&nbsp;</a></span>GameController() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tetris::GameController::GameController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td>
+          <td class="paramname"><em>igi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a968c9a79fca8a5a39e0c51edca0e5abb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968c9a79fca8a5a39e0c51edca0e5abb">&#9670;&nbsp;</a></span>GameController() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tetris::GameController::GameController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8c9011047ce96d89e4d913feb9a88eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9011047ce96d89e4d913feb9a88eed">&#9670;&nbsp;</a></span>~GameController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tetris::GameController::~GameController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5dd9a021a0a87bed079bc1ad309e4039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd9a021a0a87bed079bc1ad309e4039">&#9670;&nbsp;</a></span>GameController() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tetris::GameController::GameController </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td>
+          <td class="paramname"><em>igi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac4993d5ad8640ac617fec341fdb301ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4993d5ad8640ac617fec341fdb301ee">&#9670;&nbsp;</a></span>candropdown() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::candropdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00330">330</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac4993d5ad8640ac617fec341fdb301ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4993d5ad8640ac617fec341fdb301ee">&#9670;&nbsp;</a></span>candropdown() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::candropdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>블럭이 강제로 1칸 더 떨어질 수 있는지 유뮤 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00659">659</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae541cf926ccdce47a185c94a0c80b642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae541cf926ccdce47a185c94a0c80b642">&#9670;&nbsp;</a></span>canmoveleft() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::canmoveleft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00267">267</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae541cf926ccdce47a185c94a0c80b642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae541cf926ccdce47a185c94a0c80b642">&#9670;&nbsp;</a></span>canmoveleft() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::canmoveleft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>블럭이 왼쪽으로 이동할 수있는지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00577">577</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6c8189bb893502049396a7de1a73a88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c8189bb893502049396a7de1a73a88c">&#9670;&nbsp;</a></span>canmoveright() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::canmoveright </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00291">291</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6c8189bb893502049396a7de1a73a88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c8189bb893502049396a7de1a73a88c">&#9670;&nbsp;</a></span>canmoveright() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::canmoveright </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>블럭이 오른쪽으로 이동할 수있는지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00603">603</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a912bb473994e869a610ab356086cb0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912bb473994e869a610ab356086cb0ad">&#9670;&nbsp;</a></span>canRemoveLine() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::canRemoveLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a912bb473994e869a610ab356086cb0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912bb473994e869a610ab356086cb0ad">&#9670;&nbsp;</a></span>canRemoveLine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::canRemoveLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>y번째 라인을 지울수 있는지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00121">121</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac8058c827eaa393194dcfb83c6964f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8058c827eaa393194dcfb83c6964f8a">&#9670;&nbsp;</a></span>checkEnd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::checkEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00216">216</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac8058c827eaa393194dcfb83c6964f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8058c827eaa393194dcfb83c6964f8a">&#9670;&nbsp;</a></span>checkEnd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::checkEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임이 종료되어야하는 상황인지 아닌지 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00450">450</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1fcdadbf63bb0d908e1033496d6f9d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fcdadbf63bb0d908e1033496d6f9d16">&#9670;&nbsp;</a></span>checkRmCntDisplayRefresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::checkRmCntDisplayRefresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>gui에 띄울 '지운 라인수'항목이 새로고침이 필요한지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00201">201</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a626e0107413258a25179813653066776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626e0107413258a25179813653066776">&#9670;&nbsp;</a></span>checkScoreDisplayRefresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::checkScoreDisplayRefresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>gui에 띄울 '점수'항목이 새로고침이 필요한지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00211">211</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5d93facb945f87ba33fb8be74df023fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d93facb945f87ba33fb8be74df023fa">&#9670;&nbsp;</a></span>currentblockrotate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::currentblockrotate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00137">137</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5d93facb945f87ba33fb8be74df023fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d93facb945f87ba33fb8be74df023fa">&#9670;&nbsp;</a></span>currentblockrotate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::currentblockrotate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00299">299</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac0d40a0936505754131099034b4271fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d40a0936505754131099034b4271fa">&#9670;&nbsp;</a></span>currentusermoveleft() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::currentusermoveleft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00143">143</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac0d40a0936505754131099034b4271fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d40a0936505754131099034b4271fa">&#9670;&nbsp;</a></span>currentusermoveleft() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::currentusermoveleft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00310">310</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1d2859507cbc9bf9789753228cdedc1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2859507cbc9bf9789753228cdedc1f">&#9670;&nbsp;</a></span>currentusermoveright() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::currentusermoveright </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00150">150</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1d2859507cbc9bf9789753228cdedc1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2859507cbc9bf9789753228cdedc1f">&#9670;&nbsp;</a></span>currentusermoveright() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::currentusermoveright </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00318">318</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8d5b65ec7638519a39b4ba8a71e67fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5b65ec7638519a39b4ba8a71e67fff">&#9670;&nbsp;</a></span>fastdropdown() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::fastdropdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00314">314</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8d5b65ec7638519a39b4ba8a71e67fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5b65ec7638519a39b4ba8a71e67fff">&#9670;&nbsp;</a></span>fastdropdown() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::fastdropdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>블럭이 순식간에 떨어졌는지 유무 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00629">629</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab19e8563acc9e724e130de60f87600b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19e8563acc9e724e130de60f87600b7">&#9670;&nbsp;</a></span>findAndRemoveLines() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::findAndRemoveLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab19e8563acc9e724e130de60f87600b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19e8563acc9e724e130de60f87600b7">&#9670;&nbsp;</a></span>findAndRemoveLines() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::findAndRemoveLines </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00139">139</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a035e352a85db58a05322156af606f0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035e352a85db58a05322156af606f0fa">&#9670;&nbsp;</a></span>forcedropdownOnce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::forcedropdownOnce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>떨어지는 블럭이 1칸 강제로 더 떨어졌는지 유무 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00647">647</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab0fafbfd1d87713f4f9233ccc547ffb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fafbfd1d87713f4f9233ccc547ffb8">&#9670;&nbsp;</a></span>forceSettingScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::forceSettingScore </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long long&#160;</td>
+          <td class="paramname"><em>sc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00218">218</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6c22f25017881f6150428b62e4607310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c22f25017881f6150428b62e4607310">&#9670;&nbsp;</a></span>getCombinedBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** Tetris::GameController::getCombinedBoard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>저장된 블럭의 위치와 떨어지는 블럭의 위치를 하나의 메트릭스안에 포함한 2차원 배열 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00491">491</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a10163479e02572450b886ff0654078b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10163479e02572450b886ff0654078b4">&#9670;&nbsp;</a></span>getGameHeight() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::getGameHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a10163479e02572450b886ff0654078b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10163479e02572450b886ff0654078b4">&#9670;&nbsp;</a></span>getGameHeight() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::getGameHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3b95b1b7a3a18c27402100f70c1ac1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b95b1b7a3a18c27402100f70c1ac1ab">&#9670;&nbsp;</a></span>getGameStatus() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a> Tetris::GameController::getGameStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3b95b1b7a3a18c27402100f70c1ac1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b95b1b7a3a18c27402100f70c1ac1ab">&#9670;&nbsp;</a></span>getGameStatus() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a> Tetris::GameController::getGameStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>현재 게임의 상태 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a256cff75224efe165e1c5409c69b0503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a256cff75224efe165e1c5409c69b0503">&#9670;&nbsp;</a></span>getGameWidth() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::getGameWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a256cff75224efe165e1c5409c69b0503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a256cff75224efe165e1c5409c69b0503">&#9670;&nbsp;</a></span>getGameWidth() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::getGameWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af996b3264a1ed606a89be9e72310e569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af996b3264a1ed606a89be9e72310e569">&#9670;&nbsp;</a></span>getInstance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_tetris_1_1_game_controller.html">GameController</a>* Tetris::GameController::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af996b3264a1ed606a89be9e72310e569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af996b3264a1ed606a89be9e72310e569">&#9670;&nbsp;</a></span>getInstance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_tetris_1_1_game_controller.html">GameController</a>* Tetris::GameController::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>싱글톤형식의 <a class="el" href="class_tetris_1_1_game_controller.html" title="테트리스게임을 실질적으로 관리하는 클래스 ">GameController</a> 객체 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad88f3362af23d87282ee8ed39394054d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88f3362af23d87282ee8ed39394054d">&#9670;&nbsp;</a></span>getLocalScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long Tetris::GameController::getLocalScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00485">485</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="abc67d4b309ce2886b43a3b4e0af22abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc67d4b309ce2886b43a3b4e0af22abc">&#9670;&nbsp;</a></span>getLocalUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a>* Tetris::GameController::getLocalUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00477">477</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="afce7f1fc500acedd99636b837f9bccf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce7f1fc500acedd99636b837f9bccf4">&#9670;&nbsp;</a></span>getPlayTimeAsRaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long Tetris::GameController::getPlayTimeAsRaw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>플레이한 시간을 초단위로 리턴 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00391">391</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a71765a7d8b76400832c98002a113ed26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71765a7d8b76400832c98002a113ed26">&#9670;&nbsp;</a></span>getPlayTimeWithFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getPlayTimeWithFormat </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasPrefixFormat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>점수텍스트 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00343">343</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acd543d841613ed6c3645659d34e0b723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd543d841613ed6c3645659d34e0b723">&#9670;&nbsp;</a></span>getRemovedLinesCountWithFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getRemovedLinesCountWithFormat </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withCategoryFormat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>지운 라인수를 표현해줄 텍스트 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00226">226</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9fdc5288a92d09283a6250d684d69876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdc5288a92d09283a6250d684d69876">&#9670;&nbsp;</a></span>getRemovedLinesCountWithFormatForLocalUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getRemovedLinesCountWithFormatForLocalUser </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasPrefixFormat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00374">374</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac16414d257ffec350d6eaf47ce3ad490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16414d257ffec350d6eaf47ce3ad490">&#9670;&nbsp;</a></span>getRemovedLinesCountWithFormatForSomeone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getRemovedLinesCountWithFormatForSomeone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a> *&#160;</td>
+          <td class="paramname"><em>guser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withCategoryFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00229">229</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2e7275bdb8f29ce4f1dfec790c22705d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7275bdb8f29ce4f1dfec790c22705d">&#9670;&nbsp;</a></span>getRemovedLinesCountWithFormatForSomeUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getRemovedLinesCountWithFormatForSomeUser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a> *&#160;</td>
+          <td class="paramname"><em>guser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasPrefixFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>라인수 텍스트 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00380">380</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a84270bd9c52aae8ba1434d96a96b6c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84270bd9c52aae8ba1434d96a96b6c3c">&#9670;&nbsp;</a></span>getScoreWithFormatForLocalUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getScoreWithFormatForLocalUser </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasPrefixFormat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00363">363</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab9ee25a033698516dd98c254ab8f8f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ee25a033698516dd98c254ab8f8f1b">&#9670;&nbsp;</a></span>getScoreWithFormatForSomeUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Tetris::GameController::getScoreWithFormatForSomeUser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">GameUser</a> *&#160;</td>
+          <td class="paramname"><em>guser</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasPrefixFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00366">366</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa3c2d1f1b5539576116833526478355a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c2d1f1b5539576116833526478355a">&#9670;&nbsp;</a></span>getUsers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a>*&gt; Tetris::GameController::getUsers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임 플레이 주체를 담은 배열 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00474">474</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a78b39bdb39707e119d6e708bdb2aca17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b39bdb39707e119d6e708bdb2aca17">&#9670;&nbsp;</a></span>getVisualizedBoard() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ** Tetris::GameController::getVisualizedBoard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00235">235</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa0d81626f41c784dc256069293719e5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d81626f41c784dc256069293719e5f">&#9670;&nbsp;</a></span>getVisualizedBoard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** Tetris::GameController::getVisualizedBoard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>콘솔용 통합 메트릭스 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00525">525</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6c0d944a3e90caede9a216cb3537db44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0d944a3e90caede9a216cb3537db44">&#9670;&nbsp;</a></span>haveTimeDelta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::haveTimeDelta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임 진행 시간이 1초이상 지났는지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00154">154</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9c0f88f11b8b75063e63bcbc621dc0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0f88f11b8b75063e63bcbc621dc0be">&#9670;&nbsp;</a></span>init() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td>
+          <td class="paramname"><em>igi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00098">98</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9c0f88f11b8b75063e63bcbc621dc0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c0f88f11b8b75063e63bcbc621dc0be">&#9670;&nbsp;</a></span>init() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td>
+          <td class="paramname"><em>igi</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00184">184</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9dd5159934835ef54cb3c0b24cbc1fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd5159934835ef54cb3c0b24cbc1fd6">&#9670;&nbsp;</a></span>innergameloop() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::innergameloop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a028a1a0270750bcae1e2e2cbbbe7609a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028a1a0270750bcae1e2e2cbbbe7609a">&#9670;&nbsp;</a></span>innergameloop() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** Tetris::GameController::innergameloop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임 로직을 진행시키고 최종적으로 진행1번 한뒤의 떨어지는 블럭과 저장된 블럭의 위치를 담은 메트릭스 데이터 배열 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00241">241</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0fa9ec1dd636ecc916cd4460e14781c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa9ec1dd636ecc916cd4460e14781c4">&#9670;&nbsp;</a></span>isEnd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::isEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0fa9ec1dd636ecc916cd4460e14781c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa9ec1dd636ecc916cd4460e14781c4">&#9670;&nbsp;</a></span>isEnd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::isEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임 진행 상태가 게임종료인지유무 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00441">441</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aecd04e471f7819a8b3f80e0dda748bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd04e471f7819a8b3f80e0dda748bdc">&#9670;&nbsp;</a></span>isOngoing() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::isOngoing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aecd04e471f7819a8b3f80e0dda748bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd04e471f7819a8b3f80e0dda748bdc">&#9670;&nbsp;</a></span>isOngoing() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::isOngoing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임상태가 진행중인지 여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00128">128</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a18e513f45750361e14af091704e9f1d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e513f45750361e14af091704e9f1d4">&#9670;&nbsp;</a></span>isPaused() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::isPaused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a18e513f45750361e14af091704e9f1d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e513f45750361e14af091704e9f1d4">&#9670;&nbsp;</a></span>isPaused() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::isPaused </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임 진행 상태가 일시정지인지유무 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00435">435</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aef406397d4719c9edd49774d0343ce05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef406397d4719c9edd49774d0343ce05">&#9670;&nbsp;</a></span>justinit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::justinit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aef406397d4719c9edd49774d0343ce05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef406397d4719c9edd49774d0343ce05">&#9670;&nbsp;</a></span>justinit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::justinit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1f55b577248e34b4e0902ce114610edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f55b577248e34b4e0902ce114610edd">&#9670;&nbsp;</a></span>pause() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1f55b577248e34b4e0902ce114610edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f55b577248e34b4e0902ce114610edd">&#9670;&nbsp;</a></span>pause() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00428">428</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a766a7537d955c62969f2e4b7c0b3c73d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a766a7537d955c62969f2e4b7c0b3c73d">&#9670;&nbsp;</a></span>play() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::play </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00171">171</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a766a7537d955c62969f2e4b7c0b3c73d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a766a7537d955c62969f2e4b7c0b3c73d">&#9670;&nbsp;</a></span>play() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::play </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00394">394</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5553ac767c6065148b7c332f59251e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5553ac767c6065148b7c332f59251e76">&#9670;&nbsp;</a></span>printcurrentboard() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Tetris::GameController::printcurrentboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00084">84</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5553ac767c6065148b7c332f59251e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5553ac767c6065148b7c332f59251e76">&#9670;&nbsp;</a></span>printcurrentboard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Tetris::GameController::printcurrentboard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00556">556</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a269da7d33475ae2f327ee9a51f02ef52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269da7d33475ae2f327ee9a51f02ef52">&#9670;&nbsp;</a></span>printposinfo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::printposinfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00168">168</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a269da7d33475ae2f327ee9a51f02ef52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269da7d33475ae2f327ee9a51f02ef52">&#9670;&nbsp;</a></span>printposinfo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::printposinfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00337">337</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa95d44d0084ac5537f1c753796df4565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa95d44d0084ac5537f1c753796df4565">&#9670;&nbsp;</a></span>removeLines() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::removeLines </td>
+          <td>(</td>
+          <td class="paramtype">stack&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00083">83</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa95d44d0084ac5537f1c753796df4565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa95d44d0084ac5537f1c753796df4565">&#9670;&nbsp;</a></span>removeLines() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::removeLines </td>
+          <td>(</td>
+          <td class="paramtype">stack&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00164">164</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad8776e7b7cd905db831c7135961df453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8776e7b7cd905db831c7135961df453">&#9670;&nbsp;</a></span>requireRemovedLinesCountRefresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::requireRemovedLinesCountRefresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00161">161</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab9ff093ea91e3d248a8a287289e758b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ff093ea91e3d248a8a287289e758b0">&#9670;&nbsp;</a></span>resume() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab9ff093ea91e3d248a8a287289e758b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ff093ea91e3d248a8a287289e758b0">&#9670;&nbsp;</a></span>resume() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00444">444</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a49446695e3ba0ff829f20beaeecac6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49446695e3ba0ff829f20beaeecac6da">&#9670;&nbsp;</a></span>run() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00124">124</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a49446695e3ba0ff829f20beaeecac6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49446695e3ba0ff829f20beaeecac6da">&#9670;&nbsp;</a></span>run() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00286">286</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3c63a9754e4cbeae4f66a5760bb4055d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c63a9754e4cbeae4f66a5760bb4055d">&#9670;&nbsp;</a></span>saveBlockAndCheck() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::saveBlockAndCheck </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> *&#160;</td>
+          <td class="paramname"><em>guser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00157">157</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3c63a9754e4cbeae4f66a5760bb4055d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c63a9754e4cbeae4f66a5760bb4055d">&#9670;&nbsp;</a></span>saveBlockAndCheck() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::saveBlockAndCheck </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> *&#160;</td>
+          <td class="paramname"><em>guser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00326">326</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="adc067380df0f0da4ea4a358d00d6a123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc067380df0f0da4ea4a358d00d6a123">&#9670;&nbsp;</a></span>saveBlockAt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::saveBlockAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_block.html">Block</a> *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>cury</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>curx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00360">360</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="adc067380df0f0da4ea4a358d00d6a123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc067380df0f0da4ea4a358d00d6a123">&#9670;&nbsp;</a></span>saveBlockAt() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::saveBlockAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_block.html">Block</a> *&#160;</td>
+          <td class="paramname"><em>blk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>cury</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>curx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>떨어지는 블럭이 해당 좌표에 저장하는 명령을 수행하고 그 저장이 성공했는지유무 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00703">703</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a013cef75ba09bdb7d95ae1df8497b8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013cef75ba09bdb7d95ae1df8497b8f5">&#9670;&nbsp;</a></span>setGameStatus() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setGameStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameController::GameStatus</a>&#160;</td>
+          <td class="paramname"><em>mGs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae56eaf2e16714ef0e043c050b1aa0833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae56eaf2e16714ef0e043c050b1aa0833">&#9670;&nbsp;</a></span>setGameStatus() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setGameStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a>&#160;</td>
+          <td class="paramname"><em>mGs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3c5e6034b2e2faf70371a13eb5f9c5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5e6034b2e2faf70371a13eb5f9c5bb">&#9670;&nbsp;</a></span>setGameStatusToEnd() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setGameStatusToEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3c5e6034b2e2faf70371a13eb5f9c5bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5e6034b2e2faf70371a13eb5f9c5bb">&#9670;&nbsp;</a></span>setGameStatusToEnd() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setGameStatusToEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00135">135</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a47681985e6fbf14411a70be08f85bf99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47681985e6fbf14411a70be08f85bf99">&#9670;&nbsp;</a></span>setGameStatusToOngoing() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setGameStatusToOngoing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a47681985e6fbf14411a70be08f85bf99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47681985e6fbf14411a70be08f85bf99">&#9670;&nbsp;</a></span>setGameStatusToOngoing() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setGameStatusToOngoing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00132">132</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0d835f535b48529ca536115dd8123099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d835f535b48529ca536115dd8123099">&#9670;&nbsp;</a></span>setInitGameInfo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setInitGameInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td>
+          <td class="paramname"><em>igi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withDelPrevMem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00129">129</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0d835f535b48529ca536115dd8123099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d835f535b48529ca536115dd8123099">&#9670;&nbsp;</a></span>setInitGameInfo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tetris::GameController::setInitGameInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> *&#160;</td>
+          <td class="paramname"><em>igi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withDelPrevMem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00291">291</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad203991dc134e2ea36c9c40326da55c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad203991dc134e2ea36c9c40326da55c1">&#9670;&nbsp;</a></span>switchBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::switchBlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>현재 블럭과 다음 블럭이 바뀌였는지 성공여부 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00192">192</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab96e22daad51119b35cbee8cfb7385ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96e22daad51119b35cbee8cfb7385ef">&#9670;&nbsp;</a></span>usercheck() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::usercheck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a> 파일의 <a class="el" href="_game_controller_8cpp_source.html#l00354">354</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab96e22daad51119b35cbee8cfb7385ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab96e22daad51119b35cbee8cfb7385ef">&#9670;&nbsp;</a></span>usercheck() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::usercheck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>반환값</dt><dd>게임 주체가 1명 이상인지 유무 </dd></dl>
+
+<p class="definition"><a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a> 파일의 <a class="el" href="_game_controller_8hpp_source.html#l00694">694</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a7725b6cec9459a6bffaa3e29dd1c5196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7725b6cec9459a6bffaa3e29dd1c5196">&#9670;&nbsp;</a></span>board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; bool * &gt; Tetris::GameController::board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00116">116</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a015411333b232483387d89f3ba0617e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015411333b232483387d89f3ba0617e0">&#9670;&nbsp;</a></span>forceend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Tetris::GameController::forceend = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>외부에서 게임을 강제로 종료시킬경우에 사용하는 변수 </p>
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8e3adc647ed382de0ff541417bea9b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3adc647ed382de0ff541417bea9b33">&#9670;&nbsp;</a></span>gameHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::gameHeight =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00109">109</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a439f215918db4127fcb44cf9d501ed63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a439f215918db4127fcb44cf9d501ed63">&#9670;&nbsp;</a></span>gameWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::gameWidth =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a562adcade20e362160535cd7248a2cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562adcade20e362160535cd7248a2cce">&#9670;&nbsp;</a></span>gplaytime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long long Tetris::GameController::gplaytime =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00111">111</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae4c894005a82404c73a5a9a6efb208dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c894005a82404c73a5a9a6efb208dc">&#9670;&nbsp;</a></span>gs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770">GameStatus</a> Tetris::GameController::gs = <a class="el" href="class_tetris_1_1_game_controller.html#a96a963b56385f3b3a122ff0ca2beb770a696b031073e74bf2cb98e5ef201d4aa3">GameController::GameStatus::UNKNOWN</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00112">112</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1a31d3a933daad6d95e20458eea2900e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a31d3a933daad6d95e20458eea2900e">&#9670;&nbsp;</a></span>gusers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_tetris_1_1_users_1_1_game_user.html">Users::GameUser</a> * &gt; Tetris::GameController::gusers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00115">115</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="adaefa9bbdd0d73ec58173dce327373ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaefa9bbdd0d73ec58173dce327373ca">&#9670;&nbsp;</a></span>initginfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tetris_1_1_init_game_info.html">InitGameInfo</a> * Tetris::GameController::initginfo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00113">113</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aafb18b3b4fe5621bfb60fc42b1e8da09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb18b3b4fe5621bfb60fc42b1e8da09">&#9670;&nbsp;</a></span>usercount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Tetris::GameController::usercount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_game_controller_8h_source.html">GameController.h</a> 파일의 <a class="el" href="_game_controller_8h_source.html#l00114">114</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
+<li>Classes/tet/<a class="el" href="_game_controller_8h_source.html">GameController.h</a></li>
+<li>Classes/tet2/<a class="el" href="_game_controller_8hpp_source.html">GameController.hpp</a></li>
+<li>Classes/tet/<a class="el" href="_game_controller_8cpp_source.html">GameController.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

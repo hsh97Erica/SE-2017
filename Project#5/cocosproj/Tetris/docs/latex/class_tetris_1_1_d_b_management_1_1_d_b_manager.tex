@@ -1,0 +1,281 @@
+\hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager}{}\section{Tetris\+:\+:D\+B\+Management\+:\+:D\+B\+Manager 클래스 참조}
+\label{class_tetris_1_1_d_b_management_1_1_d_b_manager}\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+
+
+sqlite3를 통한 db통신  
+
+
+
+
+{\ttfamily \#include $<$D\+B\+Management.\+hpp$>$}
+
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8271c37f255a2e2bc85a3e1896a32c43}{D\+B\+Manager} ()
+\item 
+\hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_ac22f39981d5c862ad17b7420e313f1b2}{$\sim$\+D\+B\+Manager} ()
+\item 
+void \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8bf7e756a9cca7e57fef00076fb62f36}{open} (char $\ast$fname)
+\item 
+void \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8390e6ddf3fa06e90fa5c2ab4997e5c1}{close} ()
+\item 
+bool \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a16460066d64c9183a63194177bb0458e}{is\+Opened} ()
+\item 
+bool \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a62043d50855f42b69b057527b14dec0f}{is\+Connected} ()
+\item 
+void \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_aef16da1d2e564caa309bfc3b3e419d7e}{save\+Score} (unsigned long long score, unsigned long long playtime)
+\item 
+queue$<$ struct \hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes}{Score\+Board\+Attributes} $>$ \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_aa67ef286408b2631e15e9f8f41937c97}{get\+Score\+Board} ()
+\item 
+bool \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_aa80722572c33389c1c73f88de9f199b6}{is\+Exist\+App\+Setting} (string key)
+\item 
+bool \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a598b8014fcad434b5b1162cc6767d22c}{read\+App\+Setting\+As\+Bool} (string key)
+\item 
+int \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_ac52daf6ea2310b848278454c30698436}{read\+App\+Setting\+As\+Int} (string key)
+\item 
+string \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_acb213c517f06d1eadafd45a86b91c2ff}{read\+App\+Setting\+As\+Text} (string key)
+\item 
+bool \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_aead8bb3f2a64fdf6ac59c69bfd21a01e}{change\+Int\+Setting} (string key, int value)
+\item 
+bool \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_aece3390d5f2edca3f86316b903870c92}{change\+Bool\+Setting} (string key, bool value)
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager}{D\+B\+Manager} $\ast$ \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a9cb81505055490211a9b5c79c3c22c18}{get\+Instance} ()
+\item 
+static string \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae50cfd222e276a5ca27e17c886aa5dd5}{get\+D\+B\+Location\+For\+Tetris\+Game} ()
+\item 
+static char $\ast$ \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_a5d49e7fac7d2a65973151a7fb81ea560}{get\+D\+B\+File\+Name} ()
+\item 
+static string \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae8c98091466565c4c70971e6b7a42ce6}{get\+Sound\+Enabler\+Key} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+sqlite3를 통한 db통신 
+
+D\+B\+Management.\+hpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8271c37f255a2e2bc85a3e1896a32c43}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8271c37f255a2e2bc85a3e1896a32c43}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!D\+B\+Manager@{D\+B\+Manager}}
+\index{D\+B\+Manager@{D\+B\+Manager}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{D\+B\+Manager()}{DBManager()}}
+{\footnotesize\ttfamily Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_ac22f39981d5c862ad17b7420e313f1b2}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_ac22f39981d5c862ad17b7420e313f1b2}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!````~D\+B\+Manager@{$\sim$\+D\+B\+Manager}}
+\index{````~D\+B\+Manager@{$\sim$\+D\+B\+Manager}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+D\+B\+Manager()}{~DBManager()}}
+{\footnotesize\ttfamily Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::$\sim$\+D\+B\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_aece3390d5f2edca3f86316b903870c92}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_aece3390d5f2edca3f86316b903870c92}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!change\+Bool\+Setting@{change\+Bool\+Setting}}
+\index{change\+Bool\+Setting@{change\+Bool\+Setting}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{change\+Bool\+Setting()}{changeBoolSetting()}}
+{\footnotesize\ttfamily bool Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::change\+Bool\+Setting (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 292 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_aead8bb3f2a64fdf6ac59c69bfd21a01e}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_aead8bb3f2a64fdf6ac59c69bfd21a01e}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!change\+Int\+Setting@{change\+Int\+Setting}}
+\index{change\+Int\+Setting@{change\+Int\+Setting}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{change\+Int\+Setting()}{changeIntSetting()}}
+{\footnotesize\ttfamily bool Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::change\+Int\+Setting (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+해당 키값을 가진 값이 변경 완료되면 변경성공유무 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 269 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8390e6ddf3fa06e90fa5c2ab4997e5c1}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8390e6ddf3fa06e90fa5c2ab4997e5c1}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!close@{close}}
+\index{close@{close}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a5d49e7fac7d2a65973151a7fb81ea560}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a5d49e7fac7d2a65973151a7fb81ea560}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!get\+D\+B\+File\+Name@{get\+D\+B\+File\+Name}}
+\index{get\+D\+B\+File\+Name@{get\+D\+B\+File\+Name}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{get\+D\+B\+File\+Name()}{getDBFileName()}}
+{\footnotesize\ttfamily static char$\ast$ Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::get\+D\+B\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{반환값}
+기본적인 db파일리턴 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 77 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae50cfd222e276a5ca27e17c886aa5dd5}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae50cfd222e276a5ca27e17c886aa5dd5}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!get\+D\+B\+Location\+For\+Tetris\+Game@{get\+D\+B\+Location\+For\+Tetris\+Game}}
+\index{get\+D\+B\+Location\+For\+Tetris\+Game@{get\+D\+B\+Location\+For\+Tetris\+Game}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{get\+D\+B\+Location\+For\+Tetris\+Game()}{getDBLocationForTetrisGame()}}
+{\footnotesize\ttfamily static string Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::get\+D\+B\+Location\+For\+Tetris\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{반환값}
+일관된 db폴터리턴 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a9cb81505055490211a9b5c79c3c22c18}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a9cb81505055490211a9b5c79c3c22c18}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily static \hyperlink{class_tetris_1_1_d_b_management_1_1_d_b_manager}{D\+B\+Manager}$\ast$ Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_aa67ef286408b2631e15e9f8f41937c97}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_aa67ef286408b2631e15e9f8f41937c97}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!get\+Score\+Board@{get\+Score\+Board}}
+\index{get\+Score\+Board@{get\+Score\+Board}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{get\+Score\+Board()}{getScoreBoard()}}
+{\footnotesize\ttfamily queue$<$struct \hyperlink{struct_tetris_1_1_d_b_management_1_1_score_board_attributes}{Score\+Board\+Attributes}$>$ Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::get\+Score\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+db에 저장된 기록들을 정렬해 순차적으로 불러와 리턴 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 106 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae8c98091466565c4c70971e6b7a42ce6}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_ae8c98091466565c4c70971e6b7a42ce6}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!get\+Sound\+Enabler\+Key@{get\+Sound\+Enabler\+Key}}
+\index{get\+Sound\+Enabler\+Key@{get\+Sound\+Enabler\+Key}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{get\+Sound\+Enabler\+Key()}{getSoundEnablerKey()}}
+{\footnotesize\ttfamily static string Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::get\+Sound\+Enabler\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 295 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a62043d50855f42b69b057527b14dec0f}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a62043d50855f42b69b057527b14dec0f}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{is\+Connected()}{isConnected()}}
+{\footnotesize\ttfamily bool Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 80 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_aa80722572c33389c1c73f88de9f199b6}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_aa80722572c33389c1c73f88de9f199b6}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!is\+Exist\+App\+Setting@{is\+Exist\+App\+Setting}}
+\index{is\+Exist\+App\+Setting@{is\+Exist\+App\+Setting}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{is\+Exist\+App\+Setting()}{isExistAppSetting()}}
+{\footnotesize\ttfamily bool Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::is\+Exist\+App\+Setting (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+해당 키가 db에 있는지 유무 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 141 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a16460066d64c9183a63194177bb0458e}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a16460066d64c9183a63194177bb0458e}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!is\+Opened@{is\+Opened}}
+\index{is\+Opened@{is\+Opened}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{is\+Opened()}{isOpened()}}
+{\footnotesize\ttfamily bool Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::is\+Opened (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+db가 제대로 연결됬는지 확인 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8bf7e756a9cca7e57fef00076fb62f36}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a8bf7e756a9cca7e57fef00076fb62f36}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!open@{open}}
+\index{open@{open}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::open (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+D\+B\+Management.\+hpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_a598b8014fcad434b5b1162cc6767d22c}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_a598b8014fcad434b5b1162cc6767d22c}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!read\+App\+Setting\+As\+Bool@{read\+App\+Setting\+As\+Bool}}
+\index{read\+App\+Setting\+As\+Bool@{read\+App\+Setting\+As\+Bool}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{read\+App\+Setting\+As\+Bool()}{readAppSettingAsBool()}}
+{\footnotesize\ttfamily bool Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::read\+App\+Setting\+As\+Bool (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+해당 키값을 가진 값리턴 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 170 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_ac52daf6ea2310b848278454c30698436}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_ac52daf6ea2310b848278454c30698436}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!read\+App\+Setting\+As\+Int@{read\+App\+Setting\+As\+Int}}
+\index{read\+App\+Setting\+As\+Int@{read\+App\+Setting\+As\+Int}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{read\+App\+Setting\+As\+Int()}{readAppSettingAsInt()}}
+{\footnotesize\ttfamily int Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::read\+App\+Setting\+As\+Int (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+해당 키값을 가진 값리턴 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 176 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_acb213c517f06d1eadafd45a86b91c2ff}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_acb213c517f06d1eadafd45a86b91c2ff}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!read\+App\+Setting\+As\+Text@{read\+App\+Setting\+As\+Text}}
+\index{read\+App\+Setting\+As\+Text@{read\+App\+Setting\+As\+Text}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{read\+App\+Setting\+As\+Text()}{readAppSettingAsText()}}
+{\footnotesize\ttfamily string Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::read\+App\+Setting\+As\+Text (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+해당 키값을 가진 값리턴 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 237 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tetris_1_1_d_b_management_1_1_d_b_manager_aef16da1d2e564caa309bfc3b3e419d7e}\label{class_tetris_1_1_d_b_management_1_1_d_b_manager_aef16da1d2e564caa309bfc3b3e419d7e}} 
+\index{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}!save\+Score@{save\+Score}}
+\index{save\+Score@{save\+Score}!Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager@{Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager}}
+\subsubsection{\texorpdfstring{save\+Score()}{saveScore()}}
+{\footnotesize\ttfamily void Tetris\+::\+D\+B\+Management\+::\+D\+B\+Manager\+::save\+Score (\begin{DoxyParamCaption}\item[{unsigned long long}]{score,  }\item[{unsigned long long}]{playtime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{반환값}
+리턴은 없고 db에 점수저장 
+\end{DoxyReturn}
+
+
+D\+B\+Management.\+hpp 파일의 86 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/tet2/\hyperlink{_d_b_management_8hpp}{D\+B\+Management.\+hpp}\end{DoxyCompactItemize}

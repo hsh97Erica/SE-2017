@@ -1,0 +1,72 @@
+\hypertarget{structfts5__api}{}\section{fts5\+\_\+api 구조체 참조}
+\label{structfts5__api}\index{fts5\+\_\+api@{fts5\+\_\+api}}
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}
+
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structfts5__api_a3c338289abb33e1805da870172956a7c}{i\+Version}
+\item 
+int($\ast$ \hyperlink{structfts5__api_a7fe3663f85eab512d5c461e1674da129}{x\+Create\+Tokenizer} )(\hyperlink{structfts5__api}{fts5\+\_\+api} $\ast$p\+Api, const char $\ast$z\+Name, void $\ast$p\+Context, \hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer} $\ast$p\+Tokenizer, void($\ast$x\+Destroy)(void $\ast$))
+\item 
+int($\ast$ \hyperlink{structfts5__api_a20a23794695fa61e2892ad1243b16b67}{x\+Find\+Tokenizer} )(\hyperlink{structfts5__api}{fts5\+\_\+api} $\ast$p\+Api, const char $\ast$z\+Name, void $\ast$$\ast$pp\+Context, \hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer} $\ast$p\+Tokenizer)
+\item 
+int($\ast$ \hyperlink{structfts5__api_acf1a0612be3b91b908f38ecbc6735d17}{x\+Create\+Function} )(\hyperlink{structfts5__api}{fts5\+\_\+api} $\ast$p\+Api, const char $\ast$z\+Name, void $\ast$p\+Context, \hyperlink{sqlite3_8h_a8a1df7b5a066b194f490be5936e85c17}{fts5\+\_\+extension\+\_\+function} x\+Function, void($\ast$x\+Destroy)(void $\ast$))
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+sqlite3.\+h 파일의 10460 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{structfts5__api_a3c338289abb33e1805da870172956a7c}\label{structfts5__api_a3c338289abb33e1805da870172956a7c}} 
+\index{fts5\+\_\+api@{fts5\+\_\+api}!i\+Version@{i\+Version}}
+\index{i\+Version@{i\+Version}!fts5\+\_\+api@{fts5\+\_\+api}}
+\subsubsection{\texorpdfstring{i\+Version}{iVersion}}
+{\footnotesize\ttfamily int fts5\+\_\+api\+::i\+Version}
+
+
+
+sqlite3.\+h 파일의 10461 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structfts5__api_acf1a0612be3b91b908f38ecbc6735d17}\label{structfts5__api_acf1a0612be3b91b908f38ecbc6735d17}} 
+\index{fts5\+\_\+api@{fts5\+\_\+api}!x\+Create\+Function@{x\+Create\+Function}}
+\index{x\+Create\+Function@{x\+Create\+Function}!fts5\+\_\+api@{fts5\+\_\+api}}
+\subsubsection{\texorpdfstring{x\+Create\+Function}{xCreateFunction}}
+{\footnotesize\ttfamily int($\ast$ fts5\+\_\+api\+::x\+Create\+Function) (\hyperlink{structfts5__api}{fts5\+\_\+api} $\ast$p\+Api, const char $\ast$z\+Name, void $\ast$p\+Context, \hyperlink{sqlite3_8h_a8a1df7b5a066b194f490be5936e85c17}{fts5\+\_\+extension\+\_\+function} x\+Function, void($\ast$x\+Destroy)(void $\ast$))}
+
+
+
+sqlite3.\+h 파일의 10481 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structfts5__api_a7fe3663f85eab512d5c461e1674da129}\label{structfts5__api_a7fe3663f85eab512d5c461e1674da129}} 
+\index{fts5\+\_\+api@{fts5\+\_\+api}!x\+Create\+Tokenizer@{x\+Create\+Tokenizer}}
+\index{x\+Create\+Tokenizer@{x\+Create\+Tokenizer}!fts5\+\_\+api@{fts5\+\_\+api}}
+\subsubsection{\texorpdfstring{x\+Create\+Tokenizer}{xCreateTokenizer}}
+{\footnotesize\ttfamily int($\ast$ fts5\+\_\+api\+::x\+Create\+Tokenizer) (\hyperlink{structfts5__api}{fts5\+\_\+api} $\ast$p\+Api, const char $\ast$z\+Name, void $\ast$p\+Context, \hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer} $\ast$p\+Tokenizer, void($\ast$x\+Destroy)(void $\ast$))}
+
+
+
+sqlite3.\+h 파일의 10464 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structfts5__api_a20a23794695fa61e2892ad1243b16b67}\label{structfts5__api_a20a23794695fa61e2892ad1243b16b67}} 
+\index{fts5\+\_\+api@{fts5\+\_\+api}!x\+Find\+Tokenizer@{x\+Find\+Tokenizer}}
+\index{x\+Find\+Tokenizer@{x\+Find\+Tokenizer}!fts5\+\_\+api@{fts5\+\_\+api}}
+\subsubsection{\texorpdfstring{x\+Find\+Tokenizer}{xFindTokenizer}}
+{\footnotesize\ttfamily int($\ast$ fts5\+\_\+api\+::x\+Find\+Tokenizer) (\hyperlink{structfts5__api}{fts5\+\_\+api} $\ast$p\+Api, const char $\ast$z\+Name, void $\ast$$\ast$pp\+Context, \hyperlink{structfts5__tokenizer}{fts5\+\_\+tokenizer} $\ast$p\+Tokenizer)}
+
+
+
+sqlite3.\+h 파일의 10473 번째 라인에서 정의되었습니다.
+
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/db/sqlitelib/\hyperlink{sqlite3_8h}{sqlite3.\+h}\end{DoxyCompactItemize}

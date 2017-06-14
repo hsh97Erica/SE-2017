@@ -1,0 +1,140 @@
+\hypertarget{class_app_delegate}{}\section{App\+Delegate 클래스 참조}
+\label{class_app_delegate}\index{App\+Delegate@{App\+Delegate}}
+
+
+The cocos2d Application.  
+
+
+
+
+{\ttfamily \#include $<$App\+Delegate.\+h$>$}
+
+App\+Delegate에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_delegate}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_app_delegate_a7d26ade6fbc9d35ecc9185792303f82d}{App\+Delegate} ()
+\item 
+virtual \hyperlink{class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1}{$\sim$\+App\+Delegate} ()
+\item 
+virtual void \hyperlink{class_app_delegate_a2de4e8ab7d04bde311684e1d4ceb2c0f}{init\+G\+L\+Context\+Attrs} ()
+\item 
+virtual bool \hyperlink{class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3}{application\+Did\+Finish\+Launching} ()
+\begin{DoxyCompactList}\small\item\em Implement Director and Scene init code here. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_app_delegate_a17cb09777419781698324e0415bffd3a}{application\+Did\+Enter\+Background} ()
+\begin{DoxyCompactList}\small\item\em Called when the application moves to the background \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_app_delegate_ac4d653e3f74a91efef5f2def58fe3108}{application\+Will\+Enter\+Foreground} ()
+\begin{DoxyCompactList}\small\item\em Called when the application reenters the foreground \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+The cocos2d Application. 
+
+Private inheritance here hides part of interface from Director. 
+
+App\+Delegate.\+h 파일의 11 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_app_delegate_a7d26ade6fbc9d35ecc9185792303f82d}\label{class_app_delegate_a7d26ade6fbc9d35ecc9185792303f82d}} 
+\index{App\+Delegate@{App\+Delegate}!App\+Delegate@{App\+Delegate}}
+\index{App\+Delegate@{App\+Delegate}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{App\+Delegate()}{AppDelegate()}}
+{\footnotesize\ttfamily App\+Delegate\+::\+App\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+App\+Delegate.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1}\label{class_app_delegate_a9f89424b5e296e3668deaa0265fc5ac1}} 
+\index{App\+Delegate@{App\+Delegate}!````~App\+Delegate@{$\sim$\+App\+Delegate}}
+\index{````~App\+Delegate@{$\sim$\+App\+Delegate}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{$\sim$\+App\+Delegate()}{~AppDelegate()}}
+{\footnotesize\ttfamily App\+Delegate\+::$\sim$\+App\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+App\+Delegate.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_app_delegate_a17cb09777419781698324e0415bffd3a}\label{class_app_delegate_a17cb09777419781698324e0415bffd3a}} 
+\index{App\+Delegate@{App\+Delegate}!application\+Did\+Enter\+Background@{application\+Did\+Enter\+Background}}
+\index{application\+Did\+Enter\+Background@{application\+Did\+Enter\+Background}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{application\+Did\+Enter\+Background()}{applicationDidEnterBackground()}}
+{\footnotesize\ttfamily void App\+Delegate\+::application\+Did\+Enter\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the application moves to the background 
+
+
+\begin{DoxyParams}{매개변수}
+{\em the} & pointer of the application \\
+\hline
+\end{DoxyParams}
+
+
+App\+Delegate.\+cpp 파일의 120 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3}\label{class_app_delegate_a68cbaed49edf7581dc59a09d5062fff3}} 
+\index{App\+Delegate@{App\+Delegate}!application\+Did\+Finish\+Launching@{application\+Did\+Finish\+Launching}}
+\index{application\+Did\+Finish\+Launching@{application\+Did\+Finish\+Launching}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{application\+Did\+Finish\+Launching()}{applicationDidFinishLaunching()}}
+{\footnotesize\ttfamily bool App\+Delegate\+::application\+Did\+Finish\+Launching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implement Director and Scene init code here. 
+
+\begin{DoxyReturn}{반환값}
+true Initialize success, app continue. 
+
+false Initialize failed, app terminate. 
+\end{DoxyReturn}
+
+
+App\+Delegate.\+cpp 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_app_delegate_ac4d653e3f74a91efef5f2def58fe3108}\label{class_app_delegate_ac4d653e3f74a91efef5f2def58fe3108}} 
+\index{App\+Delegate@{App\+Delegate}!application\+Will\+Enter\+Foreground@{application\+Will\+Enter\+Foreground}}
+\index{application\+Will\+Enter\+Foreground@{application\+Will\+Enter\+Foreground}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{application\+Will\+Enter\+Foreground()}{applicationWillEnterForeground()}}
+{\footnotesize\ttfamily void App\+Delegate\+::application\+Will\+Enter\+Foreground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the application reenters the foreground 
+
+
+\begin{DoxyParams}{매개변수}
+{\em the} & pointer of the application \\
+\hline
+\end{DoxyParams}
+
+
+App\+Delegate.\+cpp 파일의 132 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_app_delegate_a2de4e8ab7d04bde311684e1d4ceb2c0f}\label{class_app_delegate_a2de4e8ab7d04bde311684e1d4ceb2c0f}} 
+\index{App\+Delegate@{App\+Delegate}!init\+G\+L\+Context\+Attrs@{init\+G\+L\+Context\+Attrs}}
+\index{init\+G\+L\+Context\+Attrs@{init\+G\+L\+Context\+Attrs}!App\+Delegate@{App\+Delegate}}
+\subsubsection{\texorpdfstring{init\+G\+L\+Context\+Attrs()}{initGLContextAttrs()}}
+{\footnotesize\ttfamily void App\+Delegate\+::init\+G\+L\+Context\+Attrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+App\+Delegate.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/\hyperlink{_app_delegate_8h}{App\+Delegate.\+h}\item 
+Classes/\hyperlink{_app_delegate_8cpp}{App\+Delegate.\+cpp}\end{DoxyCompactItemize}

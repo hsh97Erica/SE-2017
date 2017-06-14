@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Classes/tet2/ScoreManagement.hpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0c68614ac8d8401edbf4146ded722294.html">Classes</a></li><li class="navelem"><a class="el" href="dir_54493dbe7f0584fff142973b7e211605.html">tet2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScoreManagement.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_score_management_8hpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef __SCORMGRMNT_H_INC__</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define __SCORMGRMNT_H_INC__</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_util_8hpp.html">Util.hpp</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_tetris.html">Tetris</a>{</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespace_tetris_1_1_score_manage.html">   11</a></span>&#160;    <span class="keyword">namespace </span>ScoreManage{</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html">   16</a></span>&#160;        <span class="keyword">class </span><a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html">ScoreManagement</a>{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">public</span>:</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html#a41c245dcf773c6c677c2e31f6ac17944">   18</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a41c245dcf773c6c677c2e31f6ac17944">getScoreComboRule</a>(<span class="keywordtype">float</span> curcombo){</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                    <span class="keywordflow">if</span>(curcombo&lt;1){</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)(log10(curcombo)/log10(2));</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                }</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html#a66b6a1d3fdc8fb9f91f1d7bfc7854579">   24</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a66b6a1d3fdc8fb9f91f1d7bfc7854579">getAdditionalComboScore</a>(<span class="keywordtype">float</span> curcombo){</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    <span class="keywordflow">if</span>(curcombo&lt;1){</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                    <span class="keywordflow">return</span> curcombo*(float)(log10(curcombo)/log10(<a class="code" href="class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061">TetrisUtil::randInt</a>(4,6)));</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                }</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html#a89203c0689645e7e4ad75d8fd634aa11">   30</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a89203c0689645e7e4ad75d8fd634aa11">getComboScore</a>(<span class="keywordtype">float</span> curcombo){</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <span class="keywordflow">if</span>(curcombo&lt;1){</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">return</span> (curcombo* <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a41c245dcf773c6c677c2e31f6ac17944">getScoreComboRule</a>(curcombo))+ <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a66b6a1d3fdc8fb9f91f1d7bfc7854579">getAdditionalComboScore</a>(curcombo);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                }</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html#a1bedf7a989466ad1b6b8b2259eb2eff7">   36</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a1bedf7a989466ad1b6b8b2259eb2eff7">getDefaultScoreWhenRemovingOneLine</a>(){</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <span class="keywordflow">return</span> 10;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                }</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html#a2991c1eb0595da71788aba706e0b27b7">   39</a></span>&#160;                <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a2991c1eb0595da71788aba706e0b27b7">getScoreGapWhenRemovingOneLine</a>(){</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="keywordflow">return</span> <a class="code" href="class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061">TetrisUtil::randInt</a>(-5,5);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_tetris_1_1_score_manage_1_1_score_management.html#a275253fb7c1bb1820ddba3b666b9db09">   42</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_tetris_1_1_score_manage_1_1_score_management.html#a275253fb7c1bb1820ddba3b666b9db09">getScoreWhenPuttingFallenDownBlock</a>(){</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061">TetrisUtil::randInt</a>(1, 5);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        };</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html_a89203c0689645e7e4ad75d8fd634aa11"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html#a89203c0689645e7e4ad75d8fd634aa11">Tetris::ScoreManage::ScoreManagement::getComboScore</a></div><div class="ttdeci">static float getComboScore(float curcombo)</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00030">ScoreManagement.hpp:30</a></div></div>
+<div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html_a275253fb7c1bb1820ddba3b666b9db09"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html#a275253fb7c1bb1820ddba3b666b9db09">Tetris::ScoreManage::ScoreManagement::getScoreWhenPuttingFallenDownBlock</a></div><div class="ttdeci">static int getScoreWhenPuttingFallenDownBlock()</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00042">ScoreManagement.hpp:42</a></div></div>
+<div class="ttc" id="class_tetris_util_html_a0a60e809425ddb416a500bcc03cf7061"><div class="ttname"><a href="class_tetris_util.html#a0a60e809425ddb416a500bcc03cf7061">TetrisUtil::randInt</a></div><div class="ttdeci">static int randInt(int st, int ed)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8hpp_source.html#l00019">Util.hpp:19</a></div></div>
+<div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html_a41c245dcf773c6c677c2e31f6ac17944"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html#a41c245dcf773c6c677c2e31f6ac17944">Tetris::ScoreManage::ScoreManagement::getScoreComboRule</a></div><div class="ttdeci">static float getScoreComboRule(float curcombo)</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00018">ScoreManagement.hpp:18</a></div></div>
+<div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html_a2991c1eb0595da71788aba706e0b27b7"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html#a2991c1eb0595da71788aba706e0b27b7">Tetris::ScoreManage::ScoreManagement::getScoreGapWhenRemovingOneLine</a></div><div class="ttdeci">static int getScoreGapWhenRemovingOneLine()</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00039">ScoreManagement.hpp:39</a></div></div>
+<div class="ttc" id="namespace_tetris_html"><div class="ttname"><a href="namespace_tetris.html">Tetris</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_source_manager_8hpp_source.html#l00019">AudioSourceManager.hpp:19</a></div></div>
+<div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html">Tetris::ScoreManage::ScoreManagement</a></div><div class="ttdoc">점수 정책을 관리(ScorePolicyManagement가 정확하지만 최초 목적은 점수를 관라하는 것이였음) ...</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00016">ScoreManagement.hpp:16</a></div></div>
+<div class="ttc" id="_util_8hpp_html"><div class="ttname"><a href="_util_8hpp.html">Util.hpp</a></div></div>
+<div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html_a1bedf7a989466ad1b6b8b2259eb2eff7"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html#a1bedf7a989466ad1b6b8b2259eb2eff7">Tetris::ScoreManage::ScoreManagement::getDefaultScoreWhenRemovingOneLine</a></div><div class="ttdeci">static int getDefaultScoreWhenRemovingOneLine()</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00036">ScoreManagement.hpp:36</a></div></div>
+<div class="ttc" id="class_tetris_1_1_score_manage_1_1_score_management_html_a66b6a1d3fdc8fb9f91f1d7bfc7854579"><div class="ttname"><a href="class_tetris_1_1_score_manage_1_1_score_management.html#a66b6a1d3fdc8fb9f91f1d7bfc7854579">Tetris::ScoreManage::ScoreManagement::getAdditionalComboScore</a></div><div class="ttdeci">static float getAdditionalComboScore(float curcombo)</div><div class="ttdef"><b>Definition:</b> <a href="_score_management_8hpp_source.html#l00024">ScoreManagement.hpp:24</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

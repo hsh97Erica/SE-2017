@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Classes/tet2/BaseDBManagement.hpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0c68614ac8d8401edbf4146ded722294.html">Classes</a></li><li class="navelem"><a class="el" href="dir_54493dbe7f0584fff142973b7e211605.html">tet2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">BaseDBManagement.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_base_d_b_management_8hpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _Base_DB_MGRMNT_H_INC_</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _Base_DB_MGRMNT_H_INC_</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="_base_d_b_management_8hpp.html#a028e4c5d141fe1c06da5636bbd2987ee">    8</a></span>&#160;<span class="preprocessor">#define DB_FILE_NAME &quot;tet_db.db&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="_base_d_b_management_8hpp.html#a2ee22b58bca5e7989febcffafa7d017d">    9</a></span>&#160;<span class="preprocessor">#define DB_FILE_NAME2 &quot;tet_db.dat&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_tetris.html">Tetris</a>{</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespace_tetris_1_1_d_b_management.html">   11</a></span>&#160;    <span class="keyword">namespace </span>DBManagement{</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html">   15</a></span>&#160;      <span class="keyword">struct </span><a class="code" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html">ScoreBoardAttributes</a>{</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a8fcc24de440dcae3e369df28485cde4d">   16</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a8fcc24de440dcae3e369df28485cde4d">dbsaveorder</a>; </div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#acca4d00875cd210845e3ed2532ed276a">   17</a></span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#acca4d00875cd210845e3ed2532ed276a">score</a>; </div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a1534fca0e7a2795c055de645cba2ea18">   18</a></span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a1534fca0e7a2795c055de645cba2ea18">playtimesec</a>; </div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a79b3c0fb31de1f4fd878b90695480b75">   19</a></span>&#160;            time_t <a class="code" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a79b3c0fb31de1f4fd878b90695480b75">ts</a>; </div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a0ac70e57809cf25a2b6a4c224a951497">   20</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a0ac70e57809cf25a2b6a4c224a951497">datasaved</a>; </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        };</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="struct_tetris_1_1_d_b_management_1_1_score_board_attributes_html"><div class="ttname"><a href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html">Tetris::DBManagement::ScoreBoardAttributes</a></div><div class="ttdoc">내부에서 데이터를 기록 단위로 읽기 위해서 데이터를 pack하기 위한 구조체 </div><div class="ttdef"><b>Definition:</b> <a href="_base_d_b_management_8hpp_source.html#l00015">BaseDBManagement.hpp:15</a></div></div>
+<div class="ttc" id="struct_tetris_1_1_d_b_management_1_1_score_board_attributes_html_a1534fca0e7a2795c055de645cba2ea18"><div class="ttname"><a href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a1534fca0e7a2795c055de645cba2ea18">Tetris::DBManagement::ScoreBoardAttributes::playtimesec</a></div><div class="ttdeci">unsigned long long playtimesec</div><div class="ttdoc">플레이한 시간을 초단위로 가져옴 </div><div class="ttdef"><b>Definition:</b> <a href="_base_d_b_management_8hpp_source.html#l00018">BaseDBManagement.hpp:18</a></div></div>
+<div class="ttc" id="namespace_tetris_html"><div class="ttname"><a href="namespace_tetris.html">Tetris</a></div><div class="ttdef"><b>Definition:</b> <a href="_audio_source_manager_8hpp_source.html#l00019">AudioSourceManager.hpp:19</a></div></div>
+<div class="ttc" id="struct_tetris_1_1_d_b_management_1_1_score_board_attributes_html_a0ac70e57809cf25a2b6a4c224a951497"><div class="ttname"><a href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a0ac70e57809cf25a2b6a4c224a951497">Tetris::DBManagement::ScoreBoardAttributes::datasaved</a></div><div class="ttdeci">bool datasaved</div><div class="ttdoc">순수하게 구조체들은 파일로 저장하려고 했을때 사용하려고한 변수 </div><div class="ttdef"><b>Definition:</b> <a href="_base_d_b_management_8hpp_source.html#l00020">BaseDBManagement.hpp:20</a></div></div>
+<div class="ttc" id="struct_tetris_1_1_d_b_management_1_1_score_board_attributes_html_acca4d00875cd210845e3ed2532ed276a"><div class="ttname"><a href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#acca4d00875cd210845e3ed2532ed276a">Tetris::DBManagement::ScoreBoardAttributes::score</a></div><div class="ttdeci">unsigned long long score</div><div class="ttdoc">기록된 점수를 저장 </div><div class="ttdef"><b>Definition:</b> <a href="_base_d_b_management_8hpp_source.html#l00017">BaseDBManagement.hpp:17</a></div></div>
+<div class="ttc" id="struct_tetris_1_1_d_b_management_1_1_score_board_attributes_html_a79b3c0fb31de1f4fd878b90695480b75"><div class="ttname"><a href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a79b3c0fb31de1f4fd878b90695480b75">Tetris::DBManagement::ScoreBoardAttributes::ts</a></div><div class="ttdeci">time_t ts</div><div class="ttdoc">기록한 시간을 타임스템프로(TimeStamp)형식으로 저장 </div><div class="ttdef"><b>Definition:</b> <a href="_base_d_b_management_8hpp_source.html#l00019">BaseDBManagement.hpp:19</a></div></div>
+<div class="ttc" id="struct_tetris_1_1_d_b_management_1_1_score_board_attributes_html_a8fcc24de440dcae3e369df28485cde4d"><div class="ttname"><a href="struct_tetris_1_1_d_b_management_1_1_score_board_attributes.html#a8fcc24de440dcae3e369df28485cde4d">Tetris::DBManagement::ScoreBoardAttributes::dbsaveorder</a></div><div class="ttdeci">int dbsaveorder</div><div class="ttdoc">db에서 자동으로 생성되는 인덱스를 담음 </div><div class="ttdef"><b>Definition:</b> <a href="_base_d_b_management_8hpp_source.html#l00016">BaseDBManagement.hpp:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

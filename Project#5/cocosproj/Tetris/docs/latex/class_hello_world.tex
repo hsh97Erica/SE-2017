@@ -1,0 +1,682 @@
+\hypertarget{class_hello_world}{}\section{Hello\+World 클래스 참조}
+\label{class_hello_world}\index{Hello\+World@{Hello\+World}}
+
+
+메인 게임창 클래스  
+
+
+
+
+{\ttfamily \#include $<$Hello\+World\+Scene.\+h$>$}
+
+Hello\+World에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hello_world}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_hello_world_a65e2b1525051f3690e5a39ca56608a97}{init} ()
+\item 
+virtual void \hyperlink{class_hello_world_a0e47c5b1692f5ba74b776be85422dc75}{on\+Enter} ()
+\item 
+virtual void \hyperlink{class_hello_world_a348da8e1c3061248666676878e692572}{on\+Exit} ()
+\item 
+void \hyperlink{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}{menu\+Close\+Callback} (cocos2d\+::\+Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}{menu\+Drawer\+Click\+Callback} (cocos2d\+::\+Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}{gameforce\+Resume\+Menu\+Callback} (Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_ac202dde4f557f0b9b6c3d150da4eec65}{gameforce\+Pause\+Menu\+Callback} (Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_a73ad0d041144a1e610534fe5df41d556}{game\+Restart\+Game\+Callback} (Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_aa0aab5c2537449752853c2924db53261}{menu\+Sound\+Enable\+Callback} (cocos2d\+::\+Ref $\ast$p\+Sender)
+\item 
+void \hyperlink{class_hello_world_aa4c36099096e160e3726819a2308dd04}{start\+Game} ()
+\item 
+void \hyperlink{class_hello_world_a0456ce3ab8880643c5e8739634156d93}{drawboardingui} (char $\ast$$\ast$board, unsigned char $\ast$clr)
+\item 
+\hyperlink{class_hello_world_a857ebfbc49f3a7f81772bee4991d186b}{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC} (\hyperlink{class_hello_world}{Hello\+World})
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static cocos2d\+::\+Scene $\ast$ \hyperlink{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}{create\+Scene} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Menu\+Item\+Label $\ast$ \hyperlink{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}{sounditem} = N\+U\+LL
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}{make\+Field} ()
+\item 
+void \hyperlink{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}{play} (float dt)
+\item 
+void \hyperlink{class_hello_world_af72bece97d2fe997936df92723636298}{pause} ()
+\item 
+void \hyperlink{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}{resume} ()
+\item 
+void \hyperlink{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}{stateloop} (float dt)
+\item 
+void \hyperlink{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}{gameloop} (float dt)
+\item 
+void \hyperlink{class_hello_world_af1590254503ba391a084d767df2dd858}{levelup} (float dt)
+\item 
+void \hyperlink{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}{menu\+Visible\+Toggle} (bool autopauseorpause)
+\item 
+void \hyperlink{class_hello_world_ab2e9dbd1b003e6d26a10a76495efcc2a}{free\+Relative\+Connection\+When\+Deleting} ()
+\item 
+virtual void \hyperlink{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}{on\+Key\+Pressed} (\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code} key\+Code, cocos2d\+::\+Event $\ast$event)
+\item 
+virtual void \hyperlink{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}{on\+Key\+Released} (\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code} key\+Code, cocos2d\+::\+Event $\ast$event)
+\item 
+cocos2d\+::\+Menu $\ast$ \hyperlink{class_hello_world_a24162678657656105f59887233f9c841}{generate\+Option\+Menu} ()
+\item 
+cocos2d\+::\+Menu $\ast$ \hyperlink{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}{generate\+Game\+Over\+Menu} ()
+\item 
+void \hyperlink{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}{add\+Or\+Remove2048\+Game\+View} (bool remove)
+\item 
+cocos2d\+::\+Event\+Listener\+Keyboard $\ast$ \hyperlink{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}{create\+New\+K\+Listener} ()
+\item 
+void \hyperlink{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}{remove\+K\+Listener\+For\+Main\+Game} ()
+\item 
+void \hyperlink{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}{register\+K\+Listener\+For\+Main\+Game} ()
+\item 
+bool \hyperlink{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}{read\+Sound\+Enable} ()
+\item 
+string \hyperlink{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}{get\+Menu\+Text\+Sound\+Enabler} (bool enable)
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tetris_1_1_game_controller}{Tetris\+::\+Game\+Controller} $\ast$ \hyperlink{class_hello_world_a547cb213126911d9a7151f8259dc7102}{gc} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 게임 관리 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Layer $\ast$ \hyperlink{class_hello_world_acc967707dff45c20f68321f07c86a21b}{overlayblockboard} =N\+U\+LL
+\item 
+cocos2d\+::\+S\+E\+L\+\_\+\+S\+C\+H\+E\+D\+U\+LE \hyperlink{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}{mainloopfuncschedule} = N\+U\+LL
+\item 
+cocos2d\+::\+Label $\ast$ \hyperlink{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}{ptimelbl} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 플레이시간을 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Label $\ast$ \hyperlink{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}{pscorelbl} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 점수를 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Label $\ast$ \hyperlink{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}{rmlnscntlbl} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 지운 줄 수를 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Layer $\ast$ \hyperlink{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}{nxtblkrenderingarea} = N\+U\+LL
+\begin{DoxyCompactList}\small\item\em 플레이시간을 보여주는 뷰의 객체 변수 \end{DoxyCompactList}\item 
+cocos2d\+::\+Menu $\ast$ \hyperlink{class_hello_world_aeb27a8750393a2d4982809b64454a045}{gameoptionmenu} = N\+U\+LL
+\item 
+\hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior}{Views\+::\+Next\+Block\+Render\+Behavior} $\ast$ \hyperlink{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}{nxtblkrv} = N\+U\+LL
+\item 
+bool \hyperlink{class_hello_world_a1e1896c9d67df38903e55eb6782978d8}{menuviewadded} = false
+\item 
+cocos2d\+::\+Event\+Listener\+Keyboard $\ast$ \hyperlink{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}{k\+\_\+listener} = N\+U\+LL
+\item 
+unsigned short \hyperlink{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}{bonus\+\_\+game\+\_\+lv}
+\begin{DoxyCompactList}\small\item\em 보너스 게임이 나타날 최소조건의 점수가 2의 승수 이상임을 체크하는 변수 \end{DoxyCompactList}\item 
+bool \hyperlink{class_hello_world_a6dcd196f83b5eba681717366944fcddf}{is\+In\+Ext\+Game} = false
+\begin{DoxyCompactList}\small\item\em 보너스게임의 실행 여부 \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_hello_world_a165832200ec4d9ee283167ac727eeade}{effect\+\_\+ext\+\_\+2048gm}
+\begin{DoxyCompactList}\small\item\em 보너스게임의 bgm을 관리하는 id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+메인 게임창 클래스 
+
+Hello\+World\+Scene.\+h 파일의 19 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}\label{class_hello_world_ad3ea29ba5aa294fc4e4f8ee41833b702}} 
+\index{Hello\+World@{Hello\+World}!add\+Or\+Remove2048\+Game\+View@{add\+Or\+Remove2048\+Game\+View}}
+\index{add\+Or\+Remove2048\+Game\+View@{add\+Or\+Remove2048\+Game\+View}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{add\+Or\+Remove2048\+Game\+View()}{addOrRemove2048GameView()}}
+{\footnotesize\ttfamily void Hello\+World\+::add\+Or\+Remove2048\+Game\+View (\begin{DoxyParamCaption}\item[{bool}]{remove }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+보너스게임을 실행하거나 종료할때 보너스게임을 보여주거나 사라지게하는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 246 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a857ebfbc49f3a7f81772bee4991d186b}\label{class_hello_world_a857ebfbc49f3a7f81772bee4991d186b}} 
+\index{Hello\+World@{Hello\+World}!C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}}
+\index{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC@{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+N\+C()}{CREATE\_FUNC()}}
+{\footnotesize\ttfamily Hello\+World\+::\+C\+R\+E\+A\+T\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{\hyperlink{class_hello_world}{Hello\+World}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}\label{class_hello_world_ab43ad3eb748cab6180daf5a8cfdcf207}} 
+\index{Hello\+World@{Hello\+World}!create\+New\+K\+Listener@{create\+New\+K\+Listener}}
+\index{create\+New\+K\+Listener@{create\+New\+K\+Listener}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{create\+New\+K\+Listener()}{createNewKListener()}}
+{\footnotesize\ttfamily Event\+Listener\+Keyboard $\ast$ Hello\+World\+::create\+New\+K\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+키보드 값을 받는 이벤트 객체 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 87 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}\label{class_hello_world_a1b700f5f9de04271533d3fa099d7b014}} 
+\index{Hello\+World@{Hello\+World}!create\+Scene@{create\+Scene}}
+\index{create\+Scene@{create\+Scene}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{create\+Scene()}{createScene()}}
+{\footnotesize\ttfamily Scene $\ast$ Hello\+World\+::create\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a0456ce3ab8880643c5e8739634156d93}\label{class_hello_world_a0456ce3ab8880643c5e8739634156d93}} 
+\index{Hello\+World@{Hello\+World}!drawboardingui@{drawboardingui}}
+\index{drawboardingui@{drawboardingui}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{drawboardingui()}{drawboardingui()}}
+{\footnotesize\ttfamily void Hello\+World\+::drawboardingui (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{board,  }\item[{unsigned char $\ast$}]{blk\+\_\+clr }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{반환값}
+떨어지는 블럭이나 저장된 블럭의 위치의 블럭을 그려주는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 275 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ab2e9dbd1b003e6d26a10a76495efcc2a}\label{class_hello_world_ab2e9dbd1b003e6d26a10a76495efcc2a}} 
+\index{Hello\+World@{Hello\+World}!free\+Relative\+Connection\+When\+Deleting@{free\+Relative\+Connection\+When\+Deleting}}
+\index{free\+Relative\+Connection\+When\+Deleting@{free\+Relative\+Connection\+When\+Deleting}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{free\+Relative\+Connection\+When\+Deleting()}{freeRelativeConnectionWhenDeleting()}}
+{\footnotesize\ttfamily void Hello\+World\+::free\+Relative\+Connection\+When\+Deleting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 417 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ac202dde4f557f0b9b6c3d150da4eec65}\label{class_hello_world_ac202dde4f557f0b9b6c3d150da4eec65}} 
+\index{Hello\+World@{Hello\+World}!gameforce\+Pause\+Menu\+Callback@{gameforce\+Pause\+Menu\+Callback}}
+\index{gameforce\+Pause\+Menu\+Callback@{gameforce\+Pause\+Menu\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameforce\+Pause\+Menu\+Callback()}{gameforcePauseMenuCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::gameforce\+Pause\+Menu\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 694 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}\label{class_hello_world_a9765d6e42b96bcf6c025ae1905bd7a90}} 
+\index{Hello\+World@{Hello\+World}!gameforce\+Resume\+Menu\+Callback@{gameforce\+Resume\+Menu\+Callback}}
+\index{gameforce\+Resume\+Menu\+Callback@{gameforce\+Resume\+Menu\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameforce\+Resume\+Menu\+Callback()}{gameforceResumeMenuCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::gameforce\+Resume\+Menu\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 684 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}\label{class_hello_world_af59f38fb445c1302e5d2f7e18d0ab0e5}} 
+\index{Hello\+World@{Hello\+World}!gameloop@{gameloop}}
+\index{gameloop@{gameloop}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameloop()}{gameloop()}}
+{\footnotesize\ttfamily void Hello\+World\+::gameloop (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+Game\+Controller에서 진행되는 게임 상황을 gui에 그려주는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 329 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a73ad0d041144a1e610534fe5df41d556}\label{class_hello_world_a73ad0d041144a1e610534fe5df41d556}} 
+\index{Hello\+World@{Hello\+World}!game\+Restart\+Game\+Callback@{game\+Restart\+Game\+Callback}}
+\index{game\+Restart\+Game\+Callback@{game\+Restart\+Game\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{game\+Restart\+Game\+Callback()}{gameRestartGameCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::game\+Restart\+Game\+Callback (\begin{DoxyParamCaption}\item[{Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 714 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}\label{class_hello_world_a7b22f04ccc721e47e59c4f5470768790}} 
+\index{Hello\+World@{Hello\+World}!generate\+Game\+Over\+Menu@{generate\+Game\+Over\+Menu}}
+\index{generate\+Game\+Over\+Menu@{generate\+Game\+Over\+Menu}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{generate\+Game\+Over\+Menu()}{generateGameOverMenu()}}
+{\footnotesize\ttfamily Menu $\ast$ Hello\+World\+::generate\+Game\+Over\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+게임종료시 더할건지 나갈건지 물어보는 메뉴객체 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 677 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a24162678657656105f59887233f9c841}\label{class_hello_world_a24162678657656105f59887233f9c841}} 
+\index{Hello\+World@{Hello\+World}!generate\+Option\+Menu@{generate\+Option\+Menu}}
+\index{generate\+Option\+Menu@{generate\+Option\+Menu}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{generate\+Option\+Menu()}{generateOptionMenu()}}
+{\footnotesize\ttfamily Menu $\ast$ Hello\+World\+::generate\+Option\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+메뉴 탭을 누르면 나타나는 메뉴객체 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 665 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}\label{class_hello_world_a85e65e13718aba32a3a35044f0f694c5}} 
+\index{Hello\+World@{Hello\+World}!get\+Menu\+Text\+Sound\+Enabler@{get\+Menu\+Text\+Sound\+Enabler}}
+\index{get\+Menu\+Text\+Sound\+Enabler@{get\+Menu\+Text\+Sound\+Enabler}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{get\+Menu\+Text\+Sound\+Enabler()}{getMenuTextSoundEnabler()}}
+{\footnotesize\ttfamily string Hello\+World\+::get\+Menu\+Text\+Sound\+Enabler (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+소리 키고 끄는 메뉴의 텍스트 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 630 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a65e2b1525051f3690e5a39ca56608a97}\label{class_hello_world_a65e2b1525051f3690e5a39ca56608a97}} 
+\index{Hello\+World@{Hello\+World}!init@{init}}
+\index{init@{init}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Hello\+World\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 466 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_af1590254503ba391a084d767df2dd858}\label{class_hello_world_af1590254503ba391a084d767df2dd858}} 
+\index{Hello\+World@{Hello\+World}!levelup@{levelup}}
+\index{levelup@{levelup}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{levelup()}{levelup()}}
+{\footnotesize\ttfamily void Hello\+World\+::levelup (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+레벨업을 시켜주는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 348 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}\label{class_hello_world_ac7cca1564e8be641f0d52b97040c0a69}} 
+\index{Hello\+World@{Hello\+World}!make\+Field@{make\+Field}}
+\index{make\+Field@{make\+Field}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{make\+Field()}{makeField()}}
+{\footnotesize\ttfamily void Hello\+World\+::make\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+테트리스가 가능한 영역을 나타내는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}\label{class_hello_world_ac4ab2f5e922e659d4f137591c0f6a9b0}} 
+\index{Hello\+World@{Hello\+World}!menu\+Close\+Callback@{menu\+Close\+Callback}}
+\index{menu\+Close\+Callback@{menu\+Close\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Close\+Callback()}{menuCloseCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Close\+Callback (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 719 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}\label{class_hello_world_a1609fd202ff4b899571aeb34b3cdaed4}} 
+\index{Hello\+World@{Hello\+World}!menu\+Drawer\+Click\+Callback@{menu\+Drawer\+Click\+Callback}}
+\index{menu\+Drawer\+Click\+Callback@{menu\+Drawer\+Click\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Drawer\+Click\+Callback()}{menuDrawerClickCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Drawer\+Click\+Callback (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 605 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_aa0aab5c2537449752853c2924db53261}\label{class_hello_world_aa0aab5c2537449752853c2924db53261}} 
+\index{Hello\+World@{Hello\+World}!menu\+Sound\+Enable\+Callback@{menu\+Sound\+Enable\+Callback}}
+\index{menu\+Sound\+Enable\+Callback@{menu\+Sound\+Enable\+Callback}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Sound\+Enable\+Callback()}{menuSoundEnableCallback()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Sound\+Enable\+Callback (\begin{DoxyParamCaption}\item[{cocos2d\+::\+Ref $\ast$}]{p\+Sender }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 642 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}\label{class_hello_world_a38047ef68d46872dd39be5d4cc59ad18}} 
+\index{Hello\+World@{Hello\+World}!menu\+Visible\+Toggle@{menu\+Visible\+Toggle}}
+\index{menu\+Visible\+Toggle@{menu\+Visible\+Toggle}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menu\+Visible\+Toggle()}{menuVisibleToggle()}}
+{\footnotesize\ttfamily void Hello\+World\+::menu\+Visible\+Toggle (\begin{DoxyParamCaption}\item[{bool}]{autopauseorpause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 609 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a0e47c5b1692f5ba74b776be85422dc75}\label{class_hello_world_a0e47c5b1692f5ba74b776be85422dc75}} 
+\index{Hello\+World@{Hello\+World}!on\+Enter@{on\+Enter}}
+\index{on\+Enter@{on\+Enter}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Enter()}{onEnter()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 454 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a348da8e1c3061248666676878e692572}\label{class_hello_world_a348da8e1c3061248666676878e692572}} 
+\index{Hello\+World@{Hello\+World}!on\+Exit@{on\+Exit}}
+\index{on\+Exit@{on\+Exit}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Exit()}{onExit()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 449 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}\label{class_hello_world_af2d5a509259a5d0fce7770a38df371d3}} 
+\index{Hello\+World@{Hello\+World}!on\+Key\+Pressed@{on\+Key\+Pressed}}
+\index{on\+Key\+Pressed@{on\+Key\+Pressed}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Key\+Pressed()}{onKeyPressed()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code}}]{key\+Code,  }\item[{cocos2d\+::\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 394 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}\label{class_hello_world_acb7b8934f4697e752182a650a1dc7c3a}} 
+\index{Hello\+World@{Hello\+World}!on\+Key\+Released@{on\+Key\+Released}}
+\index{on\+Key\+Released@{on\+Key\+Released}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{on\+Key\+Released()}{onKeyReleased()}}
+{\footnotesize\ttfamily void Hello\+World\+::on\+Key\+Released (\begin{DoxyParamCaption}\item[{\hyperlink{_hello_world_scene_8cpp_a29d93764040e709187aa17656a43405d}{cocos2d\+::\+Event\+Keyboard\+::\+Key\+Code}}]{key\+Code,  }\item[{cocos2d\+::\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 426 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_af72bece97d2fe997936df92723636298}\label{class_hello_world_af72bece97d2fe997936df92723636298}} 
+\index{Hello\+World@{Hello\+World}!pause@{pause}}
+\index{pause@{pause}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Hello\+World\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+게임을 일시정시하는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 378 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}\label{class_hello_world_ac1aee383de0a7c30e84f7efc0da8d944}} 
+\index{Hello\+World@{Hello\+World}!play@{play}}
+\index{play@{play}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Hello\+World\+::play (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 365 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}\label{class_hello_world_a0f8c9d1b95e03b397e680b9dafb8f3d9}} 
+\index{Hello\+World@{Hello\+World}!read\+Sound\+Enable@{read\+Sound\+Enable}}
+\index{read\+Sound\+Enable@{read\+Sound\+Enable}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{read\+Sound\+Enable()}{readSoundEnable()}}
+{\footnotesize\ttfamily bool Hello\+World\+::read\+Sound\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+사용자 설정에 의해 자체 소리가 켜져있는지 유무 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 639 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}\label{class_hello_world_a15deb2e6546d6fd41267dc91932ade26}} 
+\index{Hello\+World@{Hello\+World}!register\+K\+Listener\+For\+Main\+Game@{register\+K\+Listener\+For\+Main\+Game}}
+\index{register\+K\+Listener\+For\+Main\+Game@{register\+K\+Listener\+For\+Main\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{register\+K\+Listener\+For\+Main\+Game()}{registerKListenerForMainGame()}}
+{\footnotesize\ttfamily void Hello\+World\+::register\+K\+Listener\+For\+Main\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 705 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}\label{class_hello_world_aa4aaf4a6d2ae2e0cb07273d0ee004861}} 
+\index{Hello\+World@{Hello\+World}!remove\+K\+Listener\+For\+Main\+Game@{remove\+K\+Listener\+For\+Main\+Game}}
+\index{remove\+K\+Listener\+For\+Main\+Game@{remove\+K\+Listener\+For\+Main\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{remove\+K\+Listener\+For\+Main\+Game()}{removeKListenerForMainGame()}}
+{\footnotesize\ttfamily void Hello\+World\+::remove\+K\+Listener\+For\+Main\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 699 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}\label{class_hello_world_ad72b45627fe36ea8cd04b9de431edc7f}} 
+\index{Hello\+World@{Hello\+World}!resume@{resume}}
+\index{resume@{resume}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void Hello\+World\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+게임을 이어서 하게하도록 하는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 386 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_aa4c36099096e160e3726819a2308dd04}\label{class_hello_world_aa4c36099096e160e3726819a2308dd04}} 
+\index{Hello\+World@{Hello\+World}!start\+Game@{start\+Game}}
+\index{start\+Game@{start\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{start\+Game()}{startGame()}}
+{\footnotesize\ttfamily void Hello\+World\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hello\+World\+Scene.\+cpp 파일의 93 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}\label{class_hello_world_a4ab71b15b7e362af143d2a539e39a538}} 
+\index{Hello\+World@{Hello\+World}!stateloop@{stateloop}}
+\index{stateloop@{stateloop}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{stateloop()}{stateloop()}}
+{\footnotesize\ttfamily void Hello\+World\+::stateloop (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyReturn}{반환값}
+멀티쓰레딩으로 게임을 돌리는 함수 
+\end{DoxyReturn}
+
+
+Hello\+World\+Scene.\+cpp 파일의 101 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}\label{class_hello_world_a7832a6ec52f92f460f3fc352a06412f4}} 
+\index{Hello\+World@{Hello\+World}!bonus\+\_\+game\+\_\+lv@{bonus\+\_\+game\+\_\+lv}}
+\index{bonus\+\_\+game\+\_\+lv@{bonus\+\_\+game\+\_\+lv}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{bonus\+\_\+game\+\_\+lv}{bonus\_game\_lv}}
+{\footnotesize\ttfamily unsigned short Hello\+World\+::bonus\+\_\+game\+\_\+lv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+보너스 게임이 나타날 최소조건의 점수가 2의 승수 이상임을 체크하는 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a165832200ec4d9ee283167ac727eeade}\label{class_hello_world_a165832200ec4d9ee283167ac727eeade}} 
+\index{Hello\+World@{Hello\+World}!effect\+\_\+ext\+\_\+2048gm@{effect\+\_\+ext\+\_\+2048gm}}
+\index{effect\+\_\+ext\+\_\+2048gm@{effect\+\_\+ext\+\_\+2048gm}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{effect\+\_\+ext\+\_\+2048gm}{effect\_ext\_2048gm}}
+{\footnotesize\ttfamily unsigned int Hello\+World\+::effect\+\_\+ext\+\_\+2048gm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+보너스게임의 bgm을 관리하는 id 
+
+
+
+Hello\+World\+Scene.\+h 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_aeb27a8750393a2d4982809b64454a045}\label{class_hello_world_aeb27a8750393a2d4982809b64454a045}} 
+\index{Hello\+World@{Hello\+World}!gameoptionmenu@{gameoptionmenu}}
+\index{gameoptionmenu@{gameoptionmenu}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gameoptionmenu}{gameoptionmenu}}
+{\footnotesize\ttfamily cocos2d\+::\+Menu$\ast$ Hello\+World\+::gameoptionmenu = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a547cb213126911d9a7151f8259dc7102}\label{class_hello_world_a547cb213126911d9a7151f8259dc7102}} 
+\index{Hello\+World@{Hello\+World}!gc@{gc}}
+\index{gc@{gc}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{gc}{gc}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_game_controller}{Tetris\+::\+Game\+Controller}$\ast$ Hello\+World\+::gc = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+게임 관리 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a6dcd196f83b5eba681717366944fcddf}\label{class_hello_world_a6dcd196f83b5eba681717366944fcddf}} 
+\index{Hello\+World@{Hello\+World}!is\+In\+Ext\+Game@{is\+In\+Ext\+Game}}
+\index{is\+In\+Ext\+Game@{is\+In\+Ext\+Game}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{is\+In\+Ext\+Game}{isInExtGame}}
+{\footnotesize\ttfamily bool Hello\+World\+::is\+In\+Ext\+Game = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+보너스게임의 실행 여부 
+
+
+
+Hello\+World\+Scene.\+h 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}\label{class_hello_world_a70a88f59eefadb6a03bd0b3d0ec9cc88}} 
+\index{Hello\+World@{Hello\+World}!k\+\_\+listener@{k\+\_\+listener}}
+\index{k\+\_\+listener@{k\+\_\+listener}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{k\+\_\+listener}{k\_listener}}
+{\footnotesize\ttfamily cocos2d\+::\+Event\+Listener\+Keyboard$\ast$ Hello\+World\+::k\+\_\+listener = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}\label{class_hello_world_a01e6475e24156e4f8b396c8e726f6260}} 
+\index{Hello\+World@{Hello\+World}!mainloopfuncschedule@{mainloopfuncschedule}}
+\index{mainloopfuncschedule@{mainloopfuncschedule}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{mainloopfuncschedule}{mainloopfuncschedule}}
+{\footnotesize\ttfamily cocos2d\+::\+S\+E\+L\+\_\+\+S\+C\+H\+E\+D\+U\+LE Hello\+World\+::mainloopfuncschedule = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a1e1896c9d67df38903e55eb6782978d8}\label{class_hello_world_a1e1896c9d67df38903e55eb6782978d8}} 
+\index{Hello\+World@{Hello\+World}!menuviewadded@{menuviewadded}}
+\index{menuviewadded@{menuviewadded}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{menuviewadded}{menuviewadded}}
+{\footnotesize\ttfamily bool Hello\+World\+::menuviewadded = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 63 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}\label{class_hello_world_a6ebd3cb915150357bd357df1ff4da932}} 
+\index{Hello\+World@{Hello\+World}!nxtblkrenderingarea@{nxtblkrenderingarea}}
+\index{nxtblkrenderingarea@{nxtblkrenderingarea}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{nxtblkrenderingarea}{nxtblkrenderingarea}}
+{\footnotesize\ttfamily cocos2d\+::\+Layer$\ast$ Hello\+World\+::nxtblkrenderingarea = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+플레이시간을 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 57 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}\label{class_hello_world_ac06ca16fc5a18d32c58e0229c24817f6}} 
+\index{Hello\+World@{Hello\+World}!nxtblkrv@{nxtblkrv}}
+\index{nxtblkrv@{nxtblkrv}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{nxtblkrv}{nxtblkrv}}
+{\footnotesize\ttfamily \hyperlink{class_tetris_1_1_views_1_1_next_block_render_behavior}{Views\+::\+Next\+Block\+Render\+Behavior}$\ast$ Hello\+World\+::nxtblkrv = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 62 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_acc967707dff45c20f68321f07c86a21b}\label{class_hello_world_acc967707dff45c20f68321f07c86a21b}} 
+\index{Hello\+World@{Hello\+World}!overlayblockboard@{overlayblockboard}}
+\index{overlayblockboard@{overlayblockboard}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{overlayblockboard}{overlayblockboard}}
+{\footnotesize\ttfamily cocos2d\+::\+Layer$\ast$ Hello\+World\+::overlayblockboard =N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Hello\+World\+Scene.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}\label{class_hello_world_a7ed25294d2c42aec8b7b8f37bbf75a38}} 
+\index{Hello\+World@{Hello\+World}!pscorelbl@{pscorelbl}}
+\index{pscorelbl@{pscorelbl}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{pscorelbl}{pscorelbl}}
+{\footnotesize\ttfamily cocos2d\+::\+Label$\ast$ Hello\+World\+::pscorelbl = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+점수를 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 55 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}\label{class_hello_world_ae0520bbadc78c24a50ddeb3f839b4012}} 
+\index{Hello\+World@{Hello\+World}!ptimelbl@{ptimelbl}}
+\index{ptimelbl@{ptimelbl}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{ptimelbl}{ptimelbl}}
+{\footnotesize\ttfamily cocos2d\+::\+Label$\ast$ Hello\+World\+::ptimelbl = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+플레이시간을 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 54 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}\label{class_hello_world_a52aca4f2a78e6413ace505d313b006fc}} 
+\index{Hello\+World@{Hello\+World}!rmlnscntlbl@{rmlnscntlbl}}
+\index{rmlnscntlbl@{rmlnscntlbl}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{rmlnscntlbl}{rmlnscntlbl}}
+{\footnotesize\ttfamily cocos2d\+::\+Label$\ast$ Hello\+World\+::rmlnscntlbl = N\+U\+LL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+지운 줄 수를 보여주는 뷰의 객체 변수 
+
+
+
+Hello\+World\+Scene.\+h 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}\label{class_hello_world_adb09915c0ac4077d51f46e2645bc4c0a}} 
+\index{Hello\+World@{Hello\+World}!sounditem@{sounditem}}
+\index{sounditem@{sounditem}!Hello\+World@{Hello\+World}}
+\subsubsection{\texorpdfstring{sounditem}{sounditem}}
+{\footnotesize\ttfamily Menu\+Item\+Label$\ast$ Hello\+World\+::sounditem = N\+U\+LL}
+
+
+
+Hello\+World\+Scene.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Classes/\hyperlink{_hello_world_scene_8h}{Hello\+World\+Scene.\+h}\item 
+Classes/\hyperlink{_hello_world_scene_8cpp}{Hello\+World\+Scene.\+cpp}\end{DoxyCompactItemize}
