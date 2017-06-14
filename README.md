@@ -186,7 +186,7 @@
 ## Project#5 2016004011 with SQlite & Cocos2d-x
 ***
 ## Sample  
-![main](- https://raw.githubusercontent.com/hsh97Erica/SE-2017/3eb1238d1f8d9017d02af8b860b8bebd5cc161fd/Project%235/cocosproj/Tetris/sampleshot/스크린샷%202017-06-14%20오후%201.23.48.png)
+![main](https://raw.githubusercontent.com/hsh97Erica/SE-2017/3eb1238d1f8d9017d02af8b860b8bebd5cc161fd/Project%235/cocosproj/Tetris/sampleshot/스크린샷%202017-06-14%20오후%201.23.48.png)
 ![maingame](https://raw.githubusercontent.com/hsh97Erica/SE-2017/3eb1238d1f8d9017d02af8b860b8bebd5cc161fd/Project%235/cocosproj/Tetris/sampleshot/스크린샷%202017-06-14%20오후%208.03.33.png)
 ![resumegame](https://raw.githubusercontent.com/hsh97Erica/SE-2017/3eb1238d1f8d9017d02af8b860b8bebd5cc161fd/Project%235/cocosproj/Tetris/sampleshot/스크린샷%202017-06-14%20오후%208.03.41.png)
 ![record](https://raw.githubusercontent.com/hsh97Erica/SE-2017/3eb1238d1f8d9017d02af8b860b8bebd5cc161fd/Project%235/cocosproj/Tetris/sampleshot/스크린샷%202017-06-14%20오후%201.29.39.png)
